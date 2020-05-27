@@ -1,5 +1,6 @@
 # WacOS
-A Linux distribution that mimics MacOS (modern and classic) iOS, and other Apple operating systems, but is open, customizable, and free to use on non-apple hardware.
+
+_A Linux distribution that mimics MacOS (modern and classic) iOS, and other Apple operating systems, but is open, customizable, and free to use on non-apple hardware._
 
 # Concept: WacOS (August 27th 2019)
 
@@ -77,4 +78,29 @@ It must be compatible with virtualization software like VirtualBox, Qemu, VMWare
 
 If this is to be completed, it must be better than Windows and MacOS
 
-**ReadMe version: 2 (May 26th 2020 19:22)**
+# Version history
+
+Concept releases
+-----------
+
+1. [version1-0.0.a(Concept-release)](https://github.com/seanpm2001/WacOS/releases/tag/V0.0.A)
+2. [version2-0.0.b(Concept-release)](https://github.com/seanpm2001/WacOS/releases/tag/V0.0.B)
+
+Alpha releases
+-----------
+
+**No alpha releases have been made yet**
+
+Beta releases
+-----------
+
+**No alpha releases have been made yet**
+
+Full releases
+-----------
+
+**No alpha releases have been made yet**
+
+# ReadMe about
+
+**ReadMe version: 3 (May 26th 2020 22:33)**
