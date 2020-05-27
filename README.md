@@ -89,18 +89,25 @@ Concept releases
 Alpha releases
 -----------
 
-**No alpha releases have been made yet**
+**No Alpha releases have been made yet**
 
 Beta releases
 -----------
 
-**No alpha releases have been made yet**
+**No Beta releases have been made yet**
 
 Full releases
 -----------
 
-**No alpha releases have been made yet**
+**No Full releases have been made yet**
+
+# Developers
+
+_Currently, there is only 1 developer. More will be added in the future. I can't maintain this project on my own, I am going to need volunteers._
+
+1. [SeanPM2001](https://github.com/seanpm2001) - 73 revisions (As of May 27th 2020 at 3:02 pm)
+2. No other developers
 
 # ReadMe about
 
-**ReadMe version: 3 (May 26th 2020 22:33)**
+**ReadMe version: 4 (May 27th 2020 15:02)**
