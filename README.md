@@ -27,7 +27,7 @@ A desktop environment menu where you can change the theme to make the OS look li
 16. MacOS X 10.5
 17. MacOS X 10.6
 18. MacOS X 10.7
-19 .OS X 10.8
+19. OS X 10.8
 20. OS X 10.9
 
 Those are all the good environments
@@ -76,3 +76,5 @@ The system MUST be light, with no more than 1 Gigabyte of RAM being used by the 
 It must be compatible with virtualization software like VirtualBox, Qemu, VMWare, etc. If anyone wants to go through and make it compatible with hyper-V, it is completely optional
 
 If this is to be completed, it must be better than Windows and MacOS
+
+**ReadMe version: 2 (May 26th 2020 19:22)**
