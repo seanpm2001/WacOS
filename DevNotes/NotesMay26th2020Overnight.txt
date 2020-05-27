@@ -1,0 +1,27 @@
+🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
+🍎 Notes May 26th 2020 overnight.     🍎
+🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
+Commit to make:
+🍏 Give credit to MikiWedia - WacOS
+🍏 Finder application
+🍏 Swift IDE
+🍏 Objective-C IDE
+🍏 Terminal
+🍏 Cocoa.h
+🍏 Cocoa API
+🍏 Metal API
+🍏 Theme manager
+🍏 Installer
+🍏 iOS mode (32×64)
+🍏 WatchOS mode (32×64)
+🍏 Apple TV mode (32×64)
+🍏 iPadOS mode (64×)
+🍏 Apple DOS mode (4×8--×16--)
+🍏 MacOS System classic mode (8×16)
+🍏 MacOS Classic mode (16×32)
+🍏 MacOS X mode (32×64)
+🍏 Super WacOS mode (64×128)
+🍏 PowerPC
+🍏 Intel
+🍏 Motorola 68K
+🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
