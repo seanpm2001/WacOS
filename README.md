@@ -6,7 +6,7 @@ _A Linux distribution that mimics MacOS (modern and classic) iOS, and other Appl
 
 **Note**
 
-_As of May 27th 2020 at 6:03 pm, this project is still only just a concept, and is in no way functional yet. I am just laying the foundation at the moment._
+_As of May 27th 2020 at 11:21 pm, this project is still only just a concept, and is in no way functional yet. I am just laying the foundation at the moment._
 
 **Thought of by Sean on August 27th 2019**
 
@@ -63,11 +63,14 @@ It also has iOS theme functionality:
 13. iOS 13
 
 # More info
+
 WacOS will be a Linux based operating system that acts like MacOS, but with improved functionality, being more open, and having new and other features
+
 its naming (LacOS didn't seem like a good name, as it sounds like "Lack OS" which shouldn't be associated with a Linux distribution, and it was 5:33 in the morning, so I don't know where the W came from. Just note the W does not stand for Windows
+
 Pronounced like: Wack O S or Walk O S or however you would like to pronounce it
 
-It can act as a MacOS port that isn't developed by apple, and doesn't need an expensive computer to run with. Linux users constantly go through phases of different operating systems themes, a lot of Linux users go through a MacOS phase, I haven't yet, but I could in the future
+It can act as a MacOS port that isn't developed by apple, and doesn't need an expensive computer to run with. Linux users constantly go through phases of different operating systems themes, a lot of Linux users go through a MacOS phase, I haven't  yet, but I could in the future
 It will be highly functional, and will be written in C for the core, and Python for the system, as I want to continue to spread Python, it is a great programming language, it is simple to write, and very powerful
 Some features include a desktop interface changer that can make the distro function like any version of MacOS, without the restrictiveness, and proprietary functionality
 iOS and MacOS programs from System 1 to the latest version, and iPhone OS 1 to the latest version will be supported
@@ -89,6 +92,9 @@ Concept releases
 
 1. [version1-0.0.a(Concept-release)](https://github.com/seanpm2001/WacOS/releases/tag/V0.0.A)
 2. [version2-0.0.b(Concept-release)](https://github.com/seanpm2001/WacOS/releases/tag/V0.0.B)
+3. [version3-0.0.c(Concept-release)](https://github.com/seanpm2001/WacOS/releases/tag/V0.0.C)
+4. [Coming soon](about:blank)
+5. [noos gnimoC](https://www.example.com)
 
 Alpha releases
 -----------
@@ -109,7 +115,7 @@ Full releases
 
 _Currently, there is only 1 developer. More will be added in the future. I can't maintain this project on my own, I am going to need volunteers._
 
-1. [SeanPM2001](https://github.com/seanpm2001) - 84 revisions (As of May 27th 2020 at 3:02 pm)
+1. [SeanPM2001](https://github.com/seanpm2001) - 95 revisions (As of May 27th 2020 at 11:21 pm)
 2. No other developers
 
 # Languages
@@ -124,13 +130,17 @@ Computer languages
 
 **Languages are listed in A-Z order**
 
-> 1. Assembly
-> 2. C
-> 3. Markdown
-> 4. Motorola S-RECORD
-> 5. Objective-C
-> 6. Swift
+> 01. Assembly
+> 02. C
+> 03. Markdown
+> 04. Motorola S-RECORD
+> 05. Objective-C
+> 06. Python
+> 07. Swift
+> 08. SVG
+> 09. Text
+> 10. XML
 
 # ReadMe about
 
-**ReadMe version: 5 (May 27th 2020 18:03 (6:03 pm))**
+**ReadMe version: 6 (May 27th 2020 23:21 (11:21 pm))**
