@@ -4,6 +4,10 @@ _A Linux distribution that mimics MacOS (modern and classic) iOS, and other Appl
 
 # Concept: WacOS (August 27th 2019)
 
+**Note**
+
+_As of May 27th 2020 at 6:03 pm, this project is still only just a concept, and is in no way functional yet. I am just laying the foundation at the moment._
+
 **Thought of by Sean on August 27th 2019**
 
 # WacOS (Linux)
@@ -105,9 +109,28 @@ Full releases
 
 _Currently, there is only 1 developer. More will be added in the future. I can't maintain this project on my own, I am going to need volunteers._
 
-1. [SeanPM2001](https://github.com/seanpm2001) - 73 revisions (As of May 27th 2020 at 3:02 pm)
+1. [SeanPM2001](https://github.com/seanpm2001) - 84 revisions (As of May 27th 2020 at 3:02 pm)
 2. No other developers
+
+# Languages
+
+Human-spoken languages
+-----------
+
+> Currently, the program is only supplied in the English language.
+
+Computer languages
+-----------
+
+**Languages are listed in A-Z order**
+
+> 1. Assembly
+> 2. C
+> 3. Markdown
+> 4. Motorola S-RECORD
+> 5. Objective-C
+> 6. Swift
 
 # ReadMe about
 
-**ReadMe version: 4 (May 27th 2020 15:02)**
+**ReadMe version: 5 (May 27th 2020 18:03 (6:03 pm))**
