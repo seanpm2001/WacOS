@@ -3,7 +3,7 @@
 
 ![HFSPLUS.png](/System/FileSystem/HFS+/HFSPLUS.png)
 
-# OpenZFS file system
+# HFS+ file system
 
 Development Source: [[Unknown]](https://en.wikipedia.org/wiki/HFS_Plus)
 
