@@ -31,7 +31,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [x] Cloud
 
-- [ ] WAMMY
+- [x] WAMMY
 
 - [ ] Kernel { XNU, Linux }
 
@@ -41,7 +41,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] PowerPC processor support
 
-- [ ] Skeuowie
+- [x] Skeuowie
 
 - [ ] WhyOS
 
@@ -63,7 +63,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] Assembly
 
-- [ ] Basys
+- [x] Basys
 
 - [ ] C++
 
@@ -107,10 +107,10 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `2 (2021, Tuesday, September 14th at 6:50 pm)`
+**Page version:** `3 (2021, Tuesday, September 14th at 9:48 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `2 (2021, Tuesday, September 14th at 6:50 pm)`
+**Current revision:** `3 (2021, Tuesday, September 14th at 9:48 pm)`
 
 ***
