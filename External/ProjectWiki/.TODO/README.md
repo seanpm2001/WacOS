@@ -29,6 +29,8 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [x] .TODO
 
+- [x] Cloud
+
 - [ ] WAMMY
 
 - [ ] Kernel { XNU, Linux }
@@ -97,7 +99,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] Installation
 
-**Current completion status (as of 2021 Tuesday, September 14th at 6:43 pm):** `?%`
+**Current completion status (as of 2021 Tuesday, September 14th at 6:50 pm):** `?%`
 
 ***
 
@@ -105,10 +107,10 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
+**Page version:** `2 (2021, Tuesday, September 14th at 6:50 pm)`
 
-**Latest revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
+**First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
+**Current revision:** `2 (2021, Tuesday, September 14th at 6:50 pm)`
 
 ***
