@@ -379,7 +379,69 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] 3D Touch
 
-**Current completion status (as of 2021 Wednesday, September 15th at 5:02 pm):** `?%`
+- [ ] Tim Cook
+
+- [ ] Apple Inc
+
+- [ ] Apple California Campus
+
+- [ ] History of Apple Inc
+
+- [ ] Apple Slang
+
+- [ ] Macintosh
+
+- [ ] iPhoneOS version history
+
+- [ ] iOS version history
+
+- [ ] iPadOS version history
+
+- [ ] Apple and privacy (1976-2013)
+
+- [ ] Apple and privacy (2013-2021)
+
+- [ ] Apple and privacy (2021-present)
+
+- [ ] Notable Apple advertisements
+
+- [ ] 1984 (Apple Ad)
+
+- [ ] Kernel Panic (MacOS)
+
+- [ ] Kernel Panic (Linux)
+
+- [ ] Apple Maps
+
+- [ ] Apple Passport
+
+- [ ] Apple Clock
+
+- [ ] Apple Calculator
+
+- [ ] Apple Notes
+
+- [ ] Apple Pages
+
+- [ ] Apple TV (Streaming service)
+
+- [ ] tvOS 9
+
+- [ ] tvOS 10
+
+- [ ] tvOS 11
+
+- [ ] tvOS 12
+
+- [ ] tvOS 13
+
+- [ ] tvOS 14
+
+- [ ] tvOS 15
+
+- [ ] tvOS version history
+
+**Current completion status (as of 2021 Wednesday, September 15th at 11:36 pm):** `?%`
 
 ***
 
@@ -387,11 +449,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `5 (2021, Wednesday, September 15th at 5:02 pm)`
+**Page version:** `6 (2021, Wednesday, September 15th at 11:36 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `5 (2021, Wednesday, September 15th at 5:02 pm)`
+**Current revision:** `6 (2021, Wednesday, September 15th at 11:36 pm)`
 
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
 
