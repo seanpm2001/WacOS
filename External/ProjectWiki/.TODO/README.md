@@ -123,9 +123,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [x] acid1
 
-- [ ] acid2
+- [x] acid2
 
-- [ ] acid3
+- [x] acid3
 
 - [ ] DuckDuckGo_Browser
 
@@ -145,7 +145,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] AIM Alliance
 
-- [ ] iOS 6 (Include iOS 6 image repo)
+- [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
 
 - [ ] iPhoneOS_1
 
@@ -251,7 +251,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] MacOS 12.x (Monterey)
 
-- [ ] Growl (software) mention Git repo and website)
+- [x] Growl (software) <!-- mention Git repo and website) !-->
 
 - [ ] Quicktime
 
@@ -449,11 +449,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `6 (2021, Wednesday, September 15th at 11:36 pm)`
+**Page version:** `7 (2021, Thursday, September 16th at 10:44 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `6 (2021, Wednesday, September 15th at 11:36 pm)`
+**Current revision:** `7 (2021, Thursday, September 16th at 10:44 pm)`
 
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
 
