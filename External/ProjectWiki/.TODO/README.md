@@ -3,615 +3,739 @@
 
 # Articles to write (WacOS Wiki)
 
+This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
+
 I have recently noted the importance of the project Wiki, and I want to improve this projects Wiki. Here are the articles I plan to write:
 
-- [x] Home
+* - [x] Home
 
-- [x] Footer
+* - [x] Footer
 
-- [x] Sidebar
+* - [x] Sidebar
 
-- [x] File system support
+* - [x] File system support
 
-- [x] ElementaryOS
+* - [x] ElementaryOS
 
-- [x] Project language file info
+* - [x] Project language file info
 
-- [x] Snapshot version control system
+* - [x] Snapshot version control system
 
-- [x] Finder
+* - [x] Finder
 
-- [x] Swift (programming language)
+* - [x] Swift (programming language)
 
-- [x] Image credits
+* - [x] Image credits
 
-- [x] Home directory
+* - [x] Home directory
 
-- [x] .TODO
+* - [x] .TODO
 
-- [x] Cloud
+* - [x] Cloud
 
-- [x] WAMMY
+* - [x] WAMMY
 
-- [x] Kernel { XNU, Linux }
+* - [x] Kernel { XNU, Linux }
 
-- [ ] Features
+* - [ ] Features
 
-- [x] Browser
+* - [x] Browser
 
-- [x] PowerPC processor support
+* - [x] PowerPC processor support
 
-- [x] Skeuowie
+* - [x] Skeuowie
 
-- [ ] WhyOS
+* - [ ] WhyOS
 
-- [ ] wOS
+* - [ ] wOS
 
-- [ ] WhyPadOS
+* - [ ] WhyPadOS
 
-- [ ] WhyPhoneOS
+* - [ ] WhyPhoneOS
 
-- [ ] SirIsaacNewtonScript
+* - [ ] SirIsaacNewtonScript
 
-- [ ] SirIsaacNewtonOS
+* - [ ] SirIsaacNewtonOS
 
-- [x] Cyberdog
+* - [x] Cyberdog
 
-- [x] Savannah
+* - [x] Savannah
 
-- [x] AppleScript
+* - [x] AppleScript
 
-- [ ] Assembly
+* - [ ] Assembly
 
-- [x] Basys
+* - [x] Basys
 
-- [ ] C++
+* - [ ] C++
 
-- [ ] C
+* - [ ] C
 
-- [ ] Motorola S-RECORD
+* - [ ] Motorola S-RECORD
 
-- [ ] Assembly
+* - [ ] Assembly
 
-- [ ] Objective-C
+* - [ ] Objective-C
 
-- [ ] Objective-C++
+* - [ ] Objective-C++
 
-- [ ] VHDL
+* - [ ] VHDL
 
-- [ ] WOAHS-X
+* - [ ] WOAHS-X
 
-- [ ] WacTV-OS
+* - [ ] WacTV-OS
 
-- [ ] WatchOS
+* - [ ] WatchOS
 
-- [x] Languages used
+* - [x] Languages used
 
-- [ ] Default programs
+* - [ ] Default programs
 
-- [ ] Python
+* - [ ] Python
 
-- [x] Intel processor support
+* - [x] Intel processor support
 
-- [x] AMD processor support
+* - [x] AMD processor support
 
-- [ ] Theme manager { Wac Mode }
+* - [ ] Theme manager { Wac Mode }
 
-- [ ] Installation
+* - [ ] Installation
 
-- [x] Isaac Newton
+* - [x] Isaac Newton
 
-- [x] Rosettacode
+* - [x] Rosettacode
 
-- [x] Aqua (interface)
+* - [x] Aqua (interface)
 
-- [ ] Chromium
+* - [ ] Chromium
 
-- [ ] Gohanna
+* - [ ] Gohanna
 
-- [ ] Gecko
+* - [ ] Gecko
 
-- [x] OpenCyberdog
+* - [x] OpenCyberdog
 
-- [x] Safari
+* - [x] Safari
 
-- [x] Browser_list
+* - [x] Browser_list
 
-- [ ] Firefox
+* - [ ] Firefox
 
-- [x] Internet_Explorer_for_Mac
+* - [x] Internet_Explorer_for_Mac
 
-- [x] acid1
+* - [x] acid1
 
-- [x] acid2
+* - [x] acid2
 
-- [x] acid3
+* - [x] acid3
 
-- [ ] DuckDuckGo_Browser
+* - [ ] DuckDuckGo_Browser
 
-- [ ] Steve Jobs
+* - [ ] Steve Jobs
 
-- [ ] Steve Wozniak
+* - [ ] Steve Wozniak
 
-- [ ] Dennis Ritchie
+* - [ ] Dennis Ritchie
 
-- [ ] YAML
+* - [ ] YAML
 
-- [ ] XML
+* - [ ] XML
 
-- [ ] Motorola
+* - [ ] Motorola
 
-- [ ] IBM
+* - [ ] IBM
 
-- [ ] AIM Alliance
+* - [ ] AIM Alliance
 
-- [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
+* - [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
 
-- [ ] iPhoneOS_1
+* - [ ] iPhoneOS_1
 
-- [ ] iPhoneOS_2
+* - [ ] iPhoneOS_2
 
-- [ ] iPhoneOS_3
+* - [ ] iPhoneOS_3
 
-- [ ] iOS_4
+* - [ ] iOS_4
 
-- [ ] iOS_5
+* - [ ] iOS_5
 
-- [ ] iOS_7
+* - [ ] iOS_7
 
-- [ ] iOS_8
+* - [ ] iOS_8
 
-- [ ] iOS_9
+* - [ ] iOS_9
 
-- [ ] iOS_10
+* - [ ] iOS_10
 
-- [ ] iOS_11
+* - [ ] iOS_11
 
-- [ ] iOS_12
+* - [ ] iOS_12
 
-- [ ] iOS_13
+* - [ ] iOS_13
 
-- [ ] iOS_14
+* - [ ] iOS_14
 
-- [ ] iOS_15
+* - [ ] iOS_15
 
-- [ ] iPadOS_13
+* - [ ] iPadOS_13
 
-- [ ] iPadOS_14
+* - [ ] iPadOS_14
 
-- [ ] iPadOS_15
+* - [ ] iPadOS_15
 
-- [ ] WebKit
+* - [ ] WebKit
 
-- [ ] Windows 2.0
+* - [ ] Windows 2.0
 
-- [ ] Apple Litigation
+* - [ ] Apple Litigation
 
-- [ ] Criticism of Apple Inc
+* - [ ] Criticism of Apple Inc
 
-- [ ] iCloud
+* - [ ] iCloud
 
-- [ ] iPhotos
+* - [ ] iPhotos
 
-- [x] iCon (book)
+* - [x] iCon (book)
 
-- [ ] Apple System 1
+* - [ ] Apple System 1
 
-- [ ] Apple System 2
+* - [ ] Apple System 2
 
-- [ ] Apple System 3
+* - [ ] Apple System 3
 
-- [ ] Apple System 4
+* - [ ] Apple System 4
 
-- [ ] Apple System 5
+* - [ ] Apple System 5
 
-- [ ] Apple System 6
+* - [ ] Apple System 6
 
-- [ ] Mac OS 7
+* - [ ] Mac OS 7
 
-- [ ] Mac OS 8
+* - [ ] Mac OS 8
 
-- [ ] Mac OS 9
+* - [ ] Mac OS 9
 
-- [ ] Mac OS X Public Beta
+* - [ ] Mac OS X Public Beta
 
-- [ ] Mac OS X 10.0 (Cheetah)
+* - [ ] Mac OS X 10.0 (Cheetah)
 
-- [ ] Mac OS X 10.1 (Puma)
+* - [ ] Mac OS X 10.1 (Puma)
 
-- [ ] Mac OS X 10.2 (Jaguar)
+* - [ ] Mac OS X 10.2 (Jaguar)
 
-- [ ] Mac OX X 10.3 (Panther)
+* - [ ] Mac OX X 10.3 (Panther)
 
-- [ ] Mac OS X 10.4 (Tiger)
+* - [ ] Mac OS X 10.4 (Tiger)
 
-- [ ] Mac OS X 10.5 (Leopard)
+* - [ ] Mac OS X 10.5 (Leopard)
 
-- [ ] Mac OS X 10.6 (Snow Leopard)
+* - [ ] Mac OS X 10.6 (Snow Leopard)
 
-- [ ] OS X 10.7 (Lion)
+* - [ ] OS X 10.7 (Lion)
 
-- [ ] OS X 10.8 (Mountain Lion)
+* - [ ] OS X 10.8 (Mountain Lion)
 
-- [ ] OS X 10.9 (Mavericks)
+* - [ ] OS X 10.9 (Mavericks)
 
-- [ ] OS X 10.10 (Yosemite)
+* - [ ] OS X 10.10 (Yosemite)
 
-- [ ] OS X 10.11 (El Capitan)
+* - [ ] OS X 10.11 (El Capitan)
 
-- [ ] MacOS 10.12 (Sierra)
+* - [ ] MacOS 10.12 (Sierra)
 
-- [ ] MacOS 10.13 (High Sierra)
+* - [ ] MacOS 10.13 (High Sierra)
 
-- [ ] MacOS 10.14 (Mojave)
+* - [ ] MacOS 10.14 (Mojave)
 
-- [ ] MacOS 10.15 (Catalina)
+* - [ ] MacOS 10.15 (Catalina)
 
-- [ ] MacOS 11.x (Big Sur)
+* - [ ] MacOS 11.x (Big Sur)
 
-- [ ] MacOS 12.x (Monterey)
+* - [ ] MacOS 12.x (Monterey)
 
-- [x] Growl (software) <!-- mention Git repo and website) !-->
+* - [x] Growl (software) <!-- mention Git repo and website) !-->
 
-- [x] Quicktime
+* - [x] Quicktime
 
-- [ ] DMG
+* - [ ] DMG
 
-- [ ] IPA
+* - [ ] IPA
 
-- [ ] App Store
+* - [ ] App Store
 
-- [ ] Jailbreak
+* - [ ] Jailbreak
 
-- [ ] Hackintosh
+* - [ ] Hackintosh
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] iPod Classic
+* - [ ] iPod Classic
 
-- [ ] iPod Mini
+* - [ ] iPod Mini
 
-- [ ] iPod Nano
+* - [ ] iPod Nano
 
-- [ ] iPod Shuffle
+* - [ ] iPod Shuffle
 
-- [ ] iPod Touch 1st generation
+* - [ ] iPod Touch 1st generation
 
-- [ ] iPod Touch 2nd generation
+* - [ ] iPod Touch 2nd generation
 
-- [ ] iPod Touch 3rd generation
+* - [ ] iPod Touch 3rd generation
 
-- [ ] iPod Touch 4th generation
+* - [ ] iPod Touch 4th generation
 
-- [ ] iPod Touch 5th generation
+* - [ ] iPod Touch 5th generation
 
-- [ ] iPod Touch 6th generation
+* - [ ] iPod Touch 6th generation
 
-- [ ] iPod Touch 7th generation
-
-// For hardware, make sure to list the device specifications as well in detail, they are important
-
-- [ ] iPhone 2G
-
-- [ ] iPhone 3G
-
-- [ ] iPhone 3GS
-
-- [ ] iPhone 4
-
-- [ ] iPhone 5
-
-- [ ] iPhone 6
-
-- [ ] iPhone 7
-
-- [ ] iPhone 8
-
-- [ ] iPhone 9
-
-- [ ] iPhone 10
-
-- [ ] iPhone 11
-
-- [ ] iPhone 12
-
-- [ ] iPhone 13
+* - [ ] iPod Touch 7th generation
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] iPad 1
+* - [ ] iPhone 2G
 
-- [ ] iPad 2
+* - [ ] iPhone 3G
 
-- [ ] iPad 3
+* - [ ] iPhone 3GS
 
-- [ ] iPad 4
+* - [ ] iPhone 4
 
-- [ ] iPad 5
+* - [ ] iPhone 5
 
-- [ ] iPad 6
+* - [ ] iPhone 6
 
-- [ ] iPad 7
+* - [ ] iPhone 7
 
-- [ ] iPad 8
+* - [ ] iPhone 8
 
-- [ ] iPad 9
+* - [ ] iPhone 9
 
-// For hardware, make sure to list the device specifications as well in detail, they are important
+* - [ ] iPhone 10
 
-- [ ] iPad Air 1
+* - [ ] iPhone 11
 
-- [ ] iPad Air 2
+* - [ ] iPhone 12
 
-- [ ] iPad Air 3
-
-- [ ] iPad Air 4
+* - [ ] iPhone 13
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] iPad Mini 1
+* - [ ] iPad 1
 
-- [ ] iPad Mini 2
+* - [ ] iPad 2
 
-- [ ] iPad Mini 3
+* - [ ] iPad 3
 
-- [ ] iPad Mini 4
+* - [ ] iPad 4
 
-- [ ] iPad Mini 5
+* - [ ] iPad 5
 
-- [ ] iPad Mini 6
+* - [ ] iPad 6
 
-// For hardware, make sure to list the device specifications as well in detail, they are important
+* - [ ] iPad 7
 
-- [ ] iPad Pro 1
+* - [ ] iPad 8
 
-- [ ] iPad Pro 2
-
-- [ ] iPad Pro 3
-
-- [ ] iPad Pro 4
-
-- [ ] iPad Pro 5
+* - [ ] iPad 9
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] Apple Newton
+* - [ ] iPad Air 1
 
-- [ ] 3D Touch
+* - [ ] iPad Air 2
 
-- [ ] Tim Cook
+* - [ ] iPad Air 3
 
-- [ ] Apple Inc
+* - [ ] iPad Air 4
 
-- [ ] Apple California Campus
+// For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [x] Apple Campus
+* - [ ] iPad Mini 1
 
-- [ ] History of Apple Inc
+* - [ ] iPad Mini 2
 
-- [ ] Apple Slang
+* - [ ] iPad Mini 3
 
-- [ ] Macintosh
+* - [ ] iPad Mini 4
 
-- [ ] iPhoneOS version history
+* - [ ] iPad Mini 5
 
-- [ ] iOS version history
+* - [ ] iPad Mini 6
 
-- [ ] iPadOS version history
+// For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] Apple and privacy (1976-2013)
+* - [ ] iPad Pro 1
 
-- [ ] Apple and privacy (2013-2021)
+* - [ ] iPad Pro 2
 
-- [ ] Apple and privacy (2021-present)
+* - [ ] iPad Pro 3
 
-- [x] Notable Apple advertisements
+* - [ ] iPad Pro 4
 
-- [x] 1984 (Apple Ad)
+* - [ ] iPad Pro 5
 
-- [ ] Kernel Panic (MacOS)
+// For hardware, make sure to list the device specifications as well in detail, they are important
 
-- [ ] Kernel Panic (Linux)
+* - [ ] Apple Newton
 
-- [ ] Apple Maps
+* - [ ] 3D Touch
 
-- [ ] Apple Passport
+* - [ ] Tim Cook
 
-- [ ] Apple Clock
+* - [ ] Apple Inc
 
-- [ ] Apple Calculator
+* - [ ] Apple California Campus
 
-- [ ] Apple Notes
+* - [x] Apple Campus
 
-- [ ] Apple Pages
+* - [ ] History of Apple Inc
 
-- [ ] Apple TV (Streaming service)
+* - [ ] Apple Slang
 
-- [ ] tvOS 9
+* - [ ] Macintosh
 
-- [ ] tvOS 10
+* - [ ] iPhoneOS version history
 
-- [ ] tvOS 11
+* - [ ] iOS version history
 
-- [ ] tvOS 12
+* - [ ] iPadOS version history
 
-- [ ] tvOS 13
+* - [ ] Apple and privacy (1976-2013)
 
-- [ ] tvOS 14
+* - [ ] Apple and privacy (2013-2021)
 
-- [ ] tvOS 15
+* - [ ] Apple and privacy (2021-present)
 
-- [ ] tvOS version history
+* - [x] Notable Apple advertisements
 
-- [x] 1976
+* - [x] 1984 (Apple Ad)
 
-- [ ] 1977
+* - [ ] Kernel Panic (MacOS)
 
-- [ ] 1978
+* - [ ] Kernel Panic (Linux)
 
-- [ ] 1979
+* - [ ] Apple Maps
 
-- [ ] 1980
+* - [ ] Apple Passport
 
-- [ ] 1981
+* - [ ] Apple Clock
 
-- [ ] 1982
+* - [ ] Apple Calculator
 
-- [ ] 1983
+* - [ ] Apple Notes
 
-- [x] 1984
+* - [ ] Apple Pages
 
-- [ ] 1985
+* - [ ] Apple TV (Streaming service)
 
-- [ ] 1986
+* - [ ] tvOS 9
 
-- [ ] 1987
+* - [ ] tvOS 10
 
-- [ ] 1988
+* - [ ] tvOS 11
 
-- [ ] 1989
+* - [ ] tvOS 12
 
-- [ ] 1990
+* - [ ] tvOS 13
 
-- [ ] 1991
+* - [ ] tvOS 14
 
-- [ ] 1992
+* - [ ] tvOS 15
 
-- [ ] 1993
+* - [ ] tvOS version history
 
-- [ ] 1994
+* - [x] 1976
 
-- [ ] 1995
+* - [ ] 1977
 
-- [ ] 1996
+* - [ ] 1978
 
-- [ ] 1997
+* - [ ] 1979
 
-- [ ] 1998
+* - [ ] 1980
 
-- [ ] 1999
+* - [ ] 1981
 
-- [ ] 2000
+* - [ ] 1982
 
-- [ ] 2001
+* - [ ] 1983
 
-- [ ] 2002
+* - [x] 1984
 
-- [ ] 2003
+* - [ ] 1985
 
-- [ ] 2004
+* - [ ] 1986
 
-- [ ] 2005
+* - [ ] 1987
 
-- [ ] 2006
+* - [ ] 1988
 
-- [ ] 2007
+* - [ ] 1989
 
-- [ ] 2008
+* - [ ] 1990
 
-- [ ] 2009
+* - [ ] 1991
 
-- [ ] 2010
+* - [ ] 1992
 
-- [ ] 2011
+* - [ ] 1993
 
-- [ ] 2012
+* - [ ] 1994
 
-- [ ] 2013
+* - [ ] 1995
 
-- [ ] 2014
+* - [ ] 1996
 
-- [ ] 2015
+* - [ ] 1997
 
-- [ ] 2016
+* - [ ] 1998
 
-- [ ] 2017
+* - [ ] 1999
 
-- [ ] 2018
+* - [ ] 2000
 
-- [ ] 2019
+* - [ ] 2001
 
-- [ ] 2020
+* - [ ] 2002
 
-- [ ] 2021
+* - [ ] 2003
 
-- [x] Macintosh 128K
+* - [ ] 2004
 
-- [ ] NeXTstep
+* - [ ] 2005
 
-- [ ] Darwin (operating system)
+* - [ ] 2006
 
-- [ ] Apple Pencil
+* - [ ] 2007
 
-- [ ] Bill Gates
+* - [ ] 2008
 
-- [ ] Apple Logo history
+* - [ ] 2009
 
-- [ ] Think different
+* - [ ] 2010
 
-- [ ] Ronald Wayne
+* - [ ] 2011
 
-- [x] 1984 (Dystopian Novel)
+* - [ ] 2012
 
-- [ ] MacWrite
+* - [ ] 2013
 
-- [ ] MacPaint
+* - [ ] 2014
 
-- [ ] MacDraw
+* - [ ] 2015
 
-- [ ] Apple Store
+* - [ ] 2016
 
-- [x] Apple Park
+* - [ ] 2017
 
-- [ ] Macquarium
+* - [ ] 2018
 
-- [ ] Claris
+* - [ ] 2019
 
-- [ ] Apple cult
+* - [ ] 2020
 
-- [ ] iTunes
+* - [ ] 2021
 
-- [ ] Dogcow
+* - [x] Macintosh 128K
 
-- [ ] iOS SDK
+* - [ ] NeXTstep
 
-- [ ] The 300 page iPhone bill
+* - [ ] Darwin (operating system)
 
-- [ ] Apple Books
+* - [ ] Apple Pencil
 
-- [ ] iBooks
+* - [ ] Bill Gates
 
-- [ ] Final Cut Pro
+* - [ ] Apple Logo history
 
-- [ ] Apple Classroom
+* - [ ] Think different
 
-- [ ] XCode
+* - [ ] Ronald Wayne
 
-- [ ] iMovie
+* - [x] 1984 (Dystopian Novel)
 
-- [ ] GarageBand
+* - [ ] MacWrite
 
-- [ ] FaceTime
+* - [ ] MacPaint
 
-- [ ] Apple Clips
+* - [ ] MacDraw
 
-- [ ] Apple TextEdit
+* - [ ] Apple Store
 
-- [ ] Apple Fitness
+* - [x] Apple Park
 
-- [ ] Game Center
+* - [ ] Macquarium
 
-- [ ] Siri
+* - [ ] Claris
 
-- [ ] Shazam
+* - [ ] Apple cult
 
-- [ ] Apple Control Center
+* - [ ] iTunes
 
-- [ ] iPhoto
+* - [ ] Dogcow
 
-- [ ] iMessage
+* - [ ] iOS SDK
 
-**Current completion status (as of 2021 Friday, September 17th at 11:00 pm):** `?%`
+* - [ ] The 300 page iPhone bill
+
+* - [ ] Apple Books
+
+* - [ ] iBooks
+
+* - [ ] Final Cut Pro
+
+* - [ ] Apple Classroom
+
+* - [ ] XCode
+
+* - [ ] iMovie
+
+* - [ ] GarageBand
+
+* - [ ] FaceTime
+
+* - [ ] Apple Clips
+
+* - [ ] Apple TextEdit
+
+* - [ ] Apple Fitness
+
+* - [ ] Game Center
+
+* - [ ] Siri
+
+* - [ ] Shazam
+
+* - [ ] Apple Control Center
+
+* - [ ] iPhoto
+
+* - [ ] iMessage
+
+* - [ ] Metal (API)
+
+* - [ ] Apple Lisa
+
+* - [ ] LisaOS
+
+* - [ ] Xenix
+
+* - [ ] Apple II plus
+
+* - [ ] Apple II
+
+* - [ ] Apple I
+
+* - [ ] Macintosh 512K
+
+* - [ ] Macintosh 512Ke
+
+* - [ ] Macintosh Plus (computer)
+
+* - [ ] Macintosh Plus (vaporwave) { Attempts to play the song on an Apple Plus, YouTube removal, theme, surrealism, comments }
+
+* - [ ] Copland
+
+* - [ ] Mac OS X Server
+
+* - [ ] Macintosh SE
+
+* - [ ] Macintosh SE/30
+
+* - [ ] Macintosh Classic
+
+* - [ ] Macintosh Classic II
+
+* - [ ] Macintosh Color Classic
+
+* - [ ] Macintosh LC 500 Series
+
+* - [ ] Power Macintosh 5200 LC
+
+* - [ ] Macintosh LC 550
+
+* - [ ] Macintosh LC 575
+
+* - [ ] Macintosh Color Classic II
+
+* - [ ] Power Macintosh 5260
+
+* - [ ] Power Macintosh 5400
+
+* - [ ] Power Macintosh 5500
+
+* - [ ] Twentieth Anniversary Macintosh
+
+* - [ ] Power Macintosh G3
+
+* - [ ] iMac G3
+
+* - [ ] Power Mac G4
+
+* - [ ] Power Mac G4 Cube
+
+* - [ ] Power Mac G5
+
+* - [ ] Apple Animoji
+
+* - [ ] Apple AR
+
+* - [ ] Mac OS X Version history
+
+* - [ ] Classic Mac OS version history
+
+* - [ ] Cydia
+
+* - [ ] iPodLinux
+
+* - [ ] YouTube on iOS
+
+* - [ ] Shot on iPhone
+
+**Total entries:** `336` **Completed:** `47` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `13.99%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+
+I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
+
+***
+
+## Needs update
+
+> - [ ] All articles that don't have a article info footer need to be updated
+
+> - [ ] Several articles need to be updated to include WacOS info alongside Apple info
+
+> - [ ] All year articles need lots of info on dates of events
+
+> - [ ] Hardware articles need more info
+
+> - [ ] Homepage needs an update to include graphics, improved links, and better info on the Wikis purpose and guidelines. - 2021 September 18th
+
+**Total entries:** `5` **Completed:** `0`
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `00.00%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+
+***
+
+## Development notes
+
+These are the development notes for this page.
+
+### Revision errors
+
+Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
+
+I have stopped this naming scheme, it is too confusing. - As of revision 10, or revision X
+
+### Obsession
+
+I admit, I have become a bit too obsessed with Apple recently in my research, despite owning no Apple products or software that is still in use. I feel it is important to be enthusiastic if I am going to talk about and research something. I just enjoy writing this Wiki in my free time. I hope others can too someday, once I figure out how to make Wiki editing more friendly and less subject to abuse (I don't want some random person to come in, take everything out and write something bad) - 2021 Friday September 17th
+
+### Piling on
+
+I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list. - 2021 September 18th
 
 ***
 
@@ -619,24 +743,18 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `10 (2021, Friday, September 17th at 11:00 pm)`
+**Page version:** `11 (2021, Friday, September 17th at 3:40 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Line count (including blank lines and compiler line):** `643`
+**Line count (including blank lines and compiler line):** `761`
 
 **Majority language:** `English (US) / Markdown`
 
-**Minority languages:** `Swift, AppleScript`
+**Minority languages:** `English (US) / Swift, AppleScript`
 
-**Current revision:** `10 (2021, Friday, September 17th at 11:00 pm)`
+**Current revision:** `11 (2021, Friday, September 17th at 3:40 pm)`
 
-**Development notes**
-
-Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
-
-I have stopped this naming scheme, it is too confusing. - As of revision 10, or revision X
-
-I admit, I have become a bit too obsessed with Apple recently in my research, despite owning no Apple products or software that is still in use. I feel it is important to be enthusiastic if I am going to talk about and research something. I just enjoy writing this Wiki in my free time. I hope others can too someday, once I figure out how to make Wiki editing more friendly and less subject to abuse (I don't want some random person to come in, take everything out and write something bad) - 2021 Friday September 17th
+# End of page
 
 ***
