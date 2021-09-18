@@ -29,19 +29,13 @@ This section needs improvement.
 
 ## Top sources
 
-[RosettaCode](http://rosettacode.org/wiki/Rosetta_Code/)
-
-[Wikipedia](https://www.wikipedia.org/)
-
-[Apple](https://www.apple.com/)
-
-[GitHub](https://github.com/)
+( [(RosettaCode)](http://rosettacode.org/wiki/Rosetta_Code/) | [(Wikipedia)](https://www.wikipedia.org/) | [(Apple)](https://www.apple.com/) | [(GitHub)](https://github.com/) )
 
 ***
 
 WacOS project - Project Wiki
 
-Sidebar version: `1 (Tuesday, 2021 September 14th at 6:31 pm)`
+Sidebar version: `2 (Saturday, 2021 September 18th at 3:46 pm)`
 
 ### End of sidebar
 
