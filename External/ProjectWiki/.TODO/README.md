@@ -1,7 +1,7 @@
 
 ***
 
-# Articles to write (WacOS)
+# Articles to write (WacOS Wiki)
 
 I have recently noted the importance of the project Wiki, and I want to improve this projects Wiki. Here are the articles I plan to write:
 
@@ -193,7 +193,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] iPhotos
 
-- [ ] iCon (book)
+- [x] iCon (book)
 
 - [ ] Apple System 1
 
@@ -253,7 +253,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [x] Growl (software) <!-- mention Git repo and website) !-->
 
-- [ ] Quicktime
+- [x] Quicktime
 
 - [ ] DMG
 
@@ -385,6 +385,8 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] Apple California Campus
 
+- [x] Apple Campus
+
 - [ ] History of Apple Inc
 
 - [ ] Apple Slang
@@ -403,9 +405,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] Apple and privacy (2021-present)
 
-- [ ] Notable Apple advertisements
+- [x] Notable Apple advertisements
 
-- [ ] 1984 (Apple Ad)
+- [x] 1984 (Apple Ad)
 
 - [ ] Kernel Panic (MacOS)
 
@@ -441,7 +443,129 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] tvOS version history
 
-**Current completion status (as of 2021 Wednesday, September 15th at 11:36 pm):** `?%`
+- [x] 1976
+
+- [ ] 1977
+
+- [ ] 1978
+
+- [ ] 1979
+
+- [ ] 1980
+
+- [ ] 1981
+
+- [ ] 1982
+
+- [ ] 1983
+
+- [x] 1984
+
+- [ ] 1985
+
+- [ ] 1986
+
+- [ ] 1987
+
+- [ ] 1988
+
+- [ ] 1989
+
+- [ ] 1990
+
+- [ ] 1991
+
+- [ ] 1992
+
+- [ ] 1993
+
+- [ ] 1994
+
+- [ ] 1995
+
+- [ ] 1996
+
+- [ ] 1997
+
+- [ ] 1998
+
+- [ ] 1999
+
+- [ ] 2000
+
+- [ ] 2001
+
+- [ ] 2002
+
+- [ ] 2003
+
+- [ ] 2004
+
+- [ ] 2005
+
+- [ ] 2006
+
+- [ ] 2007
+
+- [ ] 2008
+
+- [ ] 2009
+
+- [ ] 2010
+
+- [ ] 2011
+
+- [ ] 2012
+
+- [ ] 2013
+
+- [ ] 2014
+
+- [ ] 2015
+
+- [ ] 2016
+
+- [ ] 2017
+
+- [ ] 2018
+
+- [ ] 2019
+
+- [ ] 2020
+
+- [ ] 2021
+
+- [x] Macintosh 128K
+
+- [ ] NeXTstep
+
+- [ ] Darwin (operating system)
+
+- [ ] Apple Pencil
+
+- [ ] Bill Gates
+
+- [ ] Apple Logo history
+
+- [ ] Think different
+
+- [ ] Ronald Wayne
+
+- [x] 1984 (Dystopian Novel)
+
+- [ ] MacWrite
+
+- [ ] MacPaint
+
+- [ ] MacDraw
+
+- [ ] Apple Store
+
+- [x] Apple Park
+
+- [ ] Macquarium
+
+**Current completion status (as of 2021 Friday, September 17th at 11:36 pm):** `?%`
 
 ***
 
@@ -449,11 +573,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `7 (2021, Thursday, September 16th at 10:44 pm)`
+**Page version:** `8 (2021, Friday, September 17th at 10:19 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `7 (2021, Thursday, September 16th at 10:44 pm)`
+**Current revision:** `8 (2021, Friday, September 17th at 10:19 pm)`
 
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
 
