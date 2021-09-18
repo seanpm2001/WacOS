@@ -565,7 +565,53 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 - [ ] Macquarium
 
-**Current completion status (as of 2021 Friday, September 17th at 11:36 pm):** `?%`
+- [ ] Claris
+
+- [ ] Apple cult
+
+- [ ] iTunes
+
+- [ ] Dogcow
+
+- [ ] iOS SDK
+
+- [ ] The 300 page iPhone bill
+
+- [ ] Apple Books
+
+- [ ] iBooks
+
+- [ ] Final Cut Pro
+
+- [ ] Apple Classroom
+
+- [ ] XCode
+
+- [ ] iMovie
+
+- [ ] GarageBand
+
+- [ ] FaceTime
+
+- [ ] Apple Clips
+
+- [ ] Apple TextEdit
+
+- [ ] Apple Fitness
+
+- [ ] Game Center
+
+- [ ] Siri
+
+- [ ] Shazam
+
+- [ ] Apple Control Center
+
+- [ ] iPhoto
+
+- [ ] iMessage
+
+**Current completion status (as of 2021 Friday, September 17th at 11:00 pm):** `?%`
 
 ***
 
@@ -573,12 +619,24 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `8 (2021, Friday, September 17th at 10:19 pm)`
+**Page version:** `10 (2021, Friday, September 17th at 11:00 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Current revision:** `8 (2021, Friday, September 17th at 10:19 pm)`
+**Line count (including blank lines and compiler line):** `643`
+
+**Majority language:** `English (US) / Markdown`
+
+**Minority languages:** `Swift, AppleScript`
+
+**Current revision:** `10 (2021, Friday, September 17th at 11:00 pm)`
+
+**Development notes**
 
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
+
+I have stopped this naming scheme, it is too confusing. - As of revision 10, or revision X
+
+I admit, I have become a bit too obsessed with Apple recently in my research, despite owning no Apple products or software that is still in use. I feel it is important to be enthusiastic if I am going to talk about and research something. I just enjoy writing this Wiki in my free time. I hope others can too someday, once I figure out how to make Wiki editing more friendly and less subject to abuse (I don't want some random person to come in, take everything out and write something bad) - 2021 Friday September 17th
 
 ***
