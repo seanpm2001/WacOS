@@ -257,7 +257,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Quicktime
 
-* - [ ] DMG
+* - [x] DMG
 
 * - [ ] IPA
 
@@ -693,23 +693,37 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Shot on iPhone
 
-* - [ ] ZFS
+* - [x] ZFS
 
-* - [ ] OpenZFS
+* - [x] OpenZFS
 
-* - [ ] HFS
+* - [x] HFS
 
-* - [ ] HFS+
+* - [x] HFS+
 
-* - [ ] APFS
+* - [x] APFS
 
-* - [ ] EXT4
+* - [x] EXT4
 
-* - [ ] BTRFS
+* - [x] BTRFS
 
-**Total entries:** `343` **Completed:** `50` (as the footer, homepage, and sidebar are counted)
+* - [ ] Find my
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `14.58%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] Find my iPhone
+
+* - [ ] Find my friends
+
+* - [ ] Find my Device
+
+* - [ ] PRISM (Surveillance program)
+
+* - [x] 2014 iCloud celebrity photo leak
+
+* - [ ] Boston Marathon Bombing (2013) { In relation to the FBI breaking the encryption of the suspects iPhone without Apples help, 3 years after the bombing }
+
+**Total entries:** `350` **Completed:** `58` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `16.57%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -727,9 +741,11 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 > - [ ] Homepage needs an update to include graphics, improved links, and better info on the Wikis purpose and guidelines. - 2021 September 18th
 
-**Total entries:** `5` **Completed:** `0`
+> - [ ] I have noted that I made a research error with the ElementaryOS article, the developers claim they don't want to be associated with MacOS or be a MacOS article, but the developers still want to be an alternative to MacOS. There will need to be a correction
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `00.00%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+**Total entries:** `6` **Completed:** `0`
+
+**Current completion status (as of 2021 Saturday, September 18th at 10:28 pm):** `00.00%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 ***
 
@@ -771,17 +787,17 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `12 (2021, Friday, September 17th at 6:25 pm)`
+**Page version:** `13 (2021, Friday, September 17th at 10:29 pm)`
 
-**First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
+**First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `789`
+**Line count (including blank lines and compiler line):** `805`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript`
 
-**Current revision:** `12 (2021, Friday, September 17th at 6:25 pm)`
+**Current revision:** `13 (2021, Friday, September 17th at 10:29 pm)`
 
 # End of page
 
