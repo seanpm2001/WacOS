@@ -149,11 +149,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
 
-* - [ ] iPhoneOS_1
+* - [x] iPhoneOS_1
 
-* - [ ] iPhoneOS_2
+* - [x] iPhoneOS_2
 
-* - [ ] iPhoneOS_3
+* - [x] iPhoneOS_3
 
 * - [ ] iOS_4
 
@@ -395,7 +395,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Macintosh
 
-* - [ ] iPhoneOS version history
+* - [x] iPhoneOS version history
 
 * - [ ] iOS version history
 
@@ -577,7 +577,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iOS SDK
 
-* - [ ] The 300 page iPhone bill
+* - [x] The 300 page iPhone bill
 
 * - [ ] Apple Books
 
@@ -693,9 +693,23 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Shot on iPhone
 
-**Total entries:** `336` **Completed:** `47` (as the footer, homepage, and sidebar are counted)
+* - [ ] ZFS
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `13.99%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] OpenZFS
+
+* - [ ] HFS
+
+* - [ ] HFS+
+
+* - [ ] APFS
+
+* - [ ] EXT4
+
+* - [ ] BTRFS
+
+**Total entries:** `343` **Completed:** `50` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `14.58%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -727,6 +741,20 @@ These are the development notes for this page.
 
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
 
+Due to this error and suddenly stopping the naming scheme, I am going to clarify what archived revision means what, until the problem can be reversed:
+
+Version 4 is version 5
+
+Version 5 is version 6
+
+Version 6 is version 7
+
+Version 7 is version 8
+
+Version 8 is version 9
+
+Version 9 is version 4
+
 I have stopped this naming scheme, it is too confusing. - As of revision 10, or revision X
 
 ### Obsession
@@ -743,17 +771,17 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `11 (2021, Friday, September 17th at 3:40 pm)`
+**Page version:** `12 (2021, Friday, September 17th at 6:25 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 6:43 pm)`
 
-**Line count (including blank lines and compiler line):** `761`
+**Line count (including blank lines and compiler line):** `789`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript`
 
-**Current revision:** `11 (2021, Friday, September 17th at 3:40 pm)`
+**Current revision:** `12 (2021, Friday, September 17th at 6:25 pm)`
 
 # End of page
 
