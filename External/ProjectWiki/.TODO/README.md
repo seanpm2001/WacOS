@@ -75,9 +75,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Assembly
 
-* - [ ] Objective-C
+* - [x] Objective-C
 
-* - [ ] Objective-C++
+* - [x] Objective-C++
 
 * - [ ] VHDL
 
@@ -131,13 +131,13 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] DuckDuckGo_Browser
 
-* - [ ] Steve Jobs
+* - [x] Steve Jobs
 
 * - [ ] Steve Wozniak
 
 * - [ ] Dennis Ritchie
 
-* - [ ] YAML
+* - [x] YAML
 
 * - [ ] XML
 
@@ -259,7 +259,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] DMG
 
-* - [ ] IPA
+* - [x] IPA
 
 * - [ ] App Store
 
@@ -401,11 +401,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iPadOS version history
 
-* - [ ] Apple and privacy (1976-2013)
+* - [X] Apple and privacy (1976-2013)
 
-* - [ ] Apple and privacy (2013-2021)
+* - [X] Apple and privacy (2013-2021)
 
-* - [ ] Apple and privacy (2021-present)
+* - [ ] Apple and privacy (2021-yearX) - This article will have to wait until the next significant Apple privacy problem 
 
 * - [x] Notable Apple advertisements
 
@@ -495,7 +495,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] 2000
 
-* - [ ] 2001
+* - [x] 2001
 
 * - [ ] 2002
 
@@ -507,13 +507,13 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] 2006
 
-* - [ ] 2007
+* - [x] 2007
 
-* - [ ] 2008
+* - [x] 2008
 
-* - [ ] 2009
+* - [x] 2009
 
-* - [ ] 2010
+* - [x] 2010
 
 * - [ ] 2011
 
@@ -521,7 +521,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] 2013
 
-* - [ ] 2014
+* - [x] 2014
 
 * - [ ] 2015
 
@@ -573,7 +573,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iTunes
 
-* - [ ] Dogcow
+* - [x] Dogcow
 
 * - [ ] iOS SDK
 
@@ -715,15 +715,43 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Find my Device
 
-* - [ ] PRISM (Surveillance program)
+* - [x] PRISM (Surveillance program)
 
 * - [x] 2014 iCloud celebrity photo leak
 
 * - [ ] Boston Marathon Bombing (2013) { In relation to the FBI breaking the encryption of the suspects iPhone without Apples help, 3 years after the bombing }
 
-**Total entries:** `350` **Completed:** `58` (as the footer, homepage, and sidebar are counted)
+* - [x] iCloud 2021 privacy problems
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `16.57%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] iPhone Simulator
+
+* - [ ] NeXT
+
+* - [ ] LaserWriter
+
+* - [ ] LaserWriter version history
+
+* - [ ] Microsoft Office 1989-1994 for Mac
+
+* - [ ] Microsoft Office 98 Macintosh edition
+
+* - [ ] Microsoft Office 2001 for Mac
+
+* - [ ] Microsoft Office 2004
+
+* - [ ] Microsoft Office 2008
+
+* - [ ] Microsoft Office 2011
+
+* - [ ] Microsoft Office 2014
+
+* - [ ] Sad Mac
+
+* - [x] Squeak
+
+**Total entries:** `364` **Completed:** `75` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `20.06%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -787,17 +815,17 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `13 (2021, Friday, September 17th at 10:29 pm)`
+**Page version:** `14 (2021, Sunday, September 19th at 5:47 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `805`
+**Line count (including blank lines and compiler line):** `833`
 
 **Majority language:** `English (US) / Markdown`
 
-**Minority languages:** `English (US) / Swift, AppleScript`
+**Minority languages:** `English (US) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `13 (2021, Friday, September 17th at 10:29 pm)`
+**Current revision:** `14 (2021, Sunday, September 19th at 5:47 pm)`
 
 # End of page
 
