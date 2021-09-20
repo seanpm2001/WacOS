@@ -749,9 +749,27 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Squeak
 
-**Total entries:** `364` **Completed:** `75` (as the footer, homepage, and sidebar are counted)
+* - [x] .TEMPLATE_Year
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `20.06%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [x] !Collection_list_of_Templates
+
+* - [x] !Collection_list_of_Collections
+
+* - [x] !All_Rules
+
+* - [ ] Apple website
+
+* - [ ] Macintosh (Apple fruit)
+
+* - [ ] Apple (fruit)
+
+* - [ ] MacOS startup sound
+
+* - [ ] MacOS crash sound
+
+**Total entries:** `373` **Completed:** `79` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `21.18%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -815,17 +833,17 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `14 (2021, Sunday, September 19th at 5:47 pm)`
+**Page version:** `15 (2021, Sunday, September 19th at 10:34 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `833`
+**Line count (including blank lines and compiler line):** `851`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `14 (2021, Sunday, September 19th at 5:47 pm)`
+**Current revision:** `15 (2021, Sunday, September 19th at 10:34 pm)`
 
 # End of page
 
