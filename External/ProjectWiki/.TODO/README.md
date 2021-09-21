@@ -69,11 +69,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] C++
 
-* - [ ] C
+* - [x] C
 
 * - [ ] Motorola S-RECORD
-
-* - [ ] Assembly
 
 * - [x] Objective-C
 
@@ -155,7 +153,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iPhoneOS_3
 
-* - [ ] iOS_4
+* - [x] iOS_4
 
 * - [ ] iOS_5
 
@@ -535,7 +533,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] 2020
 
-* - [ ] 2021
+* - [x] 2021
 
 * - [x] Macintosh 128K
 
@@ -767,13 +765,121 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] MacOS crash sound
 
-**Total entries:** `373` **Completed:** `79` (as the footer, homepage, and sidebar are counted)
+* - [ ] MacOS Startup
 
-**Current completion status (as of 2021 Saturday, September 18th at 3:40 pm):** `21.18%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] WacWrite
+
+* - [ ] WacPaint
+
+* - [ ] WacDraw
+
+* - [ ] WacOS Death LaserWriter (For classic WacOS)
+
+* - [ ] WacOS Super LaserWriter (For post-classic WacOS X, WOAHS-X, and modern WacOS)
+
+* - [ ] WacOS Super Death LaserWriter (for Quantum WacOS)
+
+* - [ ] Apple WorldWide Developers Conference 1987
+
+* - [ ] Apple WorldWide Developers Conference 1988
+
+* - [ ] Apple WorldWide Developers Conference 1989
+
+* - [ ] Apple WorldWide Developers Conference 1990
+
+* - [ ] Apple WorldWide Developers Conference 1991
+
+* - [ ] Apple WorldWide Developers Conference 1992
+
+* - [ ] Apple WorldWide Developers Conference 1993
+
+* - [ ] Apple WorldWide Developers Conference 1994
+
+* - [ ] Apple WorldWide Developers Conference 1995
+
+* - [ ] Apple WorldWide Developers Conference 1996
+
+* - [ ] Apple WorldWide Developers Conference 1997
+
+* - [ ] Apple WorldWide Developers Conference 1998
+
+* - [ ] Apple WorldWide Developers Conference 1999
+
+* - [ ] Apple WorldWide Developers Conference 2000
+
+* - [ ] Apple WorldWide Developers Conference 2001
+
+* - [ ] Apple WorldWide Developers Conference 2002
+
+* - [ ] Apple WorldWide Developers Conference 2003
+
+* - [ ] Apple WorldWide Developers Conference 2004
+
+* - [ ] Apple WorldWide Developers Conference 2005
+
+* - [ ] Apple WorldWide Developers Conference 2006
+
+* - [ ] Apple WorldWide Developers Conference 2007
+
+* - [ ] Apple WorldWide Developers Conference 2008
+
+* - [ ] Apple WorldWide Developers Conference 2009
+
+* - [ ] Apple WorldWide Developers Conference 2010
+
+* - [ ] Apple WorldWide Developers Conference 2011
+
+* - [ ] Apple WorldWide Developers Conference 2012
+
+* - [ ] Apple WorldWide Developers Conference 2013
+
+* - [ ] Apple WorldWide Developers Conference 2014
+
+* - [ ] Apple WorldWide Developers Conference 2015
+
+* - [ ] Apple WorldWide Developers Conference 2016
+
+* - [ ] Apple WorldWide Developers Conference 2017
+
+* - [ ] Apple WorldWide Developers Conference 2018
+
+* - [ ] Apple WorldWide Developers Conference 2019
+
+* - [ ] Apple WorldWide Developers Conference 2020
+
+* - [ ] Apple WorldWide Developers Conference 2021
+
+* - [ ] AntennaGate
+
+* - [ ] BendGate
+
+* - [ ] HairGate
+
+* - [ ] Pronunciation
+
+* - [ ] Jargon
+
+* - [ ] Glossary of Apple terms
+
+* - [ ] Glossary of WacOS terms
+
+* - [ ] Happy Mac
+
+**Total entries:** `422` **Completed:** `82` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Monday, September 20th at 3:40 pm):** `19.43%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
 ***
+
+<!-- Notes 2021 Monday September 20th
+https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png
+https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-screenshot.png
+
+Wacky OS Wack o's 
+Srart qriting sodtware f9r wacos
+!-->
 
 ## Needs update
 
@@ -789,7 +895,9 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 > - [ ] I have noted that I made a research error with the ElementaryOS article, the developers claim they don't want to be associated with MacOS or be a MacOS article, but the developers still want to be an alternative to MacOS. There will need to be a correction
 
-**Total entries:** `6` **Completed:** `0`
+> - [ ] Several Apple software products need WacOS equivalents - 2021 September 20th
+
+**Total entries:** `7` **Completed:** `0`
 
 **Current completion status (as of 2021 Saturday, September 18th at 10:28 pm):** `00.00%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
@@ -833,17 +941,17 @@ I just keep adding to this list, as I keep finding new entries. It seems for eve
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `15 (2021, Sunday, September 19th at 10:34 pm)`
+**Page version:** `16 (2021, Sunday, September 19th at 10:25 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `851`
+**Line count (including blank lines and compiler line):** `959`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `15 (2021, Sunday, September 19th at 10:34 pm)`
+**Current revision:** `16 (2021, Sunday, September 19th at 10:25 pm)`
 
 # End of page
 
