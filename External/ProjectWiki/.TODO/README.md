@@ -887,9 +887,173 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 <!-- Mac OS X 10.0 Server !-->
 
-**Total entries:** `432` **Completed:** `93` (as the footer, homepage, and sidebar are counted)
+* - [ ] List of classic Mac OS wallpapers
 
-**Current completion status (as of 2021 Monday, September 20th at 3:40 pm):** `21.53%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] List of modern Mac OS wallpapers
+
+* - [ ] List of iOS wallpapers
+
+* - [ ] List of iPadOS wallpapers
+
+* - [ ] AppleSearch
+
+* - [ ] SteveNote
+
+* - [ ] Apple DVD player
+
+* - [ ] ColorSync
+
+* - [ ] ColorSync version history
+
+* - [ ] Image capture (software)
+
+* - [ ] Apple Mail
+
+* - [ ] MacOS Terminal
+
+* - [ ] MacOS Dock
+
+* - [ ] Apple Address Book (prior to Contacts (Apple software))
+
+* - [ ] Contacts (Apple software)
+
+* - [ ] MacOS Dashboard
+
+* - [ ] MacOS Launchpad
+
+* - [ ] MacOS Time Machine
+
+* - [ ] InkWell
+
+* - [ ] Bonjour
+
+* - [ ] Apple Public Source License (give a copy of the license text in the article)
+
+* - [ ] FireWire
+
+* - [ ] Exposé (Mission Control)
+
+* - [ ] FontBook
+
+* - [ ] FileVault
+
+* - [ ] iChat
+
+* - [ ] iChat AV
+
+* - [ ] XServe
+
+* - [ ] Spotlight (software)
+
+* - [ ] MacOS Automator
+
+* - [ ] MacOS VoiceOver
+
+* - [ ] MobileMe
+
+* - [ ] MacOS Grapher
+
+* - [ ] Quartz Composor
+
+* - [ ] Apple AU Lab
+
+* - [ ] Back to my Mac
+
+* - [ ] BootCamp (software)
+
+* - [ ] MacOS Dictionary
+
+* - [ ] MacOS Front Row
+
+* - [ ] iCal
+
+* - [ ] MacOS Parental controls
+
+* - [ ] Apple Photo Booth
+
+* - [ ] Apple Podcast Capture
+
+* - [ ] Apple Spaces
+
+* - [ ] Apple Universal Access
+
+* - [ ] Apple Airdrop
+
+* - [ ] Apple Push Notification Service
+
+* - [ ] Apple Emojis (see also: Emojipedia, etc.)
+
+* - [ ] Apple Autosave
+
+* - [ ] Boot Camp Assistant
+
+* - [ ] Apple Stickies
+
+* - [ ] Apple KeyChain
+
+* - [ ] iWork
+
+* - [ ] Apple Numbers (software)
+
+* - [ ] Apple Grab
+
+* - [ ] MacOS Disk Utility
+
+* - [ ] MacOS System information (software)
+
+* - [ ] MacOS Digital Color Meter
+
+* - [ ] Apple Calculator
+
+* - [ ] AirPods
+
+* - [ ] AirPod Utility
+
+* - [ ] Apple Archive Utility
+
+* - [ ] Apple Chess
+
+* - [ ] Apple Console
+
+* - [ ] App Store featured apps 2008
+
+* - [ ] App Store featured apps 2009
+
+* - [ ] App Store featured apps 2010
+
+* - [ ] App Store featured apps 2011
+
+* - [ ] App Store featured apps 2012 (did they continue featuring apps after this year?)
+
+// **Mention featured songs of the week, iTunes**
+
+* - [ ] Apple Reminders
+
+* - [ ] Apple Script Editor
+
+* - [ ] Apple Night Shift
+
+* - [ ] Apple Gatekeeper
+
+* - [ ] Apple Bluetooth file exchange
+
+* - [ ] Apple Migration Assistant
+
+* - [ ] Apple News
+
+* - [ ] About this Mac
+
+* - [ ] Apple Look Around
+
+* - [ ] Apple Screen Sharing
+
+* - [ ] MacOS Shortcuts
+
+* - [ ] Apple TestFlight
+
+**Total entries:** `513` **Completed:** `93` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Tuesday, September 21st at 10:31 pm):** `18.13%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1004,17 +1168,17 @@ March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `17 (2021, Tuesday, September 21st at 9:04 pm)`
+**Page version:** `18 (2021, Tuesday, September 21st at 10:29 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,022`
+**Line count (including blank lines and compiler line):** `1,186`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `17 (2021, Tuesday, September 21st at 9:04 pm)`
+**Current revision:** `18 (2021, Tuesday, September 21st at 10:29 pm)`
 
 # End of page
 
