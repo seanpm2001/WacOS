@@ -183,7 +183,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] WebKit
 
-* - [ ] Windows 2.0
+* - [x] Windows 2.0 litigation
 
 * - [ ] Apple Litigation
 
@@ -213,9 +213,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Mac OS 9
 
-* - [ ] Mac OS X Public Beta
+* - [x] Mac OS X Public Beta
 
-* - [ ] Mac OS X 10.0 (Cheetah)
+* - [x] Mac OS X 10.0 (Cheetah)
 
 * - [ ] Mac OS X 10.1 (Puma)
 
@@ -553,9 +553,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] 1984 (Dystopian Novel)
 
-* - [ ] MacWrite
+* - [x] MacWrite
 
-* - [ ] MacPaint
+* - [x] MacPaint
 
 * - [ ] MacDraw
 
@@ -595,7 +595,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Apple Clips
 
-* - [ ] Apple TextEdit
+* - [ ] TextEdit
 
 * - [ ] Apple Fitness
 
@@ -635,7 +635,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Copland
 
-* - [ ] Mac OS X Server
+* - [x] Mac OS X Server 1.0
 
 * - [ ] Macintosh SE
 
@@ -743,7 +743,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Microsoft Office 2014
 
-* - [ ] Sad Mac
+* - [x] Sad Mac
 
 * - [x] Squeak
 
@@ -863,11 +863,33 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Glossary of WacOS terms
 
-* - [ ] Happy Mac
+* - [x] Happy Mac
 
-**Total entries:** `422` **Completed:** `82` (as the footer, homepage, and sidebar are counted)
+* - [ ] Platinum
 
-**Current completion status (as of 2021 Monday, September 20th at 3:40 pm):** `19.43%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] Preview (software)
+
+* - [ ] Darwin version history
+
+* - [ ] Quartz
+
+* - [ ] Rhapsody
+
+* - [ ] PowerPC
+
+* - [ ] Sherlock
+
+* - [ ] OpenGL
+
+* - [ ] QuickDraw
+
+* - [ ] MacOS Server
+
+<!-- Mac OS X 10.0 Server !-->
+
+**Total entries:** `432` **Completed:** `93` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Monday, September 20th at 3:40 pm):** `21.53%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -935,23 +957,64 @@ I admit, I have become a bit too obsessed with Apple recently in my research, de
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list. - 2021 September 18th
 
+<!--
+Year article notes
+
+# 1984
+
+1984 MacPaint 1.0 released
+1984 MacWrite 1.0 released
+1984 Macintosh 128K released
+1984 1984 Apple ad released
+1984 System 1 released
+MacPaint {
+1.0 	January 24, 1984 	Initial release with System Software 1.0
+1.3 	May 1984 	Released with System Software 1.1
+1.4 	September 1984 	Released with Macintosh 512K
+1.5 	April 1985 	Released with System Software 2.0
+2.0 	January 1988[28] 	Last release
+}
+
+# 1987
+
+1987 MacPaint 2.0 released
+
+# 1988
+
+March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
+
+# 1995
+
+1995 MacWrite development ceased
+
+# 1998
+
+1998 MacWrite discontinued
+1998 MacPaint discontinued
+
+# 2010
+2010 MacPaint source code released
+
+
+!-->
+
 ***
 
 ## Page info
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `16 (2021, Sunday, September 19th at 10:25 pm)`
+**Page version:** `17 (2021, Tuesday, September 21st at 9:04 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `959`
+**Line count (including blank lines and compiler line):** `1,022`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `16 (2021, Sunday, September 19th at 10:25 pm)`
+**Current revision:** `17 (2021, Tuesday, September 21st at 9:04 pm)`
 
 # End of page
 
