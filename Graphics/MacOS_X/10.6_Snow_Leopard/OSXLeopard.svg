@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="185.875"
+   height="224.06181"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3617">
+      <stop
+         id="stop3619"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3621"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3607">
+      <stop
+         id="stop3609"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3611"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="95.625"
+       y1="1.71875"
+       x2="133.6102"
+       y2="117.41784"
+       id="linearGradient3613"
+       xlink:href="#linearGradient3607"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-357.537,-229.885)" />
+    <linearGradient
+       x1="74.246208"
+       y1="52.102516"
+       x2="208.06618"
+       y2="340.48828"
+       id="linearGradient3623"
+       xlink:href="#linearGradient3617"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     transform="translate(354.84912,227.44759)"
+     id="layer1">
+    <path
+       d="m -302.34912,-227.44759 -52.5,0 48.75,79.625 c 0,0 27.49553,-18.75 35.53125,-22.5 l -31.78125,-57.125 z m 85.34375,0 -25.1875,41.78125 c 0,0 44.66518,-20.5491 59.84375,-20.90625 l 13.375,-20.875 -48.03125,0 z"
+       id="path2830"
+       style="fill:url(#linearGradient3613);fill-opacity:1;stroke:none" />
+    <path
+       d="m 51.11129,81.160231 c 0,0 33.595997,-21.715128 35.54054,-22.510623 L 95.371027,74.148819 115.7702,42.555116 c 0,0 44.6126,-19.709146 59.37345,-20.151087 l -53.69806,89.575001 66.11448,113.84419 -45.96194,0 -45.961938,-76.19075 -44.724504,76.19075 -48.0832609,0 L 71.771338,112.68614 51.11129,81.160231 z"
+       transform="translate(-357.357,-229.209)"
+       id="path3615"
+       style="fill:url(#linearGradient3623);fill-opacity:1;stroke:none" />
+  </g>
+</svg>
