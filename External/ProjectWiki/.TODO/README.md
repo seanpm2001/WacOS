@@ -195,23 +195,23 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iCon (book)
 
-* - [ ] Apple System 1
+* - [x] Apple System 1
 
-* - [ ] Apple System 2
+* - [x] Apple System 2
 
-* - [ ] Apple System 3
+* - [x] Apple System 3
 
-* - [ ] Apple System 4
+* - [x] Apple System 4
 
-* - [ ] Apple System 5
+* - [x] Apple System 5
 
-* - [ ] Apple System 6
+* - [x] Apple System 6
 
-* - [ ] Mac OS 7
+* - [x] Mac OS 7
 
-* - [ ] Mac OS 8
+* - [x] Mac OS 8
 
-* - [ ] Mac OS 9
+* - [x] Mac OS 9
 
 * - [x] Mac OS X Public Beta
 
@@ -231,11 +231,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] OS X 10.7 (Lion)
 
-* - [ ] OS X 10.8 (Mountain Lion)
+* - [x] OS X 10.8 (Mountain Lion)
 
-* - [ ] OS X 10.9 (Mavericks)
+* - [x] OS X 10.9 (Mavericks)
 
-* - [ ] OS X 10.10 (Yosemite)
+* - [x] OS X 10.10 (Yosemite)
 
 * - [ ] OS X 10.11 (El Capitan)
 
@@ -633,7 +633,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Macintosh Plus (vaporwave) { Attempts to play the song on an Apple Plus, YouTube removal, theme, surrealism, comments }
 
-* - [ ] Copland
+* - [x] Copland
 
 * - [x] Mac OS X Server 1.0
 
@@ -873,7 +873,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Quartz
 
-* - [ ] Rhapsody
+* - [x] Rhapsody
 
 * - [ ] PowerPC
 
@@ -927,7 +927,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Bonjour
 
-* - [ ] Apple Public Source License (give a copy of the license text in the article)
+* - [x] Apple Public Source License (give a copy of the license text in the article)
 
 * - [ ] FireWire
 
@@ -1071,19 +1071,25 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iOS Dock
 
-* - [ ] iPhoneOS Dock
+* - [x] iPhoneOS Dock
 
-* - [ ] iPhoneOS Wallpaper info
+* - [x] iPhoneOS Wallpaper info
 
 * - [ ] iPadOS Dock
 
 * - [ ] OPENSTEP
 
-* - [ ] !Redirects (A page of redirects, such as iPhoneOS 4, Mac OS X 10.7, Mac OS X 10.8, OS X 10.12, OS X 10.13, iPadOS 1, iPadOS 12, etc.)
+* - [x] !Redirects (A page of redirects, such as iPhoneOS 4, Mac OS X 10.7, Mac OS X 10.8, OS X 10.12, OS X 10.13, iPadOS 1, iPadOS 12, System 1-9, etc.)
 
-**Total entries:** `528` **Completed:** `100` (as the footer, homepage, and sidebar are counted)
+* - [ ] SheepShaver
 
-**Current completion status (as of 2021 Tuesday, September 21st at 10:31 pm):** `18.94%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [x] Taligent (company)
+
+* - [ ] Taligent OS
+
+**Total entries:** `531` **Completed:** `119` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Thursday, September 23rd at 4:30 pm):** `22.41%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1459,7 +1465,191 @@ Various bug fixes, Safari 5.1.7, adds Gatekeeper functionality. 	Mac OS X 10.7.5
 
 Mac OS X 10.7.5 Update (Combo)
 
+Mac OS X 10.8 releases (see dates)
+
+Version 	Build	Date 	OS name 	Notes 	Standalone download
+
+10.8 	12A269 (GM) 	July 25, 2012 	Darwin 12.0 	Original retail Mac App Store release 	
+
+10.8.1 	12B19 	August 23, 2012 	Darwin 12.1 	About OS X Mountain Lion v10.8.1 Update 	OS X v10.8.1 Individual update
+
+10.8.2 	12C54 	September 19, 2012 	Darwin 12.2 	About OS X Mountain Lion v10.8.2 Update 	OS X v10.8.2 Individual update
+
+OS X v10.8.2 Combo update
+
+12C60 	October 4, 2012 	About OS X Mountain Lion v10.8.2 Update
+
+(supplementary update described at the end)
+
+OS X v10.8.2 Supplemental Update 1.0
+
+12C2034 	October 23, 2012 	For Mac Mini (Late 2012) (Pulled)[
+
+12C3104 	November 29, 2012 	For Mac Mini (Late 2012) 	OS X v10.8.2 Supplemental Update 2.0
+
+# 2013
+
+10.8.3 	12D78 	March 14, 2013 	Darwin 12.3 	About OS X Mountain Lion v10.8.3 Update 	OS X v10.8.3 Individual update
+
+OS X v10.8.3 Combo update
+
+10.8.4 	12E55 	June 4, 2013 	Darwin 12.4 	About OS X Mountain Lion v10.8.4 Update 	OS X v10.8.4 Individual update
+
+OS X v10.8.4 Combo update
+
+12E3067 	June 10, 2013 	For MacBook Air (Mid 2013) 	
+
+12E4022 	September 25, 2013 	For iMac (Late 2013) 	
+
+10.8.5 	12F37 	September 12, 2013 	Darwin 12.5 	About the OS X Mountain Lion v10.8.5 Update 	OS X v10.8.5 Individual update
+
+OS X v10.8.5 Combo update
+
+12F45 	October 3, 2013 	About the OS X Mountain Lion v10.8.5 Supplemental Update 	OS X v10.8.5 Supplemental Update
+
+# 2015
+
+12F2501 	March 9, 2015 	About Security Update 2015-002 	Security Update 2015-002 Mountain Lion
+
+12F2518 	April 8, 2015 	About the security content of Security Update 2015-004 	Security Update 2015-004 Mountain Lion
+
+12F2542 	June 30, 2015 	About the security content of Security Update 2015-005 	Security Update 2015-005 Mountain Lion
+
+12F2560 	August 13, 2015 	About the security content of Security Update 2015-006 	Security Update 2015-006 Mountain Lion
+
+Note: Combo updates include all previous releases (ex: 10.8 to 10.8.3). Individual update is a smaller package size and can be used if currently using the previous release (ex: 10.8.2 to 10.8.3).
+
 11G63 	October 4, 2012 		
+
+OS X 10.9 Release history (dates)
+
+# 2013
+
+10.9 	13A603 (GM2) 	October 22, 2013 	Darwin 13.0 	Original Mac App Store release 	N/A
+
+10.9.1 	13B42 	December 16, 2013 	About the OS X Mavericks v10.9.1 Update 	OS X Mavericks 10.9.1 Individual update
+
+10.9.2 	13C64 	February 25, 2014 	Darwin 13.1 	About the OS X Mavericks v10.9.2 Update 	OS X Mavericks 10.9.2 Individual update
+
+OS X Mavericks 10.9.2 Combo update
+
+# 2014
+
+13C1021 	April 22, 2014 	About Security Update 2014-002 Mavericks 	Security Update 2014-002 Mavericks
+
+10.9.3 	13D65 	May 15, 2014 	Darwin 13.2 	About the OS X Mavericks v10.9.3 Update 	OS X Mavericks 10.9.3 Individual update
+
+OS X Mavericks 10.9.3 Combo update
+
+10.9.4 	13E28 	June 30, 2014 	Darwin 13.3 	About the OS X Mavericks v10.9.4 Update 	OS X Mavericks 10.9.4 Individual update
+
+OS X Mavericks 10.9.4 Combo update
+
+10.9.5 	13F34 	September 17, 2014 	Darwin 13.4 	About the OS X Mavericks v10.9.5 Update 	OS X Mavericks 10.9.5 Individual update
+
+OS X Mavericks 10.9.5 Combo update
+
+October 16, 2014 	About the security content of Security Update 2014-005 Mavericks 	Security Update 2014-005 Mavericks
+
+# 2015
+
+January 27, 2015 	About the security content of Security Update 2015-001 Mavericks 	Security Update 2015-001 Mavericks
+
+13F1066 	March 9, 2015 	About the security content of Security Update 2015-002 Mavericks 	Security Update 2015-002 Mavericks
+
+13F1077 	April 8, 2015 	About the security content of Security Update 2015-004 Mavericks 	Security Update 2015-004 Mavericks
+
+13F1096 	June 30, 2015 	About the security content of Security Update 2015-005 Mavericks 	Security Update 2015-005 Mavericks
+
+13F1112 	August 13, 2015 	About the security content of Security Update 2015-006 Mavericks 	Security Update 2015-006 Mavericks
+
+13F1134 	October 21, 2015 	About the security content of Security Update 2015-007 Mavericks 	Security Update 2015-007 Mavericks
+
+13F1507 	December 8, 2015 	About the security content of Security Update 2015-008 Mavericks 	Security Update 2015-008 Mavericks
+
+# 2016
+
+13F1603 	January 19, 2016 	About the security content of Security Update 2016-001 Mavericks 	Security Update 2016-001 Mavericks
+
+13F1712 	March 21, 2016 	About the security content of Security Update 2016-002 Mavericks 	Security Update 2016-002 Mavericks
+
+13F1808 	May 16, 2016 	About the security content of Security Update 2016-003 Mavericks 	Security Update 2016-003 Mavericks
+
+13F1911 	July 18, 2016 	About the security content of Security Update 2016-004 Mavericks 	Security Update 2016-004 Mavericks
+
+OS X 10.10 Yosemite releases (their dates)
+
+10.10 	14A389 	October 16, 2014 	Darwin 14.0 	Original Mac App Store release 	N/A
+
+10.10.1 	14B25 	November 17, 2014 	About the OS X Yosemite v10.10.1 Update 	OS X Yosemite 10.10.1 Individual update
+
+10.10.2 	14C109 	January 27, 2015 	Darwin 14.1 	About the OS X Yosemite v10.10.2 Update 	OS X Yosemite 10.10.2 Individual update
+
+OS X Yosemite 10.10.2 Combo update
+
+14C1510 	March 9, 2015 	About Security Update 2015-002 Yosemite 	Security Update 2015-002 Yosemite
+
+14C1514 	March 19, 2015 	About Security Update 2015-003 Yosemite 	Security Update 2015-003 Yosemite
+
+14C2043 	March 10, 2015 	Security Update 2015-003
+
+Shipped with Early 2015 MacBook Air – Forked build
+
+N/A
+
+14C2513 	March 20, 2015
+
+10.10.3 	14D131 	April 8, 2015 	Darwin 14.3 	About the OS X Yosemite v10.10.3 Update
+
+This release unified the previously forked build for the early 2015 MacBook Air 	OS X Yosemite 10.10.3 Individual update
+
+OS X Yosemite 10.10.3 Combo update
+
+# 2015
+
+14D136 	April 16, 2015 	Supplemental Update
+
+Fixes issue with video driver issue that may prevent Mac from starting up when running certain apps that capture video 	OS X Yosemite 10.10.3 Supplemental Update 1.0
+
+10.10.4 	14E46 	June 30, 2015 	Darwin 14.4 	About the OS X Yosemite v10.10.4 Update 	OS X Yosemite 10.10.4 Individual update
+
+OS X Yosemite 10.10.4 Combo update
+
+10.10.5 	14F27 	August 13, 2015 	Darwin 14.5 	About the OS X Yosemite v10.10.5 Update 	OS X Yosemite 10.10.5 Individual update
+
+OS X Yosemite 10.10.5 Combo update
+
+14F1021 	October 21, 2015 	About the security content of Security Update 2015-004 Yosemite 	Security Update 2015-004 Yosemite
+
+14F1505 	November 12, 2015 	About the security content of Security Update 2015-005 Yosemite 	Included in Security Update 2015-006 Yosemite
+
+14F1509 	December 11, 2015 	About the security content of Security Update 2015-006 Yosemite 	Security Update 2015-006 Yosemite
+
+# 2016
+
+14F1605 	January 19, 2016 	About the security content of Security Update 2016-001 Yosemite 	Security Update 2016-001 Yosemite
+
+14F1713 	March 21, 2016 	About the security content of Security Update 2016-002 Yosemite 	Security Update 2016-002 Yosemite
+
+14F1808 	May 18, 2016 	About the security content of Security Update 2016-003 Yosemite 	Security Update 2016-003 Yosemite
+
+14F1909 	July 18, 2016 	About the security content of Security Update 2016-004 Yosemite 	Security Update 2016-004 Yosemite
+
+14F1912 	September 1, 2016 	About the security content of Security Update 2016-005 Yosemite 	Included in Security Update 2016-006 Yosemite
+
+14F2009 	October 24, 2016 	About the security content of Security Update 2016-006 Yosemite 	Security Update 2016-006 Yosemite
+
+14F2109 	December 13, 2016 	About the security content of Security Update 2016-007 Yosemite 	Security Update 2016-007 Yosemite
+
+# 2017
+
+14F2315 	March 27, 2017 	About the security content of Security Update 2017-001 Yosemite 	Security Update 2017-001 Yosemite
+
+14F2411 	May 15, 2017 	About the security content of Security Update 2017-002 Yosemite 	Security Update 2017-002 Yosemite
+
+14F2511 	July 19, 2017 	About the security content of Security Update 2017-003 Yosemite 	Security Update 2017-003 Yosemite
+
+Apple campus moved to Apple Park on April 2017
 
 Litigation
 
@@ -1475,17 +1665,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `19 (2021, Wednesday, September 22nd at 6:21 pm)`
+**Page version:** `20 (2021, Thursday, September 23rd at 5:49 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,493`
+**Line count (including blank lines and compiler line):** `1,683`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `19 (2021, Wednesday, September 22nd at 6:21 pm)`
+**Current revision:** `20 (2021, Thursday, September 23rd at 5:49 pm)`
 
 # End of page
 
