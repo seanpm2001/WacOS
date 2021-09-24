@@ -681,7 +681,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Mac OS X Version history
 
-* - [ ] Classic Mac OS version history
+* - [x] Classic MacOS version history
 
 * - [ ] Cydia
 
@@ -1087,9 +1087,17 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Taligent OS
 
-**Total entries:** `531` **Completed:** `119` (as the footer, homepage, and sidebar are counted)
+* - [x] Seanpm2001 Apple experience
 
-**Current completion status (as of 2021 Thursday, September 23rd at 4:30 pm):** `22.41%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] OS X Version history
+
+* - [ ] Complete MacOS version history
+
+* - [ ] LisaOS version history
+
+**Total entries:** `535` **Completed:** `121` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Thursday, September 23rd at 9:53 pm):** `22.62%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1665,17 +1673,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `20 (2021, Thursday, September 23rd at 5:49 pm)`
+**Page version:** `21 (2021, Thursday, September 23rd at 9:53 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,683`
+**Line count (including blank lines and compiler line):** `1,691`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `20 (2021, Thursday, September 23rd at 5:49 pm)`
+**Current revision:** `21 (2021, Thursday, September 23rd at 9:53 pm)`
 
 # End of page
 
