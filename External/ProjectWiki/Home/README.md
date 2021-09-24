@@ -149,7 +149,7 @@ NOT LINKED
 
 [Internet Explorer for Mac](https://github.com/seanpm2001/WacOS/wiki/Internet_Explorer_for_Mac/)
 
-* [Full browser list](https://github.com/seanpm2001/WacOS/wiki/Browser_list/)
+* [Full browser list]((https://github.com/seanpm2001/WacOS/wiki/Browser_list/)
 
 ### Standards to follow
 
@@ -219,6 +219,8 @@ List is currently empty.
 
 ##### Classic
 
+[Classic MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Classic-MacOS-version-history/)
+
 [System 1](https://github.com/seanpm2001/WacOS/wiki/Apple-System-1)
 
 [System 2](https://github.com/seanpm2001/WacOS/wiki/Apple-System-2)
@@ -239,6 +241,8 @@ List is currently empty.
 
 ##### Mac OS X
 
+[Mac OS X version history](https://github.com/seanpm2001/WacOS/wiki/Mac-OS-X-version-history/)
+
 [Mac OS X 10.0 Public Beta](https://github.com/seanpm2001/WacOS/wiki/Mac-OS-X-Public-Beta/)
 
 [Mac OS X 10.0 (Cheetah)](https://github.com/seanpm2001/WacOS/wiki/Mac-OS-X-10-0-Cheetah/)
@@ -257,6 +261,8 @@ List is currently empty.
 
 ##### OS X
 
+[OS X version history](https://github.com/seanpm2001/WacOS/wiki/OS-X-version-history/)
+
 [OS X 10.7 (Lion)](https://github.com/seanpm2001/WacOS/wiki/OS-X-10-7-Lion/)
 
 [OS X 10.8 (Mountain Lion)](https://github.com/seanpm2001/WacOS/wiki/OS-X-10-8-Mountain-Lion/)
@@ -268,6 +274,8 @@ List is currently empty.
 [OS X 10.11 (El Capitan)](https://github.com/seanpm2001/WacOS/wiki/OS-X-10-11-El-Capitan/)
 
 ##### MacOS Modern
+
+[Complete MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Complete-MacOS-version-history/)
 
 [MacOS 10.12 (Sierra)](https://github.com/seanpm2001/WacOS/wiki/MacOS-10-12-Sierra/)
 
@@ -301,6 +309,8 @@ List is currently empty.
 
 #### Modern iOS
 
+[iOS version history](https://github.com/seanpm2001/WacOS/wiki/iOS-version-history/)
+
 [iOS 4](https://github.com/seanpm2001/WacOS/wiki/iOS-4/)
 
 [iOS 5](https://github.com/seanpm2001/WacOS/wiki/iOS-5/)
@@ -329,6 +339,8 @@ List is currently empty.
 
 _iPadOS is a fork of iOS._
 
+[iPadOS version history](https://github.com/seanpm2001/WacOS/wiki/iPadOS-version-history/)
+
 [iPadOS 13](https://github.com/seanpm2001/WacOS/wiki/iPadOS-13/)
 
 [iPadOS 14](https://github.com/seanpm2001/WacOS/wiki/iPadOS-14/)
@@ -348,6 +360,10 @@ _iPadOS is a fork of iOS._
 [NeXTSTEP](https://github.com/seanpm2001/WacOS/wiki/NeXTSTEP)
 
 [OPENSTEP](https://github.com/seanpm2001/WacOS/wiki/OPENSTEP)
+
+[Darwin](https://github.com/seanpm2001/WacOS/wiki/Darwin/)
+
+> [Darwin version history](https://github.com/seanpm2001/WacOS/wiki/Darwin-version-history/)
 
 ### Culture and humor
 
@@ -595,6 +611,8 @@ Apple was founded on 1976, April 1st.
 
 [Apple Public Source License](https://github.com/seanpm2001/WacOS/wiki/Apple-Public-Source-License)
 
+[Seanpm2001's Apple experience](https://github.com/seanpm2001/WacOS/wiki/Seanpm2001-Apple-experience/)
+
 ### Credits
 
 [Image Credits (Apple)](https://github.com/seanpm2001/WacOS/wiki/ImageCredits(Apple))
@@ -603,7 +621,7 @@ Apple was founded on 1976, April 1st.
 
 ## Article info
 
-**Wiki homepage version:** `6 (Thursday, 2021 September 23rd at 6:36 pm)`
+**Wiki homepage version:** `7 (Thursday, 2021 September 23rd at 9:49 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
@@ -613,6 +631,6 @@ Apple was founded on 1976, April 1st.
 
 **File type:** `Markdown document (*.md *.mkd *.markdown)`
 
-**Language:** `English (US)`
+**Language:** `English (US) / Markdown (.md)`
 
 ***
