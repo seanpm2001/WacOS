@@ -237,19 +237,19 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] OS X 10.10 (Yosemite)
 
-* - [ ] OS X 10.11 (El Capitan)
+* - [x] OS X 10.11 (El Capitan)
 
-* - [ ] MacOS 10.12 (Sierra)
+* - [x] MacOS 10.12 (Sierra)
 
-* - [ ] MacOS 10.13 (High Sierra)
+* - [x] MacOS 10.13 (High Sierra)
 
-* - [ ] MacOS 10.14 (Mojave)
+* - [x] MacOS 10.14 (Mojave)
 
-* - [ ] MacOS 10.15 (Catalina)
+* - [x] MacOS 10.15 (Catalina)
 
-* - [ ] MacOS 11.x (Big Sur)
+* - [x] MacOS 11.x (Big Sur)
 
-* - [ ] MacOS 12.x (Monterey)
+* - [x] MacOS 12.x (Monterey)
 
 * - [x] Growl (software) <!-- mention Git repo and website) !-->
 
@@ -679,7 +679,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Apple AR
 
-* - [ ] Mac OS X Version history
+* - [x] Mac OS X Version history
 
 * - [x] Classic MacOS version history
 
@@ -769,7 +769,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] WacWrite
 
-* - [ ] WacPaint
+* - [x] WacPaint
 
 * - [ ] WacDraw
 
@@ -1089,15 +1089,43 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Seanpm2001 Apple experience
 
-* - [ ] OS X Version history
+* - [x] OS X Version history
 
-* - [ ] Complete MacOS version history
+* - [x] Complete MacOS version history
 
 * - [ ] LisaOS version history
 
-**Total entries:** `535` **Completed:** `121` (as the footer, homepage, and sidebar are counted)
+* - [ ] Pinwheel of death
 
-**Current completion status (as of 2021 Thursday, September 23rd at 9:53 pm):** `22.62%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [ ] iOS
+
+* - [ ] MacOS
+
+* - [x] iPadOS
+
+* - [ ] Complete iOS version history
+
+* - [ ] System Integrity Protection
+
+* - [ ] List of Apple software
+
+* - [ ] List of MacOS programs by Apple
+
+* - [ ] List of iOS apps by Apple
+
+* - [ ] List of WacOS Apple equivalent software
+
+* - [ ] List of WacOS software
+
+* - [ ] NewtonOS
+
+* - [ ] NewtonScript
+
+* - [x] iPhoneOS
+
+**Total entries:** `547` **Completed:** `135` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Friday, September 24th at 6:25 pm):** `24.68%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1673,17 +1701,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `21 (2021, Thursday, September 23rd at 9:53 pm)`
+**Page version:** `22 (2021, Friday, September 24th at 6:25 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,691`
+**Line count (including blank lines and compiler line):** `1,719`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `21 (2021, Thursday, September 23rd at 9:53 pm)`
+**Current revision:** `22 (2021, Friday, September 24th at 6:25 pm)`
 
 # End of page
 
