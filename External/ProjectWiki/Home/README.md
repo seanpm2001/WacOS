@@ -217,6 +217,8 @@ List is currently empty.
 
 #### MacOS
 
+[MacOS](https://github.com/seanpm2001/WacOS/wiki/MacOS) is Apples infamous desktop operating system.
+
 ##### Classic
 
 [Classic MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Classic-MacOS-version-history/)
@@ -277,6 +279,8 @@ List is currently empty.
 
 [Complete MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Complete-MacOS-version-history/)
 
+[Modern MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Modern-MacOS-version-history/)
+
 [MacOS 10.12 (Sierra)](https://github.com/seanpm2001/WacOS/wiki/MacOS-10-12-Sierra/)
 
 [MacOS 10.13 (High Sierra)](https://github.com/seanpm2001/WacOS/wiki/MacOS-10-13-High-Sierra/)
@@ -293,6 +297,8 @@ List is currently empty.
 
 #### iPhoneOS
 
+_[iPhoneOS](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS/) is a mobile operating system by Apple Inc, the predecessor to [iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) and [iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/).
+
 [iPhoneOS version history](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-Version-History)
 
 [iPhoneOS 1](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-1/)
@@ -308,6 +314,8 @@ List is currently empty.
 [iPhoneOS Wallpaper info](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-Wallpaper-info/)
 
 #### Modern iOS
+
+_[iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) is a mobile operating system by Apple Inc._
 
 [iOS version history](https://github.com/seanpm2001/WacOS/wiki/iOS-version-history/)
 
@@ -337,7 +345,7 @@ List is currently empty.
 
 #### iPadOS
 
-_iPadOS is a fork of iOS._
+_[iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/) is a fork of [iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/)._
 
 [iPadOS version history](https://github.com/seanpm2001/WacOS/wiki/iPadOS-version-history/)
 
@@ -621,7 +629,7 @@ Apple was founded on 1976, April 1st.
 
 ## Article info
 
-**Wiki homepage version:** `7 (Thursday, 2021 September 23rd at 9:49 pm)`
+**Wiki homepage version:** `8 (Friday, 2021 September 24h at 6:28 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
