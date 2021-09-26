@@ -1,0 +1,24 @@
+<!-- Start of script !-->
+<!-- H1, H2, H3, H4, H5, H6 !-->
+<!-- XML Sample file !-->
+<title1="Project language file 21 - WacOS"></title1>
+<bodyMain>
+<titlemeta="Project language file 21"></titlemeta>
+<projectDi>For: WacOS</projectDi>
+<description>I decided to make XML the 21st project language file for this project (WacOS) as XML is one of the major markup languages used for this project, and since I am now representing all languages with project language files, XML now has its own project language file.</description>
+</bodyMain>
+<!-- Divider !-->
+<fileInfo>
+	<fileVerCurrent="Version 1 (2021 Saturday September 25th at 8:15 pm)"></fileVerCurrent>
+	<fileVerFirst="Version 1 (2021 Saturday September 25th at 8:15 pm)"></fileVerFirst>
+	<fileType="XML"></fileType><!-- Obvious, but the compiler may need it !-->
+	<lineCount>
+    <includingblanklinesandcompilerline>
+    25 lines
+    </includingblanklinesandcompilerline>
+  </lineCount>
+	<encoding1="UTF-8"></encoding1>
+	<indenting="Unix (LF)"></indenting>
+	<size1="Undetermined">SIZE</size1>
+</fileInfo>
+<!-- End of script !-->
