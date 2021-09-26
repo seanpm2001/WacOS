@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="67.733mm" height="67.733mm" version="1.1" viewBox="0 0 67.733 67.733" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient1511" cx="-192.15" cy="98.754" r="6.8138" gradientTransform="matrix(3.1828 0 0 7.6981 417.37 -645.47)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#4e1162" offset="0"/>
+   <stop stop-color="#c92c69" offset=".29631"/>
+   <stop stop-color="#f4632f" offset=".5308"/>
+   <stop stop-color="#feab13" offset=".81653"/>
+   <stop stop-color="#fec220" offset="1"/>
+  </radialGradient>
+  <linearGradient id="linearGradient1523" x1="-179.55" x2="-149.82" y1="113.18" y2="80.268" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#771062" offset="0"/>
+   <stop stop-color="#dd4972" offset=".296"/>
+   <stop stop-color="#fc7030" offset=".45597"/>
+   <stop stop-color="#fc6933" offset=".67253"/>
+   <stop stop-color="#f93c3f" offset=".79786"/>
+   <stop stop-color="#dc1714" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(213.78 -58.27)">
+  <rect x="-213.78" y="58.27" width="67.733" height="67.733" rx="15.497" ry="15.497" fill="#fff"/>
+  <path d="m-194.33 69.057a1.8523 1.8523 0 0 0-0.96875 0.30664l-9.9004 6.5664a1.8523 1.8523 0 1 0 2.0488 3.0859l7.0234-4.6562v38.732a1.8525 1.8525 0 1 0 3.7051 0v-42.186a1.8523 1.8523 0 0 0-1.9082-1.8496z" color="#000000" color-rendering="auto" fill="url(#radialGradient1511)" image-rendering="auto" shape-rendering="auto" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+  <path d="m-166.98 91.192c2.4517-0.03805 4.909 0.74925 6.8822 2.205 1.8854 1.391 3.3204 3.3841 4.0362 5.615s0.70804 4.6886-0.0272 6.9133c-1.124 3.401-3.8967 6.1174-7.1495 7.6172-2.4756 1.1414-5.2254 1.6333-7.9513 1.6036-3.606-0.0393-7.2638-1.02-10.156-3.1738-2.1056-1.568-3.7937-3.807-4.3097-6.3811-0.11501-0.57371-0.17006-1.1774 0-1.7372 0.11126-0.36629 0.32061-0.70579 0.61438-0.95124 0.29377-0.24544 0.67331-0.39255 1.056-0.38511 0.38412 7e-3 0.75585 0.16838 1.0556 0.40874s0.53172 0.55659 0.71509 0.8942c0.37739 0.69483 0.55617 1.4786 0.86863 2.205 0.84308 1.9599 2.6188 3.3894 4.5436 4.3097 3.5695 1.7068 7.8949 1.847 11.493 0.20046 2.2679-1.0379 4.2659-2.8237 5.1784-5.1449 0.75319-1.9162 0.71941-4.1133-0.0142-6.0371-0.73358-1.9238-2.1462-3.5665-3.8946-4.6537-1.5757-0.97984-3.6568-1.58-5.5124-1.58h-5.5378c-0.46002 0-0.92845-0.12347-1.2757-0.42522-0.38014-0.33036-0.60624-0.8305-0.60547-1.3341 7.8e-4 -0.50363 0.22773-1.0022 0.60547-1.3353 0.32282-0.28467 0.75077-0.44885 1.1812-0.44885h5.6323c1.5412 0 3.0313-0.76421 4.3097-1.625 1.2177-0.81998 2.2372-1.9374 2.9199-3.2371s1.0246-2.78 0.95555-4.2465c-0.11264-2.3942-1.3638-4.7113-3.3075-6.1138-2.1273-1.535-4.9186-1.9307-7.517-1.5702-1.8416 0.25552-3.6495 0.87542-5.1762 1.9366-1.5267 1.0611-2.7599 2.5788-3.343 4.3443-0.17493 0.52958-0.2942 1.0843-0.56794 1.5702-0.23108 0.41021-0.57514 0.76349-1.0005 0.96537-0.42534 0.20188-0.93345 0.24277-1.3715 0.0703-0.26723-0.1052-0.50238-0.28569-0.68481-0.5075-0.18243-0.22181-0.31307-0.48406-0.39467-0.75941-0.1633-0.55069-0.13115-1.1423-0.023-1.7065 0.20607-1.075 0.67957-2.0848 1.2695-3.0068 1.2031-1.8801 2.903-3.4267 4.8466-4.5241 1.9437-1.0974 4.1261-1.751 6.3453-1.9906 3.6634-0.39549 7.5242 0.38637 10.49 2.5725 1.6045 1.1826 2.9255 2.7619 3.7393 4.5814 0.81378 1.8195 1.1102 3.878 0.77088 5.8421-0.27942 1.6176-0.98346 3.1533-1.9832 4.4553s-2.2908 2.3718-3.7297 3.1619c-1.2373 0.6794-2.586 1.1554-3.9756 1.4032" fill="url(#linearGradient1523)"/>
+ </g>
+</svg>
