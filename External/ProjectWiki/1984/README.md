@@ -13,6 +13,10 @@ This article goes over prominent events from Apple Inc or related to Apple Inc i
 
 **24** - The [Macintosh 128K](https://github.com/seanpm2001/WacOS/wiki/Macintosh_128K/) is released.
 
+**24** - [MacPaint 1.0](https://https://github.com/seanpm2001/WacOS/wiki/MacPaint/) is released
+
+**24** - [MacWrite 1.0](https://https://github.com/seanpm2001/WacOS/wiki/MacWrite/) is released
+
 ## February
 
 No entries listed here. Wiki editors can add them when they are found.
@@ -27,7 +31,9 @@ No entries listed here. Wiki editors can add them when they are found.
 
 ## May
 
-No entries listed here. Wiki editors can add them when they are found.
+**?** - [MacPaint 1.3](https://https://github.com/seanpm2001/WacOS/wiki/MacPaint/) is released
+
+**?** - [MacWrite 2.2](https://https://github.com/seanpm2001/WacOS/wiki/MacWrite/) is released
 
 ## June
 
@@ -43,7 +49,7 @@ No entries listed here. Wiki editors can add them when they are found.
 
 ## September
 
-No entries listed here. Wiki editors can add them when they are found.
+**?** - [MacPaint 1.4](https://https://github.com/seanpm2001/WacOS/wiki/MacPaint/) is released
 
 ## October
 
@@ -73,6 +79,14 @@ More sources coming soon.
 
 **File format:** `Markdown document (*.md *.mkd *.markdown)`
 
-**Article version:** `1 (Friday, 2021 September 17th at 3:37 pm)`
+**Article version:** `2 (Sunday, 2021 September 26th at 2:34 pm)`
 
 ***
+
+<!-- Tools
+
+Quick copy and paste
+
+https://github.com/seanpm2001/WacOS/wiki/
+
+!-->
