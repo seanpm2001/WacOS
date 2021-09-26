@@ -145,8 +145,6 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] AIM Alliance
 
-* - [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
-
 * - [x] iPhoneOS_1
 
 * - [x] iPhoneOS_2
@@ -155,9 +153,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iOS_4
 
-* - [ ] iOS_5
+* - [x] iOS_5
 
-* - [ ] iOS_7
+* - [x] iOS 6 <!-- (Include iOS 6 image repo) !-->
+
+* - [x] iOS_7
 
 * - [ ] iOS_8
 
@@ -175,11 +175,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iOS_15
 
-* - [ ] iPadOS_13
+* - [x] iPadOS_13
 
-* - [ ] iPadOS_14
+* - [x] iPadOS_14
 
-* - [ ] iPadOS_15
+* - [x] iPadOS_15
 
 * - [ ] WebKit
 
@@ -397,7 +397,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iOS version history
 
-* - [ ] iPadOS version history
+* - [x] iPadOS version history
 
 * - [X] Apple and privacy (1976-2013)
 
@@ -537,7 +537,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Macintosh 128K
 
-* - [ ] NeXTstep
+* - [x] NeXTstep
 
 * - [ ] Darwin (operating system)
 
@@ -723,7 +723,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iPhone Simulator
 
-* - [ ] NeXT
+* - [x] NeXT
 
 * - [ ] LaserWriter
 
@@ -1097,9 +1097,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Pinwheel of death
 
-* - [ ] iOS
+* - [x] iOS
 
-* - [ ] MacOS
+* - [x] MacOS
 
 * - [x] iPadOS
 
@@ -1123,9 +1123,13 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iPhoneOS
 
-**Total entries:** `547` **Completed:** `135` (as the footer, homepage, and sidebar are counted)
+* - [x] NeXT Character set
 
-**Current completion status (as of 2021 Friday, September 24th at 6:25 pm):** `24.68%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [x] NeXTSTEP version history
+
+**Total entries:** `551` **Completed:** `148` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Saturday, September 25th at 5:42 pm):** `26.86%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1224,6 +1228,14 @@ March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
 # 1995
 
 1995 MacWrite development ceased
+
+# 1996
+
+1996 December 20th - Apple announces plans to acquire NeXT
+
+# 1997
+
+1997 February 4th - Apple acquires NeXT
 
 # 1998
 
@@ -1701,17 +1713,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `22 (2021, Friday, September 24th at 6:25 pm)`
+**Page version:** `23 (2021, Saturday, September 25th at 5:42 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,719`
+**Line count (including blank lines and compiler line):** `1,731`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `22 (2021, Friday, September 24th at 6:25 pm)`
+**Current revision:** `23 (2021, Saturday, September 25th at 5:42 pm)`
 
 # End of page
 
