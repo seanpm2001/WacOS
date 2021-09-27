@@ -23,7 +23,7 @@ Currently, a lot of articles are based of their Wikipedia counter-parts, being m
 
 ## All articles:
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 4 articles total (excluding home page)
 
@@ -41,13 +41,13 @@ List incomplete
 
 ### General
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 [WacOS and ElementaryOS, 2 good choices](https://github.com/seanpm2001/WacOS/wiki/ElementaryOS/)
 
 ### Desktop environment
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Aqua/Leopard_Desktop.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Aqua/Leopard_Desktop.png)
 
 [WacOS Desktop environment](https://github.com/seanpm2001/WacOS/wiki/WacOS_DE/)
 
@@ -57,7 +57,7 @@ List incomplete
 
 ### Processor support
 
-![https://github.com/seanpm2001/WacOS/tree/master/Graphics/AMD](https://github.com/seanpm2001/WacOS/tree/master/Graphics/AMD)
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/AMD/AMD_Logo1.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/AMD/AMD_Logo1.png)
 
 [AMD Processor support](https://github.com/seanpm2001/WacOS/wiki/AMD_Processor_Support)
 
@@ -95,7 +95,7 @@ List incomplete
 
 ### Special Extras
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 ["Twentieth Century" WACintosh, WAC or WAMMY](https://github.com/seanpm2001/WacOS/wiki/WAMMY/)
 
@@ -125,7 +125,7 @@ List incomplete
 
 XML
 
-[C++]([Self](https://github.com/seanpm2001/WacOS/wiki/C-Plus-Plus/)
+[C++](https://github.com/seanpm2001/WacOS/wiki/C-Plus-Plus/)
 
 [Self](https://github.com/seanpm2001/WacOS/wiki/Self/)
 
@@ -231,7 +231,7 @@ NOT LINKED
 
 [Internet Explorer for Mac](https://github.com/seanpm2001/WacOS/wiki/Internet_Explorer_for_Mac/)
 
-* [Full browser list]((https://github.com/seanpm2001/WacOS/wiki/Browser_list/)
+* [Full browser list](https://github.com/seanpm2001/WacOS/wiki/Browser_list/)
 
 ### Standards to follow
 
@@ -265,7 +265,7 @@ NOT LINKED
 
 ### Meta Wiki
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 _Section renamed from `Wiki Meta` to `Meta Wiki` on 2021 Thursday September 23rd, as it produced a broken link, and ignored the word Wiki in the anchor link_
 
@@ -579,7 +579,7 @@ For info on Apple and user privacy.
 
 ### Criticism
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 For criticism of Apple Inc. and related criticism from misuse of Apple products
 
@@ -601,7 +601,7 @@ For Apples advertising.
 
 ### Books
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 For books about Apple Inc. and its employees
 
@@ -609,7 +609,7 @@ For books about Apple Inc. and its employees
 
 ### Litigation
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 For Apples legal history.
 
@@ -621,7 +621,12 @@ For Apples legal history.
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_Computer_Logo_rainbow.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_Computer_Logo_rainbow.svg)
 
-Apple was founded on 1976, April 1st.
+_Apple was founded on 1976, April 1st._
+
+( [1976](https://github.com/seanpm2001/WacOS/wiki/1976/) | [1977](https://github.com/seanpm2001/WacOS/wiki/1977/) | [1978](https://github.com/seanpm2001/WacOS/wiki/1978/) | [1979](https://github.com/seanpm2001/WacOS/wiki/1979/) | [1980](https://github.com/seanpm2001/WacOS/wiki/1980/) | [1981](https://github.com/seanpm2001/WacOS/wiki/1981/) | [1982](https://github.com/seanpm2001/WacOS/wiki/1982/) | [1983](https://github.com/seanpm2001/WacOS/wiki/1983/) | [1984](https://github.com/seanpm2001/WacOS/wiki/1984/) | [1985](https://github.com/seanpm2001/WacOS/wiki/1985/) | [1986](https://github.com/seanpm2001/WacOS/wiki/1986/) | [1987](https://github.com/seanpm2001/WacOS/wiki/1987/) | [1988](https://github.com/seanpm2001/WacOS/wiki/1988/) | [1989](https://github.com/seanpm2001/WacOS/wiki/1989/) | [1990](https://github.com/seanpm2001/WacOS/wiki/1990/) | [1991](https://github.com/seanpm2001/WacOS/wiki/1991/) | [1992](https://github.com/seanpm2001/WacOS/wiki/1992/) | [1993](https://github.com/seanpm2001/WacOS/wiki/1993/) | [1994](https://github.com/seanpm2001/WacOS/wiki/1994/) | [1995](https://github.com/seanpm2001/WacOS/wiki/1995/) | [1996](https://github.com/seanpm2001/WacOS/wiki/1996/) | [1997](https://github.com/seanpm2001/WacOS/wiki/1997/) | [1998](https://github.com/seanpm2001/WacOS/wiki/1998/) | [1999](https://github.com/seanpm2001/WacOS/wiki/1999/) | [2000](https://github.com/seanpm2001/WacOS/wiki/2000/) | [2001](https://github.com/seanpm2001/WacOS/wiki/2001/) | [2002](https://github.com/seanpm2001/WacOS/wiki/2002/) | [2003](https://github.com/seanpm2001/WacOS/wiki/2003/) | [2004](https://github.com/seanpm2001/WacOS/wiki/2004/) | [2005](https://github.com/seanpm2001/WacOS/wiki/2005/) | [2006](https://github.com/seanpm2001/WacOS/wiki/2006/) | [2007](https://github.com/seanpm2001/WacOS/wiki/2007/) | [2008](https://github.com/seanpm2001/WacOS/wiki/2008/) | [2009](https://github.com/seanpm2001/WacOS/wiki/2009/) | [2010](https://github.com/seanpm2001/WacOS/wiki/2010/) | [2011](https://github.com/seanpm2011/WacOS/wiki/2011/) | [2012](https://github.com/seanpm2011/WacOS/wiki/2012/) | [2013](https://github.com/seanpm2011/WacOS/wiki/2013/) | [2014](https://github.com/seanpm2011/WacOS/wiki/2014/) | [2015](https://github.com/seanpm2011/WacOS/wiki/2015/) | [2016](https://github.com/seanpm2011/WacOS/wiki/2016/) | [2017](https://github.com/seanpm2011/WacOS/wiki/2017/) | [2018](https://github.com/seanpm2011/WacOS/wiki/2018/) | [2019](https://github.com/seanpm2011/WacOS/wiki/2019/) | [2020](https://github.com/seanpm2011/WacOS/wiki/2020/) | [2021](https://github.com/seanpm2011/WacOS/wiki/2021/) ) 
+
+<details>
+	<summary><H2>Click/tap here to expand/collapse the list dropdown</H2></summary>
 
 [1976](https://github.com/seanpm2001/WacOS/wiki/1976/)
 
@@ -715,6 +720,8 @@ Apple was founded on 1976, April 1st.
 
 [2021](https://github.com/seanpm2011/WacOS/wiki/2021/)
 
+</details>
+
 ### Apple structures
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Park/Apple_park_cupertino_2019.jpg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Park/Apple_park_cupertino_2019.jpg)
@@ -729,15 +736,29 @@ Apple was founded on 1976, April 1st.
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXT/NeXT_logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXT/NeXT_logo.svg)
 
+( [Taligent](https://github.com/seanpm2001/WacOS/wiki/Taligent-(company)) | [Claris](https://github.com/seanpm2001/WacOS/wiki/Claris) | [NeXT](https://github.com/seanpm2001/WacOS/wiki/NeXT/) )
+
+<details>
+	<summary><H2>Click/tap here to expand/collapse the list dropdown</H2></summary>
+
 [Taligent](https://github.com/seanpm2001/WacOS/wiki/Taligent-(company))
 
 [Claris](https://github.com/seanpm2001/WacOS/wiki/Claris)
 
 [NeXT](https://github.com/seanpm2001/WacOS/wiki/NeXT/)
 
+</details>
+
 ### Apple WorldWide Developers Conference
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg)
+
+_The Apple WWDC is Apples yearly conference to announce new Apple products, and changes to Apple products._
+
+( [Apple WWDC1987](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1987/) | [Apple WWDC1988](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1988/) | [Apple WWDC1989](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1989/) | [Apple WWDC1990](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1990/) | [Apple WWDC1991](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1991/) | [Apple WWDC1992](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1992/) | [Apple WWDC1993](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1993/) | [Apple WWDC1994](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1994/) | [Apple WWDC1995](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1995/) | [Apple WWDC1996](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1996/) |[Apple WWDC1997](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1997/) | [Apple WWDC1998](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1998/) | [Apple WWDC1999](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1999/) | [Apple WWDC2000](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2000/) | [Apple WWDC2001](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2001/) | [Apple WWDC2002](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2002/) | [Apple WWDC2003](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2003/) | [Apple WWDC2004](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2004/) | [Apple WWDC2005](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2005/) | [Apple WWDC2006](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2006/) | [Apple WWDC2007](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2007/) | [Apple WWDC2008](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2008/) | [Apple WWDC2009](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2009/) | [Apple WWDC2010](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-2010/) | [Apple WWDC2011](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2011/) | [Apple WWDC2012](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2012/) | [Apple WWDC2013](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2013/) | [Apple WWDC2014](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2014/) | [Apple WWDC2015](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2015/) | [Apple WWDC2016](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2016/) | [Apple WWDC2017](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2017/) | [Apple WWDC2018](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2018/) | [Apple WWDC2019](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2019/) | [Apple WWDC2020](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2020/) | [Apple WWDC2021](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2021/) )
+
+<details>
+	<summary><H2>Click/tap here to expand/collapse the list dropdown</H2></summary>
 
 [Apple WWDC1987](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1987/)
 
@@ -809,9 +830,11 @@ Apple was founded on 1976, April 1st.
 
 [Apple WWDC2021](https://github.com/seanpm2011/WacOS/wiki/Apple-WWDC-2021/)
 
+</details>
+
 #### Other
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Vectorized_Apple_gray_logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Vectorized_Apple_gray_logo.svg)
 
 [Apple Public Source License](https://github.com/seanpm2001/WacOS/wiki/Apple-Public-Source-License)
 
@@ -819,7 +842,7 @@ Apple was founded on 1976, April 1st.
 
 ### Credits
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_logo_black.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_logo_black.svg)
 
 [Image Credits (Apple)](https://github.com/seanpm2001/WacOS/wiki/ImageCredits(Apple))
 
@@ -827,7 +850,7 @@ Apple was founded on 1976, April 1st.
 
 ## Article info
 
-**Wiki homepage version:** `9 (Sunday, 2021 September 26th at 8:20 pm)`
+**Wiki homepage version:** `10 (Sunday, 2021 September 26th at 10:28 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
@@ -839,6 +862,6 @@ Apple was founded on 1976, April 1st.
 
 **Language:** `English (US) / Markdown (.md)`
 
-**Line count (including blank lines and compiler line):** `845`
+**Line count (including blank lines and compiler line):** `868`
 
 ***
