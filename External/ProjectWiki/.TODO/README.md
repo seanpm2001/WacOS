@@ -53,9 +53,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] WhyPhoneOS
 
-* - [ ] SirIsaacNewtonScript
+* - [x] SirIsaacNewtonScript
 
-* - [ ] SirIsaacNewtonOS
+* - [x] SirIsaacNewtonOS
 
 * - [x] Cyberdog
 
@@ -67,7 +67,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Basys
 
-* - [ ] C++
+* - [x] C++
 
 * - [x] C
 
@@ -159,7 +159,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iOS_7
 
-* - [ ] iOS_8
+* - [x] iOS_8
 
 * - [ ] iOS_9
 
@@ -491,19 +491,19 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] 1999
 
-* - [ ] 2000
+* - [x] 2000
 
 * - [x] 2001
 
-* - [ ] 2002
+* - [x] 2002
 
-* - [ ] 2003
+* - [x] 2003
 
-* - [ ] 2004
+* - [x] 2004
 
-* - [ ] 2005
+* - [x] 2005
 
-* - [ ] 2006
+* - [x] 2006
 
 * - [x] 2007
 
@@ -513,7 +513,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] 2010
 
-* - [ ] 2011
+* - [x] 2011
 
 * - [ ] 2012
 
@@ -1055,7 +1055,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Chimes of death
 
-* - [ ] Pascal
+* - [x] Pascal
 
 * - [ ] New World ROM
 
@@ -1117,9 +1117,9 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] List of WacOS software
 
-* - [ ] NewtonOS
+* - [x] NewtonOS
 
-* - [ ] NewtonScript
+* - [x] NewtonScript
 
 * - [x] iPhoneOS
 
@@ -1127,9 +1127,71 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] NeXTSTEP version history
 
-**Total entries:** `551` **Completed:** `148` (as the footer, homepage, and sidebar are counted)
+* - [ ] effective power bug
 
-**Current completion status (as of 2021 Saturday, September 25th at 5:42 pm):** `26.86%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+* - [x] Kiri
+
+* - [x] WacOS server
+
+* - [ ] Java
+
+* - [x] WacOS JRE
+
+* - [ ] XML
+
+* - [ ] Prolog
+
+* - [ ] Perl
+
+* - [ ] Ruby
+
+* - [ ] Ruby on rails
+
+* - [x] Self
+
+* - [ ] Shell (BASH)
+
+* - [ ] PHP
+
+* - [ ] SQL
+
+* - [ ] MySQL
+
+* - [ ] PostgreSQL
+
+* - [ ] Apache Tomcat
+
+* - [ ] Apache HTTP server
+
+* - [ ] Makefile (GNU Make)
+
+* - [ ] Nextcloud
+
+* - [ ] NGINX
+
+* - [ ] JQuery
+
+* - [ ] JavaScript
+
+* - [ ] BusyBox HTTPD
+
+* - [ ] Apple Wave Hoax
+
+* - [ ] Apple AirDrop Hoax
+
+* - [ ] List of Apple Hoaxes
+
+* - [ ] TouchID
+
+* - [ ] HEIF
+
+* - [x] NewtonOS version history
+
+<!-- Look for iOS features like you did MacOS to add more to the list !-->
+
+**Total entries:** `581` **Completed:** `167` (as the footer, homepage, and sidebar are counted)
+
+**Current completion status (as of 2021 Sunday, September 26th at 7:45 pm):** `28.74%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1217,6 +1279,25 @@ MacPaint {
 2.0 	January 1988[28] 	Last release
 }
 
+Newton
+Version history
+
+Date released 	OS version
+
+August 3, 1993 	1.0
+
+October 30, 1993 	1.1
+
+? 	1.2
+March 4, 1994 	1.3
+
+March 14, 1996 	2.0
+
+March 21, 1997 	2.1
+# 1985
+
+# 1986
+
 # 1987
 
 1987 MacPaint 2.0 released
@@ -1224,6 +1305,18 @@ MacPaint {
 # 1988
 
 March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
+
+# 1989
+
+# 1990
+
+# 1991
+
+# 1992
+
+# 1993
+
+# 1994
 
 # 1995
 
@@ -1242,258 +1335,76 @@ March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
 1998 MacWrite discontinued
 1998 MacPaint discontinued
 
+# 1999
+
+# 2000
+
+The final update to the classic Mac OS was version 9.2.2, released on December 5, 2001.[34]
+System Version[5] 	Release Information[5]
+Mac OS 9.0 	initial retail version of Mac OS 9
+Mac OS 9.0.2 	
+Mac OS 9.0.3
+Mac OS 9.0.4
+Mac OS 9.1 	included with Mac OS X 10.0
+Mac OS 9.2 	update for improved Mac OS X compatibility
+Mac OS 9.2.1 	
+Mac OS 9.2.2 	final release of classic Mac OS 
+
 # 2001
-2001 October 25th Mac OS X 10.1 released
-Mac OS X 10.1 releases (their dates)
-10.1 	5G64 	September 25, 2001 	Darwin 1.4.1 	Original retail CD-ROM release; 5L14 and 5L17b available after certain security updates
 
-10.1.1 	5M28 	November 12, 2001 	Darwin 5.1 	Mac OS X Update 10.1.1: Information and Download
-
-10.1.2 	5P48 	December 21, 2001 	Darwin 5.2 	Mac OS X Update 10.1.2: Information and Download
+Mac OS data from 2001 is documented, find other info to place here
 
 # 2002
 
-10.1.3 	5Q45 	February 19, 2002 	Darwin 5.3 	Mac OS X Update 10.1.3: Information and Download
-
-10.1.4 	5Q125 	April 17, 2002 	Darwin 5.4 	Mac OS X Update 10.1.4: Information and Download
-
-10.1.5 	5S60 	June 5, 2002 	Darwin 5.5 	Mac OS X Update 10.1.5: Information and Download; 5S66 after networking update 
-
-Mac OS X 10.2 releases (their dates)
-
-10.2 	6C115 	August 24, 2002 	Darwin 6.0 	Original retail release
-
-6C115a
-
-10.2.1 	6D52 	September 18, 2002 	Darwin 6.1 	About the Mac OS X 10.2.1 Update, codename Jaguar Red
-
-10.2.2 	6F21 	November 11, 2002 	Darwin 6.2 	About the Mac OS X 10.2.2 Update, codename Jaguar Blue or Merlot
-
-10.2.3 	6G30 	December 19, 2002 	Darwin 6.3 	About the Mac OS X 10.2.3 Update, codename Jaguar Green
-
-6G37 		Updated retail release
-
-6G50 		Server edition; retail release
+Mac OS data from 2002 is documented, find other info to place here
 
 # 2003
 
-10.2.4 	6I32 	February 13, 2003 	Darwin 6.4 	About the Mac OS X 10.2.4 Update, codename Jaguar Pink
-
-10.2.5 	6L29 	April 10, 2003 	Darwin 6.5 	About the Mac OS X 10.2.5 Update, codename Jaguar Plaid
-
-10.2.6 	6L60 	May 6, 2003 	Darwin 6.6 	About the Mac OS X 10.2.6 Update, codename Jaguar Black
-
-10.2.7 	6R65 	September 22, 2003 	Darwin 6.7 	Removed from distribution due to defects
-
-10.2.8 	6R73 	October 3, 2003 	Darwin 6.8 	About the Mac OS X 10.2.8 Update; released as 6R50 for one day
-
-6S90 	About the Mac OS X 10.2.8 (G5) Update
-
-Mac OS X 10.3 releases (their dates)
-
-10.3 	7B85 	October 24, 2003 	Darwin 7.0 	Original retail release set
-
-7B86 	Server Edition
-
-10.3.1 	7C107 	November 10, 2003 	Darwin 7.1 	Mac OS X Update 10.3.1: Information and Download
-
-10.3.2 	7D24 	December 17, 2003 	Darwin 7.2 	Mac OS X: About the Mac OS X 10.3.2 Update
-
-7D28 		Updated retail release
+Mac OS data from 2003 is documented, find other info to place here
 
 # 2004
 
-10.3.3 	7F44 	March 15, 2004 	Darwin 7.3 	Mac OS X: About the Mac OS X 10.3.3 Update (Combo)
-
-10.3.4 	7H63 	May 26, 2004 	Darwin 7.4 	About the Mac OS X 10.3.4 Update
-
-10.3.5 	7M34 	August 9, 2004 	Darwin 7.5 	About the Mac OS X 10.3.5 Update (Delta); Updated retail release set
-
-10.3.6 	7R28 	November 5, 2004 	Darwin 7.6 	About the Mac OS X 10.3.6 Update (Delta)
-
-10.3.7 	7S215 	December 15, 2004 	Darwin 7.7 	About the Mac OS X 10.3.7 Update (Delta)
+Mac OS data from 2004 is documented, find other info to place here
 
 # 2005
 
-10.3.8 	7U16 	February 9, 2005 	Darwin 7.8 	About the Mac OS X 10.3.8 Update (Delta)
-
-10.3.9 	7W98 	April 15, 2005 	Darwin 7.9 	About the Mac OS X 10.3.9 Update (Delta)
-
-Mac OS X 10.4 releases (their dates)
-
-10.4 	8A428 	April 29, 2005 	Darwin 8.0 	Preinstalled on much of new line
-
-8A432 	Original retail release
-
-10.4.1 	8B15 	May 16, 2005 	Darwin 8.1 	About the Mac OS X 10.4.1 Update
-
-8B17 	May 19, 2005 	Server edition
-
-10.4.2 	8C46 	July 12, 2005 	Darwin 8.2 	About the Mac OS X 10.4.2 Update (Delta)
-
-8C47 	Server edition
-
-8E102 	October 12, 2005 	Exclusively for Front Row iMac G5 released on same date
-
-8E45 	October 19, 2005 	Exclusively for PowerBook G4s released on same date
-
-8E90 	Exclusively for Power Mac G5 Dual and Quad released on same date
-
-10.4.3 	8F46 	October 31, 2005 	Darwin 8.3 	About the Mac OS X 10.4.3 Update (Delta) Updated retail release
+Mac OS data from 2005 is documented, find other info to place here
 
 # 2006
 
-10.4.4 	8G32 	January 10, 2006 	Darwin 8.4 	About the Mac OS X 10.4.4 Update (Delta) PowerPC
-
-8G1165 	Shipped on initial Intel-based Macs
-
-10.4.5 	8H14 	February 14, 2006 	Darwin 8.5 	About the Mac OS X 10.4.5 Update (delta) PowerPC
-
-8G1454 	About the Mac OS X 10.4.5 Update (delta) Intel
-
-10.4.6 	8I127 	April 3, 2006 	Darwin 8.6 	About the Mac OS X 10.4.6 Update (delta) PowerPC; Final retail release
-
-8I1119 	About the Mac OS X 10.4.6 Update (delta) Intel
-
-10.4.7 	8J135 	June 27, 2006 	Darwin 8.7 	About the Mac OS X 10.4.7 Update (delta) PowerPC
-
-8J2135a 	About the Mac OS X 10.4.7 Update (delta) Intel
-
-8K1079 	August 7, 2006 	exclusively for Mac Pro released the same date
-
-8N5107 	exclusively for Apple TV (formerly codenamed iTV)[28]
-
-10.4.8 	8L127 	September 29, 2006 	Darwin 8.8 	About the Mac OS X 10.4.8 Update (delta)] PowerPC
-
-8L2127 	Update (delta) Intel and Universal Server Edition
+Mac OS data from 2006 is documented, find other info to place here
 
 # 2007
 
-10.4.9 	8P135 	March 13, 2007 	Darwin 8.9 	About the Mac OS X 10.4.9 Update (delta) PowerPC
+Mac OS data from 2007 is documented, find other info to place here
 
-8P2137 	About the Mac OS X 10.4.9 Update (delta) Intel and Universal Server Edition
-
-10.4.10 	8R218 	June 20, 2007 	Darwin 8.10 	About the Mac OS X 10.4.10 Update (delta) PowerPC
-
-8R2218 	About the Mac OS X 10.4.10 Update (delta) Intel and Universal Server Edition
-
-8R2232
-
-10.4.11 	8S165 	November 14, 2007 	Darwin 8.11 	About the Mac OS X 10.4.11 Update PowerPC
-
-8S2167 	About the Mac OS X 10.4.11 Update Intel and Universal Server Edition 
-
-Mac OS X 10.5 releases (their dates)
-
-10.5 	9A581 	October 26, 2007 	Darwin 9.0 	Original retail DVD release 	N/A
-
-10.5.1 	9B18 	November 15, 2007 	Darwin 9.1 	About the Mac OS X 10.5.1 Update; Second retail DVD release 	Mac OS X 10.5.1 Update
+iPhone 2G, iPod Touch (1st generation) and iPhoneOS data from 2007 is documented, find other info to place here
 
 # 2008
 
-10.5.2 	9C31 	February 11, 2008 	Darwin 9.2 	About the Mac OS X 10.5.2 Update 	Mac OS X 10.5.2 Combo Update
+Mac OS data from 2008 is documented, find other info to place here
 
-9C7010
-
-10.5.3 	9D34 	May 28, 2008 	Darwin 9.3 	About the Mac OS X 10.5.3 Update 	Mac OS X 10.5.3 Update
-
-Mac OS X 10.5.3 Combo Update
-
-10.5.4 	9E17 	June 30, 2008 	Darwin 9.4 	About the Mac OS X 10.5.4 update; Third retail DVD release 	Mac OS X 10.5.4 Update
-
-Mac OS X 10.5.4 Combo Update
-
-10.5.5 	9F33 	September 15, 2008 	Darwin 9.5 	About the Mac OS X 10.5.5 Update 	Mac OS X 10.5.5 Update
-
-Mac OS X 10.5.5 Combo Update
-
-10.5.6 	9G55 	December 15, 2008 	Darwin 9.6 	About the Mac OS X 10.5.6 Update 	Mac OS X 10.5.6 Update
-
-Mac OS X 10.5.6 Combo Update
-
-9G66 	January 6, 2009 	Fourth retail DVD release (part of Mac Box Set) 	N/A
+iPhone 3G, iPod Touch (2nd generation) and iPhoneOS data from 2008 is documented, find other info to place here
 
 # 2009
 
-Mac OS X 10.6 releases (their dates)
+Mac OS data from 2009 is documented, find other info to place here
 
-10.5.7 	9J61 	May 12, 2009 	Darwin 9.7 	About the Mac OS X 10.5.7 Update 	Mac OS X 10.5.7 Update
-
-Mac OS X 10.5.7 Combo Update
-
-10.5.8 	9L30 	August 5, 2009 	Darwin 9.8 	About the Mac OS X 10.5.8 Update 	Mac OS X 10.5.8 Update
-
-Mac OS X 10.5.8 Combo Update
-
-10.6 	10A432 	August 28, 2009 	Darwin 10.0 	Original retail DVD release 	N/A
-
-10A433 	Server edition; Original retail DVD release
-
-10.6.1 	10B504 	September 10, 2009 	Darwin 10.1 	About the Mac OS X v10.6.1 Update 	Mac OS X v10.6.1 Update
-
-10.6.2 	10C540 	November 9, 2009 	Darwin 10.2 	About the Mac OS X v10.6.2 Update 	Mac OS X v10.6.2 Update
-
-Mac OS X v10.6.2 Combo Update
+iPhone 3GS, iPod Touch (3rd generation) and iPhoneOS data from 2009 is documented, find other info to place here
 
 # 2010
 
-2010 MacPaint source code released
+MacPaint data from 2010 is documented, find other info to place here
 
-10.6.3 	10D573 	March 29, 2010 	Darwin 10.3 	About the Mac OS X v10.6.3 Update 	Mac OS X v10.6.3 Update
+Mac OS data from 2010 is documented, find other info to place here
 
-10D575 	April 1, 2010 	Second retail DVD release 	N/A
-
-10D578 	April 13, 2010 	About the Mac OS X v10.6.3 Update; v1.1 	Mac OS X v10.6.3 v1.1 Update (Combo)
-
-10.6.4 	10F569 	June 15, 2010 	Darwin 10.4 	About the Mac OS X v10.6.4 Update 	Mac OS X v10.6.4 Update
-
-Mac OS X v10.6.4 Update (Combo)
-
-10.6.5 	10H574 	November 10, 2010 	Darwin 10.5 	About the Mac OS X v10.6.5 Update 	Mac OS X v10.6.5 Update
-
-Mac OS X v10.6.5 Update (Combo)
+iPhone 4, iPod Touch (4th generation) iPad (1stgeneration) and iOS 4 data from 2010 is documented, find other info to place here
 
 # 2011
 
-10.6.6 	10J567 	January 6, 2011 	Darwin 10.6 	About the Mac OS X v10.6.6 Update 	Mac OS X v10.6.6 Update
+Mac OS data from 2011 is documented, find other info to place here
 
-Mac OS X v10.6.6 Update (Combo)
-
-10.6.7 	10J869 	March 21, 2011 	Darwin 10.7 	About the Mac OS X v10.6.7 Update 	Mac OS X v10.6.7 Update
-
-Mac OS X v10.6.7 Update (Combo)
-
-10J3250 	For the early 2011 Macbook Pro 	Mac OS X v10.6.7 Update for early 2011 MacBook Pro
-
-10J4138 	May 4, 2011 	For the early 2011 Macbook Pro 	MacBook Pro Software Update 1.4
-
-10.6.8 	10K540 	June 23, 2011 	Darwin 10.8 	About the Mac OS X v10.6.8 Update 	Mac OS X v10.6.8 Update (Combo)
-
-10K549 	July 25, 2011 	About the Mac OS X v10.6.8 Update; v1.1 	Mac OS X v10.6.8 Update v.1.1
-
-Mac OS X v10.6.8 v1.1 Update (Combo)
-
-Version 	Build	Date 	OS name 	Notes 	Download
-
-OS X 10.7 releases (their dates)
-
-10.7 	11A511 	July 20, 2011 	Darwin 11.0 	Original retail Mac App Store release 	Available from the Mac App Store
-
-11A511s 	August 16, 2011 	Original retail USB Thumb Drive release 	N/A
-
-11A2061	July 20, 2011 	Darwin 11.0.2 	For Mid 2011 Mac Mini (11A2061) and Mid 2011 MacBook Air (11A2063) 	Lion Internet Recovery (⌘ Cmd+⌥ Opt+R upon reboot on Mid-2011 or later Macs)
-
-11A2063
-
-10.7.1 	11B26 	August 16, 2011 	Darwin 11.1.0 	About the OS X Lion v10.7.1 Update 	Mac OS X 10.7.1 Update
-
-11B2118 	For the Mid 2011 Mac Mini and Mid 2011 MacBook Air 	Mac OS X 10.7.1 Update (for MacBook Air and Mac Mini 2011)
-
-10.7.2 	11C74 	October 12, 2011 	Darwin 11.2 	About the OS X Lion v10.7.2 Update
-
-Adds iCloud, various bug fixes, minor user interface tweaks, Safari 5.1.1, and the ability to boot into Lion Recovery from a Time Machine disk. 	Mac OS X 10.7.2 Update
-
-Mac OS X 10.7.2 Update (Combo)
+iPhone 4, iPod Touch (4th generation) iPad (2nd generation) iOS 4, and iOS 5 data from 2011 is documented, find other info to place here
 
 # 2012
 
@@ -1713,17 +1624,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `23 (2021, Saturday, September 25th at 5:42 pm)`
+**Page version:** `24 (2021, Sunday, September 26th at 7:45 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,731`
+**Line count (including blank lines and compiler line):** `1,642`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `23 (2021, Saturday, September 25th at 5:42 pm)`
+**Current revision:** `24 (2021, Sunday, September 26th at 7:45 pm)`
 
 # End of page
 
