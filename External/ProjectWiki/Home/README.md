@@ -3,6 +3,8 @@
 
 # Welcome to the WacOS wiki!
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Branding/Old/WACOS_LogoPrototype1.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Branding/Old/WACOS_LogoPrototype1.png)
+
 _This is the home page of the Wiki. It is not to be confused with the [WacOS Home directory](https://github.com/seanpm2001/WacOS/wiki/Home(Directory))._
 
 WacOS is an open source replacement project for all versions of MacOS, iOS, iPhoneOS, TvOS, WatchOS, and all Apple software.
@@ -13,11 +15,15 @@ Currently, a lot of articles are based of their Wikipedia counter-parts, being m
 
 ## Start here
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Branding/Old/LogoPrototype1.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Branding/Old/LogoPrototype1.png)
+
 [Read the rules for editing this Wiki](https://github.com/seanpm2001/WacOS/wiki/!All_Rules)
 
 [WacOS and ElementaryOS, 2 good choices](https://github.com/seanpm2001/WacOS/wiki/ElementaryOS/)
 
 ## All articles:
+
+<!--TODO ![]() !-->
 
 4 articles total (excluding home page)
 
@@ -35,9 +41,13 @@ List incomplete
 
 ### General
 
+<!--TODO ![]() !-->
+
 [WacOS and ElementaryOS, 2 good choices](https://github.com/seanpm2001/WacOS/wiki/ElementaryOS/)
 
 ### Desktop environment
+
+<!--TODO ![]() !-->
 
 [WacOS Desktop environment](https://github.com/seanpm2001/WacOS/wiki/WacOS_DE/)
 
@@ -47,6 +57,8 @@ List incomplete
 
 ### Processor support
 
+![https://github.com/seanpm2001/WacOS/tree/master/Graphics/AMD](https://github.com/seanpm2001/WacOS/tree/master/Graphics/AMD)
+
 [AMD Processor support](https://github.com/seanpm2001/WacOS/wiki/AMD_Processor_Support)
 
 [Intel Processor support](https://github.com/seanpm2001/WacOS/wiki/Intel_Processor_Support)
@@ -55,11 +67,21 @@ List incomplete
 
 ### Common sources
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/AppleLogo2011.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/AppleLogo2011.png)
+
 [Wikipedia, the Free Encyclopedia at en.wikipedia.org](https://en.wikipedia.org/)
 
 [Rosetta Code](https://github.com/seanpm2001/WacOS/wiki/RosettaCode/)
 
+[Opensource.Apple.com](https://opensource.apple.com/)
+
+[Developer.Apple.com](https://developer.apple.com/opensource/)
+
+[Apple.com](https://www.apple.com/)
+
 ### People
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Steve_Jobs/Steve_Jobs_Headshot_2010-CROP_(cropped_2).jpg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Steve_Jobs/Steve_Jobs_Headshot_2010-CROP_(cropped_2).jpg)
 
 [Isaac Newton](https://github.com/seanpm2001/WacOS/wiki/Isaac_Newton/)
 
@@ -73,9 +95,13 @@ List incomplete
 
 ### Special Extras
 
+<!--TODO ![]() !-->
+
 ["Twentieth Century" WACintosh, WAC or WAMMY](https://github.com/seanpm2001/WacOS/wiki/WAMMY/)
 
 ### Programming languages
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/C%2B%2B/ISO_C%2B%2B_Logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/C%2B%2B/ISO_C%2B%2B_Logo.svg)
 
 [See all languages used on this project](https://github.com/seanpm2001/WacOS/wiki/Languages_used)
 
@@ -93,31 +119,83 @@ List incomplete
 
 [YAML](https://github.com/seanpm2001/WacOS/wiki/YAML)
 
+[NewtonScript](https://github.com/seanpm2001/WacOS/wiki/NewtonScript/)
+
+[Sir Isaac NewtonScript](https://github.com/seanpm2001/WacOS/wiki/Sir-Isaac-NewtonScript/)
+
+XML
+
+[C++]([Self](https://github.com/seanpm2001/WacOS/wiki/C-Plus-Plus/)
+
+[Self](https://github.com/seanpm2001/WacOS/wiki/Self/)
+
+Prolog
+
+PHP
+
+JQuery
+
+JavaScript
+
+Ruby
+
+Perl
+
+Python
+
+SQL
+
+Shell (BASH)
+
+[Pascal](https://github.com/seanpm2001/WacOS/wiki/Pascal/)
+
+Java
+
+GNU Make
+
+SVG
+
+Assembly
+
 ### Applications
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
 
 [Finder (Application)](https://github.com/seanpm2001/WacOS/wiki/Finder-(application))
 
-WacOS Equivalent: currently unavailable
+**WacOS Equivalent:** currently unavailable
 
 [MacWrite](https://github.com/seanpm2001/WacOS/wiki/MacWrite)
 
-WacOS Equivalent: [WacWrite](https://github.com/seanpm2001/WacOS/wiki/WacWrite/)
+**WacOS Equivalent:** [WacWrite](https://github.com/seanpm2001/WacOS/wiki/WacWrite/)
 
 [MacPaint](https://github.com/seanpm2001/WacOS/wiki/MacPaint)
 
-WacOS Equivalent: [WacPaint](https://github.com/seanpm2001/WacOS/wiki/WacPaint)
+**WacOS Equivalent:** [WacPaint](https://github.com/seanpm2001/WacOS/wiki/WacPaint)
 
 [QuickTime](https://github.com/seanpm2001/WacOS/wiki/QuickTime)
 
-WacOS Equivalent: currently unavailable
+**WacOS Equivalent:** currently unavailable
+
+[Siri](https://github.com/seanpm2001/WacOS/wiki/Siri/)
+
+**WacOS Equivalent:** [Kiri](https://github.com/seanpm2001/WacOS/wiki/Kiri/)
+
+[MacOS server](https://github.com/seanpm2001/WacOS/wiki/MacOS-server/)
+
+**WacOS Equivalent:** [WacOS Server](https://github.com/seanpm2001/WacOS/wiki/WacOS-server/)
 
 #### Third party
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Growl/Growl.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Growl/Growl.png)
 
 [Growl](https://github.com/seanpm2001/WacOS/wiki/Growl(Software))
 
 WacOS Equivalent: None
 
 ### Features
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/DMG/Mac_OS_X_Disk_Image.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/DMG/Mac_OS_X_Disk_Image.png)
 
 [DMG](https://github.com/seanpm2001/WacOS/wiki/DMG)
 
@@ -133,9 +211,13 @@ NOT LINKED
 
 ### Subsystems
 
-[BaSYS](https://github.com/seanpm2001/WacOS/wiki/BaSYS/) - A subsystem for Classic Mac OS
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/System-software/1/Apple_Macintosh_Desktop.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/System-software/1/Apple_Macintosh_Desktop.png)
+
+[BaSYS](https://github.com/seanpm2001/WacOS/wiki/BaSYS/) - A subsystem for Classic Mac OS (versions 1.0 to 7.x prior to 7.5)
 
 ### Web browsers
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Safari/Safari_iOS6.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Safari/Safari_iOS6.png)
 
 [Cyberdog](https://github.com/seanpm2001/WacOS/wiki/Cyberdog/)
 
@@ -153,6 +235,8 @@ NOT LINKED
 
 ### Standards to follow
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Acid/3/Acid3_reference.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Acid/3/Acid3_reference.png)
+
 [Acid1](https://github.com/seanpm2001/WacOS/wiki/acid1)
 
 [Acid2](https://github.com/seanpm2001/WacOS/wiki/acid2)
@@ -162,6 +246,8 @@ NOT LINKED
 [Computing longevity](https://github.com/Computing-longevity) [Wiki link unavailable](https://github.com/seanpm2001/WacOS/wiki/)
 
 ### File system and structure
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/APFS/APFS.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/APFS/APFS.png)
 
 [Home (directory)](https://github.com/seanpm2001/WacOS/wiki/Home(Directory))
 
@@ -178,6 +264,8 @@ NOT LINKED
 [Project language file](https://github.com/seanpm2001/WacOS/wiki/Project_Language_File/)
 
 ### Meta Wiki
+
+<!--TODO ![]() !-->
 
 _Section renamed from `Wiki Meta` to `Meta Wiki` on 2021 Thursday September 23rd, as it produced a broken link, and ignored the word Wiki in the anchor link_
 
@@ -199,17 +287,25 @@ _Section renamed from `Wiki Meta` to `Meta Wiki` on 2021 Thursday September 23rd
 
 #### Macintosh
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Macintosh/128K/Macintosh_128k_transparency.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Macintosh/128K/Macintosh_128k_transparency.png)
+
 [Macintosh 128K](https://github.com/seanpm2001/WacOS/wiki/Macintosh_128K)
 
 #### iPhone
+
+<!--TODO ![]() !-->
 
 List is currently empty.
 
 #### iPod
 
+<!--TODO ![]() !-->
+
 List is currently empty.
 
 #### iPad
+
+<!--TODO ![]() !-->
 
 List is currently empty.
 
@@ -217,9 +313,13 @@ List is currently empty.
 
 #### MacOS
 
-[MacOS](https://github.com/seanpm2001/WacOS/wiki/MacOS) is Apples infamous desktop operating system.
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS/MacOS_wordmark_(2017).svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS/MacOS_wordmark_(2017).svg)
+
+_[MacOS](https://github.com/seanpm2001/WacOS/wiki/MacOS) is Apples infamous desktop operating system._
 
 ##### Classic
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Happy_Mac/Happy_Mac.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Happy_Mac/Happy_Mac.png)
 
 [Classic MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Classic-MacOS-version-history/)
 
@@ -243,6 +343,8 @@ List is currently empty.
 
 ##### Mac OS X
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS_X/10.4_Tiger/Macosx.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS_X/10.4_Tiger/Macosx.png)
+
 [Mac OS X version history](https://github.com/seanpm2001/WacOS/wiki/Mac-OS-X-version-history/)
 
 [Mac OS X 10.0 Public Beta](https://github.com/seanpm2001/WacOS/wiki/Mac-OS-X-Public-Beta/)
@@ -263,6 +365,8 @@ List is currently empty.
 
 ##### OS X
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS_X/10.6_Snow_Leopard/OSXLeopard.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS_X/10.6_Snow_Leopard/OSXLeopard.svg)
+
 [OS X version history](https://github.com/seanpm2001/WacOS/wiki/OS-X-version-history/)
 
 [OS X 10.7 (Lion)](https://github.com/seanpm2001/WacOS/wiki/OS-X-10-7-Lion/)
@@ -276,6 +380,8 @@ List is currently empty.
 [OS X 10.11 (El Capitan)](https://github.com/seanpm2001/WacOS/wiki/OS-X-10-11-El-Capitan/)
 
 ##### MacOS Modern
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS/MacOS_wordmark_(2017).svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacOS/MacOS_wordmark_(2017).svg)
 
 [Complete MacOS version history](https://github.com/seanpm2001/WacOS/wiki/Complete-MacOS-version-history/)
 
@@ -297,7 +403,9 @@ List is currently empty.
 
 #### iPhoneOS
 
-_[iPhoneOS](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS/) is a mobile operating system by Apple Inc, the predecessor to [iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) and [iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/).
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhoneOS/IPhone_OS_1_logo.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhoneOS/IPhone_OS_1_logo.png)
+
+_[iPhoneOS](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS/) is a mobile operating system by Apple Inc, the predecessor to [iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) and [iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/)._
 
 [iPhoneOS version history](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-Version-History)
 
@@ -309,11 +417,15 @@ _[iPhoneOS](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS/) is a mobile oper
 
 ##### Features
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhoneOS/IPhone_OS_2_Dock.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhoneOS/IPhone_OS_2_Dock.png)
+
 [iPhoneOS Dock](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-Dock/)
 
 [iPhoneOS Wallpaper info](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-Wallpaper-info/)
 
 #### Modern iOS
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iOS/IOS_wordmark_(2017).svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iOS/IOS_wordmark_(2017).svg)
 
 _[iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) is a mobile operating system by Apple Inc._
 
@@ -345,6 +457,8 @@ _[iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/) is a mobile operating syst
 
 #### iPadOS
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPadOS/IPadOS_wordmark.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPadOS/IPadOS_wordmark.svg)
+
 _[iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/) is a fork of [iOS](https://github.com/seanpm2001/WacOS/wiki/iOS/)._
 
 [iPadOS version history](https://github.com/seanpm2001/WacOS/wiki/iPadOS-version-history/)
@@ -355,7 +469,61 @@ _[iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/) is a fork of [iOS](h
 
 [iPadOS 15](https://github.com/seanpm2001/WacOS/wiki/iPadOS-15/)
 
+### tvOS
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/tvOS/TvOS.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/tvOS/TvOS.svg)
+
+[tvOS version history](https://github.com/seanpm2001/WacOS/wiki/tvOS-Version-history/)
+
+[iOS 4](https://github.com/seanpm2001/WacOS/wiki/iOS-4/)
+
+[iOS 5](https://github.com/seanpm2001/WacOS/wiki/iOS-5/)
+
+[iOS 6](https://github.com/seanpm2001/WacOS/wiki/iOS-6/)
+
+[iOS 7](https://github.com/seanpm2001/WacOS/wiki/iOS-7/)
+
+[iOS 8](https://github.com/seanpm2001/WacOS/wiki/iOS-8/)
+
+[tvOS 9](https://github.com/seanpm2001/WacOS/wiki/tvOS-9/)
+
+[tvOS 10](https://github.com/seanpm2001/WacOS/wiki/tvOS-10/)
+
+[tvOS 11](https://github.com/seanpm2001/WacOS/wiki/tvOS-11/)
+
+[tvOS 12](https://github.com/seanpm2001/WacOS/wiki/tvOS-12/)
+
+[tvOS 13](https://github.com/seanpm2001/WacOS/wiki/tvOS-13/)
+
+[tvOS 14](https://github.com/seanpm2001/WacOS/wiki/tvOS-14/)
+
+[tvOS 15](https://github.com/seanpm2001/WacOS/wiki/tvOS-15/)
+
+### watchOS
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/WatchOS/Apple_watchOS_wordmark_2017.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/WatchOS/Apple_watchOS_wordmark_2017.svg)
+
+[WatchOS version history](https://github.com/seanpm2001/WacOS/wiki/WatchOS-version-history/)
+
+[WatchOS 1](https://github.com/seanpm2001/WacOS/wiki/WatchOS-1/)
+
+[WatchOS 2](https://github.com/seanpm2001/WacOS/wiki/WatchOS-2/)
+
+[WatchOS 3](https://github.com/seanpm2001/WacOS/wiki/WatchOS-3/)
+
+[WatchOS 4](https://github.com/seanpm2001/WacOS/wiki/WatchOS-4/)
+
+[WatchOS 5](https://github.com/seanpm2001/WacOS/wiki/WatchOS-5/)
+
+[WatchOS 6](https://github.com/seanpm2001/WacOS/wiki/WatchOS-6/)
+
+[WatchOS 7](https://github.com/seanpm2001/WacOS/wiki/WatchOS-7/)
+
+[WatchOS 8](https://github.com/seanpm2001/WacOS/wiki/WatchOS-8/)
+
 ### Other
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXTSTEP/NeXTSTEP_desktop.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXTSTEP/NeXTSTEP_desktop.png)
 
 [Copland](https://github.com/seanpm2001/WacOS/wiki/Copland)
 
@@ -373,7 +541,11 @@ _[iPadOS](https://github.com/seanpm2001/WacOS/wiki/iPadOS/) is a fork of [iOS](h
 
 > [Darwin version history](https://github.com/seanpm2001/WacOS/wiki/Darwin-version-history/)
 
+[NewtonOS](https://github.com/seanpm2001/WacOS/wiki/NewtonOS/)
+
 ### Culture and humor
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Dogcow/DogCow_from_LaserWriter_8.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Dogcow/DogCow_from_LaserWriter_8.png)
 
 For the culture and humor of Apple
 
@@ -387,6 +559,8 @@ For the culture and humor of Apple
 
 ### Privacy
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/PRISM/PRISM_logo.jpg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/PRISM/PRISM_logo.jpg)
+
 For info on Apple and user privacy.
 
 [Apple and Privacy (1976-2013)](https://github.com/seanpm2001/WacOS/wiki/Apple-and-privacy-(1976-2013))
@@ -399,9 +573,13 @@ For info on Apple and user privacy.
 
 ### Security
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Sad_Mac/Sad_mac.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Sad_Mac/Sad_mac.png)
+
 [iCloud 2014 celebrity photo leak](https://github.com/seanpm2001/WacOS/wiki/iCloud-2014-celebrity-photo-leak)
 
 ### Criticism
+
+<!--TODO ![]() !-->
 
 For criticism of Apple Inc. and related criticism from misuse of Apple products
 
@@ -410,6 +588,8 @@ For criticism of Apple Inc. and related criticism from misuse of Apple products
 [iCon (book)](https://github.com/seanpm2001/WacOS/wiki/iCon(Book))
 
 ### Advertising
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/1984/Advertisement/Ad_apple_1984.jpg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/1984/Advertisement/Ad_apple_1984.jpg)
 
 For Apples advertising.
 
@@ -421,11 +601,15 @@ For Apples advertising.
 
 ### Books
 
+<!--TODO ![]() !-->
+
 For books about Apple Inc. and its employees
 
 [iCon](https://github.com/seanpm2001/WacOS/wiki/iCon(Book))
 
 ### Litigation
+
+<!--TODO ![]() !-->
 
 For Apples legal history.
 
@@ -434,6 +618,8 @@ For Apples legal history.
 [Apple vs. Microsoft & IBM (Windows 2.0)](https://github.com/seanpm2001/WacOS/wiki/Windows-2-litigation)
 
 ### History
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_Computer_Logo_rainbow.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/Apple_Computer_Logo_rainbow.svg)
 
 Apple was founded on 1976, April 1st.
 
@@ -531,6 +717,8 @@ Apple was founded on 1976, April 1st.
 
 ### Apple structures
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Park/Apple_park_cupertino_2019.jpg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Park/Apple_park_cupertino_2019.jpg)
+
 [Apple Campus](https://github.com/seanpm2001/WacOS/wiki/Apple_Campus)
 
 [Apple Park](https://github.com/seanpm2001/WacOS/wiki/Apple_Park)
@@ -539,11 +727,17 @@ Apple was founded on 1976, April 1st.
 
 ### Subsidiaries and ventures
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXT/NeXT_logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/NeXT/NeXT_logo.svg)
+
 [Taligent](https://github.com/seanpm2001/WacOS/wiki/Taligent-(company))
 
 [Claris](https://github.com/seanpm2001/WacOS/wiki/Claris)
 
+[NeXT](https://github.com/seanpm2001/WacOS/wiki/NeXT/)
+
 ### Apple WorldWide Developers Conference
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg)
 
 [Apple WWDC1987](https://github.com/seanpm2001/WacOS/wiki/Apple-WWDC-1987/)
 
@@ -617,11 +811,15 @@ Apple was founded on 1976, April 1st.
 
 #### Other
 
+<!--TODO ![]() !-->
+
 [Apple Public Source License](https://github.com/seanpm2001/WacOS/wiki/Apple-Public-Source-License)
 
 [Seanpm2001's Apple experience](https://github.com/seanpm2001/WacOS/wiki/Seanpm2001-Apple-experience/)
 
 ### Credits
+
+<!--TODO ![]() !-->
 
 [Image Credits (Apple)](https://github.com/seanpm2001/WacOS/wiki/ImageCredits(Apple))
 
@@ -629,7 +827,7 @@ Apple was founded on 1976, April 1st.
 
 ## Article info
 
-**Wiki homepage version:** `8 (Friday, 2021 September 24h at 6:28 pm)`
+**Wiki homepage version:** `9 (Sunday, 2021 September 26th at 8:20 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
@@ -640,5 +838,7 @@ Apple was founded on 1976, April 1st.
 **File type:** `Markdown document (*.md *.mkd *.markdown)`
 
 **Language:** `English (US) / Markdown (.md)`
+
+**Line count (including blank lines and compiler line):** `845`
 
 ***
