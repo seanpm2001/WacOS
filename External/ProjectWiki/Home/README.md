@@ -59,15 +59,27 @@ List incomplete
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/AMD/AMD_Logo1.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/AMD/AMD_Logo1.png)
 
+( [AMD Processor support](https://github.com/seanpm2001/WacOS/wiki/AMD_Processor_Support) | [Intel Processor support](https://github.com/seanpm2001/WacOS/wiki/Intel_Processor_Support) | [PowerPC Processor support](https://github.com/seanpm2001/WacOS/wiki/PowerPC_Processor_Support) )
+
+<details>
+	<summary><H4>Click/tap here to expand/collapse the list dropdown</H4></summary>
+
 [AMD Processor support](https://github.com/seanpm2001/WacOS/wiki/AMD_Processor_Support)
 
 [Intel Processor support](https://github.com/seanpm2001/WacOS/wiki/Intel_Processor_Support)
 
 [PowerPC Processor support](https://github.com/seanpm2001/WacOS/wiki/PowerPC_Processor_Support)
 
+</details>
+
 ### Common sources
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/AppleLogo2011.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Apple_Logo/AppleLogo2011.png)
+
+( [Wikipedia, the Free Encyclopedia at en.wikipedia.org](https://en.wikipedia.org/) | [Rosetta Code](https://github.com/seanpm2001/WacOS/wiki/RosettaCode/) | [Opensource.Apple.com](https://opensource.apple.com/) | [Developer.Apple.com](https://developer.apple.com/opensource/) | [Apple.com](https://www.apple.com/) )
+
+<details>
+	<summary><H4>Click/tap here to expand/collapse the list dropdown</H4></summary>
 
 [Wikipedia, the Free Encyclopedia at en.wikipedia.org](https://en.wikipedia.org/)
 
@@ -78,6 +90,8 @@ List incomplete
 [Developer.Apple.com](https://developer.apple.com/opensource/)
 
 [Apple.com](https://www.apple.com/)
+
+</details>
 
 ### People
 
@@ -103,27 +117,34 @@ List incomplete
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/C%2B%2B/ISO_C%2B%2B_Logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/C%2B%2B/ISO_C%2B%2B_Logo.svg)
 
-[See all languages used on this project](https://github.com/seanpm2001/WacOS/wiki/Languages_used)
+( [See all languages used on this project](https://github.com/seanpm2001/WacOS/wiki/Languages_used/) | [Swift (programming language)](https://github.com/seanpm2001/WacOS/wiki/Swift-(programming-language)/) | [AppleScript](https://github.com/seanpm2001/WacOS/wiki/AppleScript/) | [Squeak](https://github.com/seanpm2001/WacOS/wiki/Squeak/) | [Objective-C](https://github.com/seanpm2001/WacOS/wiki/Objective-C/) | [Objective-C++](https://github.com/seanpm2001/WacOS/wiki/Objective-CPP/) | [C (Programming language)](https://github.com/seanpm2001/WacOS/wiki/C-(Programming-language)) | [YAML](https://github.com/seanpm2001/WacOS/wiki/YAML/) | [NewtonScript](https://github.com/seanpm2001/WacOS/wiki/NewtonScript/) | [Sir Isaac NewtonScript](https://github.com/seanpm2001/WacOS/wiki/Sir-Isaac-NewtonScript/) | XML | [Virtual Hard Disk Language (VHDL)](https://github.com/seanpm2001/WacOS/wiki/VHDL/) | [C++](https://github.com/seanpm2001/WacOS/wiki/C-Plus-Plus/) | [Self](https://github.com/seanpm2001/WacOS/wiki/Self/) | Prolog | PHP | JQuery | JavaScript | Ruby | Perl | [Python](https://github.com/seanpm2001/WacOS/wiki/Python/) | SQL | Shell (BASH) | [Pascal](https://github.com/seanpm2001/WacOS/wiki/Pascal/) | [Java](https://github.com/seanpm2001/WacOS/wiki/Java/) | GNU Make | SVG )
 
-[Swift (programming language)](https://github.com/seanpm2001/WacOS/wiki/Swift-(programming-language))
+<details>
+	<summary><H4>Click/tap here to expand/collapse the list dropdown</H4></summary>
 
-[AppleScript](https://github.com/seanpm2001/WacOS/wiki/AppleScript)
+[See all languages used on this project](https://github.com/seanpm2001/WacOS/wiki/Languages_used/)
 
-[Squeak](https://github.com/seanpm2001/WacOS/wiki/Squeak)
+[Swift (programming language)](https://github.com/seanpm2001/WacOS/wiki/Swift-(programming-language)/)
 
-[Objective-C](https://github.com/seanpm2001/WacOS/wiki/Objective-C)
+[AppleScript](https://github.com/seanpm2001/WacOS/wiki/AppleScript/)
 
-[Objective-C++](*https://github.com/seanpm2001/WacOS/wiki/Objective-CPP)
+[Squeak](https://github.com/seanpm2001/WacOS/wiki/Squeak/)
+
+[Objective-C](https://github.com/seanpm2001/WacOS/wiki/Objective-C/)
+
+[Objective-C++](https://github.com/seanpm2001/WacOS/wiki/Objective-CPP/)
 
 [C (Programming language)](https://github.com/seanpm2001/WacOS/wiki/C-(Programming-language))
 
-[YAML](https://github.com/seanpm2001/WacOS/wiki/YAML)
+[YAML](https://github.com/seanpm2001/WacOS/wiki/YAML/)
 
 [NewtonScript](https://github.com/seanpm2001/WacOS/wiki/NewtonScript/)
 
 [Sir Isaac NewtonScript](https://github.com/seanpm2001/WacOS/wiki/Sir-Isaac-NewtonScript/)
 
 XML
+
+[Virtual Hard Disk Language (VHDL)](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
 
 [C++](https://github.com/seanpm2001/WacOS/wiki/C-Plus-Plus/)
 
@@ -141,7 +162,7 @@ Ruby
 
 Perl
 
-Python
+[Python](https://github.com/seanpm2001/WacOS/wiki/Python/)
 
 SQL
 
@@ -149,13 +170,17 @@ Shell (BASH)
 
 [Pascal](https://github.com/seanpm2001/WacOS/wiki/Pascal/)
 
-Java
+[Java](https://github.com/seanpm2001/WacOS/wiki/Java/
 
 GNU Make
 
 SVG
 
-Assembly
+[Assembly](https://github.com/seanpm2001/WacOS/wiki/Assembly/)
+
+Motorola S-Record
+
+</details>
 
 ### Applications
 
@@ -293,21 +318,187 @@ _Section renamed from `Wiki Meta` to `Meta Wiki` on 2021 Thursday September 23rd
 
 #### iPhone
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhone/IPhonelogo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhone/IPhonelogo.svg)
 
-List is currently empty.
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhone/2G/IPhone_1st_Gen.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPhone/2G/IPhone_1st_Gen.svg)
+
+_The iPhone is Apples flagship mobile touchscreen phone brand, starting in 2007 with the [iPhone 2G](https://github.com/seanpm2001/WacOS/wiki/iPhone-2G/)_
+
+[iPhone 2G](https://github.com/seanpm2001/WacOS/wiki/iPhone-2G/)
+
+[iPhone 3G](https://github.com/seanpm2001/WacOS/wiki/iPhone-3G/)
+
+[iPhone 3GS](https://github.com/seanpm2001/WacOS/wiki/iPhone-3GS/)
+
+[iPhone 4](https://github.com/seanpm2001/WacOS/wiki/iPhone-4/)
+
+[iPhone 4S](https://github.com/seanpm2001/WacOS/wiki/iPhone-4S/)
+
+[iPhone SE1 (Second Edition)](https://github.com/seanpm2001/WacOS/wiki/iPhone-SE1/)
+
+[iPhone 5](https://github.com/seanpm2001/WacOS/wiki/iPhone-5/)
+
+[iPhone 5S](https://github.com/seanpm2001/WacOS/wiki/iPhone-5S/)
+
+[iPhone 6](https://github.com/seanpm2001/WacOS/wiki/iPhone-6/)
+
+[iPhone 6 Plus](https://github.com/seanpm2001/WacOS/wiki/iPhone-6-Plus/)
+
+[iPhone 6S](https://github.com/seanpm2001/WacOS/wiki/iPhone-6S/)
+
+[iPhone 6S Plus](https://github.com/seanpm2001/WacOS/wiki/iPhone-6S-Plus/)
+
+[iPhone 7](https://github.com/seanpm2001/WacOS/wiki/iPhone-7/)
+
+[iPhone 7 Plus](https://github.com/seanpm2001/WacOS/wiki/iPhone-7-Plus/)
+
+[iPhone 8](https://github.com/seanpm2001/WacOS/wiki/iPhone-8/)
+
+[iPhone 8 Plus](https://github.com/seanpm2001/WacOS/wiki/iPhone-8-Plus/)
+
+[iPhone SE2 (Second Edition)](https://github.com/seanpm2001/WacOS/wiki/iPhone-SE2/)
+
+[iPhone X](https://github.com/seanpm2001/WacOS/wiki/iPhone-X/)
+
+[iPhone XR](https://github.com/seanpm2001/WacOS/wiki/iPhone-XR/)
+
+[iPhone XS](https://github.com/seanpm2001/WacOS/wiki/iPhone-XS/)
+
+[iPhone XS Plus](https://github.com/seanpm2001/WacOS/wiki/iPhone-XS-Plus/)
+
+[iPhone 12](https://github.com/seanpm2001/WacOS/wiki/iPhone-12/)
+
+[iPhone 12 Mini](https://github.com/seanpm2001/WacOS/wiki/iPhone-12-Mini/)
+
+[iPhone 12 Pro](https://github.com/seanpm2001/WacOS/wiki/iPhone-12-Pro/)
+
+[iPhone 12 Pro Max](https://github.com/seanpm2001/WacOS/wiki/iPhone-12-Pro-Max/)
+
+[iPhone 13](https://github.com/seanpm2001/WacOS/wiki/iPhone-13/)
+
+[iPhone 13 Mini](https://github.com/seanpm2001/WacOS/wiki/iPhone-13-Mini/)
+
+[iPhone 13 Pro](https://github.com/seanpm2001/WacOS/wiki/iPhone-13-Pro/)
+
+[iPhone 13 Pro Max](https://github.com/seanpm2001/WacOS/wiki/iPhone-13-Pro-Max/)
 
 #### iPod
 
-<!--TODO ![]() !-->
+##### Classic
 
-List is currently empty.
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPod-Classic/IPodclassiclogo.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPod-Classic/IPodclassiclogo.png)
+
+_Classic iPods by Apple are portable audio players. It wasn't until the iPod touch that they gained touchscreen functionality, gestures, and the ability to do more than just play music._
+
+[iPod Classic (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-1/)
+
+[iPod Classic (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-2/)
+
+[iPod Classic (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-3/)
+
+[iPod Classic (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-4/)
+
+[iPod Classic (5th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-5/)
+
+[iPod Classic (6th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Classic-6/)
+
+[iPod Mini](https://github.com/seanpm2001/WacOS/wiki/iPod-Mini/)
+
+[iPod Nano](https://github.com/seanpm2001/WacOS/wiki/iPod-Nano/)
+
+[iPod Shuffle](https://github.com/seanpm2001/WacOS/wiki/iPod-Shuffle/)
+
+##### Touch
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPod-Touch/IPodtouchlogo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPod-Touch/IPodtouchlogo.svg)
+
+_The iPod touch is a brand of portable music players by Apple. They are nearly identical in functionality to an iPhone, with the exception that phone calls and cellular networks aren't accessible._
+
+[iPod Touch (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-1/)
+
+[iPod Touch (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-2/)
+
+[iPod Touch (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-3/)
+
+[iPod Touch (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-4/)
+
+[iPod Touch (5th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-5/)
+
+[iPod Touch (6th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-6/)
+
+[iPod Touch (7th generation)](https://github.com/seanpm2001/WacOS/wiki/iPod-Touch-7/)
 
 #### iPad
 
-<!--TODO ![]() !-->
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad/IPad_Logo_(2017).svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad/IPad_Logo_(2017).svg)
 
-List is currently empty.
+_The iPad is a series of tablet computers by Apple Inc. starting with the 1st generation iPad on 2010 April 3rd._
+
+[iPad (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-1/)
+
+[iPad (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-2/)
+
+[iPad (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-3/)
+
+[iPad (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-4/)
+
+[iPad (5th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-5/)
+
+[iPad (6th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-6/)
+
+[iPad (7th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-7/)
+
+[iPad (8th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-8/)
+
+[iPad (9th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-9/)
+
+##### iPad Air
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Air/Apple_iPad_Air_Logo.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Air/Apple_iPad_Air_Logo.svg)
+
+_The iPad Air is a lightweight variant of the iPad tablet computer by Apple Inc. This series of models started with the 1st generation iPad Air on 2013 November 1st._
+
+[iPad Air (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Air-1/)
+
+[iPad Air (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Air-2/)
+
+[iPad Air (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Air-3/)
+
+[iPad Air (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Air-4/)
+
+##### iPad Mini
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Mini/IPad_Mini_logo_2019.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Mini/IPad_Mini_logo_2019.svg)
+
+_The iPad Mini is a much smaller variant of the iPad tablet computer by Apple Inc. This series of models started with the 1st generation iPad Mini on 2012 November 2nd._
+
+[iPad Mini (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-1/)
+
+[iPad Mini (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-2/)
+
+[iPad Mini (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-3/)
+
+[iPad Mini (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-4/)
+
+[iPad Mini (5th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-5/)
+
+[iPad Mini (6th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Mini-6/)
+
+##### iPad Pro
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Pro/IPad_Pro_(2017-present%2C_logo).svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/iPad-Pro/IPad_Pro_(2017-present%2C_logo).svg)
+
+_The iPad Pro is a premium variant of the iPad tablet computer by Apple Inc. intended for high power usage. This series of models started with the 1st generation iPad Pro on 2015 September 9th._
+
+[iPad Pro (1st generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Pro-1/)
+
+[iPad Pro (2nd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Pro-2/)
+
+[iPad Pro (3rd generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Pro-3/)
+
+[iPad Pro (4th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Pro-4/)
+
+[iPad Pro (5th generation)](https://github.com/seanpm2001/WacOS/wiki/iPad-Pro-5/)
 
 ### Apple operating systems
 
@@ -850,7 +1041,7 @@ _The Apple WWDC is Apples yearly conference to announce new Apple products, and 
 
 ## Article info
 
-**Wiki homepage version:** `10 (Sunday, 2021 September 26th at 10:28 pm)`
+**Wiki homepage version:** `11 (Sunday, 2021 September 26th at 5:51 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
@@ -862,6 +1053,10 @@ _The Apple WWDC is Apples yearly conference to announce new Apple products, and 
 
 **Language:** `English (US) / Markdown (.md)`
 
-**Line count (including blank lines and compiler line):** `868`
+**Line count (including blank lines and compiler line):** `1063`
+
+**All times are UTC-7 (PDT/Pacific Time)**
+
+**You may need special rendering support for the `<dropdown>` HTML tag being used in this document**
 
 ***
