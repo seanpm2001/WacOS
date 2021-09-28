@@ -3,9 +3,13 @@
 
 # Articles to write (WacOS Wiki)
 
+I have recently noted the importance of the project Wiki, and I want to improve this projects Wiki. Here are the articles I plan to write - Early 2021 September
+
 This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
 
-I have recently noted the importance of the project Wiki, and I want to improve this projects Wiki. Here are the articles I plan to write:
+Articles to write: `601`
+
+## Checklist
 
 * - [x] Home
 
@@ -395,7 +399,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iPhoneOS version history
 
-* - [ ] iOS version history
+* - [x] iOS version history
 
 * - [x] iPadOS version history
 
@@ -563,7 +567,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Apple Park
 
-* - [ ] Macquarium
+* - [x] Macquarium
 
 * - [ ] Claris
 
@@ -761,7 +765,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Apple (fruit)
 
-* - [ ] MacOS startup sound
+* - [x] MacOS startup sound
 
 * - [ ] MacOS crash sound
 
@@ -1211,11 +1215,27 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] unc0ver (exploit)
 
+* - [ ] iTunes version history
+
+* - [ ] Safari version history
+
+* - [x] Sosumi
+
+* - [ ] Apple processors list
+
+* - [x] iOS-4 (note: the hyphen rather than the underscore)
+
+* - [x] iOS-6 (note: the hyphen rather than the underscore)
+
+* - [ ] List of Apple memes
+
+* - [ ] Bomb screen
+
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
-**Total entries:** `593` **Completed:** `178` (as the footer, homepage, and sidebar are counted)
+**Total entries:** `601` **Completed:** `184` (as the footer, homepage, and sidebar are counted)
 
-**Current completion status (as of 2021 Monday, September 27th at 10:42 pm):** `30.38%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+**Current completion status (as of 2021 Tuesday, September 28th at 4:30 pm):** `30.62%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1259,6 +1279,9 @@ These are the development notes for this page.
 
 ### Revision errors
 
+<details>
+	<summary>[Click/tap here to expand the list of revision errors for this page]</p></summary>
+
 Notes: Revision 4 was a mistake, I accidentally auto-published. I am not going to count it, I am going to count revision 5 as revision 4, revision 6 as revision 5, and so on.
 
 Due to this error and suddenly stopping the naming scheme, I am going to clarify what archived revision means what, until the problem can be reversed:
@@ -1277,9 +1300,13 @@ Version 9 is version 4
 
 I have stopped this naming scheme, it is too confusing. - As of revision 10, or revision X
 
+</details>
+
 ### Obsession
 
 I admit, I have become a bit too obsessed with Apple recently in my research, despite owning no Apple products or software that is still in use. I feel it is important to be enthusiastic if I am going to talk about and research something. I just enjoy writing this Wiki in my free time. I hope others can too someday, once I figure out how to make Wiki editing more friendly and less subject to abuse (I don't want some random person to come in, take everything out and write something bad) - 2021 Friday September 17th
+
+It has become a daily routine, and I have spent at least 40 hours writing this Wiki so far this month. It is starting to impact my life negatively, so I may stop in early October/slow down heavily, although I still really enjoy writing the Wiki. - 2021 September 28th
 
 ### Piling on
 
@@ -1639,6 +1666,7 @@ Litigation
 Windows 2.0
 TigerDirect
 BitTorrent Tiger
+Applecorp . .. ... .... ..... etc......
 
 !-->
 
@@ -1648,17 +1676,17 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `26 (2021, Monday, September 27th at 10:42 pm)`
+**Page version:** `27 (2021, Tuesday, September 28th at 4:30 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,670`
+**Line count (including blank lines and compiler line):** `1,698`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `25 (2021, Monday, September 27th at 5:00 pm)`
+**Current revision:** `27 (2021, Tuesday, September 28th at 4:30 pm)`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
