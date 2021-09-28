@@ -63,7 +63,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] AppleScript
 
-* - [ ] Assembly
+* - [x] Assembly
 
 * - [x] Basys
 
@@ -77,7 +77,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] Objective-C++
 
-* - [ ] VHDL
+* - [x] VHDL
 
 * - [ ] WOAHS-X
 
@@ -89,7 +89,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] Default programs
 
-* - [ ] Python
+* - [x] Python
 
 * - [x] Intel processor support
 
@@ -161,13 +161,13 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iOS_8
 
-* - [ ] iOS_9
+* - [x] iOS_9
 
-* - [ ] iOS_10
+* - [x] iOS_10
 
-* - [ ] iOS_11
+* - [x] iOS_11
 
-* - [ ] iOS_12
+* - [x] iOS_12
 
 * - [ ] iOS_13
 
@@ -1133,7 +1133,7 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] WacOS server
 
-* - [ ] Java
+* - [x] Java
 
 * - [x] WacOS JRE
 
@@ -1187,11 +1187,13 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] NewtonOS version history
 
+* - [ ] iPhone X memes
+
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
-**Total entries:** `581` **Completed:** `167` (as the footer, homepage, and sidebar are counted)
+**Total entries:** `582` **Completed:** `175` (as the footer, homepage, and sidebar are counted)
 
-**Current completion status (as of 2021 Sunday, September 26th at 7:45 pm):** `28.74%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+**Current completion status (as of 2021 Monday, September 27th at 5:00 pm):** `30.07%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1624,17 +1626,21 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `24 (2021, Sunday, September 26th at 7:45 pm)`
+**Page version:** `25 (2021, Monday, September 27th at 5:00 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,642`
+**Line count (including blank lines and compiler line):** `1,648`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `24 (2021, Sunday, September 26th at 7:45 pm)`
+**Current revision:** `25 (2021, Monday, September 27th at 5:00 pm)`
+
+**All times are UTC-7 (PDT/Pacific Time)**
+
+**You may need special rendering support for the `<dropdown>` HTML tag being used in this document**
 
 # End of page
 
