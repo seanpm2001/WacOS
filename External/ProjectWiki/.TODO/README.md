@@ -169,11 +169,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [x] iOS_12
 
-* - [ ] iOS_13
+* - [x] iOS_13
 
-* - [ ] iOS_14
+* - [x] iOS_14
 
-* - [ ] iOS_15
+* - [x] iOS_15
 
 * - [x] iPadOS_13
 
@@ -1189,11 +1189,33 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 * - [ ] iPhone X memes
 
+* - [ ] Batterygate
+
+* - [ ] Broadpwn security exploit
+
+* - [ ] Pegasus spyware
+
+* - [ ] HomePod
+
+* - [ ] Sign in with Apple
+
+* - [ ] Apple Lookaround
+
+* - [ ] ARKIT
+
+* - [ ] ARKIT 2
+
+* - [ ] ARKIT 3
+
+* - [ ] ARKIT 3.5
+
+* - [ ] unc0ver (exploit)
+
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
-**Total entries:** `582` **Completed:** `175` (as the footer, homepage, and sidebar are counted)
+**Total entries:** `593` **Completed:** `178` (as the footer, homepage, and sidebar are counted)
 
-**Current completion status (as of 2021 Monday, September 27th at 5:00 pm):** `30.07%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+**Current completion status (as of 2021 Monday, September 27th at 10:42 pm):** `30.38%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
 
@@ -1626,11 +1648,11 @@ BitTorrent Tiger
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `25 (2021, Monday, September 27th at 5:00 pm)`
+**Page version:** `26 (2021, Monday, September 27th at 10:42 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,648`
+**Line count (including blank lines and compiler line):** `1,670`
 
 **Majority language:** `English (US) / Markdown`
 
