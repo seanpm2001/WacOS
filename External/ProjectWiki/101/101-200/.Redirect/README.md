@@ -3,31 +3,46 @@
 
 # Redirect page
 
-This is the page for finding and redirecting you to the article you are looking for.
+This is the page for finding and redirecting you to the article you are looking for. I hope to make this an automated process in the future.
+
+## 0
+
+
+## 4
+
+[404 - Redirect to: 404 error](https://github.com/seanpm2001/WacOS/wiki/404/)
 
 ## A
 
-This section is empty.
+[Aquarium computer - Redirect to Macquarium](https://github.com/seanpm2001/WacOS/wiki/Macquarium/)
+
+[acid 1 - Redirect to: acid1](https://github.com/seanpm2001/WacOS/wiki/acid1/)
+
+[acid 2 - Redirect to: acid1](https://github.com/seanpm2001/WacOS/wiki/acid2/)
+
+[acid 3 - Redirect to: acid1](https://github.com/seanpm2001/WacOS/wiki/acid3/)
 
 ## B
 
-This section is empty.
+[Bring back the bong - Redirect to MacOS startup sound](https://github.com/seanpm2001/WacOS/wiki/MacOS-startup-sound/)
 
 ## C
 
-This section is empty.
+[Cernel Panic - Redirect to Kernel Panic](https://github.com/seanpm2001/WacOS/wiki/Kernel-Panic/)
 
 ## D
 
-This section is empty.
+[.dmg - Redirect to DMG]((https://github.com/seanpm2001/WacOS/wiki/DMG/)
+
+[.dmg file - Redirect to DMG]((https://github.com/seanpm2001/WacOS/wiki/DMG/)
 
 ## E
 
-This section is empty.
+[Error sound - Redirect to: Sosumi](https://github.com/seanpm2001/WacOS/wiki/Sosumi/)
 
 ## F
 
-This section is empty.
+[Fire Fox - Redirect to: Firefox](https://github.com/seanpm2001/WacOS/wiki/Firefox/)
 
 ## G
 
@@ -39,11 +54,23 @@ This section is empty.
 
 ## I
 
+[.ipa - Redirect to IPA]((https://github.com/seanpm2001/WacOS/wiki/IPA/)
+
+[.ipa file - Redirect to IPA]((https://github.com/seanpm2001/WacOS/wiki/IPA/)
+
+[iPhone App - Redirect to IPA]((https://github.com/seanpm2001/WacOS/wiki/IPA/)
+
 [iOS 1 - Redirect to iPhoneOS 1](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-1/)
 
 [iOS 2 - Redirect to iPhoneOS 2](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-2/)
 
 [iOS 3 - Redirect to iPhoneOS 3](https://github.com/seanpm2001/WacOS/wiki/iPhoneOS-3/)
+
+[iOS_4 - Redirect to iOS-4](https://github.com/seanpm2001/WacOS/wiki/iOS-4/)
+
+[iOS_5 - Redirect to iOS-5](https://github.com/seanpm2001/WacOS/wiki/iOS-5/)
+
+[iOS_6 - Redirect to iOS-6](https://github.com/seanpm2001/WacOS/wiki/iOS-6/)
 
 [iPhoneOS 4 - Redirect to iOS 4](https://github.com/seanpm2001/WacOS/wiki/iOS-4/)
 
@@ -140,6 +167,10 @@ This section is empty.
 This section is empty.
 
 ## M
+
+[MacOS Error sound - Redirect to: Sosumi](https://github.com/seanpm2001/WacOS/wiki/Sosumi/)
+
+[MacOS 7 sound - Redirect to: Sosumi](https://github.com/seanpm2001/WacOS/wiki/Sosumi/)
 
 [Macintosh 128 - Redirect to Macintosh 128K](https://github.com/seanpm2001/WacOS/wiki/Macintosh-128K/)
 
@@ -369,7 +400,15 @@ This section is empty.
 
 ## T
 
-This section is empty.
+[TAM - Redirect to: Twentieth-Anniversary Macintosh](https://github.com/seanpm2001/WacOS/wiki/Twentieth-Anniversary-Macintosh/)
+
+[TAMMY - Redirect to: Twentieth-Anniversary Macintosh](https://github.com/seanpm2001/WacOS/wiki/Twentieth-Anniversary-Macintosh/)
+
+[TAMM- Redirect to: Twentieth-Anniversary Macintosh](https://github.com/seanpm2001/WacOS/wiki/Twentieth-Anniversary-Macintosh/)
+
+[TAMI - Redirect to: Twentieth-Anniversary Macintosh](https://github.com/seanpm2001/WacOS/wiki/Twentieth-Anniversary-Macintosh/)
+
+[TAMMI - Redirect to: Twentieth-Anniversary Macintosh](https://github.com/seanpm2001/WacOS/wiki/Twentieth-Anniversary-Macintosh/)
 
 ## U
 
@@ -377,7 +416,19 @@ This section is empty.
 
 ## V
 
-This section is empty.
+[Virtual Hard Disk Language - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[VHD file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[VHDL file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[.VHD file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[.VHDL file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[VDI file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
+
+[.VDI file - Redirect to: VHDL](https://github.com/seanpm2001/WacOS/wiki/VHDL/)
 
 ## W
 
@@ -385,15 +436,17 @@ This section is empty.
 
 ## X
 
-This section is empty.
+[XML file - Redirect to: XML](https://github.com/seanpm2001/WacOS/wiki/XML/)
 
 ## Y
 
-This section is empty.
+[YML - Redirect to: YAML](https://github.com/seanpm2001/WacOS/wiki/YAML/)
 
 ## Z
 
-This section is empty.
+[Zettabyte File System - Redirect to: ZFS](https://github.com/seanpm2001/WacOS/wiki/ZFS/)
+
+[Open Zettabyte File System - Redirect to: OpenZFS](https://github.com/seanpm2001/WacOS/wiki/OpenZFS/)
 
 ## Notes
 
@@ -413,6 +466,6 @@ More sources coming soon.
 
 **File format:** `Markdown document (*.md *.mkd *.markdown)`
 
-**Article version:** `1 (Thursday, 2021 September 23rd at 5:43 pm)`
+**Article version:** `2 (Tuesday, 2021 September 28th at 5:01 pm)`
 
 ***
