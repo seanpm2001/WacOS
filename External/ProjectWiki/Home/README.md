@@ -7,6 +7,12 @@
 
 _This is the home page of the Wiki. It is not to be confused with the [WacOS Home directory](https://github.com/seanpm2001/WacOS/wiki/Home(Directory))._
 
+General description of WacOS: 
+
+```plain-text
+A Linux distribution that mimics MacOS (modern and classic) iOS, and other Apple operating systems, but is open, customizable, and free to use on non-apple hardware. 
+```
+
 WacOS is an open source replacement project for all versions of MacOS, iOS, iPhoneOS, TvOS, WatchOS, and all Apple software.
 
 This Wiki is a glossary of Apple terms, alongside info on how it aligns with WacOS and how well it is supported/its re-development history.
@@ -315,6 +321,10 @@ _Section renamed from `Wiki Meta` to `Meta Wiki` on 2021 Thursday September 23rd
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/Macintosh/128K/Macintosh_128k_transparency.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/Macintosh/128K/Macintosh_128k_transparency.png)
 
 [Macintosh 128K](https://github.com/seanpm2001/WacOS/wiki/Macintosh_128K)
+
+##### See also
+
+[Macquarium](https://github.com/seanpm2001/WacOS/wiki/Macquarium/)
 
 #### iPhone
 
@@ -940,6 +950,18 @@ _Apple was founded on 1976, April 1st._
 
 </details>
 
+### System sounds
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/AIFF/AIFF.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/AIFF/AIFF.png)
+
+For the system sounds used by Apple.
+
+[Sosumi (MacOS 7 and onward error sound)](https://github.com/seanpm2001/WacOS/wiki/Sosumi/)
+
+[MacOS Startup sound](https://github.com/seanpm2001/WacOS/wiki/MacOS-startup-sound/)
+
+More pages coming soon
+
 ### Apple WorldWide Developers Conference
 
 ![https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg](https://github.com/seanpm2001/WacOS/blob/master/Graphics/WWDC/Apple_WWDC_wordmark.svg)
@@ -1037,11 +1059,21 @@ _The Apple WWDC is Apples yearly conference to announce new Apple products, and 
 
 [Image Credits (Apple)](https://github.com/seanpm2001/WacOS/wiki/ImageCredits(Apple))
 
+### Broken pages
+
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/ProjectWiki/Rendering/Problems/2021/September/This-Wiki-page-took-too-long-to-render_WacOS_2021September_LightMode.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/ProjectWiki/Rendering/Problems/2021/September/This-Wiki-page-took-too-long-to-render_WacOS_2021September_LightMode.png)
+
+The following pages are currently broken on connections lower than 500 megabits/all connections (if it is on GitHubs end) these pages can still be viewed by source, or through separate `README.md` files. They are still problematic as of 2021 Tuesday September 28th at 6:00 pm.
+
+[iOS version history](https://github.com/seanpm2001/WacOS/wiki/iOS-version-history/)
+
+[Complete iOS version history](https://github.com/seanpm2001/WacOS/wiki/Complete-iOS-version-history/)
+
 ***
 
 ## Article info
 
-**Wiki homepage version:** `11 (Sunday, 2021 September 26th at 5:51 pm)`
+**Wiki homepage version:** `12 (Tuesday, 2021 September 28th at 6:00 pm)`
 
 **Wiki homepage version 3 release date:** `Wednesday, 2021 September 15th at 5:10 pm) accidentally published early.`
 
@@ -1053,7 +1085,7 @@ _The Apple WWDC is Apples yearly conference to announce new Apple products, and 
 
 **Language:** `English (US) / Markdown (.md)`
 
-**Line count (including blank lines and compiler line):** `1063`
+**Line count (including blank lines and compiler line):** `1,095`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
