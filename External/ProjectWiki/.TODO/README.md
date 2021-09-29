@@ -3,13 +3,22 @@
 
 # Articles to write (WacOS Wiki)
 
+![https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png](https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-icon.png)
+
 I have recently noted the importance of the project Wiki, and I want to improve this projects Wiki. Here are the articles I plan to write - Early 2021 September
 
 This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
 
-Articles to write: `601`
+**Articles to write:** `602` _(this number will continue to go up over time, as more topics are found during research)_
+
+**Articles written so far:** `189` / `602` (31.40%) _Note: the homepage, footer, and sidebar are also included in this count._
+
+**Stats are as of 2021 Tuesday September 28th at 9:00 pm**
 
 ## Checklist
+
+<details>
+	<summary><p>Click/tap here to expand/collapse the checklist</p></summary>
 
 * - [x] Home
 
@@ -295,13 +304,13 @@ Articles to write: `601`
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
-* - [ ] iPhone 2G
+* - [x] iPhone 2G
 
-* - [ ] iPhone 3G
+* - [x] iPhone 3G
 
-* - [ ] iPhone 3GS
+* - [x] iPhone 3GS
 
-* - [ ] iPhone 4
+* - [x] iPhone 4
 
 * - [ ] iPhone 5
 
@@ -1231,13 +1240,84 @@ Articles to write: `601`
 
 * - [ ] Bomb screen
 
+* - [ ] Foxxcon
+
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
-**Total entries:** `601` **Completed:** `184` (as the footer, homepage, and sidebar are counted)
+</details>
 
-**Current completion status (as of 2021 Tuesday, September 28th at 4:30 pm):** `30.62%` (formula: completed(y) / total(x) = answer, or y / x, don't let the decimal confuse you)
+**Total entries:** `602` **Completed:** `189` _(as the footer, homepage, and sidebar are counted)_
 
-I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list.
+**Current completion status (as of 2021 Tuesday, September 28th at 8:05 pm):** `31.40%`
+
+<details>
+	<summary><p>Click/tap here to expand/collapse the total percentage estimate mathematical formula</p></summary>
+
+**Percent complete calculation formula:** `completed` `y` `/` `total` `x` _=_ `answer`, **or** `y` `/` `x`
+
+( `completed` == `y` | `total` == `x` | `answer` == `sum` )
+
+**Important notes:**
+
+`don't let the decimal confuse you`
+
+`don't divide x by y, instead divide y by x`
+
+`if your calculator puts zeroes before the decimal, that is a normal calculator. Pretend that the number 10-99 comes after the 0, and once it passes 99.99, it goes to 100.00` (I don't know how to explain this better)
+
+</details>
+
+**Other notes (not related to the formula)**
+
+_I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list._
+
+## How to make your own checklist in Markdown
+
+<details>
+	<summary><p>Click/tap here to expand/collapse the section that tells you how to make your own Markdown checklist</p></summary>
+
+```markdown
+- [ ]
+```
+
+is equal to:
+
+- [ ]
+
+```markdown
+- [x]
+```
+
+is equal to:
+
+- [x]
+
+```markdown
+- [ ] Foo
+
+- [x] Bar
+```
+
+is equal to:
+
+- [ ] Foo
+
+- [x] Bar
+
+Alternatively, this works:
+
+```markdown
+- [ ] Foo
+- [x] Bar
+```
+
+Note the lack of a blank line between each box. I choose to add the blank line, as some of my markdown viewers (including the one on GitHub in some spots) have problems if I don't separate things with spaces, and will format like this:
+
+```markdown
+- [ ] Foo-[x] Bar
+```
+
+</details>
 
 ***
 
@@ -1249,7 +1329,10 @@ Wacky OS Wack o's
 Srart qriting sodtware f9r wacos
 !-->
 
-## Needs update
+## Article updates needed
+
+<details>
+	<summary><p>Click/tap here to expand/collapse the article updates checklist section</p></summary>
 
 > - [ ] All articles that don't have a article info footer need to be updated
 
@@ -1266,6 +1349,8 @@ Srart qriting sodtware f9r wacos
 > - [ ] Several Apple software products need WacOS equivalents - 2021 September 20th
 
 > - [ ] Find and include beta versions and beta software info for various MacOS software - 2021 September 22nd
+
+</details>
 
 **Total entries:** `8` **Completed:** `0`
 
@@ -1312,25 +1397,43 @@ It has become a daily routine, and I have spent at least 40 hours writing this W
 
 I just keep adding to this list, as I keep finding new entries. It seems for every 1-5 entries I complete, 10-30 get added to the todo list. - 2021 September 18th
 
-<!--
-Year article notes
+## Article notes
 
-# 1984
+This section contains subsections for my active notes on writing various articles for this projects Wiki. Originally commented out prior to version 28 of this article, they have been made more accessible via dropdown menus.
+
+### Year article notes
+
+<details>
+	<summary><p>Click/tap here to expand/collapse my notes on events by the year articles</p></summary>
+
+#### 1984
 
 1984 MacPaint 1.0 released
+
 1984 MacWrite 1.0 released
+
 1984 Macintosh 128K released
+
 1984 1984 Apple ad released
+
 1984 System 1 released
+
 MacPaint {
+
 1.0 	January 24, 1984 	Initial release with System Software 1.0
+
 1.3 	May 1984 	Released with System Software 1.1
+
 1.4 	September 1984 	Released with Macintosh 512K
+
 1.5 	April 1985 	Released with System Software 2.0
-2.0 	January 1988[28] 	Last release
+
+2.0 	January 1988 	Last release
+
 }
 
 Newton
+
 Version history
 
 Date released 	OS version
@@ -1340,110 +1443,122 @@ August 3, 1993 	1.0
 October 30, 1993 	1.1
 
 ? 	1.2
+
 March 4, 1994 	1.3
 
 March 14, 1996 	2.0
 
 March 21, 1997 	2.1
-# 1985
 
-# 1986
+#### 1985
 
-# 1987
+#### 1986
+
+#### 1987
 
 1987 MacPaint 2.0 released
 
-# 1988
+#### 1988
 
 March 17th 1988 - Microsoft unsuccessfully sued by Apple over Windows 2.0 GUI
 
-# 1989
+#### 1989
 
-# 1990
+#### 1990
 
-# 1991
+#### 1991
 
-# 1992
+#### 1992
 
-# 1993
+#### 1993
 
-# 1994
+#### 1994
 
-# 1995
+#### 1995
 
 1995 MacWrite development ceased
 
-# 1996
+#### 1996
 
 1996 December 20th - Apple announces plans to acquire NeXT
 
-# 1997
+#### 1997
 
 1997 February 4th - Apple acquires NeXT
 
-# 1998
+#### 1998
 
 1998 MacWrite discontinued
+
 1998 MacPaint discontinued
 
-# 1999
+#### 1999
 
-# 2000
+#### 2000
 
-The final update to the classic Mac OS was version 9.2.2, released on December 5, 2001.[34]
-System Version[5] 	Release Information[5]
+The final update to the classic Mac OS was version 9.2.2, released on December 5, 2001.
+
+System Version 	Release Information
+
 Mac OS 9.0 	initial retail version of Mac OS 9
+
 Mac OS 9.0.2 	
+
 Mac OS 9.0.3
+
 Mac OS 9.0.4
+
 Mac OS 9.1 	included with Mac OS X 10.0
+
 Mac OS 9.2 	update for improved Mac OS X compatibility
+
 Mac OS 9.2.1 	
+
 Mac OS 9.2.2 	final release of classic Mac OS 
 
-# 2001
+#### 2001
 
 Mac OS data from 2001 is documented, find other info to place here
 
-# 2002
+#### 2002
 
 Mac OS data from 2002 is documented, find other info to place here
 
-# 2003
+#### 2003
 
 Mac OS data from 2003 is documented, find other info to place here
 
-# 2004
+#### 2004
 
 Mac OS data from 2004 is documented, find other info to place here
 
-# 2005
+#### 2005
 
 Mac OS data from 2005 is documented, find other info to place here
 
-# 2006
+#### 2006
 
 Mac OS data from 2006 is documented, find other info to place here
 
-# 2007
+#### 2007
 
 Mac OS data from 2007 is documented, find other info to place here
 
 iPhone 2G, iPod Touch (1st generation) and iPhoneOS data from 2007 is documented, find other info to place here
 
-# 2008
+#### 2008
 
 Mac OS data from 2008 is documented, find other info to place here
 
 iPhone 3G, iPod Touch (2nd generation) and iPhoneOS data from 2008 is documented, find other info to place here
 
-# 2009
+#### 2009
 
 Mac OS data from 2009 is documented, find other info to place here
 
 iPhone 3GS, iPod Touch (3rd generation) and iPhoneOS data from 2009 is documented, find other info to place here
 
-# 2010
+#### 2010
 
 MacPaint data from 2010 is documented, find other info to place here
 
@@ -1451,13 +1566,13 @@ Mac OS data from 2010 is documented, find other info to place here
 
 iPhone 4, iPod Touch (4th generation) iPad (1stgeneration) and iOS 4 data from 2010 is documented, find other info to place here
 
-# 2011
+#### 2011
 
 Mac OS data from 2011 is documented, find other info to place here
 
 iPhone 4, iPod Touch (4th generation) iPad (2nd generation) iOS 4, and iOS 5 data from 2011 is documented, find other info to place here
 
-# 2012
+#### 2012
 
 10.7.3 	11D50 	February 1, 2012 	Darwin 11.3 	About the OS X Lion v10.7.3 Update
 
@@ -1497,7 +1612,9 @@ OS X v10.8.2 Supplemental Update 1.0
 
 12C3104 	November 29, 2012 	For Mac Mini (Late 2012) 	OS X v10.8.2 Supplemental Update 2.0
 
-# 2013
+More notes need to be added here
+
+#### 2013
 
 10.8.3 	12D78 	March 14, 2013 	Darwin 12.3 	About OS X Mountain Lion v10.8.3 Update 	OS X v10.8.3 Individual update
 
@@ -1517,24 +1634,6 @@ OS X v10.8.5 Combo update
 
 12F45 	October 3, 2013 	About the OS X Mountain Lion v10.8.5 Supplemental Update 	OS X v10.8.5 Supplemental Update
 
-# 2015
-
-12F2501 	March 9, 2015 	About Security Update 2015-002 	Security Update 2015-002 Mountain Lion
-
-12F2518 	April 8, 2015 	About the security content of Security Update 2015-004 	Security Update 2015-004 Mountain Lion
-
-12F2542 	June 30, 2015 	About the security content of Security Update 2015-005 	Security Update 2015-005 Mountain Lion
-
-12F2560 	August 13, 2015 	About the security content of Security Update 2015-006 	Security Update 2015-006 Mountain Lion
-
-Note: Combo updates include all previous releases (ex: 10.8 to 10.8.3). Individual update is a smaller package size and can be used if currently using the previous release (ex: 10.8.2 to 10.8.3).
-
-11G63 	October 4, 2012 		
-
-OS X 10.9 Release history (dates)
-
-# 2013
-
 10.9 	13A603 (GM2) 	October 22, 2013 	Darwin 13.0 	Original Mac App Store release 	N/A
 
 10.9.1 	13B42 	December 16, 2013 	About the OS X Mavericks v10.9.1 Update 	OS X Mavericks 10.9.1 Individual update
@@ -1543,7 +1642,9 @@ OS X 10.9 Release history (dates)
 
 OS X Mavericks 10.9.2 Combo update
 
-# 2014
+More notes need to be added here
+
+#### 2014
 
 13C1021 	April 22, 2014 	About Security Update 2014-002 Mavericks 	Security Update 2014-002 Mavericks
 
@@ -1561,7 +1662,23 @@ OS X Mavericks 10.9.5 Combo update
 
 October 16, 2014 	About the security content of Security Update 2014-005 Mavericks 	Security Update 2014-005 Mavericks
 
-# 2015
+More notes need to be added here
+
+#### 2015
+
+12F2501 	March 9, 2015 	About Security Update 2015-002 	Security Update 2015-002 Mountain Lion
+
+12F2518 	April 8, 2015 	About the security content of Security Update 2015-004 	Security Update 2015-004 Mountain Lion
+
+12F2542 	June 30, 2015 	About the security content of Security Update 2015-005 	Security Update 2015-005 Mountain Lion
+
+12F2560 	August 13, 2015 	About the security content of Security Update 2015-006 	Security Update 2015-006 Mountain Lion
+
+Note: Combo updates include all previous releases (ex: 10.8 to 10.8.3). Individual update is a smaller package size and can be used if currently using the previous release (ex: 10.8.2 to 10.8.3).
+
+11G63 	October 4, 2012 		
+
+OS X 10.9 Release history (dates)
 
 January 27, 2015 	About the security content of Security Update 2015-001 Mavericks 	Security Update 2015-001 Mavericks
 
@@ -1577,7 +1694,27 @@ January 27, 2015 	About the security content of Security Update 2015-001 Maveric
 
 13F1507 	December 8, 2015 	About the security content of Security Update 2015-008 Mavericks 	Security Update 2015-008 Mavericks
 
-# 2016
+14D136 	April 16, 2015 	Supplemental Update
+
+Fixes issue with video driver issue that may prevent Mac from starting up when running certain apps that capture video 	OS X Yosemite 10.10.3 Supplemental Update 1.0
+
+10.10.4 	14E46 	June 30, 2015 	Darwin 14.4 	About the OS X Yosemite v10.10.4 Update 	OS X Yosemite 10.10.4 Individual update
+
+OS X Yosemite 10.10.4 Combo update
+
+10.10.5 	14F27 	August 13, 2015 	Darwin 14.5 	About the OS X Yosemite v10.10.5 Update 	OS X Yosemite 10.10.5 Individual update
+
+OS X Yosemite 10.10.5 Combo update
+
+14F1021 	October 21, 2015 	About the security content of Security Update 2015-004 Yosemite 	Security Update 2015-004 Yosemite
+
+14F1505 	November 12, 2015 	About the security content of Security Update 2015-005 Yosemite 	Included in Security Update 2015-006 Yosemite
+
+14F1509 	December 11, 2015 	About the security content of Security Update 2015-006 Yosemite 	Security Update 2015-006 Yosemite
+
+More notes need to be added here
+
+#### 2016
 
 13F1603 	January 19, 2016 	About the security content of Security Update 2016-001 Mavericks 	Security Update 2016-001 Mavericks
 
@@ -1615,28 +1752,6 @@ This release unified the previously forked build for the early 2015 MacBook Air 
 
 OS X Yosemite 10.10.3 Combo update
 
-# 2015
-
-14D136 	April 16, 2015 	Supplemental Update
-
-Fixes issue with video driver issue that may prevent Mac from starting up when running certain apps that capture video 	OS X Yosemite 10.10.3 Supplemental Update 1.0
-
-10.10.4 	14E46 	June 30, 2015 	Darwin 14.4 	About the OS X Yosemite v10.10.4 Update 	OS X Yosemite 10.10.4 Individual update
-
-OS X Yosemite 10.10.4 Combo update
-
-10.10.5 	14F27 	August 13, 2015 	Darwin 14.5 	About the OS X Yosemite v10.10.5 Update 	OS X Yosemite 10.10.5 Individual update
-
-OS X Yosemite 10.10.5 Combo update
-
-14F1021 	October 21, 2015 	About the security content of Security Update 2015-004 Yosemite 	Security Update 2015-004 Yosemite
-
-14F1505 	November 12, 2015 	About the security content of Security Update 2015-005 Yosemite 	Included in Security Update 2015-006 Yosemite
-
-14F1509 	December 11, 2015 	About the security content of Security Update 2015-006 Yosemite 	Security Update 2015-006 Yosemite
-
-# 2016
-
 14F1605 	January 19, 2016 	About the security content of Security Update 2016-001 Yosemite 	Security Update 2016-001 Yosemite
 
 14F1713 	March 21, 2016 	About the security content of Security Update 2016-002 Yosemite 	Security Update 2016-002 Yosemite
@@ -1651,6 +1766,8 @@ OS X Yosemite 10.10.5 Combo update
 
 14F2109 	December 13, 2016 	About the security content of Security Update 2016-007 Yosemite 	Security Update 2016-007 Yosemite
 
+More notes need to be added here
+
 # 2017
 
 14F2315 	March 27, 2017 	About the security content of Security Update 2017-001 Yosemite 	Security Update 2017-001 Yosemite
@@ -1661,14 +1778,44 @@ OS X Yosemite 10.10.5 Combo update
 
 Apple campus moved to Apple Park on April 2017
 
+More notes need to be added here
+
+# 2018
+
+Notes need to be added here
+
+# 2019
+
+Notes need to be added here
+
+# 2020
+
+Notes need to be added here
+
+# 2021
+
+Notes need to be added here
+
+</details>
+
+***
+
+### Litigation article notes
+
+<details>
+	<summary><p>Click/tap here to expand/collapse my notes for Apple litigation articles</p></summary>
+
 Litigation
 
 Windows 2.0
+
 TigerDirect
+
 BitTorrent Tiger
+
 Applecorp . .. ... .... ..... etc......
 
-!-->
+</details>
 
 ***
 
@@ -1676,17 +1823,17 @@ Applecorp . .. ... .... ..... etc......
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `27 (2021, Tuesday, September 28th at 4:30 pm)`
+**Page version:** `28 (2021, Tuesday, September 28th at 8:05 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,698`
+**Line count (including blank lines and compiler line):** `1,845`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `27 (2021, Tuesday, September 28th at 4:30 pm)`
+**Current revision:** `28 (2021, Tuesday, September 28th at 8:05 pm)`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
