@@ -9,11 +9,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
 
-**Articles to write:** `602` _(this number will continue to go up over time, as more topics are found during research)_
+**Articles to write:** `660` _(this number will continue to go up over time, as more topics are found during research)_
 
-**Articles written so far:** `189` / `602` (31.40%) _Note: the homepage, footer, and sidebar are also included in this count._
+**Articles written so far:** `189` / `660` (28.64%) _Note: the homepage, footer, and sidebar are also included in this count._
 
-**Stats are as of 2021 Tuesday September 28th at 9:00 pm**
+**Stats are as of 2021 Tuesday September 28th at 8:22 pm**
 
 ## Checklist
 
@@ -312,23 +312,63 @@ This project has become a strong Apple Wiki, and it expands outside the scope of
 
 * - [x] iPhone 4
 
+* - [ ] iPhone 4S
+
 * - [ ] iPhone 5
+
+* - [ ] iPhone 5S
+
+* - [ ] iPhone 5C
 
 * - [ ] iPhone 6
 
+* - [ ] iPhone 6+
+
+* - [ ] iPhone 6S
+
+* - [ ] iPhone 6S+
+
 * - [ ] iPhone 7
+
+* - [ ] iPhone 7+
 
 * - [ ] iPhone 8
 
-* - [ ] iPhone 9
+* - [ ] iPhone 8+
 
-* - [ ] iPhone 10
+* - [ ] iPhone X
+
+* - [ ] iPhone XR
+
+* - [ ] iPhone XS
+
+* - [ ] iPhone XS Max
 
 * - [ ] iPhone 11
 
+* - [ ] iPhone 11 Pro
+
+* - [ ] iPhone 11 Pro Max
+
 * - [ ] iPhone 12
 
+* - [ ] iPhone 12 Mini
+
+* - [ ] iPhone 12 Pro
+
+* - [ ] iPhone 12 Pro Max
+
 * - [ ] iPhone 13
+
+* - [ ] iPhone 13 Mini
+
+* - [ ] iPhone 13 Pro
+
+* - [ ] iPhone 13 Pro Max
+
+* - [ ] iPhone SE 1
+
+* - [ ] iPhone SE 2
 
 // For hardware, make sure to list the device specifications as well in detail, they are important
 
@@ -1242,13 +1282,91 @@ This project has become a strong Apple Wiki, and it expands outside the scope of
 
 * - [ ] Foxxcon
 
+* - [ ] Apple A1 processor
+
+* - [ ] Apple A2 processor
+
+* - [ ] Apple A3 processor
+
+* - [ ] Apple A4 processor
+
+* - [ ] Apple A5 processor
+
+* - [ ] Apple A5X processor
+
+* - [ ] Apple A6 processor
+
+* - [ ] Apple A6X processor
+
+* - [ ] Apple A7 processor
+
+* - [ ] Apple A8 processor
+
+* - [ ] Apple A8X processor
+
+* - [ ] Apple A9 processor
+
+* - [ ] Apple A9X processor
+
+* - [ ] Apple A10 Fusion processor
+
+* - [ ] Apple A10X Fusion processor
+
+* - [ ] Apple A11 Bionic processor
+
+* - [ ] Apple A12 Bionic processor
+
+* - [ ] Apple A12X Fusion processor
+
+* - [ ] Apple A12Z Bionic processor
+
+* - [ ] Apple A13 Bionic processor
+
+* - [ ] Apple A14 Bionic processor
+
+* - [ ] Apple A15 Bionic processor
+
+* - [ ] Apple S1 processor
+
+* - [ ] Apple S1P processor
+
+* - [ ] Apple S2 processor
+
+* - [ ] Apple S3 processor
+
+* - [ ] Apple S4 processor
+
+* - [ ] Apple S5 processor
+
+* - [ ] Apple S6 processor
+
+* - [ ] Apple S7 processor
+
+* - [ ] Apple T1 processor
+
+* - [ ] Apple T2 processor
+
+* - [ ] Apple W1 processor
+
+* - [ ] Apple W2 processor
+
+* - [ ] Apple W3 processor
+
+* - [ ] Apple H1 processor
+
+* - [ ] Apple U1 processor
+
+* - [ ] Apple M1 processor
+
+<!--TODO Unknown 2012 Apple ARM processor TODO!-->
+
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
 </details>
 
-**Total entries:** `602` **Completed:** `189` _(as the footer, homepage, and sidebar are counted)_
+**Total entries:** `660` **Completed:** `189` _(as the footer, homepage, and sidebar are counted)_
 
-**Current completion status (as of 2021 Tuesday, September 28th at 8:05 pm):** `31.40%`
+**Current completion status (as of 2021 Tuesday, September 28th at 8:22 pm):** `28.64%`
 
 <details>
 	<summary><p>Click/tap here to expand/collapse the total percentage estimate mathematical formula</p></summary>
@@ -1768,7 +1886,7 @@ OS X Yosemite 10.10.3 Combo update
 
 More notes need to be added here
 
-# 2017
+#### 2017
 
 14F2315 	March 27, 2017 	About the security content of Security Update 2017-001 Yosemite 	Security Update 2017-001 Yosemite
 
@@ -1780,15 +1898,15 @@ Apple campus moved to Apple Park on April 2017
 
 More notes need to be added here
 
-# 2018
+#### 2018
 
 Notes need to be added here
 
-# 2019
+#### 2019
 
 Notes need to be added here
 
-# 2020
+#### 2020
 
 Notes need to be added here
 
@@ -1823,17 +1941,17 @@ Applecorp . .. ... .... ..... etc......
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `28 (2021, Tuesday, September 28th at 8:05 pm)`
+**Page version:** `29 (2021, Tuesday, September 28th at 8:22 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,845`
+**Line count (including blank lines and compiler line):** `1,963`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `28 (2021, Tuesday, September 28th at 8:05 pm)`
+**Current revision:** `29 (2021, Tuesday, September 28th at 8:22 pm)`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
