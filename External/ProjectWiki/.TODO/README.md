@@ -9,11 +9,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
 
-**Articles to write:** `667` _(this number will continue to go up over time, as more topics are found during research)_
+**Articles to write:** `671` _(this number will continue to go up over time, as more topics are found during research)_
 
-**Articles written so far:** `204` / `667` (30.58%) _Note: the homepage, footer, and sidebar are also included in this count._
+**Articles written so far:** `204` / `671` (30.40%) _Note: the homepage, footer, and sidebar are also included in this count._
 
-**Stats are as of 2021 Wednesday September 29th at 7:04 pm**
+**Stats are as of 2021 Wednesday September 29th at 10:47 pm**
 
 ## Checklist
 
@@ -1372,15 +1372,23 @@ This project has become a strong Apple Wiki, and it expands outside the scope of
 
 * - [ ] Apple M1 processor
 
+* - [ ] Apple 40 years in 40 seconds
+
+* - [ ] Rosetta software MacOs
+
+* - [ ] Keychain software MacOS
+
+* - [ ] FingerWorks
+
 <!--TODO Unknown 2012 Apple ARM processor TODO!-->
 
 <!-- Look for iOS features like you did MacOS to add more to the list !-->
 
 </details>
 
-**Total entries:** `667` **Completed:** `204` _(as the footer, homepage, and sidebar are counted)_
+**Total entries:** `671` **Completed:** `204` _(as the footer, homepage, and sidebar are counted)_
 
-**Current completion status (as of 2021 Wednesday, September 29th at 7:04 pm):** `30.58%`
+**Current completion status (as of 2021 Wednesday, September 29th at 7:04 pm):** `30.40%`
 
 <details>
 	<summary><p>Click/tap here to expand/collapse the total percentage estimate mathematical formula</p></summary>
@@ -1955,17 +1963,17 @@ Applecorp . .. ... .... ..... etc......
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `30 (2021, Wednesday, September 29th at 7:04 pm)`
+**Page version:** `31 (2021, Wednesday, September 29th at 10:47 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,977`
+**Line count (including blank lines and compiler line):** `1,985`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `30 (2021, Wednesday, September 29th at 7:04 pm)`
+**Current revision:** `31 (2021, Wednesday, September 29th at 10:47 pm)`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
