@@ -9,11 +9,11 @@ I have recently noted the importance of the project Wiki, and I want to improve 
 
 This project has become a strong Apple Wiki, and it expands outside the scope of just WacOS. Articles should still be based on WacOS when possible, but also contain info on Apple - 2021 Saturday September 18th
 
-**Articles to write:** `660` _(this number will continue to go up over time, as more topics are found during research)_
+**Articles to write:** `667` _(this number will continue to go up over time, as more topics are found during research)_
 
-**Articles written so far:** `189` / `660` (28.64%) _Note: the homepage, footer, and sidebar are also included in this count._
+**Articles written so far:** `204` / `667` (30.58%) _Note: the homepage, footer, and sidebar are also included in this count._
 
-**Stats are as of 2021 Tuesday September 28th at 8:22 pm**
+**Stats are as of 2021 Wednesday September 29th at 7:04 pm**
 
 ## Checklist
 
@@ -480,21 +480,35 @@ This project has become a strong Apple Wiki, and it expands outside the scope of
 
 * - [ ] Apple TV (Streaming service)
 
-* - [ ] tvOS 9
+* - [x] tvOS 4 (iOS 4)
 
-* - [ ] tvOS 10
+* - [x] tvOS 5 (iOS 5)
 
-* - [ ] tvOS 11
+* - [x] tvOS 6 (iOS 6)
 
-* - [ ] tvOS 12
+* - [x] tvOS 7 (iOS 7)
 
-* - [ ] tvOS 13
+* - [x] tvOS 8 (iOS 8)
 
-* - [ ] tvOS 14
+* - [x] tvOS 9
 
-* - [ ] tvOS 15
+* - [x] tvOS 10
 
-* - [ ] tvOS version history
+* - [x] tvOS 11
+
+* - [x] tvOS 12
+
+* - [x] tvOS 13
+
+* - [x] tvOS 14
+
+* - [x] tvOS 15
+
+* - [x] tvOS version history
+
+* - [x] tvOS early version history
+
+* - [x] Complete tvOS version history
 
 * - [x] 1976
 
@@ -1364,9 +1378,9 @@ This project has become a strong Apple Wiki, and it expands outside the scope of
 
 </details>
 
-**Total entries:** `660` **Completed:** `189` _(as the footer, homepage, and sidebar are counted)_
+**Total entries:** `667` **Completed:** `204` _(as the footer, homepage, and sidebar are counted)_
 
-**Current completion status (as of 2021 Tuesday, September 28th at 8:22 pm):** `28.64%`
+**Current completion status (as of 2021 Wednesday, September 29th at 7:04 pm):** `30.58%`
 
 <details>
 	<summary><p>Click/tap here to expand/collapse the total percentage estimate mathematical formula</p></summary>
@@ -1444,7 +1458,7 @@ https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-softw
 https://github.com/seanpm2001/WacOS/blob/master/Graphics/MacWrite/MacWrite-software-screenshot.png
 
 Wacky OS Wack o's 
-Srart qriting sodtware f9r wacos
+Start writing software for wacos
 !-->
 
 ## Article updates needed
@@ -1941,17 +1955,17 @@ Applecorp . .. ... .... ..... etc......
 
 **Page type:** `(supposed to be) hidden by default` `Markdown document (*.md *.mkd *.markdown)`
 
-**Page version:** `29 (2021, Tuesday, September 28th at 8:22 pm)`
+**Page version:** `30 (2021, Wednesday, September 29th at 7:04 pm)`
 
 **First revision:** `1 (2021, Tuesday, September 14th at 10:29 pm)`
 
-**Line count (including blank lines and compiler line):** `1,963`
+**Line count (including blank lines and compiler line):** `1,977`
 
 **Majority language:** `English (US) / Markdown`
 
 **Minority languages:** `English (US) / Japanese (JP) / Swift, AppleScript, YAML, GITATTRIBUTES, Objective-C, Objective-C++, C, C++`
 
-**Current revision:** `29 (2021, Tuesday, September 28th at 8:22 pm)`
+**Current revision:** `30 (2021, Wednesday, September 29th at 7:04 pm)`
 
 **All times are UTC-7 (PDT/Pacific Time)**
 
