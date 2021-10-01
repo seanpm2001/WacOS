@@ -1,0 +1,164 @@
+WacOS plans 2021.09.30
+
+Cloud service program + separate repo (WacOS_Cloud) written in Python {
+	Basic GUI program
+	Cloud options: DeGoo, pCloud, ProtonDrive
+	Reasons for no iCloud
+}
+Separate repo: WacOS_API
+Work on BaSYS + separate repo (WacOS_BaSYS_Subsystem) Written in C/Assembly {
+	BaSYS 1 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	BaSYS 2 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	BaSYS 3 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	BaSYS 4 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	BaSYS 5 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	BaSYS 6 {
+		Startup script
+		Desktop script
+		Find script (Finder alternative) see below
+		Monochrome mode
+	}
+	Unavailable message by default for now, continue working around that
+}
+Work on AppleScript + separate repo (WacOS_AppleScript_Support) Written in C/AppleScript {
+	Script editor
+	Compiler
+	Startup script
+	Voice support
+	Version switcher
+	Unavailable message by default for now, continue working around that
+}
+Work on Architectures + separate repo (WacOS_Architectures) Written in C/Assembly
+Work on OpenCyberdog + separate repo (WacOS_OpenCyberdog) Written in Python, HTML and Assembly {
+	Web Suite, differs from browser
+	Classic mode: HTML1, HTML2, CSS1
+	X mode: HTML3, CSS2, JavaScript
+	Woah mode: HTML4, CSS3, JavaScript 1.8, PHP, Ruby
+	Suite programs {
+		Web browser
+		Other/tba
+	}
+	Unavailable message by default for now, continue working around that
+}
+Work on Savannah + separate repo (WacOS_Savannah_Browser) Written in Python, Swift, Objective-C, C++, HTML, and Assembly {
+	Engine: Switch between WebKit and Gecko, Gecko is the default
+	X mode: HTML4, CSS2, JavaScript
+	Woah mode: HTML5, CSS3, JavaScript 1.8, PHP, Ruby
+	Bookmark support
+	Tab switcher
+	Default pages {
+		about:blank
+		about:about
+		about:license
+		savannah:home
+		savannah:users
+		savannah:version
+	}
+	Tab support {
+		Pin/unpin option
+		Mute/Unmute option
+		Styles: Square, 
+		Location: Top (default) Left, Right, Bottom
+		Close tab warning message
+	}
+	Unavailable message by default for now, continue working around that
+}
+Work on DOSMODE + separate repo (WacOS_DOS-Mode_4bit) Written in Assembly
+Work on Drivers + separate repo (WacOS_Drivers) Written in C, Assembly
+Work on OpenAPFS + separate repo (OpenAPFS) Written in C, Assembly {
+	Set up parameters (file limit, file size limit, path limit)
+	Compatibility with APFS
+	Unavailable message by default for now, continue working around that
+}
+Work on JRE + separate repo (WacOS_JRE) Written in Java, C, C++ {
+	Java package installation script (mega script)
+	Java Virtual Machine
+	Java IDE
+	Unavailable message by default for now, continue working around that	
+}
+Work on WacOS-server + separate repo (WacOS_Server) Written in C, Python, Ruby, PHP, SQL, HTML, Perl, and JavaScript {
+	X mode A:  
+}
+Work on WacOS-theme-manager + separate repo (WacOS_Theme_Manager) written in Python
+Work on WacOS-installer + separate repo (WacOS_Installer) written in C {
+	Installer script
+	Unavailable message by default for now, continue working around that
+}
+Work on WacOS-WAMMY + separate repo (WacOS_WAMMY) Written in C, Assembly, HTML {
+	Webpage for wammy
+	WAMMY essentials pack (startup sound, themes, abilities, passthrough (switch between) from classic to X/WOAHS-X
+}
+Work on WacOS-WhyPadOS + separate repo (WacOS_WhyPadOS) Written in C, C++, Objective-C, Assembly
+Work on WacOS-X + separate repo (WacOS-X) Written in C, Objective-C, Assembly
+Work on WOAHS-X + separate repo (WOAHS-X) Written in C, Objective-C, Swift, Assembly
+Work on WhyPhoneOS + separate repo (WhyPhoneOS) Written in C, Objective-C, Assembly
+Work on WhyWatchOS + separate repo (WhyWatchOS) Written in C, Python, Assembly
+Work on WacTVOS + separate repo (WacOS-TV) Written in C, C++, Assembly {
+	Anti-DRM message
+	Basic interface, tiles
+	Startup script
+	Unavailable message by default for now, continue working around that
+}
+Work on wOS + separate repo (WhyOS) Written in C, Objective-C, C++, Assembly
+Work on WacOS-Find + separate repo (WacOS-Find) written in C, Python, Assembly {
+	BaSYS variant {
+		Basic search
+		Languages: C, Assembly, Pascal
+	}
+	WacOS X variant {
+		More advanced search
+		Languages: C, Python, Assembly
+	}
+	WOAHS-X variant {
+		Same as WacOS X variant, but with Kiri compatibility
+	}
+}
+
+Separate repositories to create
+
+WacOS_Cloud (1)
+WacOS_API (2)
+WacOS_AppleScript_Support (3)
+WacOS_Architectures (4)
+WacOS_Savannah_Browser (5)
+WacOS_DOS-Mode-4-bit (6)
+WacOS_Drivers (7)
+OpenAPFS (8)
+WacOS_JRE (9)
+WacOS_Server (10)
+WacOS_Theme_Manager (11)
+WacOS_Installer (12)
+WacOS_WAMMY (13)
+WacOS_WhyPadOS (14)
+WacOS-X (15)
+WOAHS-X (16)
+WhyPhoneOS (17)
+WhyWatchOS (18)
+WacOS-TV (19)
+wOS (20)
+WacOS-Find (21)
