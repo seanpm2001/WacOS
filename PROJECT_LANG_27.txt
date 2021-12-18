@@ -1,0 +1,9 @@
+Project language (file) 27
+For: seanpm2001/WacOS
+About:
+I decided to make .txt the 27th project language file for this project (WacOS) as Plain Text is one of the many languages used in this project, and I am representing all project languages today (2021 Friday December 17th)
+
+File info
+File type: Plain text file (*.txt)
+File version: 1 (Friday, 2021 December 17th at 4:54 pm)
+Line count (including blank lines and compiler line): 10
