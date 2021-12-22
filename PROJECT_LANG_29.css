@@ -1,0 +1,36 @@
+/* Start of script */
+
+/* I chose CSS3 as the twenty-ninth project language file for this project (Seanpm2001/WacOS) as CSS is being used as a stylesheet language on web components and web demos for this project. It first started being used on this project on 2021 Tuesday December 21st. */
+/* Now to make this a multi-purpose file, I will add styling for a basic dark mode template */
+
+h1 {
+  color: white;
+}
+h2 {
+  color: white;
+}
+h3 {
+  color: white;
+}
+h4 {
+  color: white;
+}
+h5 {
+  color: white;
+}
+h6 {
+  color: white;
+}
+p {
+  color: white;
+}
+
+/* Note for project language files: The languages associated with SNU programming tools are not included as project language files, as there are too many to list. */
+
+/* File info
+* File type: Cascading Styling Sheets 3 stylesheet source file (*.css)
+* File version: 1 (Wednesday, 2021 December 22nd at 3:18 pm)
+* Line count (including blank lines and compiler line): 37
+*/
+
+/* End of script */
