@@ -1,0 +1,11 @@
+{
+	"projectLanguage": "45",
+	"projectLangHead": "WacOS",
+	"projectLanHead2": "About:",
+	"projectLangBody": "I decided to make JSON the forty-fifth project language file for this project (Seanpm2001/WacOS) as JSON is a language that needs to be used alongside JavaScript and JS++ for data puroposes. It is being included for software diversity reasons, and will be used for some portions of the project. It is getting its own project language file, starting here.",
+}[]{
+	"FileInfo": "Nil",
+	"FileType": "JSON source file (*.json)",
+	"FileVersion": "1 (2021, Friday, December 24th at 5:12 pm)",
+	"LineCount": "Including blank lines and compiler line): 12",
+}
