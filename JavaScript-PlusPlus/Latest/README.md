@@ -7,20 +7,48 @@ I currently can't find a compiler/library for making JS++ programs work yet for 
 
 ## Module info
 
+<details open><summary><p lang="en">Click/tap here to expand/collapse this section</p></summary>
+
 **Repo link:** [Coming soon](https://www.example.com/)
 
 **Version:** `?`
 
 **Year:** `?`
 
-**File extension(s):** `*.st`
+**First appeared:** `2011, October 8th`
+
+**File extension(s):** `*.jspp *.js++ *.jpp`
 
 **License:** `?`
 
 **Language support:** `?`
 
+</details>
+
 ***
 
-**File version:** `1 (2021, Saturday, December 25th at 3:12 pm)`
+## File info
+
+<details open><summary><p lang="en">Click/tap here to expand/collapse this section</p></summary>
+
+**File version:** `2 (2021, Saturday, December 25th at 3:20 pm)`
+
+**File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
+
+**Line count (including blank lines and compiler line):** `55`
+
+**All times are UTC-7 (PDT/Pacific Time) (please also account for daylight savings time)**
+
+**You may need special rendering support for the `<dropdown>` HTML tag being used in this document**
+
+</details>
+
+***
+
+## Footer
+
+You have reached the end of this document.
+
+###### EOF
 
 ***
