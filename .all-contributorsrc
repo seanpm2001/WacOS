@@ -21,6 +21,17 @@
         "maintenance",
         "ideas"
       ]
+    },
+    {
+      "login": "peterhil",
+      "name": "Peter H.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70079?v=4",
+      "profile": "http://composed.nu/peterhil",
+      "contributions": [
+        "code",
+        "design",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
