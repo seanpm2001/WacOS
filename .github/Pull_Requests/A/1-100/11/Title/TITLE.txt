@@ -1,0 +1,1 @@
+docs: add peterhil as a contributor for code, design, content #11
