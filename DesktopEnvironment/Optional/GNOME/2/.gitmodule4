@@ -1,3 +1,0 @@
-[submodule "GNOME Desktop Environment 2.x"]
-	path = GNOME Desktop Environment version 2.x
-	url = https://www.gnome.org/ # Can't find the actual 2.x repo

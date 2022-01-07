@@ -1,3 +1,0 @@
-[submodule "KDE Plasma"]
-	path = K Desktop Environment Plasma 5 desktop
-	url = https://github.com/KDE/plasma-desktop
