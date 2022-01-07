@@ -1,1 +1,0 @@
-Thank you for your contribution! I have included it in the project. It is now visible under [BaSYS/1](https://github.com/seanpm2001/WacOS/tree/master/Basys/1/UI_Demo/Web/peterhil/) I included the credits and added additional credits in the source code. I will be closing this issue now, but you can still follow up if needed.
