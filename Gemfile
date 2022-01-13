@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 source "https://rubygems.org"
 
 gem "undefined", group: :unknown
@@ -17,3 +19,10 @@ gem "undefined", group: :unknown
 
 # Security bump
 # gem "activesupport", ">= 4.1.11"
+
+"""
+File info
+File type: Ruby Gemfile (GEMFILE)
+File version: 2 (2022, Thursday, January 13th at 3:45 pm)
+Line count (including blank lines and compiler line): 29
+"""
