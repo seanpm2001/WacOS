@@ -1,0 +1,71 @@
+'\" t
+.\"     Title: WacOS Manual for file system information
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 2022/01/13@17:24
+.\"    Manual: Git Manual
+.\"    Source: Nil
+.\"  Language: English (US)
+.\"
+.TH "GIT\-ADD" "1" "12/10/2021" "Git 2\&.34\&.1\&.182\&.ge77354" "Git Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+git-add \- Add file contents to the index
+.SH "SYNOPSIS"
+.sp
+.nf
+\fIgit add\fR [\-\-verbose | \-v] [\-\-dry\-run | \-n] [\-\-force | \-f] [\-\-interactive | \-i] [\-\-patch | \-p]
+          [\-\-edit | \-e] [\-\-[no\-]all | \-\-[no\-]ignore\-removal | [\-\-update | \-u]] [\-\-sparse]
+          [\-\-intent\-to\-add | \-N] [\-\-refresh] [\-\-ignore\-errors] [\-\-ignore\-missing] [\-\-renormalize]
+          [\-\-chmod=(+|\-)x] [\-\-pathspec\-from\-file=<file> [\-\-pathspec\-file\-nul]]
+          [\-\-] [<pathspec>\&...]
+.fi
+.sp
+.SH "DESCRIPTION"
+.sp
+This is the manual for the WacOS operating system project that goes over file system information.\&.
+.sp
+.SH "File systems"
+.sp
+## File Systems
+[Read more about the available file systems here](/System/FileSystem/)
+### WacOS Default File Systems
+#### Overview
+WacOS by default has 5 options for a file system upon install. The current 5 options are:
+1. [HFS](/System/FileSystem/HFS/)
+2. [HFS+](/System/FileSystem/HFS+/)
+3. [EXT4](/System/FileSystem/EXT4/)
+4. [APFS](/System/FileSystem/APFS/)
+5. [OpenZFS](/System/FileSystem/OpenZFS/)
+#### Experimental
+Support for HFS, APFS, and OpenZFS is currently experimental. APFS might be the hardest, due to it being so new, and having to be reverse engineered first. HFS might be difficult as well due to how old the format is.
+BTRFS is currently under consideration for being a 6th option for a default file system.
+#### Recommendations
+For Apple fans: HFS+, APFS
+For less-technical Apple fans: EXT4
+For Apple fans with old Apple virtual machines: HFS
+For everyone: EXT4
+For massive data: OpenZFS
+.sp
+.SH "Footer"
+.sp
+This manpage was last updated on 2022 Thursday, January 13th at 5:24 pm (Version 1.0)
+.sp
