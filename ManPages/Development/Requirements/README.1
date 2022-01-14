@@ -1,0 +1,56 @@
+'\" t
+.\"     Title: WacOS Manual for development requirements
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 2022/01/13@16:43
+.\"    Manual: Git Manual
+.\"    Source: Nil
+.\"  Language: English (US)
+.\"
+.TH "GIT\-ADD" "1" "12/10/2021" "Git 2\&.34\&.1\&.182\&.ge77354" "Git Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+git-add \- Add file contents to the index
+.SH "SYNOPSIS"
+.sp
+.nf
+\fIgit add\fR [\-\-verbose | \-v] [\-\-dry\-run | \-n] [\-\-force | \-f] [\-\-interactive | \-i] [\-\-patch | \-p]
+          [\-\-edit | \-e] [\-\-[no\-]all | \-\-[no\-]ignore\-removal | [\-\-update | \-u]] [\-\-sparse]
+          [\-\-intent\-to\-add | \-N] [\-\-refresh] [\-\-ignore\-errors] [\-\-ignore\-missing] [\-\-renormalize]
+          [\-\-chmod=(+|\-)x] [\-\-pathspec\-from\-file=<file> [\-\-pathspec\-file\-nul]]
+          [\-\-] [<pathspec>\&...]
+.fi
+.sp
+.SH "DESCRIPTION"
+.sp
+This is the manual for the WacOS operating system project that goes over development requirements.\&.
+.sp
+.SH "Development requirements"
+.sp
+The system will be at minimum 64 bit, but will contain 32 bit, 16 bit, 8 bit, and 4 bit libraries (I also plan on having 128 bit libraries)
+The system MUST be light, with no more than 1 Gigabyte of RAM being used by the system itself at any time. On Idle, it should use no more than 500 Megabytes of RAM.
+It must be compatible with virtualization software like VirtualBox, Qemu, VMWare, etc. If anyone wants to go through and make it compatible with hyper-V, it is completely optional
+If this is to be completed, it must be better than Windows and MacOS in terms of functionality, and must meet these development requirements to do so.
+.sp
+.SH "Footer"
+.sp
+This manpage was last updated on 2022 Thursday, January 13th at 4:43 pm (Version 1.0)
+.sp
