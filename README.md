@@ -20,6 +20,75 @@ _A Linux distribution that mimics MacOS (modern and classic) iOS, and other Appl
 
 ***
 
+### Workflow status
+
+[![.NET](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet.yml)
+[![.NET Core Desktop](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet-desktop.yml)
+[![C/C++ CI](https://github.com/seanpm2001/WacOS/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/c-cpp.yml)
+[![CodeQL](https://github.com/seanpm2001/WacOS/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/codeql-analysis.yml)
+[![Deno](https://github.com/seanpm2001/WacOS/actions/workflows/deno.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/deno.yml)
+[![Django CI](https://github.com/seanpm2001/WacOS/actions/workflows/django.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/django.yml)
+[![Java CI](https://github.com/seanpm2001/WacOS/actions/workflows/ant.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ant.yml)
+[![Java CI with Gradle](https://github.com/seanpm2001/WacOS/actions/workflows/gradle.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/gradle.yml)
+[![Java CI with Maven](https://github.com/seanpm2001/WacOS/actions/workflows/maven.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/maven.yml)
+[![Jekyll site CI](https://github.com/seanpm2001/WacOS/actions/workflows/jekyll.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/jekyll.yml)
+[![Laravel](https://github.com/seanpm2001/WacOS/actions/workflows/laravel.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/laravel.yml)
+[![Lint Code Base](https://github.com/seanpm2001/WacOS/actions/workflows/super-linter.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/super-linter.yml)
+[![MSBuild](https://github.com/seanpm2001/WacOS/actions/workflows/msbuild.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/msbuild.yml)
+[![Makefile CI](https://github.com/seanpm2001/WacOS/actions/workflows/makefile.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/makefile.yml)
+[![Node.js CI](https://github.com/seanpm2001/WacOS/actions/workflows/node.js.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/node.js.yml)
+[![NodeJS with Grunt](https://github.com/seanpm2001/WacOS/actions/workflows/npm-grunt.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/npm-grunt.yml)
+[![NodeJS with Gulp](https://github.com/seanpm2001/WacOS/actions/workflows/npm-gulp.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/npm-gulp.yml)
+[![NodeJS with Webpack](https://github.com/seanpm2001/WacOS/actions/workflows/webpack.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/webpack.yml)
+[![PHP Composer](https://github.com/seanpm2001/WacOS/actions/workflows/php.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/php.yml)
+[![Perl (Linux) CI](https://github.com/seanpm2001/WacOS/actions/workflows/perl-linux.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/perl-linux.yml)
+[![Pylint](https://github.com/seanpm2001/WacOS/actions/workflows/pylint.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/pylint.yml)
+[![Python application](https://github.com/seanpm2001/WacOS/actions/workflows/python-app.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/python-app.yml)
+[![Ruby](https://github.com/seanpm2001/WacOS/actions/workflows/ruby.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ruby.yml)
+[![Swift](https://github.com/seanpm2001/WacOS/actions/workflows/swift.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/swift.yml)
+[![Symfony](https://github.com/seanpm2001/WacOS/actions/workflows/symfony.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/symfony.yml)
+[![Xcode - Build and Analyze](https://github.com/seanpm2001/WacOS/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/objective-c-xcode.yml)
+[![YAML Lint](https://github.com/seanpm2001/WacOS/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/yaml-lint.yml)
+[![iOS starter workflow](https://github.com/seanpm2001/WacOS/actions/workflows/ios.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ios.yml)
+
+
+<details><summary><p lang="en"><b>Click/tap here to expand/collapse the source code for this section</b></p></summary>
+
+```markdown
+[![.NET](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet.yml)
+[![.NET Core Desktop](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/dotnet-desktop.yml)
+[![C/C++ CI](https://github.com/seanpm2001/WacOS/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/c-cpp.yml)
+[![CodeQL](https://github.com/seanpm2001/WacOS/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/codeql-analysis.yml)
+[![Deno](https://github.com/seanpm2001/WacOS/actions/workflows/deno.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/deno.yml)
+[![Django CI](https://github.com/seanpm2001/WacOS/actions/workflows/django.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/django.yml)
+[![Java CI](https://github.com/seanpm2001/WacOS/actions/workflows/ant.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ant.yml)
+[![Java CI with Gradle](https://github.com/seanpm2001/WacOS/actions/workflows/gradle.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/gradle.yml)
+[![Java CI with Maven](https://github.com/seanpm2001/WacOS/actions/workflows/maven.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/maven.yml)
+[![Jekyll site CI](https://github.com/seanpm2001/WacOS/actions/workflows/jekyll.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/jekyll.yml)
+[![Laravel](https://github.com/seanpm2001/WacOS/actions/workflows/laravel.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/laravel.yml)
+[![Lint Code Base](https://github.com/seanpm2001/WacOS/actions/workflows/super-linter.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/super-linter.yml)
+[![MSBuild](https://github.com/seanpm2001/WacOS/actions/workflows/msbuild.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/msbuild.yml)
+[![Makefile CI](https://github.com/seanpm2001/WacOS/actions/workflows/makefile.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/makefile.yml)
+[![Node.js CI](https://github.com/seanpm2001/WacOS/actions/workflows/node.js.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/node.js.yml)
+[![NodeJS with Grunt](https://github.com/seanpm2001/WacOS/actions/workflows/npm-grunt.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/npm-grunt.yml)
+[![NodeJS with Gulp](https://github.com/seanpm2001/WacOS/actions/workflows/npm-gulp.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/npm-gulp.yml)
+[![NodeJS with Webpack](https://github.com/seanpm2001/WacOS/actions/workflows/webpack.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/webpack.yml)
+[![PHP Composer](https://github.com/seanpm2001/WacOS/actions/workflows/php.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/php.yml)
+[![Perl (Linux) CI](https://github.com/seanpm2001/WacOS/actions/workflows/perl-linux.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/perl-linux.yml)
+[![Pylint](https://github.com/seanpm2001/WacOS/actions/workflows/pylint.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/pylint.yml)
+[![Python application](https://github.com/seanpm2001/WacOS/actions/workflows/python-app.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/python-app.yml)
+[![Ruby](https://github.com/seanpm2001/WacOS/actions/workflows/ruby.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ruby.yml)
+[![Swift](https://github.com/seanpm2001/WacOS/actions/workflows/swift.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/swift.yml)
+[![Symfony](https://github.com/seanpm2001/WacOS/actions/workflows/symfony.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/symfony.yml)
+[![Xcode - Build and Analyze](https://github.com/seanpm2001/WacOS/actions/workflows/objective-c-xcode.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/objective-c-xcode.yml)
+[![YAML Lint](https://github.com/seanpm2001/WacOS/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/yaml-lint.yml)
+[![iOS starter workflow](https://github.com/seanpm2001/WacOS/actions/workflows/ios.yml/badge.svg)](https://github.com/seanpm2001/WacOS/actions/workflows/ios.yml)
+```
+
+</details>
+
+***
+
 ## Read this article in a different language
 
 _🌐 List of languages_
@@ -1249,11 +1318,11 @@ Contributing is allowed for this project, as long as you follow the rules of the
 
 ## File info
 
-**ReadMe version:** `11 (2022, Thursday, January 6th at 17:36 (5:36 pm))`
+**ReadMe version:** `12 (2022, Thursday, January 13th at 16:00 (4:00 pm))`
 
 **File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**Line count (including blank lines and compiler line):** `1,641`
+**Line count (including blank lines and compiler line):** `1,732`
 
 **Article language:** `English (US)`
 
@@ -1515,11 +1584,17 @@ Contributing is allowed for this project, as long as you follow the rules of the
 
 > * No other changes in version 11
 
-**Version 12 (Coming soon)**
+**Version 12 (2022, Thursday, January 13th at 4:00 pm)**
+
+**This version was created by [@seanpm2001](https://github.com/seanpm2001/)**
 
 > Changes:
 
-> * Coming soon
+> * Updated the file info section
+
+> * Updated the file history section
+
+> * Added 28 workflow badges plus source code for all of them as a big block of markdown
 
 > * No other changes in version 12
 
@@ -1602,6 +1677,22 @@ Contributing is allowed for this project, as long as you follow the rules of the
 > * Coming soon
 
 > * No other changes in version 22
+
+**Version 23 (Coming soon)**
+
+> Changes:
+
+> * Coming soon
+
+> * No other changes in version 23
+
+**Version 24 (Coming soon)**
+
+> Changes:
+
+> * Coming soon
+
+> * No other changes in version 24
 
 ***
 
