@@ -1,0 +1,594 @@
+'\" t
+.\"     Title: WacOS Master Manual
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 2022/01/13@16:37
+.\"    Manual: Git Manual
+.\"    Source: Nil
+.\"  Language: English (US)
+.\"
+.TH "GIT\-ADD" "1" "12/10/2021" "Git 2\&.34\&.1\&.182\&.ge77354" "Git Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+git-add \- Add file contents to the index
+.SH "SYNOPSIS"
+.sp
+.nf
+\fIgit add\fR [\-\-verbose | \-v] [\-\-dry\-run | \-n] [\-\-force | \-f] [\-\-interactive | \-i] [\-\-patch | \-p]
+          [\-\-edit | \-e] [\-\-[no\-]all | \-\-[no\-]ignore\-removal | [\-\-update | \-u]] [\-\-sparse]
+          [\-\-intent\-to\-add | \-N] [\-\-refresh] [\-\-ignore\-errors] [\-\-ignore\-missing] [\-\-renormalize]
+          [\-\-chmod=(+|\-)x] [\-\-pathspec\-from\-file=<file> [\-\-pathspec\-file\-nul]]
+          [\-\-] [<pathspec>\&...]
+.fi
+.sp
+.SH "DESCRIPTION"
+.sp
+This is the manual for the WacOS operating system project. It is highly incomplete, and is sampled from a Git manpage.\&.
+.sp
+.toc
+.SH "TABLE OF CONTENTS"
+.sp
+View separate manual entries
+.sp
+001 Concept
+002 Development requirements
+003 Developers
+004 Langugaes
+005 Kernel
+006 File Systems
+007 OpenAPFS
+008 OpenZFS
+009 Wiki
+010 API
+011 Language package support
+012 Architectures
+013 BaSYS
+014 Browsers
+015 Desktop Environment
+016 Fonts
+017 Kiri
+018 WacOS Login
+019 OpenGL
+020 OpenGS
+021 Legacy programs
+022 WacPaint
+023 WacWrite
+024 Sherman
+025 Sir Isaac NewtonScript
+026 Sir Isaac NewtonOS
+027 WAMMY
+028 WOAHS-X
+029 WacOS Cloud
+030 WacOS Server
+031 Wac OS X
+032 WacTV OS
+033 WhyPadOS
+034 WhyPhoneOS
+035 wOS
+036 Other
+Other
+001 HFS
+002 HFS+
+003 EXT4
+004 APFS
+005 BTRFS
+006 Python 2
+007 Python 3
+008 Apple Inc.
+009 Swift
+010 ZFS
+011 Skeuowie
+012 Linux kernel
+013 Git
+014 Darwin kernel
+015 NeXTSTEP
+016 Classic Mac OS
+017 Mac OS X
+018 OS X
+019 MacOS
+020 iPhoneOS
+021 iOS
+022 iPadOS
+023 WatchOS
+024 tvOS
+025 AppleScript
+026 Apple TV
+027 Safari
+028 Cyberdog
+029 Dogcow
+030 iTunes
+031 OpenGL
+032 Intel x86
+033 PowerPC
+034 AMD x86
+035 AMD x64
+036 Intel x64
+037 ARM x64
+038 ARM x128
+039 Apple Newton
+040 Apple MessagePad
+041 Siri
+042 NewtonOS
+043 NewtonScript
+044 Squeak
+045 Java
+046 PHP
+047 Perl
+048 Perl 6
+049 Skeuomormphism
+050 Other
+.toc
+.SH "ABOUT WACOS"
+.sp
+A Linux distribution that mimics MacOS (modern and classic) iOS, and other Apple operating systems, but is open, customizable, and free to use on non-apple hardware. 
+.sp
+.sp
+Linux distribution that has most of the functionality of MacOS 10.9 but without proprietary features, which includes a desktop environment menu where you can change the theme to make the OS look like any version of MacOS, including:
+1. System 1
+2. System 2
+3. System 3
+4. System 4
+5. System 5
+6. System 6
+7. MacOS 7
+8. MacOS 8
+9. MacOS 9
+10. MacOS X Beta
+11. MacOS X 10.0
+12. MacOS X 10.1
+13. MacOS X 10.2
+14. MacOS X 10.3
+15. MacOS X 10.4
+16. MacOS X 10.5
+17. MacOS X 10.6
+18. MacOS X 10.7
+19. OS X 10.8
+20. OS X 10.9
+Those are all the good environments (skeuomorphic releases)
+Below it are the solid color ones which <!-- might not be implementable for a while due to Apples copyright !--> I previously thought couldn't be implemented due to Apples copyright, but flat icons are not copyrightable or claimable, so they can be used here (they lack the uniqueness to have ownership rights()
+21. MacOS 10.10
+22. MacOS 10.11
+23. MacOS 10.12
+24. MacOS 10.13
+25. MacOS 10.14
+26. MacOS 10.15
+27. MacOS 11.0
+28. MacOS 12.0
+It also has iOS theme functionality:
+1. iPhone OS 1
+2. iPhone OS 2
+3. iPhone OS 3
+4. iOS 4
+5. iOS 5
+6. iOS 6
+7. iOS 7
+8. iOS 8
+9. iOS 9
+10. iOS 10
+11. iOS 11
+12. iOS 12
+13. iOS 13
+14. iOS 14
+15. iOS 15
+It also has iPadOS theme functionality:
+1. iPadOS 13
+2. iPadOS 14
+3. iPadOS 15
+Along with tvOS theme functionality:
+1. tvOS 9
+2. tvOS 10
+3. tvOS 11
+4. tvOS 12
+5. tvOS 13
+6. tvOS 14
+7. tvOS 15
+Along with WatchOS theme functionality:
+1. WatchOS 1
+2. WatchOS 2
+3. WatchOS 3
+4. WatchOS 4
+5. WatchOS 5
+6. WatchOS 6
+7. WatchOS 7
+8. WatchOS 8
+Along with support for other Apple systems
+1. Apple Pippin (system software 6 (modified))
+2. Apple GS/OS
+WacOS will be a Linux based operating system that acts like MacOS, but with improved functionality, being more open, and having new and other features.
+its naming (LacOS didn't seem like a good name, as it sounds like "Lack OS" which shouldn't be associated with a Linux distribution, and it was 5:33 in the morning, so I don't know where the W came from. Just note the W does not stand for Windows.
+Pronounced like: Whack O S or Walk O S or however you would like to pronounce it
+It can act as a MacOS port that isn't developed by apple, and doesn't need an expensive computer to run with. Linux users constantly go through phases of different operating systems themes, a lot of Linux users go through a MacOS phase, I haven't  yet, but I could in the future.
+It will be highly functional, and will be written in C for the core, and Python for the system, as I want to continue to spread Python, it is a great programming language, it is simple to write, and very powerful.
+Some features include a desktop interface changer that can make the distro function like any version of MacOS, without the restrictiveness, and proprietary functionality.
+iOS and MacOS programs from System 1 to the latest version, and iPhone OS 1 to the latest version will be supported.
+.sp
+.SH "Development requirements"
+.sp
+The system will be at minimum 64 bit, but will contain 32 bit, 16 bit, 8 bit, and 4 bit libraries (I also plan on having 128 bit libraries)
+The system MUST be light, with no more than 1 Gigabyte of RAM being used by the system itself at any time. On Idle, it should use no more than 500 Megabytes of RAM.
+It must be compatible with virtualization software like VirtualBox, Qemu, VMWare, etc. If anyone wants to go through and make it compatible with hyper-V, it is completely optional
+If this is to be completed, it must be better than Windows and MacOS in terms of functionality, and must meet these development requirements to do so.
+.sp
+.SH "Languages"
+.sp
+## Human-spoken languages
+> Currently, the program is only supplied in the English language. Multi-lingual support for over 100 languages is planned for the future.
+**Languages are listed in A-Z order**
+> 001. English
+> 002. No other human spoken languages listed.
+### Computer languages
+**Languages are listed in A-Z order**
+> 01. AppleScript | Type: Programming language
+> 02. Assembly | Type: Programming language
+> 03. C | Type: Programming language
+> 04. C++ | Type: Programming language
+> 05. Markdown | Type: Markup language
+> 06. Motorola S-RECORD | Type: Programming language
+> 07. Objective-C | Type: Programming language
+> 08. Python | Type: Programming language
+> 09. Swift | Type: Programming language
+> 10. SVG (Scalable Vector Graphics) | type: Raster graphics
+> 11. Text | Type: Plain Text
+> 12. Virtual Hard Disk Language (VHDL) | Type: Programming language
+> 13. XML (eXtensive Markup Language) | type: Markup language
+> 14. No other computer/programming languages listed.
+.sp
+.SH "Kernel"
+.sp
+## Kernel
+This project utilizes the Linux kernel. I currently can't connect it via a submodule, as I still can't figure out how to make Git submodules, but the kernel can be downloaded via these sources:
+[Kernel.org: The Linux Kernel archives](https://www.kernel.org/)
+> [Git repository from Kernel.org for the Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git)
+[Learn more about the Linux kernel (Wikipedia)](https://en.wikipedia.org/wiki/Linux/)
+[GitHub.com: torvalds/Linux](https://github.com/torvalds/linux/)
+[Search for a different source via DuckDuckGo](https://duckduckgo.com/?t=ffab&q=Linux+kernel&ia=web)
+[Search for a different source via Ecosia and contribute to the planting of trees](https://www.ecosia.org/search?q=Linux+Kernel)
+[Search for a different source via Bing](https://www.bing.com/search?q=Linux+kernel) <!-- This link needs to have its trackers removed !-->
+<!-- There will be no search link for Google, Yandex, Baidu, or Amazon !-->
+The project is also a dual-kernel project. It additionally makes use of the XNU kernel. It also cannot be connected with a submodule right now, but the kernel can be downloaded via these sources:
+[OpenSource.Apple.com: XNU Source code](https://opensource.apple.com/source/xnu/)
+> [Git repository for standard XNU (GitHub)](https://github.com/opensource-apple/xnu/)
+> [Git repository for Darwin/XNU (GitHub)](https://github.com/apple/darwin-xnu/)
+[Learn more about XNU (Wikipedia)](https://en.wikipedia.org/wiki/XNU/)
+[GitHub.com: torvalds/Linux](https://github.com/torvalds/linux/)
+[Search for a different source via DuckDuckGo](https://duckduckgo.com/?q=XNU+kernel&t=ffab&ia=web)
+[Search for a different source via Ecosia and contribute to the planting of trees](https://www.ecosia.org/search?q=XNU+Kernel)
+[Search for a different source via Bing](https://www.bing.com/search?q=XNU+Kernel) <!-- This link needs to have its trackers removed !-->
+<!-- There will be no search link for Google, Yandex, Baidu, or Amazon !-->
+.sp
+.SH "File systems"
+.sp
+## File Systems
+[Read more about the available file systems here](/System/FileSystem/)
+### WacOS Default File Systems
+#### Overview
+WacOS by default has 5 options for a file system upon install. The current 5 options are:
+1. [HFS](/System/FileSystem/HFS/)
+2. [HFS+](/System/FileSystem/HFS+/)
+3. [EXT4](/System/FileSystem/EXT4/)
+4. [APFS](/System/FileSystem/APFS/)
+5. [OpenZFS](/System/FileSystem/OpenZFS/)
+#### Experimental
+Support for HFS, APFS, and OpenZFS is currently experimental. APFS might be the hardest, due to it being so new, and having to be reverse engineered first. HFS might be difficult as well due to how old the format is.
+BTRFS is currently under consideration for being a 6th option for a default file system.
+#### Recommendations
+For Apple fans: HFS+, APFS
+For less-technical Apple fans: EXT4
+For Apple fans with old Apple virtual machines: HFS
+For everyone: EXT4
+For massive data: OpenZFS
+.sp
+.SH "WacOS wiki"
+.sp
+## Wiki
+[View the Wiki](https://github.com/seanpm2001/WacOS/wiki/) | [View the local Wiki archive](/External/ProjectWiki/)
+Archives by year [2021](https://github.com/seanpm2001/WacOS_Wiki_2021/)
+The WacOS Wiki is the key documentation center for this project. Unfortunately, it is only available in English (US)
+The WacOS Wiki archives the entirety of Apples history, along with its relation to WacOS and its sub-projects. It contains over 210 pages, and is far from complete.
+The Wiki is written in Markdown and HTML.
+.sp
+.SH "WacOS API"
+.sp
+## API
+[View all APIs via source code](/API/)
+WacOS uses several API sets to emulate Apple products. Common ones include:
+[Cocoa](/API/CocoaAPI/) (to be renamed)
+[Metal](/API/Metal/) (to be renamed)
+More information coming soon.
+.sp
+.SH "Language package support"
+.sp
+## Language package support
+WacOS uses 45 different computing, configuration, markup, and programming languages, including:
+C
+C++
+Objective-C
+Assembly
+VHDL (Virtual Hard Disk Language)
+Python (3.6 and up for modern portions)
+Swift (5.7 and up for modern portions)
+AppleScript
+Pascal
+Self
+Shell (BASH)
+YAML (YAML Ain't Markup Language)
+Markdown
+Prolog
+PHP (PHP HyperText Preprocessor)
+Java
+SQL (Structed Query Language)
+Ruby
+Perl
+SVG (Scalable Vector Graphics)
+XML (eXtensible Markup Language)
+Makefile (GNU Make)
+JavaScript
+Q#
+Desktop (KDE Desktop configuration file)
+INI (Windows INI)
+Plain Text
+HTML (HyperText Markup Language)
+CSS (Cascade Styling Sheets)
+WebVTT (Web Video Text Tracks)
+TypeScript
+Metal
+Objective-C++
+Rust
+PostScript
+TeX (LaTeX and BibTeX)
+m4
+OpenEdge ABL
+Verilog
+SystemVerilog
+Verilog AMS
+Smalltalk
+AssemblyScript
+JavaScript++ (JS++)
+JSON (JavaScript Object Notation)
+.sp
+.SH "Architectures"
+.sp
+## Architectures
+[View architecture source code](/Architectures/)
+WacOS currently supports the following CPU architectures:
+- [ ] AMD (64 bit)
+- [ ] Intel (64 bit)
+- [ ] Intel (x86, 32 bit)
+- [ ] PowerPC (32 bit)
+- [ ] Unknown (16 bit)
+- [ ] Unknown (8 bit)
+- [ ] Unknown (4 bit)
+Since the system is not functional, no CPU architectures are supported yet.
+.sp
+.SH "BaSYS"
+.sp
+## BaSYS
+[View source code for BaSYS](/BaSYS/)
+WacOS contains subsystems for every Apple product. BaSYS is a sub-operating system project meant to emulate the first 7 major versions of classic MacOS
+BaSYS 1 - Emulates Apple System 1
+BaSYS 2 - Emulates Apple System 2
+BaSYS 3 - Emulates Apple System 3
+BaSYS 4 - Emulates Apple System 4
+BaSYS 5 - Emulates Apple System 5
+BaSYS 6 - Emulates Apple System 6
+BaSYS 7 - Emulates Apple System 7 (but not MacOS 7.5)
+.sp
+.SH "Browsers"
+.sp
+## Browsers
+[View browser source code](/Browsers/)
+The goal of the WacOS project is to emulate all of Apples software in a specific open source, friendly fashion. WacOS contains 3 web browsers, of which 2 are Apple recreations:
+- [x] [Mozilla Firefox](/Browsers/Firefox/) (Included as a browser choice, one of the 3 default browsers) {Engine: Gecko}
+- [x] [OpenCyberdog](/Browsers/OpenCyberdog/) (An open source recreation of Apples first web browser, Cyberdog) {Engine: Undetermined}
+- [x] [Savannah](/Browsers/Savannah/) (An open source recreation of the Safari web browser) {Engine: WebKit}
+TenFourFox is not currently supported, as it doesn't fit with the project. Support for other browsers (such as PaleMoon) is currently being considered.
+The following browsers will never be added to the list of default browsers:
+- [ ] Microsoft Edge
+- [ ] Google Chrome
+- [ ] Google Chromium
+- [ ] Internet Explorer
+- [ ] Samsung Internet
+- [ ] AOSP (Android Operating System Stock Browser)
+- [ ] Safari
+- [ ] Cyberdog
+- [ ] AOL Explorer
+.sp
+.SH "Desktop Environment (DE)"
+.sp
+## Desktop Environment
+[View sub-repo](/DesktopEnvironment/)
+WacOS uses a modified version of the [Skeuowie](https://github.com/seanpm2001/Skeuowie/) desktop environment (also known as the S Desktop Environment, or SDE) it uses Skeuowie in a special mode known as `Wac Mode` that allows WacOS customizations and compatibility.
+### About Skeuowie
+Skeuowie is a desktop environment that is inspired by KDE principles, and has a 100% focus on [Skeuomorphism](https://en.wikipedia.org/wiki/Skeuomorph) opposed to flat design.
+.sp
+.SH "Fonts"
+.sp
+# Fonts
+[View the fonts sub-repo](/Fonts/)
+WacOS supports all the standard Apple fonts, along with others. I also plan to support some rare, but historical ones, such as blackletter.
+### Apple fonts
+WacOS currently supports the following Apple fonts:
+- [x] Chicago
+- [x] Monaco
+- [ ] Garamond
+- [x] Charcoal
+- [x] Geneva
+- [ ] Shaston
+- [ ] Espy Sans
+- [ ] Lucida Grande
+- [ ] Podium Sans
+- [x] Helvetica
+- [ ] San Francisco
+- [ ] New York
+- [ ] Motter Tektura
+- [x] Gill Sans
+- [x] Myriad
+The fonts are in OTF, TTF, and WOFF formats. The fonts used are free to use, as long as they are not sold for a profit.
+### Other fonts
+No other fonts are currently in use
+.sp
+.SH "Kiri"
+.sp
+## Kiri
+[View the Kiri sub-repo](/Kiri/) [View the Kiri repository](https://github.com/seanpm2001/Kiri/)
+Kiri is an open source recreation of the Siri search assistant. It is named with a K instead of an S. Kiri is also a Cambodian gender-neutral name that means `mountain`
+Kiri is written in Prolog. It is not yet functional.
+.sp
+.SH "WacOS login"
+.sp
+## WacOS login
+[View the source code](/Login/)
+WacOS contains a login page that is written in multiple ways, for several operating system styles, and several programming languages. Currently, only a custom style Python version is in use, and is not yet functional.
+.sp
+.SH "OpenGL"
+.sp
+## OpenGL
+WacOS uses OpenGL as one of the shading languages for applications.
+.sp
+.SH "OpenGS"
+.sp
+## OpenGS
+[View the source code](/OpenGS/)
+OpenGS is an open source recreation of Apple GS/OS. It is still in very early development, and no further information is currently available.
+.sp
+.SH "Legacy programs"
+.sp
+## Legacy programs
+[View the source directory](/Programs/Legacy/)
+WacOS contains some Legacy Programs for x8, x16, and x32 architectures.
+.sp
+.SH "WacPaint"
+.sp
+### WacPaint
+[View the sub-repo](/Programs/Legacy/WacPaint/) [View the repository](https://github.com/seanpm2001/WacPaint/)
+WacPaint is an open source recreation of MacPaint. It is written in Pascal and Assembly. It is currently not functional.
+A special feature known as Wacky Mode, allows support for newer system scheme versions.
+.sp
+.SH "WacWrite"
+.sp
+### WacWrite
+[View the sub-repo](/Programs/Legacy/WacWrite/) [View the repository](https://github.com/seanpm2001/WacWrite/)
+WacWrite is an open source recreation of MacWrite. It is written in C and Assembly. It is currently not functional.
+A special feature known as Wacky Mode, allows support for newer system scheme versions.
+.sp
+.SH "Sherman"
+.sp
+## Sherman
+[View the sub-repo](/Sherman/)
+Sherman is the WacOS repository for m4 configuration scripts. It is named after the M4 Sherman tank of World War II. It is not to be used for physically destructive purposes or for violence/terrorism.
+.sp
+.SH "Sir Isaac NewtonOS"
+.sp
+## Sir Isaac NewtonOS
+[View the sub-repo](/SirIsaacNewtonOS/) [View the repository](https://github.com/seanpm2001/SirIsaacNewtonOS/)
+Sir Isaac NewtonOS is an open source recreation of Apples NewtonOS for the Apple Newton/Apple MessagePad family of PDA devices. It uses Sir Isaac NewtonScript as its main scripting language. It is another sub-operating system project of WacOS.
+.sp
+.SH "Sir Isaac NewtonScript"
+.sp
+### Sir Isaac NewtonScript
+[View the sub-repo](/SirIsaacNewtonScript/) [View the repository](https://github.com/seanpm2001/SirIsaacNewtonScript/)
+Sir Isaac NewtonScript is an open source recreation of Apples NewtonScript, which was used to write the Newton operating system. This project is early in development, and is not functional. It is currently written in C++.
+.sp
+.SH "WAMMY"
+.sp
+## WAMMY
+[View the sub-repo](/WAMMY/)
+WAMMY is an extension pack to celebrate the upcoming 20th anniversary of WacOS, based off the TAM (Twentieth Anniversary Macintosh) it is still a work in progress, and is not fully planned out.
+.sp
+.SH "WOAHS-X"
+.sp
+## WOAHS-X
+[View the sub-repo](/WOAHS-X/)
+WOAHS-X is an open source mode for WacOS to emulate OS X (OS X 10.7 to OS X 10.10) it is still a work in progress, and is not yet functional.
+.sp
+.SH "WacOS Cloud"
+.sp
+## WacOS Cloud
+[View the sub-repo](/WacOS_Cloud/)
+WacOS Cloud is an open source alternative to iCloud. It was named when I was unaware of the controversy surrounding the vague blanket-term `cloud computing` although the name still stays, as it needs to remain familiar with the naming convention of iCloud.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "WacOS Server"
+.sp
+## WacOS Server
+[View the sub-repo](/WacOS_Server/)
+WacOS server is the server counterpart of WacOS. Its purpose is to retain functionality with MacOS server, and offer web server functionality for WacOS. It supports the following languages:
+- [x] PHP
+- [x] SQL
+- [x] Ruby
+- [x] Python
+- [x] HTML5
+- [x] CSS3
+- [x] JavaScript
+- [x] JavaScript++ (JS++)
+- [x] AssemblyScript
+- [x] TypeScript
+- [x] WebVTT
+- [x] JSON
+- [x] YAML
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "Wac OS X"
+.sp
+## Wac OS X
+[View the sub-repo](/WacOS_X/)
+WOAHS-X is an open source mode for WacOS to emulate Mac OS X (Mac OS X Public Beta/Mac OS X 10.0 to Mac OS X 100.6) it is still a work in progress, and is not yet functional.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "Wac TV OS"
+.sp
+## WacTV OS
+[View the sub-repo](/WacTVOS/)
+WacTV OS is an open source recreation of Apples tvOS, and is a sub-operating system project of the WacOS project. It supports WebVTT, and video streaming. It will NEVER include DRM, and will NEVER have the option to enable or install DRM.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "WhyPadOS"
+.sp
+## WhyPadOS
+[View the sub-repo](/WhyPadOS/)
+WhyPadOS is an open source recreation of the iPadOS fork of iOS, and is a sub-operating system project of the WacOS project.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "WhyPhoneOS"
+.sp
+## WhyPhoneOS
+[View the sub-repo](/WhyPhoneOS/)
+WhyPhoneOS is an open source recreation of the early versions of iOS, known as iPhoneOS (iPhoneOS 1, iPhoneOS 2, and iPhoneOS 3) and is a sub-operating system project of the WacOS project.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "WhyWatchOS"
+.sp
+## WhyWatchOS
+[View the sub-repo](/WhyWatchOS/)
+WhyWatchOS is an open source recreation of WatchOS, and is a sub-operating system project of the WacOS project.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "wOS"
+.sp
+## wOS
+[View the sub-repo](/wOS/)
+wOS is an open source recreation of iOS, and is a sub-operating system project of the WacOS project.
+It is currently a work in progress, is early in development, and is not yet functional.
+.sp
+.SH "Footer"
+.sp
+This manpage was last updated on 2022 Thursday, January 13th at 4:37 pm (Version 1.0)
+.sp
