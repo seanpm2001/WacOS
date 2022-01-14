@@ -1,0 +1,72 @@
+'\" t
+.\"     Title: WacOS Manual for kernel information
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 2022/01/13@17:19
+.\"    Manual: Git Manual
+.\"    Source: Nil
+.\"  Language: English (US)
+.\"
+.TH "GIT\-ADD" "1" "12/10/2021" "Git 2\&.34\&.1\&.182\&.ge77354" "Git Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+git-add \- Add file contents to the index
+.SH "SYNOPSIS"
+.sp
+.nf
+\fIgit add\fR [\-\-verbose | \-v] [\-\-dry\-run | \-n] [\-\-force | \-f] [\-\-interactive | \-i] [\-\-patch | \-p]
+          [\-\-edit | \-e] [\-\-[no\-]all | \-\-[no\-]ignore\-removal | [\-\-update | \-u]] [\-\-sparse]
+          [\-\-intent\-to\-add | \-N] [\-\-refresh] [\-\-ignore\-errors] [\-\-ignore\-missing] [\-\-renormalize]
+          [\-\-chmod=(+|\-)x] [\-\-pathspec\-from\-file=<file> [\-\-pathspec\-file\-nul]]
+          [\-\-] [<pathspec>\&...]
+.fi
+.sp
+.SH "DESCRIPTION"
+.sp
+This is the manual for the WacOS operating system project that goes over kernel information.\&.
+.sp
+.SH "Kernel"
+.sp
+## Kernel
+This project utilizes the Linux kernel. I currently can't connect it via a submodule, as I still can't figure out how to make Git submodules, but the kernel can be downloaded via these sources:
+[Kernel.org: The Linux Kernel archives](https://www.kernel.org/)
+> [Git repository from Kernel.org for the Linux kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git)
+[Learn more about the Linux kernel (Wikipedia)](https://en.wikipedia.org/wiki/Linux/)
+[GitHub.com: torvalds/Linux](https://github.com/torvalds/linux/)
+[Search for a different source via DuckDuckGo](https://duckduckgo.com/?t=ffab&q=Linux+kernel&ia=web)
+[Search for a different source via Ecosia and contribute to the planting of trees](https://www.ecosia.org/search?q=Linux+Kernel)
+[Search for a different source via Bing](https://www.bing.com/search?q=Linux+kernel) <!-- This link needs to have its trackers removed !-->
+<!-- There will be no search link for Google, Yandex, Baidu, or Amazon !-->
+The project is also a dual-kernel project. It additionally makes use of the XNU kernel. It also cannot be connected with a submodule right now, but the kernel can be downloaded via these sources:
+[OpenSource.Apple.com: XNU Source code](https://opensource.apple.com/source/xnu/)
+> [Git repository for standard XNU (GitHub)](https://github.com/opensource-apple/xnu/)
+> [Git repository for Darwin/XNU (GitHub)](https://github.com/apple/darwin-xnu/)
+[Learn more about XNU (Wikipedia)](https://en.wikipedia.org/wiki/XNU/)
+[GitHub.com: torvalds/Linux](https://github.com/torvalds/linux/)
+[Search for a different source via DuckDuckGo](https://duckduckgo.com/?q=XNU+kernel&t=ffab&ia=web)
+[Search for a different source via Ecosia and contribute to the planting of trees](https://www.ecosia.org/search?q=XNU+Kernel)
+[Search for a different source via Bing](https://www.bing.com/search?q=XNU+Kernel) <!-- This link needs to have its trackers removed !-->
+<!-- There will be no search link for Google, Yandex, Baidu, or Amazon !-->
+.sp
+.SH "Footer"
+.sp
+This manpage was last updated on 2022 Thursday, January 13th at 5:19 pm (Version 1.0)
+.sp
