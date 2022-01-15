@@ -5,6 +5,10 @@
 
 ## 2022 January 13th
 
+Tasks for 2022 January 13th were completed on 2022 January 13th
+
+<details><summary><p lang="en">Click/tap here to expand/collapse completed tasks</p></summary>
+
 This is what is left to be converted to separate man pages.
 
 **01**
@@ -206,6 +210,8 @@ It is currently a work in progress, is early in development, and is not yet func
 .sp
 ```
 
+</details>
+
 ***
 
 ## File info
@@ -214,9 +220,9 @@ It is currently a work in progress, is early in development, and is not yet func
 
 **File type:** `Markdown (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (Thursday, 2022 January 13th at 6:42 pm)`
+**File version:** `2 (Friday, 2022 January 14th at 6:28 pm)`
 
-**Line count (including blank lines and compiler line):** `232`
+**Line count (including blank lines and compiler line):** `238`
 
 **Current article language:** `English (US)` / `Markdown` / `HTML5`
 
