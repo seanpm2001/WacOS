@@ -1,0 +1,22 @@
+# Operating system configuration file
+Mode: WacOS
+Mode-version: Latest
+RAMSize: 8000000000 (8 Gigabytes)
+SWAPSize: 65 bytes
+BootDevice: USB 3.0 Flashdrive
+TPM: "False"
+UEFI: "False"
+StorageSize: 1000000000000 (1 Terabyte)
+Partition1: 128000000000 (128 gigabytes, WacOS partition)
+ColorMode: 24 bit
+ProcessorType: AMD x64
+GPUType: AMD x64
+Keyboard: Enabled
+KeyboardKFG: QWERTY (US) English
+Battery: "False"
+Kernel: Linux
+KernelVersion: "5.10"
+AltKernel: Darwin XNU
+AltKernelVersion: "???"
+# More config data coming soon
+# File version: 1 (2022, Friday, January 14th at 5:06 pm)
