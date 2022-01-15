@@ -1,3 +1,4 @@
+# Start of script
 # GitHub issue data file (YAML) for WacOS
 issuelabel_1: color1: "#ffffff" title1: "wontfix" description1: "This will not be worked on"
 issueLabel_2: color2: "#d876e3" title2: "question" description2: "Further information is requested"
@@ -83,17 +84,17 @@ issueLabel_81: color81: "#1d76db" title81: "BaSYS" description81: "For issues re
 issueLabel_82: color82: "#FBA111" title82: "Assembly" description82: "For issues on the topic of Assembly source code."
 issueLabel_83: color83: "#7E49F6" title83: "AppleScript" description83: "For issues on the topic of AppleScript source code."
 issueLabel_84: color84: "#B60205" title84: "APFS" description84: "For issues related to the APFS file system."
-issueLabel_85: color85: "" title85: "" description85: ""
-issueLabel_86: color86: "" title86: "" description86: ""
-issueLabel_87: color87: "" title87: "" description87: ""
-issueLabel_88: color88: "" title88: "" description88: ""
-issueLabel_89: color89: "" title89: "" description89: ""
-issueLabel_90: color90: "" title90: "" description90: ""
-issueLabel_91: color91: "" title91: "" description91: ""
-issueLabel_92: color92: "" title92: "" description92: ""
-issueLabel_93: color93: "" title93: "" description93: ""
-issueLabel_94: color94: "" title94: "" description94: ""
-issueLabel_95: color95: "" title95: "" description95: ""
+issueLabel_85: color85: "#006b75" title85: "Memory management" description85: "For issues on the topic of memory management."
+issueLabel_86: color86: "#F9D0C4" title86: "Man page" description86: "For issues on the topic of manual pages in Roff format."
+issueLabel_87: color87: "#D5C4D6" title87: "SWAP Memory" description87: "For issues on the topic of SWAP Memory."
+issueLabel_88: color88: "#FEF2C0" title88: "ROFF" description88: "For issues on the topic of ROFF source code"
+issueLabel_89: color89: "#5319E7" title89: "SWAP Maker" description89: "For issues related to the SWAP Maker component."
+issueLabel_90: color90: "#FBCA04" title90: "News (file)" description90: "For issues on the topic of the NEWS file, improvements, additions, deductions, and edits."
+issueLabel_91: color91: "#7901E8" title91: "OS Config (file)" description91: "For issues on the topic of the OSCONFIG.YML file, improvements, additions, deductions, and edits."
+issueLabel_92: color92: "#006b75" title92: "Legal" description92: "For issues on the topic of legality."
+issueLabel_93: color93: "#C213CD" title93: "Review needed" description93: "For issues that need review."
+issueLabel_94: color94: "#0052CC" title94: "Credits" description94: "For issues on the topic of credits and crediting contributors."
+issueLabel_95: color95: "#e99695" title95: "Maintenance" description95: "For issues related to maintenance of the WacOS project."
 issueLabel_96: color96: "" title96: "" description96: ""
 issueLabel_97: color97: "" title97: "" description97: ""
 issueLabel_98: color98: "" title98: "" description98: ""
@@ -123,6 +124,6 @@ issueLabel_119: color119: "" title119: "" description119: ""
 # No known limit on # of issue labels
 # File info
 # File type: YAML source file (*.yml *.yaml)
-# File version: 1 (2021, Wednesday, December 22nd at 4:50 pm)
-# Line count (including blank lines and compiler line): 129
+# File version: 2 (2022, Friday, January 14th at 8:18 pm)
+# Line count (including blank lines and compiler line): 1300
 # End of file
