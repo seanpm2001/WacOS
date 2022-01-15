@@ -1,0 +1,79 @@
+# Operating system configuration file
+# Mode
+Mode: "WacOS"
+Mode-version: "Latest" # WacOS in its modern desktop mode
+3D-Acceleration-Mode: "True" # Some devices may need this to be turned off for stability reasons
+# RAM and SWAP
+RAMSize: 8000000000 # (8 Gigabytes)
+SWAPSize: 65 bytes # SWAP file has to be generated manually at the moment
+RAMDrive: "False"
+# Boot
+BootDevice: USB 3.0 Flashdrive
+TPM: "False"
+UEFI: "False"
+# Storage
+StorageSize: 1000000000000 # (1 Terabyte)
+Partition1: 128000000000 # (128 gigabytes, WacOS partition)
+StorageType: "HDD"
+# Color and graphics
+ColorMode: "24 bit"
+AltColorMode: "16 color" # 4 bit
+AntiAlias: "False"
+RayTracing: "False"
+3DGraphics: "True" 
+# Processor (CPU) and GPU
+ProcessorType: AMD x64
+GPUType: AMD x64
+ProcessorRingCount: "3" # Processor security rings: 0, 1, 2, 3
+CoreCount: 2
+PerCoreSpeed: "356 Mhz" # Speed per CPU core
+TotalCoreSpeed: "712 MhZ" # Speed of all cores combined
+# Input
+Keyboard1: Enabled
+Keyboard1KFG: QWERTY (US) English
+Mouse1: "Enabled"
+Mouse1KFG: "2 button, wireless Bluetooth"
+Mouse2: "Enabled"
+Mouse2KFG: "2 button, trackball, corded"
+Microphone1: "Disabled"
+Microphone1BitRate: "240 KBit"
+Microphone1IsWireless: "False"
+Touchscreen: "True"
+FloppyDriveA: "False"
+CD_DriveA: "False"
+CD_DriveB: "False"
+DVD_DriveA: "False"
+DVD_DriveB: "False"
+Blu-Ray_DriveA: "False"
+Blu-Ray_DriveA: "False"
+# Battery
+Battery: "False"
+BatteryIsDead: "False"
+# Kernel
+KernelName: "Linux"
+KernelVersion: "5.10"
+KernelRingLINUX: "0" # Runs at CPU Ring 0
+AltKernelName: "Darwin (XNU)"
+AltKernelVersion: "???"
+KernelRingDARWIN: "1" # Runs at CPU Ring 
+# Internet
+BlueTooth: "False"
+WiFi: "False"
+CellularInternet1x: "False"
+CellularInternet2G: "False"
+CellularInternet3G: "False"
+CellularInternet4G: "False"
+CellularInternet5G: "False"
+CellularInternet6G: "False"
+CellularDataMode: "Metered"
+# Display
+Display_Resolution: "1280x720"
+Min_Resolution: "256x144"
+Max_Resolution: "65536x65536"
+Monitor2: "False"
+Monitor3: "False"
+IsCRT: "False"
+IsLCD: "True"
+
+# More config data coming soon
+# File version: 2 (2022, Friday, January 14th at 6:23 pm)
