@@ -1,6 +1,9 @@
----
+
+----
+
+====
 Installing WacOS
----
+====
 
 WacOS currently can't be installed, as it not turing complete yet, and is far from ready.
 
@@ -14,6 +17,8 @@ Some included files are in Markdown format (*.md) for best viewing, you should u
 
 Some included files are in PDF format. They should be opened with a document viewer capable of handling PDF documents.
 
----
-Install instructions file version: 1 (Thursday, August 26th 2021 at 4:09 pm)
----
+====
+Install instructions file version: 2 (2022, Tuesday, March 15th at 7:51 pm)
+====
+
+----
