@@ -1,0 +1,26 @@
+
+====
+
+= Project language file 48 =
+
+== For seanpm2001/WacOS ==
+
+=== About ===
+
+I chose WikiText as the 14th project language file for this project, as WikiText is beginning to get used on this project, and it needs its own project language file.
+
+This is an instance in which I am using WikiText/MediaWiki as a project language file, as I learned how to make the GitHub linguist recognize Markdown as a language. I found this out 2 days ago when snooping around on [https://github.com/apple/swift-evolution/blob/main/.gitattributes Apple/Swift Evolution] and I have now expanded it to 4 languages. if you want to do this yourself, simply add this to your <code>.gitattributes</code> file (if you haven't created one yet, make it now, do not add anything else to the file name but <code>.gitattributes</code>)
+
+<code>*.wiki linguist-detectable=true</code>
+
+<code>*.wiki linguist-documentation=false</code>
+
+== File info ==
+
+File type: <code>MediaWiki/Wikitext document (*.wiki)</code>
+
+File version: <code>1 (Tuesday, 2022 March 15th at 8:25 pm)</code>
+
+Line count (including blank lines and compiler line): <code>27</code>
+
+=== End of file ===
