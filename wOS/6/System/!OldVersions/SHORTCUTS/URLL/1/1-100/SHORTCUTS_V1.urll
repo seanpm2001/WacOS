@@ -1,0 +1,7 @@
+--URLL-version=2;
+-- Dock application links, a bit non-standard for the URLL format
+$#D0///"Phone.app"
+$#D1///"Mail.app"
+$#D2///"Firefox.app"
+$#D3///"VLC_Media_Player.app"
+-- File version: 1 (2022, Wednesday, May 11th at 10:51 pm PST)
