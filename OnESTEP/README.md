@@ -19,8 +19,46 @@ I recommend the following environments whle OnESTEP is under construction:
 
 Both of these projects come really close to the full NeXTSTEP experience, I can't decide which one is better at it, as they both do a really good job.
 
+## Languages
+
+OnESTEP is written in C, PostScript, Objective-C, and Objective-C++
+
+## Base
+
+![NeXTSTEP_desktop.png](NeXTSTEP_desktop.png)
+
+OnESTEP is designed to look like NeXTSTEP/OpenSTEP. It currently isn't based on anything.
+
+## Name
+
+Microsoft commonly uses the word `one` in front of things to brand them (examples: OneDrive, OneNote, etc.) this project is meant to represent Apple, and I didn't feel like calling it `iStep`
+
+## Character set
+
+OnESTEP uses the NeXT character set. Here is a reference table of all characters:
+
+![/OnESTEP/CharacterSet/HighCompression/NeXT_Character_Set_Table3_Cropped_HighCompression.png](/OnESTEP/CharacterSet/HighCompression/NeXT_Character_Set_Table3_Cropped_HighCompression.png)
+
+## Home repositories
+
+[Guesthouse repository](https://github.com/seanpm2001/WacOS_OnESTEP/)
+
+This is a guesthouse repository, and not a home repository, as development mainly stays on the main WacOS side. This is just the guesthouse that the project retreats to at times. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+[Home repository](https://github.com/seanpm2001/WacOS/tree/WacOS-dev/OnESTEP/)
+
+This is the home repository. If you are already in this repository, the link is likely recursive, and will reload the page.
+
 ***
 
-**File version:** `1 (2022, Tuesday, May 10th at 9:33 pm PST)`
+## File info
+
+**File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
+
+**File version:** `2 (2022, Sunday, May 15th at 4:50 pm PST)`
+
+**Line count (including blank lines and compiler line):** `65`
+
+**Current article language:** `English (US)`
 
 ***
