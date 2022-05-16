@@ -1,0 +1,1 @@
+A separate repository for the archival and development of OnESTEP, an open source remake of the NeXTSTEP/OpenSTEP operating systems, in par with the WacOS project. Written in Smalltalk & C, and part of the WacOS operating system project.
