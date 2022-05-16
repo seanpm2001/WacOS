@@ -27,16 +27,28 @@ I have not chosen out a CPU or GPU yet, but it definitely won't be NVIDIA. I hop
 
 The device is still in planning. It is not yet confirmed.
 
+## Home repositories
+
+These are the mainhouse and guesthouse links for this project
+
+[Guesthouse repository](https://github.com/seanpm2001/WacOS_Hardware_Blueprints/)
+
+This is a guesthouse repository, and not a home repository, as development mainly stays on the main WacOS side. This is just the guesthouse that the project retreats to at times. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+[Home repository](https://github.com/seanpm2001/WacOS/tree/WacOS-dev/Hardware/)
+
+This is the home repository. If you are already in this repository, the link is likely recursive, and will reload the page.
+
 ***
 
 ## File info
 
 **File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (2022, Wednesday, May 11th at 4:32 pm PST)`
+**File version:** `2 (2022, Sunday, May 15th at 8:40 pm PST)`
 
-**Line count (including blank lines and compiler line):** `43`
+**Line count (including blank lines and compiler line):** `55`
 
-**Article language:** `English (US)`
+**Current article language:** `English (US)`
 
 ***
