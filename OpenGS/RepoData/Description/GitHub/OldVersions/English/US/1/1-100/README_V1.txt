@@ -1,0 +1,1 @@
+A separate repository for the archival and development of OpenGS, an open source remake of the Apple GS/OS, in par with the WacOS project. Written in C, Assembly, and Pascal, and part of the WacOS operating system project.
