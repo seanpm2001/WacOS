@@ -1,0 +1,194 @@
+# Start of script
+# I am going to keep trying on this until I get it right
+# @seanpm2001 is the global code owner for this project
+/// @seanpm2001
+// @seanpm2001
+# / @seanpm2001
+/* @seanpm2001
+* @seanpm2001
+# Directories at root
+# .github
+/.github/ @seanpm2001
+# Docs
+/Docs/ @seanpm2001
+# External
+/External/ @seanpm2001
+# OldVersions
+/OldVersions/ @seanpm2001
+# RepoData
+/RepoData/ @seanpm2001
+# Files at root
+.editorconfig @seanpm2001
+.gitattributes @seanpm2001
+.gitignore @seanpm2001
+AUTHORS @seanpm2001
+CITATION.cff @seanpm2001
+CONTRIBUTING.md @seanpm2001
+COPYINGL @seanpm2001
+CREDITS @seanpm2001
+DRM-free_label.en.svg @seanpm2001
+INSTALL @seanpm2001
+LINUX_DEFENDER.desktop @seanpm2001
+LICENSE.txt @seanpm2001
+Pax_tux.png @seanpm2001
+PROJECT_LANG_1.py @seanpm2001
+PROJECT_LANG_2.sh @seanpm2001
+README.md @seanpm2001
+SECURITY.md @seanpm2001
+SponsorButton.png @seanpm2001
+desktop.ini @seanpm2001
+makefile.mk @seanpm2001
+# Individual file types
+# Section A
+*.aiff @seanpm2001
+*.AIFF @seanpm2001
+*.alac @seanpm2001
+*.ALAC @seanpm2001
+*.applescript @seanpm2001
+*.asm @seanpm2001
+*.ASM @seanpm2001
+# Section B
+*.bib @seanpm2001
+# Section C
+*.c @seanpm2001
+*.C @seanpm2001
+*.cff @seanpm2001
+*.cpp @seanpm2001
+*.css @seanpm2001
+*.cxx @seanpm2001
+# Section D
+*.DS_STORE @seanpm2001
+*.desktop @seanpm2001
+*.dmg @seanpm2001
+*.DMG @seanpm2001
+# Section E
+*.editorconfig @seanpm2001
+# Section F
+# No entries starting with the letter F
+# Section G
+*.gif @seanpm2001
+*.GIF @seanpm2001
+*.gitattributes @seanpm2001
+*.gitignore @seanpm2001
+*.go @seanpm2001
+# Section H
+*.h @seanpm2001
+*.H @seanpm2001
+*.htm @seanpm2001
+*.html @seanpm2001
+# Section I
+*.ini @seanpm2001
+*.ipa @seanpm2001
+*.IPA @seanpm2001
+*.iso @seanpm2001
+*.ISO @seanpm2001
+# Section J
+*.java @seanpm2001
+*.js @seanpm2001
+*.jpg @seanpm2001
+*.jpeg @seanpm2001
+*.jpp @seanpm2001
+*.json @seanpm2001
+*.jspp @seanpm2001
+# Section K
+# No entries starting with the letter K
+# Section L
+# No entries starting with the letter L
+# Section M
+*.m @seanpm2001
+*.m4 @seanpm2001
+*.mm @seanpm2001
+*.mak @seanpm2001
+*.make @seanpm2001
+*.markdown @seanpm2001
+*.md @seanpm2001
+*.mdown @seanpm2001
+*.metal @seanpm2001
+*.mhtm @seanpm2001
+*.mhtml @seanpm2001
+*.mp3 @seanpm2001
+*.mk @seanpm2001
+*.mkd @seanpm2001
+*.mot @seanpm2001
+*.MOT @seanpm2001
+*.mov @seanpm2001
+*.MOV @seanpm2001
+# Section N
+# No entries starting with the letter N
+# Section O
+*.oga @seanpm2001
+*.ogg @seanpm2001
+# Section P
+*.p @seanpm2001
+*.P @seanpm2001
+*.pas @seanpm2001
+*.PAS @seanpm2001
+*.php @seanpm2001
+*.png @seanpm2001
+*.PNG @seanpm2001
+*.pl @seanpm2001
+*.pro @seanpm2001
+*.ps @seanpm2001
+*.PS @seanpm2001
+*.py @seanpm2001
+# Section Q
+*.qs @seanpm2001
+*.qt @seanpm2001
+# Section R
+*.rb @seanpm2001
+*.rs @seanpm2001
+# Section S
+*.self @seanpm2001
+*.sh @seanpm2001
+*.st @seanpm2001
+*.sql @seanpm2001
+*.svg @seanpm2001
+*.swift @seanpm2001
+# Section T
+*.tex @seanpm2001
+*.ts @seanpm2001
+*.tsx @seanpm2001
+*.ttf @seanpm2001
+*.TTF @seanpm2001
+*.txt @seanpm2001
+*.TXT @seanpm2001
+# Section U
+*.url @seanpm2001
+*.URL @seanpm2001
+# Section V
+*.v @seanpm2001
+*.vh @seanpm2001
+*.vhd @seanpm2001
+*.vhdl @seanpm2001
+*.vtt @seanpm2001
+# Setion W
+*.wim @seanpm2001
+*.woff @seanpm2001
+*.WOFF @Seanpm2001
+# Section X
+*.xhtm @seanpm2001
+*.xhtml @seanpm2001
+*.xml @seanpm2001
+# Section Y
+*.yaml @seanpm2001
+*.yml @seanpm2001
+# Section Z
+# No entries starting with the letter Z
+
+# No more individual file types for now
+
+# Todo
+
+# Add every individual file
+# Finish adding all file types
+# Add new entries as they are added
+
+# Past goals (completed)
+# Add all Wiki entries
+# Add all graphics entries
+
+# File info
+# File type: codeowners file (CODEOWNERS)
+# File version: 2 (2022, Monday, February 21st at 3:05 pm)
+# Line count (including blank lines and compiler line): 195
+# End of script
