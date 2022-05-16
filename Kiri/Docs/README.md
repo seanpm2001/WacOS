@@ -1,7 +1,9 @@
 
 ***
 
-# What is Kiri
+# WacOS Kiri
+
+## What is kiri
 
 Kiri is a voice assistant software piece that is open source with privacy in mind. Written in Prolog, it is an alternative to Siri, with an easily pronouncable and similar name.
 
@@ -27,18 +29,36 @@ Etc.
 
 A functional build of Kiri is not yet available.
 
+## Queries
+
+Kiri Queries are written in AppleScript.
+
 ## Other info
 
 More documentation is coming soon.
 
 ***
 
+## Home repositories
+
+[Guesthouse repository](https://github.com/seanpm2001/Kiri/)
+
+This is a guesthouse repository, and not a home repository, as development mainly stays on the main WacOS side. This is just the guesthouse that the project retreats to at times. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+[Home repository](https://github.com/seanpm2001/WacOS/tree/WacOS-dev/Kiri/)
+
+This is the home repository. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+***
+
 ## File info
 
-**File type:** `Markdown document (*.md *.mkd *.markdown)`
+**File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (Saturday, 2021 September 25th at 9:02 pm)`
+**File version:** `2 (2022, Monday, May 16th at 1:41 pm PST)`
 
-**Line count (including blank lines and compiler line):** `77`
+**Line count (including blank lines and compiler line):** `65`
+
+**Current article language:** `English (US)`
 
 ***
