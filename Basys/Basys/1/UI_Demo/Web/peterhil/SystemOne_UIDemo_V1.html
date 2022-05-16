@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Start of script !-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi"><head>
+        <title>Macintosh® System + CSS menubar</title>
+        <!-- Credits
+        Full credit goes to @Peterhil
+        You can find him on GitHub at https://github.com/peterhil/
+        Used with permission from issue 5: https://github.com/seanpm2001/WacOS/issues/5/
+        !-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var startList = function() {
+                if (document.all && document.getElementById) {
+                    var navRoot = document.getElementById("menubar");
+                    for (i=0; i < navRoot.childNodes.length; i++) {
+                        node = navRoot.childNodes[i];
+                        if (node.nodeName == "DIV" || node.nodeName == "LI") {
+                            node.onmouseover = function() {
+                                this.className += " over";
+                            }
+                            node.onmouseout = function() {
+                                this.className = this.className.replace(" over", "");
+                            }
+                        }
+                    }
+                }
+            }
+            window.onload = startList;
+        </script>
+
+        <style type="text/css">
+            <!--
+            body {
+	            font: 9px Monaco, Verdana, sans-serif;
+	            position: relative; background: #aaa url(grey.png); margin: 0; padding: 0;}
+
+            img {border-width: 0;}
+
+            img#roundtopleft {float: left; margin-right: 6px;}
+            img#roundtopright {float: right;}
+
+            a { color: black; text-decoration: underline; }
+
+            div#menubar {
+	            font: 12px Chicago, Verdana, sans-serif;
+	            position: absolute; top: 0px; left 0px; width: 100%; height: 19px;
+	            padding: 0px; margin: 0px;
+	            color: black; background: white;
+	            border-bottom: 1px solid black;
+	            z-index: 500;}
+
+            .separator {
+                background: red url(separator.png);
+                margin: 0 -6px 0 -12px;
+                color: black;
+                background-color: white;
+                border: 0px;
+            }
+
+            .menu {
+                width: auto;
+                height: 17px;
+                float: left;
+                padding: 2px 8px 1px 8px;
+                margin: 0 -2px 0 -2px;
+                cursor: default;
+            }
+
+            .menu:hover, div.over {
+	            * /*IE*/ position: relative;
+                display: block;
+                color: white;
+                background: black;
+                border-top: 1px solid white;
+            }
+
+            .menu ul {
+                display: none;
+                position: absolute;
+                top: 19px;
+                * /*IE*/ left: 8px;
+                * /*IE*/ top: 20px;
+                width: auto;
+                color: black;
+                background-color: white;
+                list-style: none;
+                border: 1px solid black;
+                border-right: 2px solid black;
+                border-bottom: 2px solid black;
+                margin: 0px;
+                margin-left: -8px;
+                padding: 0px;
+            }
+
+            .menu ul li {
+                display: block;
+                padding: 1px 6px 1px 12px;
+            }
+
+            div.menu:hover ul, div.over ul {
+                display: block;
+            }
+
+            div.menu ul li:hover, div.over ul li.over {
+                color: white;
+                background-color: black;
+            }
+
+            div.menu ul li.disabled {
+                color: grey;
+                background-color: white;
+            }
+
+            div.menu ul li div.key {
+                display: inline;
+                position: absolute;
+                right: 6px;
+                width: auto;
+                text-align: right;
+            }
+
+            div.window {
+                position: absolute;
+                top: 35px;
+                left: 40px;
+                z-index: 100;
+            }
+
+            div#disk {
+                text-align: center;
+                position: fixed;
+                right: 2px;
+                top: 32px;
+            }
+
+            div#trash {
+                text-align: center;
+                position: fixed;
+                right: 20px;
+                bottom: 16px;
+            }
+
+            div.icon span {
+                color: black;
+                background: white;
+                margin: 0px;
+                padding: 0 4px 0 4px;
+            }
+
+            div#note {
+                font: 10px Monaco, Verdana, sans-serif;
+                position: fixed;
+                top: 34%;
+                width: 250px;
+                color: black;
+                background: grey;
+                padding: 5px;
+                z-index: 150;
+            }
+
+            div#note h1 { font: 14px Chicago, Verdana, sans-serif }
+
+            div.menu ul li a { color: black; text-decoration: underline; }
+            div.menu ul li:hover a, li.over a { color: white; text-decoration: underline; }
+
+            -->
+        </style>
+    </head>
+
+    <body>
+        <div id="menubar">
+            <img src="Macintosh%C2%AE%20System%20+%20CSS%20menubar_files/roundtopleft.png" id="roundtopleft" alt="">
+            <img src="Macintosh%C2%AE%20System%20+%20CSS%20menubar_files/roundtopright.png" id="roundtopright" alt="">
+
+            <div id="menu1" class="menu">
+                <ul>
+  	                <li>About the Finder...</li>
+		            <li class="disabled"><div class="separator">&nbsp;</div></li>
+		            <li>Alarm Clock</li>
+		            <!-- <li>Battery</li> -->
+		            <li>Calculator</li>
+		            <!-- <li>Chooser</li> -->
+		            <li>Control Panel</li>
+		            <!-- <li>Find File</li> -->
+		            <li>Key Caps</li>
+		            <li>Note Pad</li>
+		            <li>Puzzle</li>
+		            <li>Scrapbook</li>
+                </ul>
+            </div>
+            <div id="menu2" class="menu">File
+                <ul>
+  	                <li>Open</li>
+  	                <li class="disabled">Duplicate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="key">⌘D</div></li>
+		            <li>Get Info <div class="key">⌘I</div></li>
+		            <li class="disabled">Put Back</li>
+		            <li class="disabled"><div class="separator">&nbsp;</div></li>
+		            <li class="disabled">Close</li>
+		            <li class="disabled">Close All</li>
+		            <li class="disabled">Print</li>
+		            <li class="disabled"><div class="separator">&nbsp;</div></li>
+		            <li><a href="javascript:history.back(1);" accesskey="e">Eject <div class="key">⌘E</div></a></li>
+                </ul>
+            </div>
+            <div id="menu3" class="menu">Edit
+                <ul>
+  	                <li class="disabled">Undo <div class="key">⌘Z</div></li>
+		            <li class="disabled"><div class="separator">&nbsp;</div></li>
+  	                <li>Cut <div class="key">⌘X</div></li>
+  	                <li>Copy <div class="key">⌘C</div></li>
+  	                <li>Paste <div class="key">⌘V</div></li>
+  	                <li>Clear</li>
+  	                <li>Select All <div class="key">⌘A</div></li>
+		            <li class="disabled"><div class="separator">&nbsp;</div></li>
+  	                <li><a href="http://composed.nu/csssr/ean/" accesskey="c">Show Clipboard</a></li>
+                </ul>
+            </div>
+            <div id="menu4" class="menu">View
+                <ul>
+  	                <li class="disabled">by Icon</li>
+  	                <li class="disabled">by Name</li>
+  	                <li class="disabled">by Date</li>
+  	                <li class="disabled">by Size</li>
+  	                <li class="disabled">by Kind</li>
+                </ul>
+            </div>
+            <div id="menu5" class="menu">Special
+                <ul>
+  	                <li>Clean Up</li>
+  	                <li class="disabled">Empty Trash</li>
+  	                <li>Erase Disk</li>
+  	                <li class="disabled">Set Startup</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="window"><img src="Macintosh%C2%AE%20System%20+%20CSS%20menubar_files/systemfolder.png" alt="System Folder"></div>
+
+        <div id="note">
+            <details><summary><p lang="en">Credits (full credit goes to <a href="https://github.com/peterhil/">@peterhil</a>) <a href="https://github.com/seanpm2001/WacOS/issues/5/">used with permission</a></p></summary>
+            <h1>Use the menu. Surprised, no?</h1>
+
+            <p>This imitation of Mac System 1 menus is made completely
+            in CSS. For complete viewing pleasure, please view from a
+            machine where fonts Chicago and Monaco are
+            installed... Also note that this is only tested with
+            Safari and Mozilla browsers. IE may mess this up
+            completely.</p>
+
+            <p>I was inspired by this
+                <a href="http://www.meyerweb.com/eric/css/edge/menus/demo.html"> demo from Eric Meyer</a>
+                and by another one
+                <a href="http://www.serve.com/apg/workshop/cssMenu.html">from Porter Glendinning.</a>
+            </p>
+
+            <p>© 2006 <a href="https://github.com/peterhil/">Peter Hillerström</a>. All lefts reserved. (Use this as you will, but do mention the source).</p>
+
+            <p>Find me on <a href="https://twitter.com/peterhil">Twitter</a> if you came from there.</p>
+            </details>
+        </div>
+
+        <div id="disk" class="icon">
+	        <img src="Macintosh%C2%AE%20System%20+%20CSS%20menubar_files/systemdisk.png" alt="Icon"><br>
+	        <span>Mac System Software</span>
+        </div>
+
+        <div id="trash" class="icon">
+	        <img src="Macintosh%C2%AE%20System%20+%20CSS%20menubar_files/trash_empty.png" alt="Icon"><br>
+	        <span>Trash</span>
+        </div>
+</body></html>
+<!-- End of script !-->
+
