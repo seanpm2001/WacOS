@@ -1,56 +1,49 @@
 
 ***
 
-# API collection
+# WacOS API
 
-## For WacOS
+## About
 
-### About
+The WacOS API is the API that helps with the development of WacOS. It is currently written in 6 languages:
 
-This is the collection of API (Application Programming Interface) sets for the WacOS operating system project.
+- AppleScript
+- C
+- Metal
+- Objective-C
+- Objective-C++
+- Swift
 
-The current APIs aim to imitate the MacOS and iOS CocoaTouch and Metal APIs, along with support for Objective-C and Swift. Additional APIs are coming soon
+Pascal, and other languages might be supported in the future.
+
+It aims to implement APIs for Metal, Cocoa/CocoaTouch, and all the other Apple APIs
+
+It is highly incomplete, and is currently not functional.
+
+***
+
+## Home repositories
+
+These are the mainhouse and guesthouse links for this project
+
+[Guesthouse repository](https://github.com/seanpm2001/WacOS_API/)
+
+This is a guesthouse repository, and not a home repository, as development mainly stays on the main WacOS side. This is just the guesthouse that the project retreats to at times. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+[Home repository](https://github.com/seanpm2001/WacOS/tree/WacOS-dev/API/)
+
+This is the home repository. If you are already in this repository, the link is likely recursive, and will reload the page.
 
 ***
 
 ## File info
 
-**File type:** `Markdown document (*.md *.mkd *.markdown)`
+**File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (2021, Thursday, September 30th at 4:36 pm)`
+**File version:** `1 (2022, Tuesday, May 17th at 3:44 pm PST)`
 
-**Line count (including blank lines and compiler line):** `57`
+**Line count (including blank lines and compiler line):** `50`
 
-***
-
-## File history
-
-<details><summary><p>Click/tap here to expand/collapse the history for this file</p></summary>
-
-**Version 1 (2021, Thursday, September 30th at 4:36 pm)**
-
-> Changes:
-
-> * Started the file
-
-> * Added the title section
-
-> * Added the about section
-
-> * Added the file info section
-
-> * Added the file history section
-
-> * No other changes in version 1
-
-**Version 2 (Coming soon)**
-
-> Changes:
-
-> * Coming soon
-
-> * No other changes in version 2
-
-</details>
+**Current article language:** `English (US)`
 
 ***
