@@ -1,0 +1,1 @@
+A separate repository for the WacOS Cloud services software piece for the WacOS Operating System project. A cloud service utility for the Linux-based WacOS. Part of the WacOS operating system project.
