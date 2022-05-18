@@ -1,0 +1,1 @@
+The repository for Sir Isaac NewtonScript, a low-power language based on C++ made to imitate Apples NewtonScript. Works with WacOS and SirIsaacNewtonOS. It is part of the WacOS Operating System project.
