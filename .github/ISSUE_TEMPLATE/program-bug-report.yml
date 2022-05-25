@@ -207,7 +207,7 @@ body:
           required: false
         - label: Firefox for WacOS
           required: false
-        - label: !Cloud
+        - label: WacOS Cloud
           required: false
         - label: WacOS PyLogin
           required: false
@@ -279,7 +279,9 @@ body:
     validations:
       required: true
 
+# V3, attempting to fix a critical bug
+
 # File info
 # File type: GitHub bug report issue template (*.yml)
-# File version: 2 (2022, Wednesday, May 25th at 3:32 pm PST)
-# Line count (including blank lines and compiler line): 286
+# File version: 3 (2022, Wednesday, May 25th at 3:37 pm PST)
+# Line count (including blank lines and compiler line): 288
