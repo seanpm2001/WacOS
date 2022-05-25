@@ -1,0 +1,187 @@
+name: Feature request
+description: Suggest a feature for WacOS
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Unknown
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: |
+        To rule out invalid issues, confirm and check each one of the checkboxes.
+      options:
+        - label: I verified that this is not an existing request
+          required: true
+        - label: This is not a question, poll, or discussion
+          required: true
+        - label: I checked the documentation to see if this feature was already drafted/included
+          required: true
+        - label: I am sure this fits the Apple theme of this project
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: This feature should work on the following WacOS subsystems (choose as many as needed)
+      options:
+        - label: BaSYS 1
+          required: false
+        - label: BaSYS 2
+          required: false
+        - label: BaSYS 3
+          required: false
+        - label: BaSYS 4
+          required: false
+        - label: BaSYS 5
+          required: false
+        - label: BaSYS 6
+          required: false
+        - label: Classic WacOS 7
+          required: false
+        - label: Classic WacOS 8
+          required: false
+        - label: Classic WacOS 9
+          required: false
+        - label: Wac OS X 10.0
+          required: false
+        - label: Wac OS X 10.1
+          required: false
+        - label: Wac OS X 10.2
+          required: false
+        - label: Wac OS X 10.3
+          required: false
+        - label: Wac OS X 10.4
+          required: false
+        - label: Wac OS X 10.5
+          required: false
+        - label: Wac OS X 10.6
+          required: false
+        - label: WOAHS-X 10.7
+          required: false
+        - label: WOAHS-X 10.8
+          required: false
+        - label: WOAHS-X 10.9
+          required: false
+        - label: WOAHS-X 10.10
+          required: false
+        - label: WOAHS-X 10.11
+          required: false
+        - label: WacOS 10.12
+          required: false
+        - label: WacOS 10.13
+          required: false
+        - label: WacOS 10.14
+          required: false
+        - label: WacOS 10.15
+          required: false
+        - label: WacOS 11.x
+          required: false
+        - label: WacOS 12.x
+          required: false
+        - label: Sir Isaac NewtonOS
+          required: false
+        - label: OnESTEP
+          required: false
+        - label: OpenGS
+          required: false
+        - label: WhyPhoneOS 1
+          required: false
+        - label: WhyPhoneOS 2
+          required: false
+        - label: WhyPhoneOS 3
+          required: false
+        - label: wOS 4
+          required: false
+        - label: wOS 5
+          required: false
+        - label: wOS 6
+          required: false
+        - label: wOS 7
+          required: false
+        - label: wOS 8
+          required: false
+        - label: wOS 9
+          required: false
+        - label: wOS 10
+          required: false
+        - label: wOS 11
+          required: false
+        - label: wOS 12
+          required: false
+        - label: wOS 13
+          required: false
+        - label: wOS 14
+          required: false
+        - label: wOS 15
+          required: false
+        - label: whyPadOS 13
+          required: false
+        - label: whyPadOS 14
+          required: false
+        - label: whyPadOS 15
+          required: false
+        - label: WhyWatchOS 1
+          required: false
+        - label: WhyWatchOS 2
+          required: false
+        - label: WhyWatchOS 3
+          required: false
+        - label: WhyWatchOS 4
+          required: false
+        - label: WhyWatchOS 5
+          required: false
+        - label: WhyWatchOS 6
+          required: false
+        - label: WhyWatchOS 7
+          required: false
+        - label: WhyWatchOS 8
+          required: false
+        - label: WacTVOS 9
+          required: false
+        - label: WacTVOS 10
+          required: false
+        - label: WacTVOS 11
+          required: false
+        - label: WacTVOS 12
+          required: false
+        - label: WacTVOS 13
+          required: false
+        - label: WacTVOS 14
+          required: false
+        - label: WacTVOS 15
+          required: false
+        - label: Other/unlisted
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: The feature I am suggesting is
+      options:
+        - label: A new program
+          required: false
+        - label: A new feature for an existing program
+          required: false
+        - label: A new subsystem
+          required: false
+        - label: A new feature for an existing subsystem
+          required: false
+        - label: Other/unlisted
+          required: false
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Description of the feature. Please also list the version of the programming language you tested with.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: WacOS repository version
+    validations:
+      required: true
+
+# File info
+# File type: GitHub bug report issue template (*.yml)
+# File version: 1 (2022, Wednesday, May 25th at 2:38 pm PST)
+# Line count (including blank lines and compiler line): 188
