@@ -199,6 +199,22 @@ body:
           required: false
         - label: In Ease
           required: false
+        - label: Kiri
+          required: false
+        - label: OpenCyberdog
+          required: false
+        - label: Savanna
+          required: false
+        - label: Firefox for WacOS
+          required: false
+        - label: !Cloud
+          required: false
+        - label: WacOS PyLogin
+          required: false
+        - label: WacOS Server
+          required: false
+        - label: Sir Isaac NewtonScript
+          required: false
         - label: Other/unlisted
           required: false
 
@@ -208,6 +224,7 @@ body:
       options:
         - label: This GitHub repository
           required: true
+
   - type: checkboxes
     attributes:
       label: I am running this repository in a virtual machine...
@@ -224,6 +241,7 @@ body:
           required: false
         - label: No (I am running it on my host computer)
           required: false
+
   - type: textarea
     attributes:
       label: Description
@@ -263,5 +281,5 @@ body:
 
 # File info
 # File type: GitHub bug report issue template (*.yml)
-# File version: 1 (2022, Wednesday, May 25th at 2:35 pm PST)
-# Line count (including blank lines and compiler line): 268
+# File version: 2 (2022, Wednesday, May 25th at 3:32 pm PST)
+# Line count (including blank lines and compiler line): 286
