@@ -1,0 +1,27 @@
+blank_issues_enabled: false
+contact_links:
+  - name: The program won't run/can't install
+    url: https://github.com/seanpm2001/WacOS/tree/WacOS-dev/Docs/Installation/
+    about: This question will be ignored if asked. Please read the docs.
+  - name: I want to help develop
+    url: https://github.com/seanpm2001/Teams/discussions/
+    about: Thank you for your interest in this project! Please consider joining a team to start developing with me
+  - name: I want to help develop an operating system with you, but not like this
+    url: https://github.com/seanpm2001/Seanpm2001-Operating-Systems/
+    about: I have several operating system projects, WacOS is just one of them. This list contains all of them
+  - name: I want to help translate
+    url: https://github.com/seanpm2001/Teams/discussions/
+    about: Thank you for your interest in this project! Please consider joining a team to start translating projects with me
+# Other options (from other issue templates)
+# Bug report (OS)
+# Bug report (Program)
+# Feature request
+# Security
+# 8 options, 4 internal, 4 external, perfectly balanced
+
+# V2: Fixed a broken link
+
+# File info
+# File version: 2 (2022, Wednesday, May 25th at 3:22 pm PST)
+# File type: GitHub issue template config file (*.yml)
+# Line count (including blank lines and compiler line): 28
