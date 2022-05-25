@@ -1,0 +1,285 @@
+name: Program Bug Report
+description: File a bug report (for WacOS program issues)
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Unknown
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: |
+        To rule out invalid issues, confirm and check each one of the checkboxes.
+      options:
+        - label: I verified that this is not an existing issue
+          required: true
+        - label: This is not a question, poll, or discussion
+          required: true
+        - label: I checked the documentation to understand that the issue I report is not a normal behavior
+          required: true
+        - label: I am sure this is an program bug, and not an operating system bug
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: I tried to reproduce the issue when...
+      options:
+        - label: The repository was downloaded to my device/was viewing through the web browser
+          required: true
+        - label: I was using the latest version of the project
+          required: true
+        - label: I was using the version from the right source
+          required: false
+        - label: I did not modify the project
+          required: false
+          
+  - type: checkboxes
+    attributes:
+      label: My issue involves...
+      options:
+        - label: Problems during installation
+          required: false
+        - label: Problems after installation
+          required: true
+        - label: A GUI/CLI bug
+          required: false
+        - label: The project language file (won't run)
+          required: false
+        - label: The project language file (doesn't run correctly)
+          required: false
+        - label: Documentation (not being clear)
+          required: false
+        - label: Documentation (being missing)
+          required: false
+        - label: A runtime error
+          required: false     
+        - label: Other (please describe)
+          required: false
+          
+  - type: checkboxes
+    attributes:
+      label: I am running the following WacOS operating system/subsystem (choose only one)
+      options:
+        - label: BaSYS 1
+          required: false
+        - label: BaSYS 2
+          required: false
+        - label: BaSYS 3
+          required: false
+        - label: BaSYS 4
+          required: false
+        - label: BaSYS 5
+          required: false
+        - label: BaSYS 6
+          required: false
+        - label: Classic WacOS 7
+          required: false
+        - label: Classic WacOS 8
+          required: false
+        - label: Classic WacOS 9
+          required: false
+        - label: Wac OS X 10.0
+          required: false
+        - label: Wac OS X 10.1
+          required: false
+        - label: Wac OS X 10.2
+          required: false
+        - label: Wac OS X 10.3
+          required: false
+        - label: Wac OS X 10.4
+          required: false
+        - label: Wac OS X 10.5
+          required: false
+        - label: Wac OS X 10.6
+          required: false
+        - label: WOAHS-X 10.7
+          required: false
+        - label: WOAHS-X 10.8
+          required: false
+        - label: WOAHS-X 10.9
+          required: false
+        - label: WOAHS-X 10.10
+          required: false
+        - label: WOAHS-X 10.11
+          required: false
+        - label: WacOS 10.12
+          required: false
+        - label: WacOS 10.13
+          required: false
+        - label: WacOS 10.14
+          required: false
+        - label: WacOS 10.15
+          required: false
+        - label: WacOS 11.x
+          required: false
+        - label: WacOS 12.x
+          required: false
+        - label: Sir Isaac NewtonOS
+          required: false
+        - label: OnESTEP
+          required: false
+        - label: OpenGS
+          required: false
+        - label: WhyPhoneOS 1
+          required: false
+        - label: WhyPhoneOS 2
+          required: false
+        - label: WhyPhoneOS 3
+          required: false
+        - label: wOS 4
+          required: false
+        - label: wOS 5
+          required: false
+        - label: wOS 6
+          required: false
+        - label: wOS 7
+          required: false
+        - label: wOS 8
+          required: false
+        - label: wOS 9
+          required: false
+        - label: wOS 10
+          required: false
+        - label: wOS 11
+          required: false
+        - label: wOS 12
+          required: false
+        - label: wOS 13
+          required: false
+        - label: wOS 14
+          required: false
+        - label: wOS 15
+          required: false
+        - label: whyPadOS 13
+          required: false
+        - label: whyPadOS 14
+          required: false
+        - label: whyPadOS 15
+          required: false
+        - label: WhyWatchOS 1
+          required: false
+        - label: WhyWatchOS 2
+          required: false
+        - label: WhyWatchOS 3
+          required: false
+        - label: WhyWatchOS 4
+          required: false
+        - label: WhyWatchOS 5
+          required: false
+        - label: WhyWatchOS 6
+          required: false
+        - label: WhyWatchOS 7
+          required: false
+        - label: WhyWatchOS 8
+          required: false
+        - label: WacTVOS 9
+          required: false
+        - label: WacTVOS 10
+          required: false
+        - label: WacTVOS 11
+          required: false
+        - label: WacTVOS 12
+          required: false
+        - label: WacTVOS 13
+          required: false
+        - label: WacTVOS 14
+          required: false
+        - label: WacTVOS 15
+          required: false
+        - label: Other/unlisted
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: The following program is having issues (choose only one)
+      options:
+        - label: WacPaint
+          required: false
+        - label: WacWrite
+          required: false
+        - label: In Ease
+          required: false
+        - label: Kiri
+          required: false
+        - label: OpenCyberdog
+          required: false
+        - label: Savanna
+          required: false
+        - label: Firefox for WacOS
+          required: false
+        - label: !Cloud
+          required: false
+        - label: WacOS PyLogin
+          required: false
+        - label: WacOS Server
+          required: false
+        - label: Sir Isaac NewtonScript
+          required: false
+        - label: Other/unlisted
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: I obtained this repository data from...
+      options:
+        - label: This GitHub repository
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: I am running this repository in a virtual machine...
+      options:
+        - label: Yes (with Oracle VM VirtualBox)
+          required: false
+        - label: Yes (with VMWare)
+          required: false
+        - label: Yes (with Hyper-V)
+          required: false
+        - label: Yes (with Qemu)
+          required: false
+        - label: Yes (with another virtual machine option that isn't listed)
+          required: false
+        - label: No (I am running it on my host computer)
+          required: false
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Description of the bug or feature. Please also list the version of the programming language you tested with.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. [First Step]
+        2. [Second Step]
+        3. [and so on...]
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: What actually happened
+    validations:
+      required: true  
+
+  - type: input
+    attributes:
+      label: Git-image repository version
+    validations:
+      required: true
+
+# File info
+# File type: GitHub bug report issue template (*.yml)
+# File version: 2 (2022, Wednesday, May 25th at 3:32 pm PST)
+# Line count (including blank lines and compiler line): 286
