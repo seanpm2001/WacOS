@@ -7,18 +7,16 @@
 
 </details>
 
-<!--
-| ![SadMac_Tiny64px_HighCompression.png](/SadMac_Tiny64px_HighCompression.png) Note: Wac OS X 10.1 is the last version where the happy Wac appears at the startup by default |
+| ![SadMac_Tiny64px_HighCompression.png](/SadMac_Tiny64px_HighCompression.png) Note: Wac OS X 10.3 is the last version where an Internet Explorer equivalent for WacOS is installed by default (and, or supported) |
 |-----------------------------------------------------------------------------------------------|
-!-->
 
-| [Previous (10.2)](https://github.com/seanpm2001/WacOS_X_10.2/) | [Current (10.3)](https://github.com/seanpm2001/WacOS_X_10.3) | [Next (10.4)](https://github.com/seanpm2001/WacOS_X_10.34) |
+| [Previous (10.2)](https://github.com/seanpm2001/WacOS_X_10.2/) | [Current (10.3)](https://github.com/seanpm2001/WacOS_X_10.3) | [Next (10.4)](https://github.com/seanpm2001/WacOS_X_10.4) |
 |---|---|---|
 | ![/W_Cats_HighCompression.png](/W_Cats_HighCompression.png) | ![/W_Cats_HighCompression.png](/W_Cats_HighCompression.png) | ![/W_Cats_HighCompression.png](/W_Cats_HighCompression.png) |
 | First boot | First boot | First boot |
 | ![/W_Modern1_HighCompression.png](/W_Modern1_HighCompression.png) |  ![/W_Modern1_HighCompression.png](/W_Modern1_HighCompression.png) | ![/W_Modern1_HighCompression.png](/W_Modern1_HighCompression.png) |
 | Default boot | Default boot | Default boot |
-| Wac OS X 10.2 (Jaguar) [Local](/WacOS_X/10.2) | Wac OS X 10.3 (Panther) [Local](/WacOS_X/10.3) | Wac OS X 10.4 (Tiger) [Local](/WacOS_X/10.4) |
+| Wac OS X 10.2 (Jaguar) [Local](/WacOS_X/10.2/) | Wac OS X 10.3 (Panther) [Local](/WacOS_X/10.3/) | Wac OS X 10.4 (Tiger) [Local](/WacOS_X/10.4/) |
 
 # WacOS X 10.3
 
@@ -52,8 +50,10 @@ Video conferencing requires:
 Since a New World ROM was required for Mac OS X Panther, certain older computers (such as beige Power Mac G3s and 'Wall Street' PowerBook G3s) were unable to run Panther by default. Third-party software (such as XPostFacto) can, however, override checks made during the install process; otherwise, installation or upgrades from Jaguar fails on these older machines.
 
 Panther still fully supported the Classic environment for running older Mac OS 9 applications, but made Classic application windows double-buffered, interfering with some applications written to draw directly to screen.
-New and changed features
-End-user features
+
+### New and changed features
+
+#### End-user features
 
 Apple advertised that Mac OS X Panther had over 150 new features, including:
 
@@ -65,7 +65,7 @@ Apple advertised that Mac OS X Panther had over 150 new features, including:
 - [ ] Preview: Increased speed of PDF rendering.
 - [ ] QuickTime: Now supports the Pixlet high-definition video codec.
 
-New applications in Panther
+#### New applications in Panther
 
 - [ ] Font Book: A font manager which simplifies viewing character maps, and adding new fonts that can be used systemwide. The app also allows the user to organize fonts into collections.
 - [ ] FileVault: On-the-fly encryption and decryption of a user's home folder.
@@ -73,7 +73,7 @@ New applications in Panther
 - [ ] X11: X11 is built into Panther.
 - [ ] Safari: A new web browser that was developed to replace Internet Explorer for Mac when the contract between Apple and Microsoft ended, although Internet Explorer for Mac was still available. Safari 1.0 was included in an update in Jaguar but was used as the default browser in Panther.
 
-Other
+#### Other
 
 - [ ] Microsoft Windows interoperability improvements, including out-of-the-box support for Active Directory and SecurID-based VPNs.
 - [ ] Built-in fax support.
@@ -136,9 +136,11 @@ This is the home repository. If you are already in this repository, the link is 
 
 **File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (2022, Saturday, June 4th at 5:32 pm PST)`
+**File version:** `2 (2022, Saturday, June 4th at 6:52 pm PST)`
 
-**Line count (including blank lines and compiler line):** `146`
+> Version 2: There was originally only a small revision, so I did a little extra (I added a feature deprecation warning, and added documentation for this version) I didn't want this to be a 1 byte change release
+
+**Line count (including blank lines and compiler line):** `148`
 
 **Current article language:** `English (USA)`
 
