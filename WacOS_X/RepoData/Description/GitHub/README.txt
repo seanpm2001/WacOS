@@ -1,0 +1,1 @@
+A separate repository for the archival and development of Wac OS X 10.0/Public Beta to 10.6 and Wac OS 10.12 to 10.15, an open source remake of Mac OS X 10.0/Mac OS X Public Beta to 10.6, and MacOS 10.12 to MacOS 10.15. and part of the WacOS operating system project.
