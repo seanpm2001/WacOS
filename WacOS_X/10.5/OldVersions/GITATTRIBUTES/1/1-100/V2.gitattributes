@@ -1,0 +1,68 @@
+# Start of script
+# .gitattributes
+# This file defines what languages can show up in the GitHub linguist menu (the menu that tells you what percentage each language is using up on this project.
+# Some non-programming languages must be included manually with this file. Want to create your own? Do something similar to what is done here, and name the file
+# .gitattributes
+# and nothing else, no characters before, no characters after
+# Start of linguist script
+# HTML (Duplicate, as it is already detected by GitHub Linguist by default)
+*.htm linguist-detectable=true
+*.htm linguist-documentation=false
+*.html linguist-detectable=true
+*.html linguist-documentation=false
+*.mhtm linguist-detectable=true
+*.mhtm linguist-documentation=false
+*.mhtml linguist-detectable=true
+*.mhtml linguist-documentation=false
+*.xhtm linguist-detectable=true
+*.xhtm linguist-documentation=false
+*.xhtml linguist-detectable=true
+*.xhtml linguist-documentation=false
+# YAML (YAML Ain't Markup Language) document
+# Do not include, as it would become a dominant language that shouldn't be the language people refer this project to
+*.yml linguist-detectable=false
+*.yml linguist-documentation=false
+*.yaml linguist-detectable=false
+*.yaml linguist-documentation=false
+# Markdown
+# Do not include, as it would become the 100% dominant language and would hide all the other languages as "other"
+*.md linguist-detectable=false
+*.md linguist-documentation=false
+*.mkd linguist-detectable=false
+*.mkd linguist-documentation=false
+*.mdown linguist-detectable=false
+*.mdown linguist-documentation=false
+*.markdown linguist-detectable=false
+*.markdown linguist-documentation=false
+# Makefile (GNU Make)
+# Do not include, as it is not needed to be shown
+*.mk linguist-detectable=false
+*.mk linguist-documentation=false
+*.mak linguist-detectable=false
+*.mak linguist-documentation=false
+*.make linguist-detectable=false
+*.make linguist-documentation=false
+*.makefile linguist-detectable=false
+*.makefile linguist-documentation=false
+# SVG (Scalable Vector Graphics) image file
+# Do not include, as it would become the 100% dominant language and would hide all the other languages as "other"
+*.svg linguist-detectable=false
+*.svg linguist-documentation=false
+# Git Configuration files
+# Do not include, as it would become the 100% dominant language and would hide all the other languages as "other"
+*.gitattributes linguist-detectable=false
+*.gitattributes linguist-documentation=false
+*.gitignore linguist-detectable=false
+*.gitignore linguist-documentation=false
+*.editorconfig linguist-detectable=false
+*.editorconfig linguist-documentation=false
+# Plain Text document
+# Do not include, as it would become the 100% dominant language and would hide all the other languages as "other"
+*.txt linguist-detectable=false
+*.txt linguist-documentation=false
+# End of linguist script
+# File info
+# File type: gitattributes file (.gitattributes)
+# File version: 2 (Monday, 2021 November 29th at 2:56 pm)
+# Line count (including blank lines and compiler line): 69
+# End of script
