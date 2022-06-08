@@ -1,0 +1,140 @@
+# Start of script
+# .gitattributes
+# This file defines what languages can show up in the GitHub linguist menu (the menu that tells you what percentage each language is using up on this project.
+# Some non-programming languages must be included manually with this file. Want to create your own? Do something similar to what is done here, and name the file
+# .gitattributes
+# and nothing else, no characters before, no characters after
+# Start of linguist script
+# HTML (HyperText Markup Language)
+*.htm linguist-detectable=false
+*.htm linguist-documentation=false
+*.htm linguist-language=HTML
+*.html linguist-detectable=false
+*.html linguist-documentation=false
+*.html linguist-language=HTML
+*.mhtm linguist-detectable=false
+*.mhtm linguist-documentation=false
+*.mhtm linguist-language=HTML
+*.mhtml linguist-detectable=false
+*.mhtml linguist-documentation=false
+*.mhtm linguist-language=HTML
+*.xhtm linguist-detectable=false
+*.xhtm linguist-documentation=false
+*.xhtm linguist-language=HTML
+*.xhtml linguist-detectable=false
+*.xhtml linguist-documentation=false
+*.xhtm linguist-language=HTML
+# Objective-C
+*.m linguist-detectable=true
+*.m linguist-documentation=false
+*.m linguist-language=Objective-C
+# Objective-C++
+# Currently not planned to be used on this project
+*.mm linguist-detectable=true
+*.mm linguist-documentation=false
+*.mm linguist-language=Objective-C++
+# AppleScript
+*.applescript linguist-detectable=true
+*.applescript linguist-documentation=false
+*.applescript linguist-language=AppleScript
+*.scpt linguist-detectable=true
+*.scpt linguist-documentation=false
+*.scpt linguist-language=AppleScript
+*.scptd linguist-detectable=true
+*.scptd linguist-documentation=false
+*.scptd linguist-language=AppleScript
+# Metal
+*.metal linguist-detectable=true
+*.metal linguist-documentation=false
+*.metal linguist-language=Metal
+# PostScript
+*.ps linguist-detectable=true
+*.ps linguist-documentation=false
+*.ps linguist-language=PostScript
+# C
+*.c linguist-detectable=true
+*.c linguist-documentation=false
+*.c linguist-language=C
+*.h linguist-detectable=true
+*.h linguist-documentation=false
+*.h linguist-language=C
+# Makefile (GNU Make)
+*.mk linguist-detectable=false
+*.mk linguist-documentation=false
+*.mk linguist-language=Makefile
+*.mak linguist-detectable=false
+*.mak linguist-documentation=false
+*.mak linguist-language=Makefile
+*.make linguist-detectable=false
+*.make linguist-documentation=false
+*.make linguist-language=Makefile
+*.makefile linguist-detectable=false
+*.makefile linguist-documentation=false
+*.makefile linguist-language=Makefile
+# YAML
+*.yml linguist-detectable=false
+*.yml linguist-documentation=false
+*.yml linguist-language=YAML
+*.yaml linguist-detectable=false
+*.yaml linguist-documentation=false
+*.yaml linguist-language=YAML
+# ReStructuredText
+*.rst linguist-detectable=true
+*.rst linguist-documentation=false
+*.rst linguist-language=reStructuredText
+# LaTeX/BibTeX
+*.tex linguist-detectable=true
+*.tex linguist-documentation=false
+*.tex linguist-language=TeX
+*.bib linguist-detectable=true
+*.bib linguist-documentation=false
+*.bib linguist-language=BibTeX
+# SVG
+*.svg linguist-detectable=false
+*.svg linguist-documentation=false
+*.svg linguist-language=SVG
+# JSON
+*.json linguist-detectable=false
+*.json linguist-documentation=false
+*.json linguist-language=JSON
+# INI
+*.ini linguist-detectable=false
+*.ini linguist-documentation=false
+*.ini linguist-language=INI
+# Assembly (x86)
+*.asm linguist-detectable=true
+*.asm linguist-documentation=false
+*.asm linguist-language=Assembly
+# Roff
+*.0 linguist-detectable=false
+*.0 linguist-documentation=false
+*.0 linguist-language=Roff
+*.1 linguist-detectable=false
+*.1 linguist-documentation=false
+*.1 linguist-language=Roff
+*.2 linguist-detectable=false
+*.2 linguist-documentation=false
+*.2 linguist-language=Roff
+*.3 linguist-detectable=false
+*.3 linguist-documentation=false
+*.3 linguist-language=Roff
+# Markdown
+# Do not include, as it would become the 100% dominant language and would hide all the other languages as "other"
+*.md linguist-detectable=false
+*.md linguist-documentation=false
+*.md linguist-language=Markdown
+*.mkd linguist-detectable=false
+*.mkd linguist-documentation=false
+*.mkd linguist-language=Markdown
+*.mdown linguist-detectable=false
+*.mdown linguist-documentation=false
+*.mdown linguist-language=Markdown
+*.markdown linguist-detectable=false
+*.markdown linguist-documentation=false
+*.markdown linguist-language=Markdown
+# End of linguist script
+# File info
+# File type: Gitattributes file (*.gitattributes)
+# File version: 4 (2022, Thursday, June 2nd at 7:11 pm PST)
+# Line count (including blank lines and compiler line): 141
+# End of script
