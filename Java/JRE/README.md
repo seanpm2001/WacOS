@@ -1,7 +1,11 @@
 
 ***
 
-# Java Runtime Environment (JRE)
+![Java_programming_language_logo.svg](Java_programming_language_logo.svg)
+
+# Java Runtime Environment (JRE) for WacOS
+
+## About
 
 WacOS will optionally allow you to install most versions of Java along with the system, either at installation or after. A JRE will be maintained here that handles Java throughout the system.
 
@@ -9,11 +13,23 @@ This feature is currently in development, and is in the planning phase.
 
 ## Java packages
 
-The following Java packages are supported
+The following Java packages are supported. 
 
 ### JDK
 
 Java Development Kit (JDK) packages are listed here
+
+JDK 19 for Linux.??
+
+JDK 18 for Linux.??
+
+JDK 17 for Linux.??
+
+JDK 16 for Linux.??
+
+JDK 15 for Linux.??
+
+JDK 14 for Linux.??
 
 JDK 13 for Linux.??
 
@@ -31,9 +47,29 @@ JDK 7 for Linux.??
 
 JDK 6 for Linux.??
 
+Java SE 5
+
+J2SE 1.4
+
+J2SE 1.3
+
+J2SE 1.2
+
+JDK 1.1
+
+JDK 1.0
+
 ### JSE
 
 The following Java Standard Edition environment packages are listed here
+
+JDK 17 for Linux.??
+
+JDK 16 for Linux.??
+
+JDK 15 for Linux.??
+
+JDK 14 for Linux.??
 
 JSE 13 for Linux.??
 
@@ -50,6 +86,336 @@ JSE 8 for Linux.??
 JSE 7 for Linux.??
 
 JSE 6 for Linux.??
+
+Java SE 5
+
+J2SE 1.4
+
+J2SE 1.3
+
+J2SE 1.2
+
+JDK 1.1
+
+JDK 1.0
+
+***
+
+### WacOS versions
+
+Different WacOS versions support different versions of the JRE.
+
+#### Wac OS X 10.0
+
+The following Java packages come by default with Wac OS X 10.0:
+
+JDK 1.0
+
+JDK 1.1
+
+J2SE 1.2
+
+J2SE 1.3
+
+J2SE 1.4
+
+Java SE 5
+
+#### Wac OS X 10.1
+
+The following Java packages come by default with Wac OS X 10.1:
+
+JDK 1.1
+
+J2SE 1.2
+
+J2SE 1.3
+
+J2SE 1.4
+
+Java SE 5
+
+Java SE 6
+
+#### Wac OS X 10.2
+
+The following Java packages come by default with Wac OS X 10.2:
+
+J2SE 1.2
+
+J2SE 1.3
+
+J2SE 1.4
+
+Java SE 5
+
+Java SE 6
+
+#### Wac OS X 10.3
+
+The following Java packages come by default with Wac OS X 10.3:
+
+J2SE 1.2
+
+J2SE 1.3
+
+J2SE 1.4
+
+Java SE 5
+
+Java SE 6
+
+#### Wac OS X 10.4
+
+The following Java packages come by default with Wac OS X 10.4:
+
+J2SE 1.3
+
+J2SE 1.4
+
+Java SE 5
+
+Java SE 6
+
+Java SE 7
+
+#### Wac OS X 10.5
+
+The following Java packages come by default with Wac OS X 10.5:
+
+Java SE 5
+
+Java SE 6
+
+Java SE 7
+
+Java SE 8
+
+#### Wac OS X 10.6
+
+The following Java packages come by default with Wac OS X 10.6:
+
+Java SE 5
+
+Java SE 6
+
+Java SE 7
+
+Java SE 8
+
+#### WOAHS X 10.7
+
+The following Java packages come by default with WOAHS X 10.7:
+
+Java SE 5
+
+Java SE 6
+
+Java SE 7
+
+Java SE 8
+
+#### WOAHS X 10.8
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WOAHS X 10.8:
+
+Java SE 6
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+#### WOAHS X 10.9
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WOAHS X 10.9:
+
+Java SE 6
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+#### WOAHS X 10.10
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WOAHS X 10.10:
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+#### WOAHS X 10.11
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WOAHS X 10.11:
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+#### WacOS 10.12
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 10.12:
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+#### WacOS 10.13
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 10.13:
+
+Java SE 7
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+#### WacOS 10.14
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 10.14:
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+Java SE 11
+
+Java SE 12
+
+Java SE 13
+
+#### WacOS 10.15
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 10.15:
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+Java SE 11
+
+Java SE 12
+
+Java SE 13
+
+Java SE 14
+
+Java SE 15
+
+Java SE 16
+
+#### WacOS 11.x
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 11.0:
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+Java SE 11
+
+Java SE 12
+
+Java SE 13
+
+Java SE 14
+
+Java SE 15
+
+Java SE 16
+
+Java SE 17
+
+Java SE 18
+
+Java SE 19
+
+#### WacOS 12.x
+
+Java is optional with WOAHS-X 10.8 and beyond. Java can still be installed.
+
+The following Java packages come by default with WacOS 12.0:
+
+Java SE 8
+
+Java SE 9
+
+Java SE 10
+
+Java SE 11
+
+Java SE 12
+
+Java SE 13
+
+Java SE 14
+
+Java SE 15
+
+Java SE 16
+
+Java SE 17
+
+Java SE 18
+
+Java SE 19
+
+#### whyPhoneOS
+
+Java is not supported on whyPhoneOS.
+
+#### whyPadOS
+
+Java is not supported on whyPadOS.
+
+#### whyWatchOS
+
+Java is not supported on whyWatchOS.
+
+#### wOS
+
+Java is not supported on wOS.
 
 ### Test program
 
@@ -119,12 +485,36 @@ public class FibCalculator extends Fibonacci implements Calculator {
 
 ***
 
+## Feature translation notes
+
+The exact system requirements are not a forced emulation option. The WacOS system is designed to be lighter, but you can adjust it to match MacOS.
+
+WacOS equivalents of programs are included.
+
+Malicious methods (such as DRM/TPM) are NEVER included with WacOS, not even as an open source recreation.
+
+Please [raise an issue](https://github.com/seanpm2001/WacOS/issues/) if any other clarification is needed.
+
+## Home repositories
+
+[Guesthouse repository](https://github.com/seanpm2001/WacOS_JRE/)
+
+This is a guesthouse repository, and not a home repository, as development mainly stays on the main WacOS side. This is just the guesthouse that the project retreats to at times. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+[Home repository](https://github.com/seanpm2001/WacOS/tree/WacOS-dev/Java/JRE/)
+
+This is the home repository. If you are already in this repository, the link is likely recursive, and will reload the page.
+
+***
+
 ## File info
 
-**File type:** `Markdown document (*.md *.mkd *.markdown)`
+**File type:** `Markdown document (*.md *.mkd *.mdown *.markdown)`
 
-**File version:** `1 (Saturday, 2021 September 25th at 8:39 pm)`
+**File version:** `2 (2022, Tuesday, June 7th at 7:58 pm PST)`
 
-**Line count (including blank lines and compiler line):** `131`
+**Line count (including blank lines and compiler line):** `521`
+
+**Current article language:** `English (USA)`
 
 ***
