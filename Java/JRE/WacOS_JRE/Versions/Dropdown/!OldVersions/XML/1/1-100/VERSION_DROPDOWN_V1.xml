@@ -1,0 +1,228 @@
+<!-- Start of script !-->
+<xml>
+  <jre-version>
+    <wacos-x>
+      <wacos-x-10-0>
+        <dropdown>
+          JDK 1.0
+          JDK 1.1
+          J2SE 1.2
+          J2SE 1.3
+          J2SE 1.4
+          Java SE 5
+        </dropdown>
+      <wacos-x-10-1>
+        <dropdown>
+          JDK 1.1
+          J2SE 1.2
+          J2SE 1.3
+          J2SE 1.4
+          Java SE 5
+          Java SE 6
+        </dropdown>
+      </wacos-x-10-1>
+      <wacos-x-10-2>
+        <dropdown>
+          J2SE 1.2
+          J2SE 1.3
+          J2SE 1.4
+          Java SE 5
+          Java SE 6
+        </dropdown>
+      </wacos-x-10-2>
+      <wacos-x-10-3>
+        <dropdown>
+          J2SE 1.2
+          J2SE 1.3
+          J2SE 1.4
+          Java SE 5
+          Java SE 6
+        </dropdown>
+      </wacos-x-10-3>
+      <wacos-x-10-4>
+        <dropdown>
+          J2SE 1.3
+          J2SE 1.4
+          Java SE 5
+          Java SE 6
+          Java SE 7
+        </dropdown>
+      </wacos-x-10-4>
+      <wacos-x-10-5>
+        <dropdown>
+          J2SE 1.4
+          Java SE 5
+          Java SE 6
+          Java SE 7
+        </dropdown>
+      </wacos-x-10-5>
+      <wacos-x-10-6>
+        <dropdown>
+          Java SE 5
+          Java SE 6
+          Java SE 7
+          Java SE 8
+        </dropdown>
+      </wacos-x-10-6>
+    </wacos-x>
+    <woahs-x>
+      <woahs-x-10-7>
+        <dropdown>
+          Java SE 5
+          Java SE 6
+          Java SE 7
+          Java SE 8
+        </dropdown>
+      </woahs-x-10-7>
+      <woahs-x-10-8>
+        <dropdown>
+          Java SE 6
+          Java SE 7
+          Java SE 8
+          Java SE 9
+        </dropdown>
+      </woahs-x-10-8>
+      <woahs-x-10-9>
+        <dropdown>
+          Java SE 6
+          Java SE 7
+          Java SE 8
+          Java SE 9
+        </dropdown>
+      </woahs-x-10-9>
+      <woahs-x-10-10>
+        <dropdown>
+          Java SE 6
+          Java SE 7
+          Java SE 8
+          Java SE 9
+        </dropdown>
+      </woahs-x-10-10>
+      <woahs-x-10-11>
+        <dropdown>
+          Java SE 7
+          Java SE 8
+          Java SE 9
+          Java SE 10
+        </dropdown>
+      </woahs-x-10-11>
+     </woahs-x>
+     <wacos-10-12>
+        <dropdown>
+          Java SE 7
+          Java SE 8
+          Java SE 9
+          Java SE 10
+        </dropdown>
+      </wacos-10-12>
+     <wacos-10-13>
+        <dropdown>
+          Java SE 7
+          Java SE 8
+          Java SE 9
+          Java SE 10
+        </dropdown>
+      </wacos-10-13>
+     <wacos-10-14>
+        <dropdown>
+          Java SE 8
+          Java SE 9
+          Java SE 10
+          Java SE 11
+          Java SE 12
+          Java SE 13
+        </dropdown>
+      </wacos-10-14>
+     <wacos-10-15>
+        <dropdown>
+          Java SE 8
+          Java SE 9
+          Java SE 10
+          Java SE 11
+          Java SE 12
+          Java SE 13
+          Java SE 14
+          Java SE 15
+          Java SE 16
+        </dropdown>
+      </wacos-10-15>
+     <wacos-11-x>
+        <dropdown>
+          Java SE 8
+          Java SE 9
+          Java SE 10
+          Java SE 11
+          Java SE 12
+          Java SE 13
+          Java SE 14
+          Java SE 15
+          Java SE 16
+          Java SE 17
+          Java SE 18
+          Java SE 19
+        </dropdown>
+      </wacos-11-x>
+     <wacos-12-x>
+        <dropdown>
+          Java SE 8
+          Java SE 9
+          Java SE 10
+          Java SE 11
+          Java SE 12
+          Java SE 13
+          Java SE 14
+          Java SE 15
+          Java SE 16
+          Java SE 17
+          Java SE 18
+          Java SE 19
+        </dropdown>
+      </wacos-12-x>
+      <wacos-13-x>
+        <dropdown>
+          Java SE 8
+          Java SE 9
+          Java SE 10
+          Java SE 11
+          Java SE 12
+          Java SE 13
+          Java SE 14
+          Java SE 15
+          Java SE 16
+          Java SE 17
+          Java SE 18
+          Java SE 19
+        </dropdown>
+      </wacos-13-x>
+    </wacos-x>
+    <full-dropdown="restricted"><!-- Used as a reference, not possible to use with WacOS !-->
+      JDK 1.0
+      JDK 1.1
+      J2SE 1.2
+      J2SE 1.3
+      J2SE 1.4
+      Java SE 5
+      Java SE 6
+      Java SE 7
+      Java SE 8
+      Java SE 9
+      Java SE 10
+      Java SE 11
+      Java SE 12
+      Java SE 13
+      Java SE 14
+      Java SE 15
+      Java SE 16
+      Java SE 17
+      Java SE 18
+      Java SE 19
+    </full-dropdown>
+  </jre-version>
+</xml>
+<!-- File info
+File type: XML source file (*.xml)
+File version: 1 (2022, Tuesday, June 7th at 2:27 pm PST)
+Line count (including blank lines and compiler line): 229
+File purpose: Defining Java version support in WacOS
+!-->
+<!-- End of script !-->
