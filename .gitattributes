@@ -25,6 +25,19 @@
 *.cff linguist-detectable=false
 *.cff linguist-documentation=false
 *.cff linguist-language=Citation-File-Format
+# WacOS Dylan
+*.lid linguist-detectable=true
+*.lid linguist-documentation=false
+*.lid linguist-language=Dylan
+# In the future, this will be renamed to wDylan, DylanW, or whatever the name is decided to be
+# OpenDylan
+*.dylan linguist-detectable=true
+*.dylan linguist-documentation=false
+*.dylan linguist-language=Dylan
+# Lingo (Adobe)
+*.lg4 linguist-detectable=true
+*.lg4 linguist-documentation=false
+*.lg4 linguist-language=Lingo
 # ReStructuredText
 *.rst linguist-detectable=false
 *.rst linguist-documentation=false
@@ -321,6 +334,6 @@
 # End of linguist script
 # File info
 # File type: gitattributes file (*.gitattributes)
-# File version: 2 (2022, Sunday, May 15th at 4:07 pm PST)
-# Line count (including blank lines and compiler line): 327
+# File version: 3 (2022, Sunday, June 26th at 9:38 pm PST)
+# Line count (including blank lines and compiler line): 340
 # End of script
