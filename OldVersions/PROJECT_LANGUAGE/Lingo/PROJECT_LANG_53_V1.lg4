@@ -1,0 +1,17 @@
+// Start of script
+on startmovie
+  alert "Project language file 53\nFor: WacOS\nAbout:\nI chose Adobe Lingo as the 53rd project language file for this project (WacOS) as WacOS uses Lingo for some legacy subprojects. It is getting its own project language file, starting here."
+end
+// Output
+
+// Project language file 53
+// For: WacOS
+// About:
+// I chose Adobe Lingo as the 53rd project language file for this project (WacOS) as WacOS uses Lingo for some legacy subprojects. It is getting its own project language file, starting here.
+
+// File info
+// File type: Adobe Lingo 4 source file (*.lg4)
+// File version: 1 (2022, Sunday, June 26th at 9:34 pm PST)
+// Line count (including blank lines and compiler line): 18
+
+// End of script
