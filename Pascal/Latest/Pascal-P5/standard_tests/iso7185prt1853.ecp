@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1853: Self referencing type. Self reference to same type. 
+                 
+                   Tests a type that references its own definition. 
+                 
+                 
+                } 
+                 
+                program iso7185prt1853(output); 
+                 
+                type r = record a: r end; 
+    12   ****                      ^243
+                 
+                var x: r; 
+                 
+                begin 
+                 
+                end. 
+x          unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+243  Type referenced is incomplete
+

@@ -1,0 +1,36 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1829: Parameter number mismatch. Less parameters than specified. 
+                 
+                    ISO 7185 6.8.2.3 
+                 
+                } 
+                 
+                program iso7185prt1829; 
+                 
+                procedure a(b: integer; c: char); 
+                 
+                begin 
+                 
+                   b := 1; 
+                   c := 'a' 
+                 
+                end; 
+                 
+                begin 
+                 
+                   a(1) 
+                 
+                end. 
+    24   ****     ^126
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+126  Number of parameters does not agree with declaration
+

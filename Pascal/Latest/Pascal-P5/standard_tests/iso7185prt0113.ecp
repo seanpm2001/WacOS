@@ -1,0 +1,35 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 113: Misspelled "then" on conditional 
+                 
+                } 
+                 
+                program iso7185prt0113; 
+                 
+                var a, b: integer; 
+                 
+                begin 
+                 
+                   if 1=1 thne a := b 
+    13   ****                ^6,104^59
+                 
+                end. 
+thne       unreferenced
+b          unreferenced
+a          unreferenced
+
+    15   ****     ^52
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 52  'then' expected
+ 59  Error in variable
+104  Identifier not declared
+

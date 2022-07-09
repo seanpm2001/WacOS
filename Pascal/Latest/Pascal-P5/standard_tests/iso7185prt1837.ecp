@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1837: Goto/label issues. Label used but not defined. 
+                 
+                } 
+                 
+                program iso7185prt1837(output); 
+                 
+                var i: integer; 
+                 
+                begin 
+                 
+                   goto 1; 
+    13   ****           ^167
+                   for i := 1 to 10 do begin 
+                 
+                      1: writeln(i) 
+                 
+                   end 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+167  Undeclared label
+

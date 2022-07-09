@@ -1,0 +1,37 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 305: Missing function identifier 
+                 
+                } 
+                 
+                program iso7185prt0305; 
+                 
+                function (one, two: integer): char; 
+     9   ****            ^2
+                 
+                begin 
+                 
+                   one := 1; 
+                   two := 2; 
+                   x := 'a' 
+    15   ****      ^104
+                 
+                end; 
+x          unreferenced
+
+                 
+                begin 
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  2  Identifier expected
+104  Identifier not declared
+

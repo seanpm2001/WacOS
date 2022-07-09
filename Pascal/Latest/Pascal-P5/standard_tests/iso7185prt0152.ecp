@@ -1,0 +1,35 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 152: Misspelled "goto" in goto statement 
+                 
+                } 
+                 
+                program iso7185prt0152; 
+                 
+                label 1; 
+                 
+                begin 
+                 
+                   ogto 1; 
+    13   ****         ^104^59^51
+                 
+                   1:; 
+                 
+                end. 
+label           1 unreferenced
+                     
+ogto       unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 51  ':=' expected
+ 59  Error in variable
+104  Identifier not declared
+

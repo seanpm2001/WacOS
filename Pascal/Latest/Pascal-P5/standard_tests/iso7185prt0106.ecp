@@ -1,0 +1,39 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 106: Misspelled "begin" on statement block 
+                 
+                } 
+                 
+                program iso7185prt0106; 
+                 
+                begin 
+                 
+                   beign 
+    11   ****          ^104
+                 
+                      if 1=1 then 
+    13   ****          ^51,6
+                 
+                   end 
+                 
+                end.
+beign      unreferenced
+ 
+    17   ****     ^6
+   *** eof encountered
+
+    18   ****  ^21
+
+Errors in program: 5
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 21  '.' expected
+ 51  ':=' expected
+104  Identifier not declared
+

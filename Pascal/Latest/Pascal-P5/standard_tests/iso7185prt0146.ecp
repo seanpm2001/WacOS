@@ -1,0 +1,36 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 146: Misspelled "do" on for statement 
+                 
+                } 
+                 
+                program iso7185prt0146; 
+                 
+                var i, a, b: integer; 
+                 
+                begin 
+                 
+                   for i := 1 to 10 od a := b 
+    13   ****                        ^6,104^9^59
+                 
+                end. 
+b          unreferenced
+
+    15   ****     ^4,145,54
+
+Errors in program: 7
+
+Error numbers in listing:
+-------------------------
+  4  ')' expected
+  6  Illegal symbol
+  9  '(' expected
+ 54  'do' expected
+ 59  Error in variable
+104  Identifier not declared
+145  Type conflict
+

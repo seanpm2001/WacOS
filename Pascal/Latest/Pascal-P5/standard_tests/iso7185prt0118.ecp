@@ -1,0 +1,34 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 118: Missing "of" on case statement 
+                 
+                } 
+                 
+                program iso7185prt0118; 
+                 
+                var x, a: integer; 
+                 
+                begin 
+                 
+                   case x  
+                 
+                      1: a := 1; 
+    15   ****         ^59^8,50
+                      2: a := 2 
+                 
+                   end 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  8  'of' expected
+ 50  Error in constant
+ 59  Error in variable
+

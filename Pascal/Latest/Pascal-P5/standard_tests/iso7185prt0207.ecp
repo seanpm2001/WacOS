@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 207: Missing identifier for variant 
+                 
+                } 
+                 
+                program iso7185prt0207; 
+                 
+                var a: record b, c: integer; 
+                              case : boolean of 
+    10   ****                      ^2
+                                 true: (); 
+                                 false: () 
+                       end; 
+                 
+                begin 
+                 
+                   a.b := 1 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+  2  Identifier expected
+

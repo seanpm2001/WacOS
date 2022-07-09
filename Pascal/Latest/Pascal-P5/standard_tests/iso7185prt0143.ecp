@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 143: Misspelled "downto" on for statement 
+                 
+                } 
+                 
+                program iso7185prt0143; 
+                 
+                var i, a, b: integer; 
+                 
+                begin 
+                 
+                   for i := 10 dunto 1 do a := b 
+    13   ****                      ^6,104^59^55
+                 
+                end. 
+dunto      unreferenced
+
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 55  'to'/'downto' expected
+ 59  Error in variable
+104  Identifier not declared
+

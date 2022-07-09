@@ -1,0 +1,37 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 104: Missing procedure identifier 
+                 
+                } 
+                 
+                program iso7185prt0104(output); 
+                 
+                { The appearance of a procedure with a matching list could conceivably 
+                  allow recovery } 
+                procedure x(a, b: integer); 
+                 
+                begin 
+                 
+                   writeln(a, b) 
+                 
+                end; 
+                 
+                begin 
+                 
+                   (1, 2) 
+    21   ****      ^6
+                 
+                end. 
+x          unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+

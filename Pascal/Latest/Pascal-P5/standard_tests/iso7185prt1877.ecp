@@ -1,0 +1,27 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1877: Tests read to subrange of integer out of bounds generates error. 
+                 
+                    Tests reading an out of bounds value to a subrange of integer generates 
+                    an error. 
+                } 
+                 
+                program iso7185prt1877; 
+                 
+                var f: file of integer; 
+                    x: 1..10; 
+                     
+                begin 
+                 
+                   rewrite(f); 
+                   write(f, 42); 
+                   reset(f); 
+                   read(f, x) 
+                    
+                end. 
+
+Errors in program: 0

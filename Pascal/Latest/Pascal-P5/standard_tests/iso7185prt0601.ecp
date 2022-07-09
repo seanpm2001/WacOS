@@ -1,0 +1,35 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 601: Missing first parameter identifier 
+                 
+                } 
+                 
+                program iso7185prt0601; 
+                 
+                procedure a(, c: integer); 
+     9   ****               ^7
+                 
+                begin 
+                 
+                   c := 1 
+                 
+                end; 
+                 
+                begin 
+                 
+                   a(1, 2) 
+    19   ****         ^126
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  7  Error in parameter list
+126  Number of parameters does not agree with declaration
+

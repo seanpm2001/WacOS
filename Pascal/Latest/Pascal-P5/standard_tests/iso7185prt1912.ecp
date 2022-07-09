@@ -1,0 +1,34 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1912: '..' and ':' equivalence 
+                 
+                    Pascal-P2 regarded '..' and ':' as equivalent. This should not be possible 
+                    under ISO 7185. 
+                 
+                } 
+                 
+                program iso7185prt1912(output); 
+                 
+                var r: 1:10; 
+    12   ****           ^6 ^30,50,107,102
+                 
+                begin 
+                 
+                end. 
+r          unreferenced
+
+
+Errors in program: 5
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 30  '..' expected
+ 50  Error in constant
+102  Low bound exceeds highbound
+107  Incompatible subrange types
+

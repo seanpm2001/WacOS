@@ -1,0 +1,33 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 206: Misspelled 'case' to variant 
+                 
+                } 
+                 
+                program iso7185prt0206; 
+                 
+                var a: record b, c: integer; 
+                              csae d: boolean of 
+    10   ****                      ^6          ^6
+                                 true: (); 
+                                 false: () 
+    12   ****                            ^2
+                       end; 
+                 
+                begin 
+                 
+                   a.b := 1 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  2  Identifier expected
+  6  Illegal symbol
+

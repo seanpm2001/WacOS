@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1901: Constructing set from real 
+                 
+                   Check attempt to construct set from real element. 
+                 
+                 
+                } 
+                 
+                program iso7185prt1901(output); 
+                 
+                var 
+                	r: real; 
+                 
+                begin 
+                 
+                    if [r] <> [] then 
+    17   ****            ^109
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+109  Type must not be real
+

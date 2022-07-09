@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1916: Inappropriate application of sign. 
+                 
+                    Use of sign on char value. 
+                 
+                } 
+                 
+                program iso7185prt1916(output); 
+                 
+                var c: char; 
+                 
+                begin 
+                 
+                   c := 'a'; 
+                   writeln('Value is: ', +c) 
+    16   ****                              ^134
+                    
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+134  Illegal type of operand(s)
+

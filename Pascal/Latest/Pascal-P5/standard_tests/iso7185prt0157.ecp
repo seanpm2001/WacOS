@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 157: Missing ',' between variables in with statement 
+                 
+                } 
+                 
+                program iso7185prt0157; 
+                 
+                var a: record b, c: integer end; 
+                    d: record e, f: integer end; 
+                 
+                begin 
+                 
+                   with a d do e := f 
+    14   ****             ^59  ^104 ^104
+                 
+                end. 
+d          unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 59  Error in variable
+104  Identifier not declared
+

@@ -1,0 +1,33 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 153: Missing unsigned integer in goto statement 
+                 
+                } 
+                 
+                program iso7185prt0153; 
+                 
+                { Theoretically the compiler could determine that only one label is possible, 
+                  and use that to recover. } 
+                label 1; 
+                 
+                begin 
+                 
+                   goto ; 
+    15   ****           ^15
+                 
+                   1: 
+                 
+                end. 
+label           1 unreferenced
+                     
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 15  Integer expected
+

@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1822: Double definitions. Double define with different case. 
+                 
+                    ISO 7185 6.2.2.7 
+                 
+                } 
+                 
+                program iso7185prt1822(output); 
+                 
+                var myvar: integer; 
+                    MyVar: integer; 
+    12   ****           ^101
+                 
+                begin 
+                 
+                   writeln(myvar) 
+                 
+                end. 
+MyVar      unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+101  Identifier declared twice
+

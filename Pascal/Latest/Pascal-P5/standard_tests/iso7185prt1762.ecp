@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1762: Invalid string index subrange. 
+                 
+                    String index starts with 0. 
+                 
+                } 
+                 
+                program iso7185prt1762(output); 
+                 
+                var s: packed array [0..10] of char; 
+                 
+                begin 
+                 
+                   s := 'h          '; 
+    15   ****                        ^129
+                   writeln('The string is: ''', s, ''''); 
+    16   ****                                    ^116
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+116  Error in type of standard procedure parameter
+129  Type conflict of operands
+
