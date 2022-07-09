@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 522: Misspelled 'end' on field list 
+                 
+                } 
+                 
+                program iso7185prt0522; 
+                 
+                var a: record a, b: integer den; 
+     9   ****                                 ^6
+                 
+                begin 
+    11   ****       ^13,14
+                 
+                   a.a := 1 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 13  'end' expected
+ 14  ';' expected
+

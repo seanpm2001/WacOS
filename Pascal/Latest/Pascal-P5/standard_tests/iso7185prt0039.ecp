@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 39: Missing semicolon in var 
+                 
+                } 
+                 
+                program iso7185prt0039(output); 
+                 
+                var  one: char 
+                     two: integer; 
+    10   ****          ^6
+                 
+                begin 
+                 
+                   writeln(one, two) 
+    14   ****                     ^104
+                 
+                end. 
+two        unreferenced
+
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+104  Identifier not declared
+

@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1859: pred of real. 
+                 
+                   Tests pred() works on real (which is a scalar). 
+                 
+                } 
+                 
+                program iso7185prt1859; 
+                 
+                var r: real; 
+                 
+                begin 
+                 
+                   r := pred(r) 
+    15   ****                 ^125
+                    
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+125  Error in type of standard function parameter
+

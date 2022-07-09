@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 109: Missing "if" on conditional 
+                 
+                } 
+                 
+                program iso7185prt0109; 
+                 
+                begin 
+                 
+                   1=1 then 
+    11   ****      ^167^5,6
+                 
+                end. 
+label           1 unreferenced
+                     
+    13   ****      ^168
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  5  ':' expected
+  6  Illegal symbol
+167  Undeclared label
+168  Undefined label
+

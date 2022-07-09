@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 138: Misspelled variable ident on for statement 
+                 
+                } 
+                 
+                program iso7185prt0138; 
+                 
+                var i, a, b: integer; 
+                 
+                begin 
+                 
+                   for id := 1 to 10 do a := b 
+    13   ****           ^104,183
+                 
+                end. 
+id         unreferenced
+i          unreferenced
+
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+104  Identifier not declared
+183  For index variable must be local to this block
+

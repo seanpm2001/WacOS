@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 501: Misspelled 'packed' 
+                 
+                } 
+                 
+                program iso7185prt0501; 
+                 
+                var a: picked array [1..10] of integer; 
+     9   ****               ^104  ^14,2,5
+                 
+                begin 
+                 
+                   a[1] := 1 
+                 
+                end. 
+picked     unreferenced
+
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  2  Identifier expected
+  5  ':' expected
+ 14  ';' expected
+104  Identifier not declared
+

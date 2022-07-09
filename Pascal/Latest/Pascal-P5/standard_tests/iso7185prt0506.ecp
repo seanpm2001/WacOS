@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 506: Missing second index in array 
+                 
+                } 
+                 
+                program iso7185prt0506; 
+                 
+                var a: array [1..] of integer; 
+     9   ****                    ^50,107,102
+                 
+                begin 
+                 
+                   a[1] := 1 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 50  Error in constant
+102  Low bound exceeds highbound
+107  Incompatible subrange types
+

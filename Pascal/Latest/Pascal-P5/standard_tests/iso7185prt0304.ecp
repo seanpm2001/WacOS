@@ -1,0 +1,34 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 304: Misspelled 'function' 
+                 
+                } 
+                 
+                program iso7185prt0304; 
+                 
+                functoin x(one, two: integer): char; 
+     9   ****          ^18
+                 
+                begin 
+                 
+                   x := 'a' 
+                 
+                end; 
+two        unreferenced
+one        unreferenced
+
+                 
+                begin 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 18  Error in declaration part
+

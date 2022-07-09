@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 135: Missing "for" on for statement 
+                 
+                } 
+                 
+                program iso7185prt0135; 
+                 
+                var i, a, b: integer; 
+                 
+                begin 
+                 
+                   i := 1 to 10 do a := b 
+    13   ****              ^6    ^6   ^59
+                 
+                end. 
+b          unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 59  Error in variable
+

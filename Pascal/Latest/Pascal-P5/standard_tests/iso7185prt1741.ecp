@@ -1,0 +1,24 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1741: When eoln(f) is activated, it is an error if f is undefined. 
+                 
+                               ISO 7185 reference: 6.6.6.5 
+                 
+                } 
+                 
+                program iso7185prt1741(output); 
+                 
+                var a: text; 
+                 
+                begin 
+                 
+                   { As usual, it is possible that this could be completely optimized out } 
+                   if eoln(a) then 
+                 
+                end. 
+
+Errors in program: 0

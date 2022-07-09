@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 407: Missing 2nd constant on subrange 
+                 
+                } 
+                 
+                program iso7185prt0155; 
+                 
+                var a: 1..; 
+     9   ****             ^50,107,102
+                 
+                begin 
+                 
+                   a := 1 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 50  Error in constant
+102  Low bound exceeds highbound
+107  Incompatible subrange types
+

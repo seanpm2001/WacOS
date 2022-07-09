@@ -1,0 +1,31 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1503: Mispelled 'e' in exponent 
+                 
+                } 
+                 
+                program iso7185prt1503(output); 
+                 
+                var a: integer; 
+                 
+                begin 
+                 
+                   a := 1d5 
+    13   ****           ^241^6,104
+                 
+                end. 
+d5         unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+104  Identifier not declared
+241  Invalid tolken separator
+

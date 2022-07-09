@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1761: Assign different length strings. 
+                 
+                               Assigns a string with different length than the destination. 
+                 
+                } 
+                 
+                program iso7185prt1761; 
+                 
+                var a: packed array [1..10] of char; 
+                 
+                begin 
+                 
+                   a := 'h          ' 
+                 
+                end. 
+    17   ****     ^129
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+129  Type conflict of operands
+

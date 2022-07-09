@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 121: Missing 2nd constant on case statement list 
+                 
+                } 
+                 
+                program iso7185prt0121; 
+                 
+                var x, a: integer; 
+                 
+                begin 
+                 
+                   case x of 
+                 
+                      1,: a := 1; 
+    15   ****           ^50
+                      2: a := 2 
+                 
+                   end 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 50  Error in constant
+

@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1508: Missing number before exponent 
+                 
+                } 
+                 
+                program iso7185prt1508(output); 
+                 
+                var a: integer; 
+                 
+                begin 
+                 
+                   { somewhat ambiguous, could be "e" as identifier } 
+                   a := e+5 
+    14   ****           ^104
+                 
+                end. 
+e          unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+104  Identifier not declared
+

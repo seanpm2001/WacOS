@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 38: Incomplete second in var 
+                 
+                } 
+                 
+                program iso7185prt0038(output); 
+                 
+                var  one: char; 
+                     two; 
+    10   ****           ^6,5,10
+                 
+                begin 
+                 
+                   writeln(one, two) 
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  5  ':' expected
+  6  Illegal symbol
+ 10  Error in type
+

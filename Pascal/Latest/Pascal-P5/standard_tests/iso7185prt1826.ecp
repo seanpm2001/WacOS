@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1826: Files of files. Direct specification of file of file. 
+                 
+                    ISO 7185 6.4.3.5 
+                 
+                } 
+                 
+                program iso7185prt1826; 
+                 
+                var f: file of file of integer; 
+    11   ****                                 ^190
+                 
+                begin 
+                 
+                   rewrite(f) 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+190  File component may not contain other files
+

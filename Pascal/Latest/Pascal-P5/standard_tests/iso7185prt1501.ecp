@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1501: Missing digit after '.' 
+                 
+                } 
+                 
+                program iso7185prt1501(output); 
+                 
+                var a: integer; 
+                 
+                begin 
+                 
+                   a := 5. 
+    13   ****            ^201
+                 
+                end. 
+    15   ****     ^129
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+129  Type conflict of operands
+201  Error in real constant: digit expected
+

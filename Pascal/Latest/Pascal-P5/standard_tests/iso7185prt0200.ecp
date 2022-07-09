@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 200: Missing field ident 
+                 
+                } 
+                 
+                program iso7185prt0200; 
+                 
+                var a: record : integer end; 
+     9   ****                 ^19         ^6,5,10
+                 
+                begin 
+                 
+                   with a do 
+                 
+                end. 
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  5  ':' expected
+  6  Illegal symbol
+ 10  Error in type
+ 19  Error in field-list
+

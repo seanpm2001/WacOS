@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 148: Misspelled "with" on with statement 
+                 
+                } 
+                 
+                program iso7185prt0148; 
+                 
+                var a: record b, c: integer end; 
+                 
+                begin 
+                 
+                   wtih a do b := c 
+    13   ****         ^104^59     ^104
+                 
+                end. 
+c          unreferenced
+wtih       unreferenced
+a          unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 59  Error in variable
+104  Identifier not declared
+

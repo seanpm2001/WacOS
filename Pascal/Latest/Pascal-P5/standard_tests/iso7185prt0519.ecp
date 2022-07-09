@@ -1,0 +1,32 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 519: Missing 'record' on field list 
+                 
+                } 
+                 
+                program iso7185prt0519; 
+                 
+                var a: a, b: integer end; 
+     9   ****          ^103,104,101^6
+                 
+                begin 
+                 
+                   a.a := 1 
+                 
+                end. 
+a          unreferenced
+
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+101  Identifier declared twice
+103  Identifier is not of appropriate class
+104  Identifier not declared
+

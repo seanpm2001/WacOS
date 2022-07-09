@@ -1,0 +1,28 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1914: Adjoining symbols. Number directly adjoining a symbol. 
+                 
+                } 
+                 
+                program iso7185prt1914(output); 
+                 
+                var myvar: integer; 
+                 
+                begin 
+                 
+                   writeln('The result is: ', 42myvar); 
+    13   ****                                  ^241 ^6
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+241  Invalid tolken separator
+

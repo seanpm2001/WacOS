@@ -1,0 +1,25 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1846: Numeric overflow on constant. Integer overflow. 
+                 
+                } 
+                 
+                program iso7185prt1846(output); 
+                 
+                begin 
+                 
+                   write(100000000000000000000000000000000000000000000000000000000000000) 
+    11   ****                                                                          ^203
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+203  Integer constant exceeds range
+
