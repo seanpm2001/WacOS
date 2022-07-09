@@ -1,0 +1,28 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 56: missing begin word-symbol 
+                 
+                } 
+                 
+                program iso7185prt0056; 
+                 
+                end. 
+     9   ****     ^18
+   *** eof encountered
+
+    10   ****  ^17,6,13,6,21
+
+Errors in program: 6
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 13  'end' expected
+ 17  'begin' expected
+ 18  Error in declaration part
+ 21  '.' expected
+

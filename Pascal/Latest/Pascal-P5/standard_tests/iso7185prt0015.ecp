@@ -1,0 +1,25 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 15: Non-numeric label 
+                 
+                } 
+                 
+                program iso7185prt0015; 
+                 
+                label one; 
+     9   ****           ^15,6
+                 
+                begin 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 15  Integer expected
+
