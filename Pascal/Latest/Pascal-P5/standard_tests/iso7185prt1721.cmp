@@ -1,0 +1,9 @@
+P5 Pascal interpreter vs. 1.4.x
+
+Assembling/loading program
+Running program
+
+
+*** Runtime error [32]: New/dispose tags mismatch
+
+program complete

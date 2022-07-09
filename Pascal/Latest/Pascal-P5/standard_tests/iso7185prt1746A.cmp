@@ -1,0 +1,9 @@
+P5 Pascal interpreter vs. 1.4.x
+
+Assembling/loading program
+Running program
+
+
+*** Runtime error [27]: Invalid divisor in mod   
+
+program complete
