@@ -1,0 +1,27 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1105: Missing second operand to 'div' 
+                 
+                } 
+                 
+                program iso7185prt1105(output); 
+                 
+                var a, b: integer; 
+                 
+                begin 
+                 
+                   a := b div   
+                 
+                end. 
+    15   ****     ^58
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 58  Error in factor
+

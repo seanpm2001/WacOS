@@ -1,0 +1,28 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 43: Missing semicolon 
+                 
+                } 
+                 
+                program iso7185prt0043; 
+                 
+                procedure x begin end; 
+     9   ****                   ^7,14
+                 
+                begin 
+                 
+                   x 
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  7  Error in parameter list
+ 14  ';' expected
+

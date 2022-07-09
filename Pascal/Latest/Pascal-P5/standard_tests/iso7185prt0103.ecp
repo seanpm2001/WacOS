@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 103: Missing assignment ":=" 
+                 
+                } 
+                 
+                program iso7185prt0103; 
+                 
+                var a: integer; 
+                 
+                begin 
+                 
+                   a 1 
+    13   ****        ^59
+                 
+                end. 
+    15   ****     ^51
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+ 51  ':=' expected
+ 59  Error in variable
+

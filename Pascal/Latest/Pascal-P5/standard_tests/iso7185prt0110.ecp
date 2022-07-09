@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 110: Misspelled "if" on conditional  
+                 
+                } 
+                 
+                program iso7185prt0110; 
+                 
+                begin 
+                 
+                   fi 1=1 then 
+    11   ****       ^104^59
+                 
+                end. 
+fi         unreferenced
+
+    13   ****     ^51
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 51  ':=' expected
+ 59  Error in variable
+104  Identifier not declared
+

@@ -1,0 +1,27 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1206: Missing first operand to 'or' 
+                 
+                } 
+                 
+                program iso7185prt1206(output); 
+                 
+                var a, b: boolean; 
+                 
+                begin 
+                 
+                   a := or b   
+    13   ****            ^58
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 58  Error in factor
+

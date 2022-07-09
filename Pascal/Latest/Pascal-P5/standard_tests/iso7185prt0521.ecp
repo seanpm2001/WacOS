@@ -1,0 +1,28 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 521: Missing 'end' on field list 
+                 
+                } 
+                 
+                program iso7185prt0521; 
+                 
+                var a: record a, b: integer; 
+                 
+                begin 
+    11   ****       ^13,14
+                 
+                   a.a := 1 
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+ 13  'end' expected
+ 14  ';' expected
+

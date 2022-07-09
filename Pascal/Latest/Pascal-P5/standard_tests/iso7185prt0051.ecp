@@ -1,0 +1,27 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 51: Bad procedure/function 
+                 
+                } 
+                 
+                program iso7185prt0051; 
+                 
+                bark x; begin end; 
+     9   ****      ^18^18        ^6
+                 
+                begin 
+    11   ****       ^21
+                end. 
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 18  Error in declaration part
+ 21  '.' expected
+

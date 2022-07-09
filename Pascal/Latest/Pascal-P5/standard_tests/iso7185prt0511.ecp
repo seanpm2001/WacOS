@@ -1,0 +1,27 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 511: Missing type on array 
+                 
+                } 
+                 
+                program iso7185prt0511; 
+                 
+                var a: array [1..10] of; 
+     9   ****                          ^10
+                 
+                begin 
+                 
+                   a[1] := 1 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 10  Error in type
+

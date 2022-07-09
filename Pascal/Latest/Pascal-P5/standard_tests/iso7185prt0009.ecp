@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 9: Opening paren for program header only 
+                 
+                } 
+                 
+                program iso7185prt0009(; 
+     7   ****                          ^2,4
+                 
+                begin 
+     9   ****       ^14
+                end 
+   *** eof encountered
+
+    11   ****  ^6,21
+
+Errors in program: 5
+
+Error numbers in listing:
+-------------------------
+  2  Identifier expected
+  4  ')' expected
+  6  Illegal symbol
+ 14  ';' expected
+ 21  '.' expected
+

@@ -1,0 +1,33 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1620: Unterminated comment 
+                 
+                } 
+                 
+                program iso7185prt1620; 
+                 
+                begin 
+                 
+                   { 
+                 
+                end. 
+   *** eof encountered
+
+   *** eof encountered
+
+   *** eof encountered
+
+    16   ****  ^6,13,6,21
+
+Errors in program: 4
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+ 13  'end' expected
+ 21  '.' expected
+

@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 513: Misspelled 'file' on file type 
+                 
+                } 
+                 
+                program iso7185prt0513; 
+                 
+                var a: filed of integer; 
+     9   ****              ^104^6
+                 
+                begin 
+                 
+                   rewrite(a) 
+                 
+                end. 
+filed      unreferenced
+
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+104  Identifier not declared
+

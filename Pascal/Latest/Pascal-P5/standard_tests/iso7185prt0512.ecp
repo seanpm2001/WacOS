@@ -1,0 +1,29 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 512: Missing 'file' or 'set' on file or set type 
+                 
+                } 
+                 
+                program iso7185prt0512; 
+                 
+                var a: of integer; 
+     9   ****           ^10
+                 
+                begin 
+                 
+                   a := [] 
+                 
+                end. 
+    15   ****     ^129
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+ 10  Error in type
+129  Type conflict of operands
+

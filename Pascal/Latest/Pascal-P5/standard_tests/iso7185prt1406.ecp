@@ -1,0 +1,28 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1406: Missing ']' in index list 
+                 
+                } 
+                 
+                program iso7185prt1406(output); 
+                 
+                var a: integer; 
+                    b: array [1..10] of integer; 
+                 
+                begin 
+                 
+                   a := b[5 
+                 
+                end. 
+    16   ****     ^12
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 12  ']' expected
+

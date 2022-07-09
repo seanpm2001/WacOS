@@ -1,0 +1,30 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1400: Missing variable or field identifier 
+                 
+                } 
+                 
+                program iso7185prt1400(output); 
+                 
+                var a: integer; 
+                    b: ^integer; 
+                 
+                begin 
+                 
+                   a := ^ 
+    14   ****           ^58
+                 
+                end. 
+b          unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 58  Error in factor
+
