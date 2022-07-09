@@ -1,0 +1,37 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1857: record variant: tag constant outside of range. 
+                 
+                   Tests tagfield case constant out of range. 
+                 
+                } 
+                 
+                program iso7185prt1857(output); 
+                 
+                type enum = (one, two, three, four, five); 
+                     enums = two..four; 
+                     rec  = record case e: enums of 
+                              two: (c: char); 
+                              three: (b: boolean); 
+                              four: (); 
+                              five: (); 
+    17   ****                     ^244
+                            end; 
+                 
+                begin 
+                end. 
+rec        unreferenced
+one        unreferenced
+enum       unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+244  Tagfield constant exceeds type range
+

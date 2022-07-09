@@ -1,0 +1,42 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 220: Standard field specification in variant 
+                 
+                } 
+                 
+                program iso7185prt0220; 
+                 
+                type q = (one, two, three); 
+                 
+                var a: record b, c: integer; 
+                              case d: q of 
+                                 one, two: (); 
+                                 three: (); 
+                                 e, f: char 
+    15   ****                    ^104^178^104^178,178^9
+                       end; 
+    16   ****            ^6,5,10,4,200
+                 
+                begin 
+                 
+                   a.b := 1 
+                 
+                end. 
+
+Errors in program: 11
+
+Error numbers in listing:
+-------------------------
+  4  ')' expected
+  5  ':' expected
+  6  Illegal symbol
+  9  '(' expected
+ 10  Error in type
+104  Identifier not declared
+178  Multidefined record variant
+200  Tagfield constants must cover entire tagfield type
+

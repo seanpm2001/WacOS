@@ -1,0 +1,34 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1765: String not based on char. 
+                 
+                    String based on subrange of char, not char itself. 
+                 
+                } 
+                 
+                program iso7185prt1765(output); 
+                 
+                type mychar = 'a'..'z'; 
+                 
+                var s: packed array [1..10] of mychar; 
+                 
+                begin 
+                 
+                   s := 'hello you '; 
+    17   ****                       ^129
+                   writeln('The string is: ''', s, ''''); 
+    18   ****                                    ^116
+                 
+                end. 
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+116  Error in type of standard procedure parameter
+129  Type conflict of operands
+

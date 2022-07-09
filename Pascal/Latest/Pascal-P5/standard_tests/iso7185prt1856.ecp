@@ -1,0 +1,33 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1856: record variant: all tag constants appear 
+                 
+                   Tests if a variant contains all constants of the tag field. 
+                 
+                } 
+                 
+                program iso7185prt1856(output); 
+                 
+                type enum = (one, two, three); 
+                     rec  = record case e: enum of 
+                              one: (i: integer); 
+                              two: (c: char); 
+                            end; 
+    15   ****                 ^200
+                 
+                begin 
+                end. 
+rec        unreferenced
+three      unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+200  Tagfield constants must cover entire tagfield type
+

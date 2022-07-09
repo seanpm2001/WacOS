@@ -1,0 +1,41 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 608: Missing ';' between parameter specifications 
+                 
+                } 
+                 
+                program iso7185prt0608; 
+                 
+                procedure a(b, c: integer d: char); 
+     9   ****                             ^7
+                 
+                begin 
+                 
+                   b := 1; 
+                   c := 1; 
+                   d := 'a' 
+    15   ****      ^104
+                 
+                end; 
+d          unreferenced
+
+                 
+                begin 
+                 
+                   a(1, 2, 'a') 
+    21   ****            ^126
+                 
+                end. 
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+  7  Error in parameter list
+104  Identifier not declared
+126  Number of parameters does not agree with declaration
+

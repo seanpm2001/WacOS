@@ -1,0 +1,38 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 214: Missing second constant on variant 
+                 
+                } 
+                 
+                program iso7185prt0214; 
+                 
+                type q = (one, two, three); 
+                 
+                var a: record b, c: integer; 
+                              case d: q of 
+                                 one,: (); 
+    13   ****                        ^50,178
+                                 three: () 
+                       end; 
+    15   ****            ^200
+                 
+                begin 
+                 
+                   a.b := 1 
+                 
+                end. 
+two        unreferenced
+
+
+Errors in program: 3
+
+Error numbers in listing:
+-------------------------
+ 50  Error in constant
+178  Multidefined record variant
+200  Tagfield constants must cover entire tagfield type
+

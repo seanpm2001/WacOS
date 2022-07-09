@@ -1,0 +1,37 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1823: Invalid type substitutions. Use of subrange for VAR reference. 
+                 
+                    ISO 7185 6.6.3.3 
+                 
+                } 
+                 
+                program iso7185prt1823(input); 
+                 
+                var c: 1..10; 
+                 
+                procedure a(var b: integer); 
+                 
+                begin 
+                 
+                   b := 1 
+                 
+                end; 
+                 
+                begin 
+                 
+                   a(c) 
+    23   ****         ^199
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+199  Var parameter must be same type
+

@@ -1,0 +1,37 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 218: Missing ';' between successive variant cases 
+                 
+                } 
+                 
+                program iso7185prt0218; 
+                 
+                type q = (one, two, three); 
+                 
+                var a: record b, c: integer; 
+                              case d: q of 
+                                 one, two: () 
+                                 three: () 
+    14   ****                        ^6
+                       end; 
+    15   ****            ^200
+                 
+                begin 
+                 
+                   a.b := 1 
+                 
+                end. 
+three      unreferenced
+
+
+Errors in program: 2
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+200  Tagfield constants must cover entire tagfield type
+

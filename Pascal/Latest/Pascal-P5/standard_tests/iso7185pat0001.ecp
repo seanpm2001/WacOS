@@ -1,0 +1,344 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+     1      -32 {$s} 
+     2      -32 { 
+     3      -32  
+     4      -32 PAT test 1: Alternate keywords 
+     5      -32  
+     6      -32    Tests a series of common alternative keywords as definitions. These should be 
+     7      -32    treated as normal ids in standard mode. We test serveral different Pascal 
+     8      -32    version's keywords. 
+     9      -32     
+    10      -32 } 
+    11      -32  
+    12      -32 program iso7185pat0001; 
+    13      -32  
+    14      -32 procedure pascaline; 
+    15      -32  
+    16      -32 var 
+    17      -32  
+    18      -32    forward:   integer; 
+    19      -36    module:    integer; 
+    20      -40    uses:      integer; 
+    21      -44    private:   integer; 
+    22      -48    external:  integer; 
+    23      -52    view:      integer; 
+    24      -56    fixed:     integer; 
+    25      -60    process:   integer; 
+    26      -64    monitor:   integer; 
+    27      -68    share:     integer; 
+    28      -72    class:     integer; 
+    29      -76    is:        integer; 
+    30      -80    overload:  integer; 
+    31      -84    override:  integer; 
+    32      -88    reference: integer; 
+    33      -92    joins:     integer; 
+    34      -96    static:    integer; 
+    35     -100    inherited: integer; 
+    36     -104    self:      integer; 
+    37     -108    virtual:   integer; 
+    38     -112    try:       integer; 
+    39     -116    except:    integer; 
+    40     -120    extends:   integer; 
+    41     -124    on:        integer; 
+    42     -128    result:    integer; 
+    43     -132    operator:  integer; 
+    44     -136    out:       integer; 
+    45     -140    property:  integer; 
+    46     -144    channel:   integer; 
+    47     -148    stream:    integer; 
+    48     -152    xor:       integer; 
+    49     -156        
+    50     -156 begin 
+    51        3 end; 
+channel    unreferenced
+extends    unreferenced
+except     unreferenced
+class      unreferenced
+fixed      unreferenced
+external   unreferenced
+inherited  unreferenced
+joins      unreferenced
+is         unreferenced
+out        unreferenced
+operator   unreferenced
+on         unreferenced
+override   unreferenced
+overload   unreferenced
+monitor    unreferenced
+property   unreferenced
+result     unreferenced
+self       unreferenced
+reference  unreferenced
+stream     unreferenced
+try        unreferenced
+static     unreferenced
+share      unreferenced
+process    unreferenced
+private    unreferenced
+xor        unreferenced
+virtual    unreferenced
+view       unreferenced
+uses       unreferenced
+module     unreferenced
+forward    unreferenced
+
+    52        6  
+    53        6 procedure gpc; 
+    54        6  
+    55        6 var 
+    56      -32  
+    57      -32    absolute:       integer; 
+    58      -36    overloaded:     integer; 
+    59      -40    abstract:       integer; 
+    60      -44    all:            integer; 
+    61      -48    export:         integer; 
+    62      -52    as:             integer; 
+    63      -56    asm:            integer; 
+    64      -60    asmname:        integer; 
+    65      -64    attribute:      integer;    
+    66      -68    bindable:       integer; 
+    67      -72    class:          integer; 
+    68      -76    constructor:    integer; 
+    69      -80    destructor:     integer; 
+    70      -84    exports:        integer; 
+    71      -88    external:       integer; 
+    72      -92    far:            integer; 
+    73      -96    finalization:   integer; 
+    74     -100    unit:           integer; 
+    75     -104    loop:           integer; 
+    76     -108    forward:        integer; 
+    77     -112    implementation: integer; 
+    78     -116    import:         integer; 
+    79     -120    inherited:      integer; 
+    80     -124    initialization: integer; 
+    81     -128    interface:      integer; 
+    82     -132    interrupt:      integer; 
+    83     -136    is:             integer; 
+    84     -140    library:        integer; 
+    85     -144    module:         integer; 
+    86     -148    name:           integer; 
+    87     -152    near:           integer; 
+    88     -156    object:         integer; 
+    89     -160    only:           integer; 
+    90     -164    operator:       integer; 
+    91     -168    otherwise:      integer; 
+    92     -172    pow:            integer; 
+    93     -176    private:        integer; 
+    94     -180    property:       integer; 
+    95     -184    protected:      integer; 
+    96     -188    public:         integer; 
+    97     -192    published:      integer; 
+    98     -196    qualified:      integer; 
+    99     -200    resident:       integer; 
+   100     -204    restricted:     integer; 
+   101     -208    segment:        integer; 
+   102     -212    shl:            integer; 
+   103     -216    shr:            integer; 
+   104     -220    uses:           integer; 
+   105     -224    value:          integer; 
+   106     -228    view:           integer; 
+   107     -232    virtual:        integer; 
+   108     -236    xor:            integer; 
+   109     -240                     
+   110     -240 begin               
+   111        6 end; 
+destructor unreferenced
+constructo unreferenced
+class      unreferenced
+bindable   unreferenced
+attribute  unreferenced
+asmname    unreferenced
+asm        unreferenced
+as         unreferenced
+initializa unreferenced
+inherited  unreferenced
+import     unreferenced
+implementa unreferenced
+forward    unreferenced
+finalizati unreferenced
+far        unreferenced
+external   unreferenced
+exports    unreferenced
+export     unreferenced
+all        unreferenced
+abstract   unreferenced
+library    unreferenced
+is         unreferenced
+interrupt  unreferenced
+interface  unreferenced
+otherwise  unreferenced
+operator   unreferenced
+only       unreferenced
+object     unreferenced
+near       unreferenced
+name       unreferenced
+module     unreferenced
+loop       unreferenced
+shr        unreferenced
+shl        unreferenced
+segment    unreferenced
+restricted unreferenced
+resident   unreferenced
+qualified  unreferenced
+published  unreferenced
+public     unreferenced
+protected  unreferenced
+property   unreferenced
+private    unreferenced
+pow        unreferenced
+xor        unreferenced
+virtual    unreferenced
+view       unreferenced
+value      unreferenced
+uses       unreferenced
+unit       unreferenced
+overloaded unreferenced
+absolute   unreferenced
+
+   112        9  
+   113        9 procedure fpc; 
+   114        9  
+   115        9 var 
+   116      -32  
+   117      -32    asm:	            integer; 
+   118      -36    break:	        integer; 
+   119      -40    constructor:	    integer; 
+   120      -44    continue:	    integer; 
+   121      -48    destructor:	    integer; 
+   122      -52    implementation:  integer; 
+   123      -56    inline:	        integer; 
+   124      -60    interface:	    integer; 
+   125      -64    object:	        integer; 
+   126      -68    on:	            integer; 
+   127      -72    operator:	    integer; 
+   128      -76    shl:	            integer; 
+   129      -80    shr:	            integer; 
+   130      -84    string:	        integer; 
+   131      -88    unit:	        integer; 
+   132      -92    uses:	        integer; 
+   133      -96    xor:	            integer; 
+   134     -100    as:	            integer; 
+   135     -104    class:	        integer; 
+   136     -108    except:	        integer; 
+   137     -112    exit:	        integer; 
+   138     -116    exports:	        integer; 
+   139     -120    finalization:    integer; 
+   140     -124    finally:	        integer; 
+   141     -128    inherited:	    integer; 
+   142     -132    initialization:  integer; 
+   143     -136    is:	            integer; 
+   144     -140    library:	        integer; 
+   145     -144    out:	            integer; 
+   146     -148    property:	    integer; 
+   147     -152    raise:	        integer; 
+   148     -156    self:	        integer; 
+   149     -160    threadvar:	    integer; 
+   150     -164    try:	            integer; 
+   151     -168    absolute:	    integer; 
+   152     -172    abstract:	    integer; 
+   153     -176    alias:	        integer; 
+   154     -180    assembler:	    integer; 
+   155     -184    cdecl:	        integer; 
+   156     -188    cppdecl:	        integer; 
+   157     -192    default:	        integer; 
+   158     -196    export:	        integer; 
+   159     -200    external:	    integer; 
+   160     -204    forward:	        integer; 
+   161     -208    generic:	        integer; 
+   162     -212    index:	        integer; 
+   163     -216    local:	        integer; 
+   164     -220    name:	        integer; 
+   165     -224    nostackframe:	integer; 
+   166     -228    oldfpccall:	    integer; 
+   167     -232    override:	    integer; 
+   168     -236    pascal:	        integer; 
+   169     -240    private:	        integer; 
+   170     -244    protected:	    integer; 
+   171     -248    public:	        integer; 
+   172     -252    published:	    integer; 
+   173     -256    register:	    integer; 
+   174     -260    reintroduce:	    integer; 
+   175     -264    safecall:	    integer; 
+   176     -268    softfloat:	    integer; 
+   177     -272    specialize:	    integer; 
+   178     -276    stdcall:	        integer; 
+   179     -280    virtual:	        integer; 
+   180     -284     
+   181     -284 begin 
+   182        9 end; 
+alias      unreferenced
+abstract   unreferenced
+absolute   unreferenced
+as         unreferenced
+assembler  unreferenced
+cdecl      unreferenced
+class      unreferenced
+default    unreferenced
+cppdecl    unreferenced
+export     unreferenced
+external   unreferenced
+generic    unreferenced
+forward    unreferenced
+finally    unreferenced
+finalizati unreferenced
+exports    unreferenced
+exit       unreferenced
+except     unreferenced
+index      unreferenced
+initializa unreferenced
+inherited  unreferenced
+inline     unreferenced
+implementa unreferenced
+destructor unreferenced
+continue   unreferenced
+constructo unreferenced
+break      unreferenced
+nostackfra unreferenced
+name       unreferenced
+local      unreferenced
+library    unreferenced
+is         unreferenced
+oldfpccall unreferenced
+private    unreferenced
+pascal     unreferenced
+override   unreferenced
+published  unreferenced
+public     unreferenced
+protected  unreferenced
+safecall   unreferenced
+reintroduc unreferenced
+register   unreferenced
+self       unreferenced
+raise      unreferenced
+property   unreferenced
+out        unreferenced
+stdcall    unreferenced
+specialize unreferenced
+softfloat  unreferenced
+try        unreferenced
+threadvar  unreferenced
+virtual    unreferenced
+xor        unreferenced
+uses       unreferenced
+unit       unreferenced
+string     unreferenced
+shr        unreferenced
+shl        unreferenced
+operator   unreferenced
+on         unreferenced
+object     unreferenced
+interface  unreferenced
+asm        unreferenced
+
+   183       12           
+   184       12 begin 
+   185       12 end. 
+fpc        unreferenced
+gpc        unreferenced
+pascaline  unreferenced
+
+
+Errors in program: 0

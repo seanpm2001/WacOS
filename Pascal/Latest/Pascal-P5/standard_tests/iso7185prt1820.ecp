@@ -1,0 +1,50 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1820: Backwards pointer association. Backwards association. 
+                 
+                    Indicates an error unless a pointer reference uses backwards assocation, 
+                    which is incorrect. 
+                     
+                    ISO 7185 6.2.2.9, 6.4.1 
+                 
+                } 
+                 
+                program iso7185prt1820(output); 
+                 
+                type a = integer; 
+                 
+                var k: a; 
+                 
+                procedure b; 
+                 
+                type b = ^a; 
+                     a = char; 
+                 
+                var cp: b; 
+                 
+                begin 
+                 
+                    new(cp); 
+                    cp^ := 1 
+                 
+                end; 
+    30   ****     ^129
+                 
+                begin 
+                 
+                   k := 1; 
+                   b 
+                 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+129  Type conflict of operands
+

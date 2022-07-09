@@ -1,0 +1,42 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1917: Redefinition of same constant. 
+                 
+                    Defining a constant as itself is both a reference and a defining point, thus 
+                    it is inherently illegal. 
+                 
+                } 
+                 
+                program iso7185prt1917(output); 
+                 
+                const one = 1; 
+                 
+                procedure x; 
+                 
+                const one = one; 
+    16   ****                  ^242
+                 
+                begin 
+                 
+                   write(one) 
+                    
+                end; 
+                 
+                begin 
+                 
+                   writeln('Value is: ', one) 
+                    
+                end. 
+x          unreferenced
+
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+242  Identifier referenced before defining point
+

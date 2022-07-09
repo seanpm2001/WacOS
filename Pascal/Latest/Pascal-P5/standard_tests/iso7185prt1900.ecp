@@ -1,0 +1,34 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1900: Elide of type 
+                 
+                   Type description completely missing. 
+                 
+                 
+                } 
+                 
+                program iso7185prt1900(output); 
+                 
+                var 
+                    avi:   { packed [1..10] of integer} ; 
+    13   ****                                           ^10
+                    pavi:  packed array [1..10] of integer; 
+                    i:     integer; 
+                 
+                begin 
+                 
+                    for i := 1 to 10 do pavi[i] := i+10; 
+                    unpack(pavi, avi, 1); 
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+ 10  Error in type
+

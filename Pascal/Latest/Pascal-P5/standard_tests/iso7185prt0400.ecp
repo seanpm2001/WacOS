@@ -1,0 +1,40 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 400: Missing '(' on enumeration 
+                 
+                } 
+                 
+                program iso7185prt0400; 
+                 
+                var a: one, two, three); 
+     9   ****            ^104^6
+                 
+                begin 
+                 
+                   a := one; 
+    13   ****             ^103,104,103,101
+                   a := two; 
+    14   ****             ^104
+                   a := three 
+    15   ****               ^104
+                 
+                end. 
+three      unreferenced
+two        unreferenced
+one        unreferenced
+one        unreferenced
+
+
+Errors in program: 8
+
+Error numbers in listing:
+-------------------------
+  6  Illegal symbol
+101  Identifier declared twice
+103  Identifier is not of appropriate class
+104  Identifier not declared
+
