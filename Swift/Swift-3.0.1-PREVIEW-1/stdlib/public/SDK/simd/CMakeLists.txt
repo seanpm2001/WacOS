@@ -1,0 +1,5 @@
+add_swift_library(swiftsimd ${SWIFT_SDK_OVERLAY_LIBRARY_BUILD_TYPES} IS_SDK_OVERLAY
+  simd.swift.gyb
+
+  SWIFT_COMPILE_FLAGS ${STDLIB_SIL_SERIALIZE_ALL} -parse-stdlib
+  SWIFT_MODULE_DEPENDS Darwin)
