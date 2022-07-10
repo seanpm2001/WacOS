@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Script to test pascals
+#
+echo
+echo Test compile and run of Pascal-S
+
+echo Compiling Pascal-S
+compile sample_programs/pascals
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    exit 1
+    
+fi
+#
+# Prepare a prd deck that has the pascals intermediate first, followed by the
+# program to run.
+#
+cat sample_programs/pascals.p5 sample_programs/roman.pas > sample_programs/tmp.p5
+rm sample_programs/pascals.p5
+cp sample_programs/tmp.p5 sample_programs/pascals.p5 > tmp
+rm sample_programs/tmp.p5
+#
+# Run that
+#
+echo Runing interpreted Pascal-S on test program
+run sample_programs/pascals
+#
+# compare to reference
+#
+echo Checking against reference file
+diffnole sample_programs/pascals.lst sample_programs/pascals.cmp > sample_programs/pascals.dif
+#
+## pass if diff file is empty
+if test -s pascals.dif
+then
+    echo "*** FAILED"
+else
+    echo "PASSED"
+fi

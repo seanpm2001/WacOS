@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Script to run pcom on interpreter with target file.
+#
+# Compiles pcom, then interprets that to run a target file. Used to find 
+# errors in pcom due to compiling a test source.
+#
+# Run macro preprocessor to configure source for self compile.
+#
+pascpp source/pcom -DWRDSIZ32 -DSELF_COMPILE
+#
+# Compile pcom to intermediate code using its binary version.
+#
+echo "Compiling pcom to intermediate code"
+call compile source/pcom.mpp
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    cat source/pcom.mpp.err
+    exit 1
+    
+fi
+
+#
+# Now run that code on the interpreter and have it compile the target source.
+#
+echo "Running pcom to compile $1"
+cat source/pcom.mpp.p5 $1.pas > tmp.p5
+mv source/pcom.mpp.p5 source/pcom.mpp.p5.org
+cp tmp.p5 source/pcom.mpp.p5
+echo > source/pcom.mpp.inp
+run source/pcom.mpp
+cat source/pcom.mpp.lst

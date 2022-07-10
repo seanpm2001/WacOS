@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Change version numbers on compare file
+#
+# Format:
+#
+# chgver file from_ver to_ver
+#
+
+if [ -z "$1" ]
+then
+   echo "*** Error: Missing file name"
+   exit 1
+fi
+
+if [ -z "$2" ]
+then
+   echo "*** Error: Missing "from" version number"
+   exit 1
+fi
+
+if [ -z "$3" ]
+then
+   echo "*** Error: Missing "to" version number"
+   exit 1
+fi
+
+sed -e 's/P5 Pascal compiler vs. $2/P5 Pascal compiler vs. $3/g' $1 > temp
+cp temp $1 > temp2
+rm temp
+rm temp2

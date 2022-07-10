@@ -1,0 +1,50 @@
+#!/bin/bash
+#
+# Change version numbers on all compare files
+#
+
+if [ -z "$1" ]
+then
+   echo "*** Error: Missing 'from' version number"
+   exit 1
+fi
+
+if [ -z "$2" ]
+then
+   echo "*** Error: Missing 'to' version number"
+   exit 1
+fi
+
+echo Changing version number $1 to $2
+
+LIST=sample_programs/*.cmp
+for f in $LIST
+do
+
+    chgver sample_programs/$f.cmp $1 $2
+
+done
+
+LIST=sample_programs/*.ecp
+for f in $LIST
+do
+
+    chgver sample_programs/$f.ecp $1 $2
+
+done
+
+LIST=standard_tests/*.cmp
+for f in $LIST
+do
+
+    chgver sample_programs/$f.cmp $1 $2
+
+done
+
+LIST=standard_tests/*.ecp
+for f in $LIST
+do
+
+    chgver sample_programs/$f.ecp $1 $2
+
+done

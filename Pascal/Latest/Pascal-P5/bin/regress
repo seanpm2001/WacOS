@@ -1,0 +1,149 @@
+#!/bin/bash
+#
+# Regression test
+#
+# Execution:
+#
+# regress [--full|--short]...
+#
+# Run the compiler through a few typical programs
+# to a "gold" standard file. Each mode is cycled through in sequence.
+#
+# The flags are one of:
+#
+# --full  Run full test sequence.
+# --short Run short test sequence.
+#
+
+full="0"
+
+#
+# Run regression with current options
+#
+function do_regress {
+
+    testprog $option sample_programs/hello
+    wc -l sample_programs/hello.dif >> regress_report.txt
+    testprog $option sample_programs/roman
+    wc -l sample_programs/roman.dif >> regress_report.txt
+    testprog $option sample_programs/match
+    wc -l sample_programs/match.dif >> regress_report.txt
+    testprog $option sample_programs/prime
+    wc -l sample_programs/prime.dif >> regress_report.txt
+    testprog $option sample_programs/qsort
+    wc -l sample_programs/qsort.dif >> regress_report.txt
+    testprog $option sample_programs/fbench
+    wc -l sample_programs/fbench.dif >> regress_report.txt
+    testprog $option sample_programs/drystone
+    wc -l sample_programs/drystone.dif >> regress_report.txt
+    testprog $option sample_programs/startrek
+    wc -l sample_programs/startrek.dif >> regress_report.txt
+    testprog $option sample_programs/basics
+    wc -l sample_programs/basics.dif >> regress_report.txt
+    testprog $option basic/basic
+    wc -l basic/basic.dif >> regress_report.txt
+    #
+    # Now run the ISO7185pat compliance test
+    #
+	testprog $option standard_tests/iso7185pat
+    wc -l standard_tests/iso7185pat.dif >> regress_report.txt
+    testprog $option standard_tests/iso7185pat0001
+    wc -l standard_tests/iso7185pat0001.dif >> regress_report.txt
+    #
+    # Run previous versions of the system and Pascal-S
+    #
+    testpascals $option
+    wc -l sample_programs/pascals.dif >> regress_report.txt
+    testp2 $option
+    wc -l p2/roman.dif >> regress_report.txt
+    testp4 $option
+    wc -l p4/standardp.dif >> regress_report.txt
+    if [ "$full" = "1" ]; then
+
+        echo "Running PRT..."
+        echo "PRT run" >> regress_report.txt
+        #
+        # Run rejection test
+        #
+        runprt $option
+        diffnole standard_tests/iso7185prt.rpt standard_tests/iso7185prt.cmp > standard_tests/iso7185prt.dif
+        wc -l standard_tests/iso7185prt.dif >> regress_report.txt
+
+        echo "Running self compile..."
+        #
+        # Run pcom self compile \(note this runs on P5/P6 only\)
+        #
+        echo "pcom self compile" >> regress_report.txt
+        cpcoms $option
+        wc -l source/pcom.mpp.dif >> regress_report.txt
+
+        #
+        # Run pint self compile \(note this runs on P5/P6 only\)
+        #
+        echo "pint self compile" >> regress_report.txt
+        cpints $option
+        wc -l standard_tests/iso7185pats.dif >> regress_report.txt
+
+	fi
+
+}
+
+for param in "$@"
+do
+
+    if [ "$param" = "--full" ]; then
+
+        full=1
+
+    elif [ "$param" = "--short" ]; then
+
+        full=0
+
+    elif [ "$param" = "--help" ]; then
+
+        echo ""
+        echo "Regression test"
+        echo ""
+        echo "Execution:"
+        echo ""
+        echo "regress [--full|--short|--pmach|--cmach]..."
+        echo ""
+        echo "Run the compiler through a few typical programs"
+        echo "to a "gold" standard file. Each mode is cycled through in sequence."
+        echo ""
+        echo "The flags are one of:"
+        echo ""
+        echo "--full  Run full test sequence."
+        echo "--short Run short test sequence."
+        echo ""
+		exit 0
+
+    elif [ ! -z "$param" ]; then
+
+    	echo ""
+    	echo "*** Option not recognized"
+    	echo ""
+		echo "Execution:"
+		echo ""
+		echo "regress [--full|--short|--pmach|--cmach]..."
+		echo ""
+		exit 1
+
+    fi
+
+done
+
+echo "Regression Summary" > regress_report.txt
+echo "Line counts should be 0 for pass" >> regress_report.txt
+option=""
+echo "pint run" >> regress_report.txt
+do_regress
+
+#
+# Print collected status
+#
+echo ""
+date >> regress_report.txt
+chkfiles >> regress_report.txt
+cat regress_report.txt
+echo ""

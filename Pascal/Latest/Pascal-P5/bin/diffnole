@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# Difference without line endings
+#
+# Same as diff, but ignores the DOS/Unix line ending differences.
+#
+
+if [ -z "$1" ]
+then
+
+   echo "*** Error: Missing parameter 1"
+   echo "*** s/b \"diffnole <file1> <file2>\""
+   exit 1
+
+fi
+
+if [ ! -f $1 ]
+then
+   echo "*** Error: Missing $1 file"
+   exit 1
+fi
+
+if [ -z "$2" ]
+then
+
+   echo "*** Error: Missing parameter 2"
+   echo "*** s/b \"diffnole <file1> <file2>\""
+   exit 1
+
+fi
+
+if [ ! -f $2 ]
+then
+   echo "*** Error: Missing $2 file"
+   exit 1
+fi
+
+cp $1 tmp1
+cp $2 tmp2
+flip -u -b tmp1
+flip -u -b tmp2
+# ignore lines with compiler/interpreter vs number
+diff -I 'P5 Pascal .*er vs.' tmp1 tmp2
+rm tmp1
+rm tmp2

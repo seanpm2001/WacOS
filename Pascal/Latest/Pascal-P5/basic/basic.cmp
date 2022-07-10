@@ -1,0 +1,108 @@
+P5 Pascal interpreter vs. 1.3.x
+
+Assembling/loading program
+Running program
+
+
+Basic interpreter vs. 0.1 Copyright (C) 1994 S. A. Moore
+
+Ready
+                             ROCKET
+              CREATIVE COMPUTING  MORRISTOWN, NEW JERSEY
+
+
+
+LUNAR LANDING SIMULATION
+----- ------- ----------
+
+DO YOU WANT INSTRUCTIONS (YES OR NO)? 
+YOU ARE LANDING ON THE MOON AND AND HAVE TAKEN OVER MANUAL
+CONTROL 1000 FEET ABOVE A GOOD LANDING SPOT. YOU HAVE A DOWN-
+WARD VELOCITY OF 50 FEET/SEC. 150 UNITS OF FUEL REMAIN.
+
+HERE ARE THE RULES THAT GOVERN YOUR APOLLO SPACE-CRAFT:
+
+(1) AFTER EACH SECOND THE HEIGHT, VELOCITY, AND REMAINING FUEL
+    WILL BE REPORTED VIA DIGBY YOUR ON-BOARD COMPUTER.
+(2) AFTER THE REPORT A '?' WILL APPEAR. ENTER THE NUMBER
+    OF UNITS OF FUEL YOU WISH TO BURN DURING THE NEXT
+    SECOND. EACH UNIT OF FUEL WILL SLOW YOUR DESCENT BY
+    1 FOOT/SEC.
+(3) THE MAXIMUM THRUST OF YOUR ENGINE IS 30 FEET/SEC/SEC
+    OR 30 UNITS OF FUEL PER SECOND.
+(4) WHEN YOU CONTACT THE LUNAR SURFACE. YOUR DESCENT ENGINE
+    WILL AUTOMATICALLY SHUT DOWN AND YOU WILL BE GIVEN A
+    REPORT OF YOUR LANDING SPEED AND REMAINING FUEL.
+(5) IF YOU RUN OUT OF FUEL THE '?' WILL NO LONGER APPEAR
+    BUT YOUR SECOND BY SECOND REPORT WILL CONTINUE UNTIL
+    YOU CONTACT THE LUNAR SURFACE.
+
+BEGINNING LANDING PROCEDURE..........
+
+G O O D  L U C K ! ! !
+
+
+SEC  FEET      SPEED     FUEL     PLOT OF DISTANCE
+
+ 0    1000      50        150     I                               *
+?  1    962.5     25        120     I                            *
+?  2    950       0         90      I                           *
+?  3    962.5     -25       60      I                            *
+?  4    1000      -50       30      I                               *
+? **** OUT OF FUEL ****
+ 5  1062.5  -75     0       I                                                                                        *
+ 6  1135    -70     0       I                                                                                              *
+ 7  1202.5  -65     0       I                                                                                                   *
+ 8  1265    -60     0       I                                                                                                        *
+ 9  1322.5  -55     0       I                                                                                                             *
+ 10  1375   -50     0       I                                                                                                                  *
+ 11  1422.5  -45    0       I                                                                                                                      *
+ 12  1465   -40     0       I                                                                                                                         *
+ 13  1502.5  -35    0       I                                                                                                                            *
+ 14  1535   -30     0       I                                                                                                                               *
+ 15  1562.5  -25    0       I                                                                                                                                 *
+ 16  1585   -20     0       I                                                                                                                                   *
+ 17  1602.5  -15    0       I                                                                                                                                     *
+ 18  1615   -10     0       I                                                                                                                                      *
+ 19  1622.5  -5     0       I                                                                                                                                      *
+ 20  1625   0       0       I                                                                                                                                      *
+ 21  1622.5  5      0       I                                                                                                                                      *
+ 22  1615   10      0       I                                                                                                                                      *
+ 23  1602.5  15     0       I                                                                                                                                     *
+ 24  1585   20      0       I                                                                                                                                   *
+ 25  1562.5  25     0       I                                                                                                                                 *
+ 26  1535   30      0       I                                                                                                                               *
+ 27  1502.5  35     0       I                                                                                                                            *
+ 28  1465   40      0       I                                                                                                                         *
+ 29  1422.5  45     0       I                                                                                                                      *
+ 30  1375   50      0       I                                                                                                                  *
+ 31  1322.5  55     0       I                                                                                                             *
+ 32  1265   60      0       I                                                                                                        *
+ 33  1202.5  65     0       I                                                                                                   *
+ 34  1135   70      0       I                                                                                              *
+ 35  1062.5  75     0       I                                                                                        *
+ 36  985    80      0       I                                                                                 *
+ 37  902.5  85      0       I                                                                          *
+ 38  815    90      0       I                                                                   *
+ 39  722.5  95      0       I                                                           *
+ 40  625    100     0       I                                                   *
+ 41  522.5  105     0       I                                           *
+ 42  415    110     0       I                                  *
+ 43  302.5  115     0       I                        *
+ 44  185    120     0       I              *
+ 45  62.5   125     0       I    *
+***** CONTACT *****
+TOUCHDOWN AT 45.4950976 SECONDS.
+LANDING VELOCITY= 127.475488 FEET/SEC.
+ 0 UNITS OF FUEL REMAINING.
+***** SORRY, BUT YOU BLEW IT!!!!
+APPROPRIATE CONDOLENCES WILL BE SENT TO YOUR NEXT OF KIN.
+
+
+
+ANOTHER MISSION? 
+CONTROL OUT.
+
+Ready
+
+program complete

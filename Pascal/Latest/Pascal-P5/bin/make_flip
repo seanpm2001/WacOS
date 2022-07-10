@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Create flip utility
+#
+echo
+echo Compiling and creating flip script
+echo
+gcc -o bin/flip c_support/flip.c

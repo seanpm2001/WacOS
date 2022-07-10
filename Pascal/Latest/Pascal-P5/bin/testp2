@@ -1,0 +1,80 @@
+#!/bin/bash
+#
+# test p2 compile and run
+#
+echo
+echo Test compile and run of Pascal-P2
+
+echo Compiling pcomp to intermediate code
+compile p2/pcomp
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    exit 1
+
+fi
+#
+# Copy the test file to the input file and compile it via interpreted p2
+#
+cp p2/roman.pas p2/pcomp.inp
+echo Compiling test file with interpreted P2 pcomp
+run p2/pcomp
+# cat p2/pcomp.lst
+#
+# For neatness sake, copy out the intermediate to .p2 file
+#
+cp p2/pcomp.out p2/roman.p2
+#
+# Compile pasint to intermediate code
+#
+echo Compile pasint to intermediate code
+compile p2/pasint
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    exit 1
+
+fi
+#
+# Add the final target program to the end of pasint.
+# This means that the version of pint will read and interpret
+# this.
+#
+# For those of you having fun reading this, yes, the next statement accurately
+# describes what is going on: we are concatenating and running two different
+# intermediate codes together in completely different formats!
+#
+cat p2/pasint.p5 p2/roman.p2 > tmp.p5
+rm -f p2/pasint.p5
+mv tmp.p5 p2/pasint.p5
+#
+# Create null input file
+#
+echo > p2/pasint.inp
+#
+# Now run pasint on pint, which runs the test program.
+#
+echo Run pasint on pint, to run test program
+run p2/pasint
+#
+# Copy the result listing back to roman.lst, again for neatness
+#
+cp p2/pasint.lst p2/roman.lst
+#
+# Now compare with reference
+#
+echo Checking against reference file
+diffnole p2/roman.lst p2/roman.cmp > p2/roman.dif
+#
+## pass if diff file is empty
+if test -s p2/roman.dif
+then
+    echo "*** FAILED ***"
+else
+    echo "PASSED"
+fi
+
+rm -f p2/pcomp.inp
+rm -f p2/pasint.inp

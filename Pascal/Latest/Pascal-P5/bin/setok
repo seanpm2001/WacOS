@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Set prt test as passed. Copies the compiler and run outputs to
+# the compare files.
+#
+cp standard_tests/iso7185prt$1.err standard_tests/iso7185prt$1.ecp
+if [ -f "standard_tests/iso7185prt$1.lst" ]
+then
+
+    cp standard_tests/iso7185prt$1.lst standard_tests/iso7185prt$1.cmp
+
+fi

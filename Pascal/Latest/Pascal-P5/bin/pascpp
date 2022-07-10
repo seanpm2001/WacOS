@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#
+# Run cpp (C PreProcessor) on the input file .pas to
+# produce a .mpp (Macro post process) file. Accepts macro definitions and other
+# options after the filename. Execute as:
+#
+# pascpp <file> [<option>]...
+#
+# Example:
+#
+# pascpp hello -DGNU_PASCAL
+#
+# Preprocesses the file hello.pas to become hello.mpp, and defines the 
+# GNU_PASCAL macro.
+#
+# Supresses warnings, supresses '#' lines in the output, and supresses any 
+# attempt to automatically include system files, and preserves whitespace
+# from the original file.
+#
+# This is basically how you use cpp with a non-C language file. It *should* be
+# able to preprocess a file without "#" line directives and give the same
+# file back without differences (check with diff). This is a good crosscheck
+# before you add macros to a file.
+#
+if [ "$1" == "--linemacro" ] 
+then
+
+    cpp -nostdinc -traditional-cpp $2.pas $2.mpp.pas $3 $4 $5 $6 $7 $8 $9
+    
+else
+
+    cpp -P -nostdinc -traditional-cpp $1.pas $1.mpp.pas $2 $3 $4 $5 $6 $7 $8 $9
+    
+fi

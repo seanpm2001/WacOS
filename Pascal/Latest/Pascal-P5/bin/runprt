@@ -1,0 +1,133 @@
+#!/bin/bash
+#
+#
+# Run rejection tests
+#
+# The rejection tests use the same format as the acceptance tests, but there
+# is no positive go/no go indication for them. Each test should generate a
+# failure, and all you can say is that the test has failed if there were no
+# error(s).
+#
+
+#
+# Configure to drop the preamble so that miscompares are lessened.
+#
+make pcom_no_preamble
+
+echo Running tests
+
+for tp in standard_tests/iso7185prt*.pas ; do
+    testprog standard_tests/`basename $tp .pas`
+done
+
+echo Creating combined listing
+echo "*******************************************************************************" > standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+echo "Pascal Rejection test run for iso7185prt " >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+echo "*******************************************************************************" >> standard_tests/iso7185prt.rpt
+#
+# Make a list of files WITHOUT compile errors
+#
+echo "Creating error accounting listings"
+grep -l "Errors in program: 0" standard_tests/iso7185prt*.err > standard_tests/iso7185prt.nocerr
+#
+# Make a list of files WITHOUT runtime errors.
+#
+egrep -L "^\*\*\*" standard_tests/iso7185prt*.lst > standard_tests/iso7185prt.norerr
+#
+# Find files with NO errors either at compile time or runtime. This is done
+# by concatenating the files, sorting and finding duplicate filenames. That
+# is, if the filename list in both the no compile error and no runtime error
+# lists, then no error at all occurred on the file and it needs to be looked
+# at.
+#
+cat standard_tests/iso7185prt.nocerr standard_tests/iso7185prt.norerr > temp
+sort temp | uniq -d -w 30 > standard_tests/iso7185prt.noerr
+#
+# Place in combined listing as report
+#
+echo >> standard_tests/iso7185prt.rpt
+echo "Tests for which no compile or runtime error was flagged: **********************" >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+cat standard_tests/iso7185prt.noerr >> standard_tests/iso7185prt.rpt
+
+#
+# Make a listing of compiler output difference files to look at. If you are
+# satisfied with each of the prt output runs, then you can copy the .err file
+# to the .ecp file and get a 0 dif length file. Then this file will show you
+# the files that don't converge. Note DIFFERENT DOES NOT MEAN *** WRONG ***.
+# It simply may mean the error handling has changed. The purpose of diffing
+# the output files is that it allows you to check that simple changes have
+# not broken anything.
+#
+echo creating compile time difference list
+echo > standard_tests/iso7185prt.ecdlst
+for a in standard_tests/iso7185prt*.err ; do
+    b=`basename $a .err`
+    diffnole standard_tests/$b.err standard_tests/$b.ecp > standard_tests/$b.ecd
+done
+
+wc -l standard_tests/iso7185prt*.ecd > standard_tests/iso7185prt.ecdlst
+#
+# Place in combined listing
+#
+echo >> standard_tests/iso7185prt.rpt
+echo "Compile output differences: **********************" >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+cat standard_tests/iso7185prt.ecdlst >> standard_tests/iso7185prt.rpt
+
+#
+# Make a listing of run output difference files to look at. If you are satisfied
+# with each of the prt output runs, then you can copy the .lst file to the .cmp
+# file and get a 0 dif length file. Then this file will show you the files that
+# don't converge. Note DIFFERENT DOES NOT MEAN *** WRONG ***. It simply may
+# mean the error handling has changed. The purpose of diffing the output files
+# is that it allows you to check that simple changes have not broken anything.
+#
+echo "creating runtime difference list"
+rm -f standard_tests/iso7185prt.dif
+wc -l standard_tests/iso7185prt*.dif > standard_tests/iso7185prt.diflst
+#
+# Place in combined listing
+#
+echo >> standard_tests/iso7185prt.rpt
+echo "Run output differences: **********************" >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+cat standard_tests/iso7185prt.diflst >> standard_tests/iso7185prt.rpt
+
+#
+# Add individual program compiles and runs
+#
+echo Adding program compile and runs
+echo >> standard_tests/iso7185prt.rpt
+echo "*******************************************************************************" >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+echo "Listings for compile and run of iso7185prt " >> standard_tests/iso7185prt.rpt
+echo >> standard_tests/iso7185prt.rpt
+echo "*******************************************************************************" >> standard_tests/iso7185prt.rpt
+
+for f in standard_tests/iso7185prt*.pas ; do
+
+    echo >> standard_tests/iso7185prt.rpt
+    echo "Listing for $f *************************************" >> standard_tests/iso7185prt.rpt
+    echo >> standard_tests/iso7185prt.rpt
+    echo "Compile: " >> standard_tests/iso7185prt.rpt
+    echo >> standard_tests/iso7185prt.rpt
+    cat standard_tests/`basename $f .pas`.err >> standard_tests/iso7185prt.rpt
+    echo >> standard_tests/iso7185prt.rpt
+    if [ -e "standard_tests/`basename $f .pas`.lst" ] ; then
+
+        echo "Run: " >> standard_tests/iso7185prt.rpt
+        echo >> standard_tests/iso7185prt.rpt
+        cat standard_tests/`basename $f .pas`.lst >> standard_tests/iso7185prt.rpt
+
+    fi
+
+
+done
+
+#
+# Restore binaries
+#
+make
