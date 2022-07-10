@@ -1,0 +1,1129 @@
+//===--- FloatingPointTypes.swift.gyb -------------------------*- swift -*-===//
+//
+// This source file is part of the Swift.org open source project
+//
+// Copyright (c) 2014 - 2016 Apple Inc. and the Swift project authors
+// Licensed under Apache License v2.0 with Runtime Library Exception
+//
+// See http://swift.org/LICENSE.txt for license information
+// See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
+//
+//===----------------------------------------------------------------------===//
+
+import SwiftShims
+
+%{
+#
+# Utility code for later in this template
+#
+
+# // Bit counts for all floating point types. 
+# // 80-bit floating point types are only permitted on x86 architectures. This
+# // restriction is handled via #if's in the generated code.
+allFloatBits = [32, 64, 80]
+
+# Bit counts for all int types
+allIntBits = [8, 16, 32, 64, 'Int']
+
+# Number of bits in the Builtin.Word type
+word_bits = int(CMAKE_SIZEOF_VOID_P) * 8
+
+# Number of bits in integer literals.
+builtinIntLiteralBits = 2048
+
+# Mapping from float bits to significand bits
+explicitSignificandBits = { 32:24, 64:53, 80:64 }
+SignificandSizes = { 32:32, 64:64, 80:64 }
+SignificandBitCounts = { 32:23, 64:52, 80:63 }
+ExponentBitCounts = { 32:8, 64:11, 80:15 }
+
+def allInts():
+    for bits in allIntBits:
+        for signed in False, True:
+            yield bits, signed
+
+def baseIntName(name):
+    return 'Int' if name == 'Int' else 'Int' + str(name)
+
+def builtinIntName(name):
+    return 'Int' + str(word_bits) if name == 'Int' else 'Int' + str(name)
+
+def intName(name, signed):
+    return ('' if signed else 'U') + baseIntName(name)
+
+floatName = { 32:'Float', 64:'Double', 80:'Float80' }
+
+def cFuncSuffix(bits):
+    if bits == 32:
+        return 'f'
+    if bits == 64:
+        return ''
+    if bits == 80:
+        return 'l'
+        
+def intFormatFix(bits):
+    if bits == 'Int':
+        return int(CMAKE_SIZEOF_VOID_P) * 8
+    return bits
+}%
+
+//  TODO: remove once integer proposal is available ----------------------------
+%for bits in [32,64]:
+extension UInt${bits} {
+  var signBitIndex: Int {
+    return ${bits-1} - Int(Int${bits}(Builtin.int_ctlz_Int${bits}(self._value, false._value)))
+  }
+  var countTrailingZeros: Int {
+    return Int(Int${bits}(Builtin.int_cttz_Int${bits}(self._value, false._value)))
+  }
+}
+%end
+
+% for bits in allFloatBits:
+%{
+Self = floatName[bits]
+SignificandSize = SignificandSizes[bits]
+SignificandBitCount = SignificandBitCounts[bits]
+ExponentBitCount = ExponentBitCounts[bits]
+RawSignificand = 'UInt' + str(SignificandSize)
+
+if Self == 'Float':
+    SelfDocComment = '''\
+/// A single-precision, floating-point value type.'''
+
+elif Self == 'Double':
+    SelfDocComment = '''\
+/// A double-precision, floating-point value type.'''
+
+elif Self == 'Float80':
+    SelfDocComment = '''\
+/// An extended-precision, floating-point value type.'''
+
+else:
+    raise ValueError('Unhandled float type.')
+}%
+
+% if bits == 80:
+#if !os(Windows) && (arch(i386) || arch(x86_64))
+% end
+
+${SelfDocComment}
+@_fixed_layout
+public struct ${Self} {
+  public // @testable
+  var _value: Builtin.FPIEEE${bits}
+
+  /// Creates a value initialized to zero.
+  @_transparent public
+  init() {
+    let zero: Int64 = 0
+    self._value = Builtin.sitofp_Int64_FPIEEE${bits}(zero._value)
+  }
+
+  @_transparent 
+  public // @testable
+  init(_bits v: Builtin.FPIEEE${bits}) {
+    self._value = v
+  }
+}
+
+extension ${Self} : CustomStringConvertible {
+  /// A textual representation of the value.
+  public var description: String {
+    return _float${bits}ToString(self, debug: false)
+  }
+}
+
+extension ${Self} : CustomDebugStringConvertible {
+  /// A textual representation of the value, suitable for debugging.
+  public var debugDescription: String {
+    return _float${bits}ToString(self, debug: true)
+  }
+}
+
+extension ${Self}: BinaryFloatingPoint {
+
+  public typealias Exponent = Int
+  public typealias RawSignificand = ${RawSignificand}
+
+  public static var exponentBitCount: Int {
+    return ${ExponentBitCount}
+  }
+
+%if bits == 80:
+  /// The available number of fractional significand bits.
+  ///
+  /// `Float80.significandBitCount` is 63, even though 64 bits are used to
+  /// store the significand in the memory representation of a `Float80`
+  /// instance. Unlike other floating-point types, the `Float80` type
+  /// explicitly stores the leading integral significand bit.
+%end
+  public static var significandBitCount: Int {
+    return ${SignificandBitCount}
+  }
+
+  //  Implementation details.
+  @_versioned
+  static var _infinityExponent: UInt {
+    @inline(__always) get { return 1 << UInt(exponentBitCount) - 1 }
+  }
+
+  static var _exponentBias: UInt {
+    @inline(__always) get { return _infinityExponent >> 1 }
+  }
+
+  static var _significandMask: ${RawSignificand} {
+    @inline(__always) get {
+      return 1 << ${RawSignificand}(significandBitCount) - 1
+    }
+  }
+
+  @_versioned
+  static var _quietNaNMask: ${RawSignificand} {
+    @inline(__always) get {
+      return 1 << ${RawSignificand}(significandBitCount - 1)
+    }
+  }
+
+%if bits != 80:
+  //  Conversions to/from integer encoding.  These are not part of the
+  //  BinaryFloatingPoint prototype because there's no guarantee that an
+  //  integer type of the same size actually exists (e.g. Float80).
+  //
+  //  If we want them in a protocol at some future point, that protocol should
+  //  be "InterchangeFloatingPoint" or "PortableFloatingPoint" or similar, and
+  //  apply to IEEE 754 "interchange types".
+  /// The bit pattern of the value's encoding.
+  ///
+  /// The bit pattern matches the binary interchange format defined by the
+  /// [IEEE 754 specification][spec].
+  ///
+  /// [spec]: http://ieeexplore.ieee.org/servlet/opac?punumber=4610933
+  ///
+  /// - SeeAlso: `init(bitPattern:)`
+  public var bitPattern: UInt${bits} {
+    return UInt${bits}(Builtin.bitcast_FPIEEE${bits}_Int${bits}(_value))
+  }
+
+  /// Creates a new value with the given bit pattern.
+  ///
+  /// The value passed as `bitPattern` is interpreted in the binary interchange
+  /// format defined by the [IEEE 754 specification][spec].
+  ///
+  /// [spec]: http://ieeexplore.ieee.org/servlet/opac?punumber=4610933
+  ///
+  /// - Parameter bitPattern: The integer encoding of a `${Self}` instance.
+  ///
+  /// - SeeAlso: `bitPattern`
+  public init(bitPattern: UInt${bits}) {
+    self.init(_bits: Builtin.bitcast_Int${bits}_FPIEEE${bits}(bitPattern._value))
+  }
+
+  public var sign: FloatingPointSign {
+    let shift = ${Self}.significandBitCount + ${Self}.exponentBitCount
+    return FloatingPointSign(rawValue: Int(bitPattern >> ${RawSignificand}(shift)))!
+  }
+
+  @available(*, unavailable, renamed: "sign")
+  public var isSignMinus: Bool { Builtin.unreachable() }
+
+  public var exponentBitPattern: UInt {
+    return UInt(bitPattern >> UInt${bits}(${Self}.significandBitCount)) &
+      ${Self}._infinityExponent
+  }
+
+  public var significandBitPattern: ${RawSignificand} {
+    return ${RawSignificand}(bitPattern) & ${Self}._significandMask
+  }
+
+  public init(sign: FloatingPointSign,
+              exponentBitPattern: UInt,
+              significandBitPattern: ${RawSignificand}) {
+    let signShift = ${Self}.significandBitCount + ${Self}.exponentBitCount
+    let sign = UInt${bits}(sign == .minus ? 1 : 0)
+    let exponent = UInt${bits}(
+      exponentBitPattern & ${Self}._infinityExponent)
+    let significand = UInt${bits}(
+      significandBitPattern & ${Self}._significandMask)
+    self.init(bitPattern:
+      sign << UInt${bits}(signShift) |
+      exponent << UInt${bits}(${Self}.significandBitCount) |
+      significand)
+  }
+
+  public var isCanonical: Bool {
+    return true
+  }
+%else:
+  // Internal implementation details of x86 Float80
+  struct _Float80Representation {
+    var explicitSignificand: UInt64
+    var signAndExponent: UInt16
+    var _padding: (UInt16, UInt16, UInt16) = (0, 0, 0)
+    var sign: FloatingPointSign {
+      return FloatingPointSign(rawValue: Int(signAndExponent >> 15))!
+    }
+    var exponentBitPattern: UInt { return UInt(signAndExponent) & 0x7fff }
+    init(explicitSignificand: UInt64, signAndExponent: UInt16) {
+      self.explicitSignificand = explicitSignificand
+      self.signAndExponent = signAndExponent
+    }
+  }
+
+  var _representation: _Float80Representation {
+    return unsafeBitCast(self, to: _Float80Representation.self)
+  }
+
+  public var sign: FloatingPointSign {
+    return _representation.sign
+  }
+
+  static var _explicitBitMask: UInt64 {
+    @inline(__always) get { return 1 << 63 }
+  }
+
+  public var exponentBitPattern: UInt {
+    let provisional = _representation.exponentBitPattern
+    if provisional == 0 {
+      if _representation.explicitSignificand >= Float80._explicitBitMask {
+        //  Pseudo-denormals have an exponent of 0 but the leading bit of the
+        //  significand field is set.  These are noncanonical encodings of the
+        //  same significand with an exponent of 1.
+        return 1
+      }
+      //  Exponent is zero, leading bit of significand is clear, so this is
+      //  a canonical zero or subnormal number.
+      return 0
+    }
+    if _representation.explicitSignificand < Float80._explicitBitMask {
+      //  If the exponent is not-zero but the leading bit of the significand
+      //  is clear, then we have an invalid operand (unnormal, pseudo-inf, or
+      //  pseudo-NaN).  All of these are noncanonical encodings of NaN.
+      return Float80._infinityExponent
+    }
+    //  We have a canonical number, so the provisional exponent is correct.
+    return provisional
+  }
+
+  public var significandBitPattern: UInt64 {
+    if _representation.exponentBitPattern > 0 &&
+      _representation.explicitSignificand < Float80._explicitBitMask {
+        //  If the exponent is nonzero and the leading bit of the significand
+        //  is clear, then we have an invalid operand (unnormal, pseudo-inf, or
+        //  pseudo-NaN).  All of these are noncanonical encodings of qNaN.
+        return _representation.explicitSignificand | Float80._quietNaNMask
+    }
+    //  Otherwise we always get the "right" significand by simply clearing the
+    //  integral bit.
+    return _representation.explicitSignificand & Float80._significandMask
+  }
+
+  public init(sign: FloatingPointSign,
+              exponentBitPattern: UInt,
+              significandBitPattern: UInt64) {
+    let signBit = UInt16(sign == .minus ? 0x8000 : 0)
+    let exponent = UInt16(exponentBitPattern)
+    var significand = significandBitPattern
+    if exponent != 0 { significand |= Float80._explicitBitMask }
+    let rep = _Float80Representation(explicitSignificand: significand,
+      signAndExponent: signBit|exponent)
+    self = unsafeBitCast(rep, to: Float80.self)
+  }
+
+  public var isCanonical: Bool {
+    if exponentBitPattern == 0 {
+      // If exponent field is zero, canonical numbers have the explicit
+      // significand bit clear.
+      return _representation.explicitSignificand < Float80._explicitBitMask
+    }
+    // If exponent is nonzero, canonical values have the explicit significand
+    // bit set.
+    return _representation.explicitSignificand >= Float80._explicitBitMask
+  }
+%end
+
+  public static var infinity: ${Self} {
+    return ${Self}(sign: .plus,
+      exponentBitPattern: _infinityExponent,
+      significandBitPattern: 0)
+  }
+
+  public static var nan: ${Self} {
+    return ${Self}(nan: 0, signaling: false)
+  }
+
+  public static var signalingNaN: ${Self} {
+    return ${Self}(nan: 0, signaling: true)
+  }
+
+  @available(*, unavailable, renamed: "nan")
+  public static var quietNaN: ${Self} { Builtin.unreachable()}
+
+  public static var greatestFiniteMagnitude: ${Self} {
+    return ${Self}(sign: .plus,
+      exponentBitPattern: _infinityExponent - 1,
+      significandBitPattern: _significandMask)
+  }
+
+  public static var pi: ${Self} {
+%if bits == 32:
+    // Note: this is not the correctly rounded (to nearest) value of pi,
+    // because pi would round *up* in Float precision, which can result
+    // in angles in the wrong quadrant if users aren't careful.  This is
+    // not a problem for Double or Float80, as pi rounds down in both of
+    // those formats.
+    return Float(0x1.921fb4p1)
+%elif bits == 64:
+    return Double(0x1.921fb54442d18p1)
+%elif bits == 80:
+    return Float80(0x1.921fb54442d1846ap1)
+%end
+  }
+
+  public var ulp: ${Self} {
+    if !isFinite { return ${Self}.nan }
+    if exponentBitPattern > UInt(${Self}.significandBitCount) {
+      // self is large enough that self.ulp is normal, so we just compute its
+      // exponent and construct it with a significand of zero.
+      let ulpExponent = exponentBitPattern - UInt(${Self}.significandBitCount)
+      return ${Self}(sign: .plus,
+        exponentBitPattern: ulpExponent,
+        significandBitPattern: 0)
+    }
+    if exponentBitPattern >= 1 {
+      // self is normal but ulp is subnormal.
+      let ulpShift = ${RawSignificand}(exponentBitPattern - 1)
+      return ${Self}(sign: .plus,
+        exponentBitPattern: 0,
+        significandBitPattern: 1 << ulpShift)
+    }
+    return ${Self}(sign: .plus,
+      exponentBitPattern: 0,
+      significandBitPattern: 1)
+  }
+
+  public static var leastNormalMagnitude: ${Self} {
+    return ${Self}(sign: .plus,
+      exponentBitPattern: 1,
+      significandBitPattern: 0)
+  }
+
+  public static var leastNonzeroMagnitude: ${Self} {
+#if arch(arm)
+    return leastNormalMagnitude
+#else
+    return ${Self}(sign: .plus,
+      exponentBitPattern: 0,
+      significandBitPattern: 1)
+#endif
+  }
+
+  public var exponent: Int {
+    if !isFinite { return .max }
+    if isZero { return .min }
+    let provisional = Int(exponentBitPattern) - Int(${Self}._exponentBias)
+    if isNormal { return provisional }
+    let shift = ${Self}.significandBitCount - significandBitPattern.signBitIndex
+    return provisional + 1 - Int(shift)
+  }
+
+  public var significand: ${Self} {
+    if isNaN { return self }
+    if isNormal {
+      return ${Self}(sign: .plus,
+        exponentBitPattern: ${Self}._exponentBias,
+        significandBitPattern: significandBitPattern)
+    }
+    if isSubnormal {
+      let shift = ${Self}.significandBitCount - significandBitPattern.signBitIndex
+      return ${Self}(sign: .plus,
+        exponentBitPattern: ${Self}._exponentBias,
+        significandBitPattern: significandBitPattern << ${RawSignificand}(shift))
+    }
+    // zero or infinity.
+    return ${Self}(sign: .plus,
+      exponentBitPattern: exponentBitPattern,
+      significandBitPattern: 0)
+  }
+
+  public init(sign: FloatingPointSign, exponent: Int, significand: ${Self}) {
+    var result = significand
+    if sign == .minus { result = -result }
+    if significand.isFinite && !significand.isZero {
+      var clamped = exponent
+      let leastNormalExponent = 1 - Int(${Self}._exponentBias)
+      let greatestFiniteExponent = Int(${Self}._exponentBias)
+      if clamped < leastNormalExponent {
+        clamped = max(clamped, 3*leastNormalExponent)
+        while clamped < leastNormalExponent {
+          result  *= ${Self}.leastNormalMagnitude
+          clamped -= leastNormalExponent
+        }
+      }
+      else if clamped > greatestFiniteExponent {
+        clamped = min(clamped, 3*greatestFiniteExponent)
+        let step = ${Self}(sign: .plus,
+          exponentBitPattern: ${Self}._infinityExponent - 1,
+          significandBitPattern: 0)
+        while clamped > greatestFiniteExponent {
+          result  *= step
+          clamped -= greatestFiniteExponent
+        }
+      }
+      let scale = ${Self}(sign: .plus,
+        exponentBitPattern: UInt(Int(${Self}._exponentBias) + clamped),
+        significandBitPattern: 0)
+      result = result * scale
+    }
+    self = result
+  }
+
+  /// Creates a NaN ("not a number") value with the specified payload.
+  ///
+  /// NaN values compare not equal to every value, including themselves. Most
+  /// operations with a NaN operand produce a NaN result. Don't use the
+  /// equal-to operator (`==`) to test whether a value is NaN. Instead, use
+  /// the value's `isNaN` property.
+  ///
+  ///     let x = ${Self}(nan: 0, signaling: false)
+  ///     print(x == .nan)
+  ///     // Prints "false"
+  ///     print(x.isNaN)
+  ///     // Prints "true"
+  ///
+  /// - Parameters:
+  ///   - payload: The payload to use for the new NaN value.
+  ///   - signaling: Pass `true` to create a signaling NaN or `false` to create
+  ///     a quiet NaN.
+  public init(nan payload: RawSignificand, signaling: Bool) {
+    // We use significandBitCount - 2 bits for NaN payload.
+    _precondition(payload < (${Self}._quietNaNMask >> 1),
+      "NaN payload is not encodable.")
+    var significand = payload
+    significand |= ${Self}._quietNaNMask >> (signaling ? 1 : 0)
+    self.init(sign: .plus,
+              exponentBitPattern: ${Self}._infinityExponent,
+              significandBitPattern: significand)
+  }
+
+  public var nextUp: ${Self} {
+    if isNaN { return self }
+    if sign == .minus {
+#if arch(arm)
+      // On arm, subnormals are flushed to zero.
+      if (exponentBitPattern == 1 && significandBitPattern == 0) ||
+         (exponentBitPattern == 0 && significandBitPattern != 0) {
+        return ${Self}(sign: .minus,
+          exponentBitPattern: 0,
+          significandBitPattern: 0)
+      }
+#endif
+      if significandBitPattern == 0 {
+        if exponentBitPattern == 0 {
+          return .leastNonzeroMagnitude
+        }
+        return ${Self}(sign: .minus,
+          exponentBitPattern: exponentBitPattern - 1,
+          significandBitPattern: ${Self}._significandMask)
+      }
+      return ${Self}(sign: .minus,
+        exponentBitPattern: exponentBitPattern,
+        significandBitPattern: significandBitPattern - 1)
+    }
+    if isInfinite { return self }
+    if significandBitPattern == ${Self}._significandMask {
+      return ${Self}(sign: .plus,
+        exponentBitPattern: exponentBitPattern + 1,
+        significandBitPattern: 0)
+    }
+#if arch(arm)
+    // On arm, subnormals are skipped.
+    if exponentBitPattern == 0 {
+      return .leastNonzeroMagnitude
+    }
+#endif
+    return ${Self}(sign: .plus,
+      exponentBitPattern: exponentBitPattern,
+      significandBitPattern: significandBitPattern + 1)
+  }
+
+  @_transparent
+  public mutating func round(_ rule: FloatingPointRoundingRule) {
+    switch rule {
+    case .toNearestOrAwayFromZero:
+      _value = Builtin.int_round_FPIEEE${bits}(_value)
+    case .toNearestOrEven:
+      _value = Builtin.int_rint_FPIEEE${bits}(_value)
+    case .towardZero:
+      _value = Builtin.int_trunc_FPIEEE${bits}(_value)
+    case .awayFromZero:
+      if sign == .minus {
+        _value = Builtin.int_floor_FPIEEE${bits}(_value)
+      }
+      else {
+        _value = Builtin.int_ceil_FPIEEE${bits}(_value)
+      }
+    case .up:
+      _value = Builtin.int_ceil_FPIEEE${bits}(_value)
+    case .down:
+      _value = Builtin.int_floor_FPIEEE${bits}(_value)
+    }
+  }
+
+  @_transparent
+  public mutating func negate() {
+    _value = Builtin.fneg_FPIEEE${bits}(self._value)
+  }
+
+  @_transparent
+  public mutating func add(_ other: ${Self}) {
+    _value = Builtin.fadd_FPIEEE${bits}(self._value, other._value)
+  }
+
+  @_transparent
+  public mutating func subtract(_ other: ${Self}) {
+    _value = Builtin.fsub_FPIEEE${bits}(self._value, other._value)
+  }
+
+  @_transparent
+  public mutating func multiply(by other: ${Self}) {
+    _value = Builtin.fmul_FPIEEE${bits}(self._value, other._value)
+  }
+
+  @_transparent
+  public mutating func divide(by other: ${Self}) {
+    _value = Builtin.fdiv_FPIEEE${bits}(self._value, other._value)
+  }
+
+  @_transparent
+  public mutating func formRemainder(dividingBy other: ${Self}) {
+%if bits == 80:
+    var other = other
+    _swift_stdlib_remainderl(&self, &other)
+%else:
+    self = _swift_stdlib_remainder${cFuncSuffix(bits)}(self, other)
+%end
+  }
+
+  @_transparent
+  public mutating func formTruncatingRemainder(dividingBy other: ${Self}) {
+    _value = Builtin.frem_FPIEEE${bits}(self._value, other._value)
+  }
+
+  @_transparent
+  public mutating func formSquareRoot( ) {
+%if bits == 80:
+    _swift_stdlib_squareRootl(&self)
+%else:
+    self = _swift_stdlib_squareRoot${cFuncSuffix(bits)}(self)
+%end
+  }
+
+  @_transparent
+  public mutating func addProduct(_ lhs: ${Self}, _ rhs: ${Self}) {
+    _value = Builtin.int_fma_FPIEEE${bits}(lhs._value, rhs._value, _value)
+  }
+
+  @_transparent
+  public func isEqual(to other: ${Self}) -> Bool {
+    return Bool(Builtin.fcmp_oeq_FPIEEE${bits}(self._value, other._value))
+  }
+
+  @_transparent
+  public func isLess(than other: ${Self}) -> Bool {
+    return Bool(Builtin.fcmp_olt_FPIEEE${bits}(self._value, other._value))
+  }
+
+  @_transparent
+  public func isLessThanOrEqualTo(_ other: ${Self}) -> Bool {
+    return Bool(Builtin.fcmp_ole_FPIEEE${bits}(self._value, other._value))
+  }
+
+  @_transparent
+  public var isNormal: Bool {
+    return exponentBitPattern > 0 && isFinite
+  }
+
+  @_transparent
+  public var isFinite: Bool {
+    return exponentBitPattern < ${Self}._infinityExponent
+  }
+
+  @_transparent
+  public var isZero: Bool {
+    return exponentBitPattern == 0 && significandBitPattern == 0
+  }
+
+  @_transparent
+  public var isSubnormal:  Bool {
+    return exponentBitPattern == 0 && significandBitPattern != 0
+  }
+
+  @_transparent
+  public var isInfinite:  Bool {
+    return !isFinite && significandBitPattern == 0
+  }
+
+  @_transparent
+  public var isNaN:  Bool {
+    return !isFinite && significandBitPattern != 0
+  }
+
+  @_transparent
+  public var isSignalingNaN: Bool {
+    return isNaN && (significandBitPattern & ${Self}._quietNaNMask) == 0
+  }
+
+  public var binade: ${Self} {
+    if !isFinite { return .nan }
+    if exponentBitPattern != 0 {
+      return ${Self}(sign: sign, exponentBitPattern: exponentBitPattern,
+        significandBitPattern: 0)
+    }
+    if significandBitPattern == 0 { return self }
+    // For subnormals, we isolate the leading significand bit.
+    let index = significandBitPattern.signBitIndex
+    return ${Self}(sign: sign, exponentBitPattern: 0,
+      significandBitPattern: 1 << RawSignificand(index))
+  }
+
+  public var significandWidth: Int {
+    let trailingZeros = significandBitPattern.countTrailingZeros
+    if isNormal {
+      return ${Self}.significandBitCount - trailingZeros
+    }
+    if isSubnormal {
+      return significandBitPattern.signBitIndex - trailingZeros
+    }
+    return -1
+  }
+
+  /// Creates a new value from the given floating-point literal.
+  ///
+  /// Do not call this initializer directly. It is used by the compiler when
+  /// you create a new `${Self}` instance by using a floating-point literal.
+  /// Instead, create a new value by using a literal.
+  ///
+  /// In this example, the assignment to the `x` constant calls this
+  /// initializer behind the scenes.
+  ///
+  ///     let x: ${Self} = 21.25
+  ///     // x == 21.25
+  ///
+  /// - Parameter value: The new floating-point value.
+  @_transparent
+  public init(floatLiteral value: ${Self}) {
+    self = value
+  }
+}
+
+@_transparent
+extension ${Self} : _ExpressibleByBuiltinIntegerLiteral, ExpressibleByIntegerLiteral {
+  public
+  init(_builtinIntegerLiteral value: Builtin.Int${builtinIntLiteralBits}){
+    self = ${Self}(_bits: Builtin.itofp_with_overflow_Int${builtinIntLiteralBits}_FPIEEE${bits}(value))
+  }
+
+  /// Creates a new value from the given integer literal.
+  ///
+  /// Do not call this initializer directly. It is used by the compiler when
+  /// you create a new `${Self}` instance by using an integer literal.
+  /// Instead, create a new value by using a literal.
+  ///
+  /// In this example, the assignment to the `x` constant calls this
+  /// initializer behind the scenes.
+  ///
+  ///     let x: ${Self} = 100
+  ///     // x == 100.0
+  ///
+  /// - Parameter value: The new value.
+  public init(integerLiteral value: Int64) {
+    self = ${Self}(_bits: Builtin.sitofp_Int64_FPIEEE${bits}(value._value))
+  }
+}
+
+#if !os(Windows) && (arch(i386) || arch(x86_64))
+
+% builtinFloatLiteralBits = 80
+@_transparent
+extension ${Self} : _ExpressibleByBuiltinFloatLiteral {
+  public
+  init(_builtinFloatLiteral value: Builtin.FPIEEE${builtinFloatLiteralBits}) {
+%   if bits == builtinFloatLiteralBits:
+    self = ${Self}(_bits: value)
+%   elif bits < builtinFloatLiteralBits:
+    self = ${Self}(_bits: Builtin.fptrunc_FPIEEE${builtinFloatLiteralBits}_FPIEEE${bits}(value))
+%   else:
+    // FIXME: This is actually losing precision <rdar://problem/14073102>.
+    self = ${Self}(Builtin.fpext_FPIEEE${builtinFloatLiteralBits}_FPIEEE${bits}(value))
+%   end
+  }
+}
+
+#else
+
+% builtinFloatLiteralBits = 64
+@_transparent
+extension ${Self} : _ExpressibleByBuiltinFloatLiteral {
+  public
+  init(_builtinFloatLiteral value: Builtin.FPIEEE${builtinFloatLiteralBits}) {
+%   if bits == builtinFloatLiteralBits:
+    self = ${Self}(_bits: value)
+%   elif bits < builtinFloatLiteralBits:
+    self = ${Self}(_bits: Builtin.fptrunc_FPIEEE${builtinFloatLiteralBits}_FPIEEE${bits}(value))
+%   else:
+    // FIXME: This is actually losing precision <rdar://problem/14073102>.
+    self = ${Self}(Builtin.fpext_FPIEEE${builtinFloatLiteralBits}_FPIEEE${bits}(value))
+%   end
+  }
+}
+
+#endif
+
+extension ${Self} : Hashable {
+  /// The number's hash value.
+  ///
+  /// Hash values are not guaranteed to be equal across different executions of
+  /// your program. Do not save hash values to use during a future execution.
+  public var hashValue: Int {
+    if isZero {
+      // To satisfy the axiom that equality implies hash equality, we need to
+      // finesse the hash value of -0.0 to match +0.0.
+      return 0
+    } else {
+    %if bits <= word_bits:
+      return Int(bitPattern: UInt(bitPattern))
+    %elif bits == 64: # Double -> 32-bit Int
+      return Int(truncatingBitPattern: bitPattern >> 32) ^
+             Int(truncatingBitPattern: bitPattern)
+    %elif word_bits == 32: # Float80 -> 32-bit Int
+      return Int(truncatingBitPattern: significandBitPattern >> 32) ^
+             Int(truncatingBitPattern: significandBitPattern) ^
+             Int(_representation.signAndExponent)
+    %else: # Float80 -> 64-bit Int
+      return Int(bitPattern: UInt(significandBitPattern)) ^
+             Int(_representation.signAndExponent)
+    %end
+    }
+  }
+}
+
+extension ${Self} : AbsoluteValuable {
+  /// The magnitude of this value.
+  ///
+  /// For any value `x`, `x.magnitude.sign` is `.plus`. If `x` is not NaN,
+  /// `x.magnitude` is the absolute value of `x`.
+  ///
+  /// The global `abs(_:)` function provides more familiar syntax when you need
+  /// to find an absolute value. In addition, because `abs(_:)` always returns
+  /// a value of the same type, even in a generic context, using the function
+  /// instead of the `magnitude` property is encouraged.
+  ///
+  ///     let targetDistance: ${Self} = 5.25
+  ///     let throwDistance: ${Self} = 5.5
+  ///
+  ///     let margin = targetDistance - throwDistance
+  ///     // margin == -0.25
+  ///     // margin.magnitude == 0.25
+  ///
+  ///     // Use 'abs(_:)' instead of 'magnitude'
+  ///     print("Missed the target by \(abs(margin)) meters.")
+  ///     // Prints "Missed the target by 0.25 meters."
+  ///
+  /// - SeeAlso: `abs(_:)`
+  @_transparent
+  public static func abs(_ x: ${Self}) -> ${Self} {
+    return ${Self}(_bits: Builtin.int_fabs_FPIEEE${bits}(x._value))
+  }
+}
+
+@_transparent
+public prefix func + (x: ${Self}) -> ${Self} {
+  return x
+}
+
+@_transparent
+public prefix func - (x: ${Self}) -> ${Self} {
+  return ${Self}(_bits: Builtin.fneg_FPIEEE${bits}(x._value))
+}
+
+//===----------------------------------------------------------------------===//
+// Explicit conversions between types.
+//===----------------------------------------------------------------------===//
+
+// Construction from integers.
+@_transparent
+extension ${Self} {
+% for (srcBits, srcSigned) in allInts():
+%    That = intName(srcBits, srcSigned)
+%    ThatBuiltinName = builtinIntName(srcBits)
+%    sign = 's' if srcSigned else 'u'
+  public init(_ v: ${That}) {
+    _value = Builtin.${sign}itofp_${ThatBuiltinName}_FPIEEE${bits}(v._value)
+  }
+% end
+}
+
+// Construction from other floating point numbers.
+@_transparent
+extension ${Self} {
+% for srcBits in allFloatBits:
+%   That = floatName[srcBits]
+
+%   if srcBits == 80:
+#if !os(Windows) && (arch(i386) || arch(x86_64))
+%   end
+
+%   if srcBits == bits:
+  /// Creates a new instance initialized to the given value.
+  ///
+  /// The value of `other` is represented exactly by the new instance. A NaN
+  /// passed as `other` results in another NaN, with a signaling NaN value
+  /// converted to quiet NaN.
+%   else:
+  /// Creates a new instance that approximates the given value.
+  ///
+  /// The value of `other` is rounded to a representable value, if necessary.
+  /// A NaN passed as `other` results in another NaN, with a signaling NaN
+  /// value converted to quiet NaN.
+%   end
+  ///
+  ///     let x: ${That} = 21.25
+  ///     let y = ${Self}(x)
+  ///     // y == 21.25
+  ///
+  ///     let z = ${Self}(${That}.nan)
+  ///     // z.isNaN == true
+  ///
+  /// - Parameter other: The value to use for the new instance.
+  @_transparent
+  public init(_ other: ${That}) {
+%   if srcBits > bits:
+    _value = Builtin.fptrunc_FPIEEE${srcBits}_FPIEEE${bits}(other._value)
+%   elif srcBits < bits:
+    _value = Builtin.fpext_FPIEEE${srcBits}_FPIEEE${bits}(other._value)
+%   else:
+    _value = other._value
+%   end
+  }
+  
+  /// Creates a new instance initialized to the given value, if it can be
+  /// represented without rounding.
+  ///
+  /// If `other` can't be represented as an instance of `${Self}` without
+  /// rounding, the result of this initializer is `nil`. In particular,
+  /// passing NaN as `other` always results in `nil`.
+  ///
+  ///     let x: ${That} = 21.25
+  ///     let y = ${Self}(exactly: x)
+  ///     // y == Optional.some(21.25)
+  ///
+  ///     let z = ${Self}(exactly: ${That}.nan)
+  ///     // z == nil
+  ///
+  /// - Parameter other: The value to use for the new instance.
+  @inline(__always)
+  public init?(exactly other: ${That}) {
+    self.init(other)
+    // Converting the infinity value is considered value preserving. 
+    // In other cases, check that we can round-trip and get the same value.
+    // NaN always fails.
+    if ${That}(self) != other {
+      return nil
+    }
+  }
+
+%   if srcBits == 80:
+#endif
+%   end
+% end
+}
+
+//===----------------------------------------------------------------------===//
+// Standard Operator Table
+//===----------------------------------------------------------------------===//
+
+//  TODO: These should not be necessary, since they're already provided by
+//  <T: FloatingPoint>, but in practice they are currently needed to
+//  disambiguate overloads.  We should find a way to remove them, either by
+//  tweaking the overload resolution rules, or by removing the other
+//  definitions in the standard lib, or both.
+
+@_transparent
+public func + (lhs: ${Self}, rhs: ${Self}) -> ${Self} {
+  return lhs.adding(rhs)
+}
+
+@_transparent
+public func - (lhs: ${Self}, rhs: ${Self}) -> ${Self} {
+  return lhs.subtracting(rhs)
+}
+
+@_transparent
+public func * (lhs: ${Self}, rhs: ${Self}) -> ${Self} {
+  return lhs.multiplied(by: rhs)
+}
+
+@_transparent
+public func / (lhs: ${Self}, rhs: ${Self}) -> ${Self} {
+  return lhs.divided(by: rhs)
+}
+
+@_transparent
+public func += (lhs: inout ${Self}, rhs: ${Self}) {
+  lhs.add(rhs)
+}
+
+@_transparent
+public func -= (lhs: inout ${Self}, rhs: ${Self}) {
+  lhs.subtract(rhs)
+}
+
+@_transparent
+public func *= (lhs: inout ${Self}, rhs: ${Self}) {
+  lhs.multiply(by: rhs)
+}
+
+@_transparent
+public func /= (lhs: inout ${Self}, rhs: ${Self}) {
+  lhs.divide(by: rhs)
+}
+
+//===----------------------------------------------------------------------===//
+// Strideable Conformance
+//===----------------------------------------------------------------------===//
+
+@_transparent
+extension ${Self} : Strideable {
+  /// Returns the distance from this value to the specified value.
+  ///
+  /// For two values `x` and `y`, the result of `x.distance(to: y)` is equal to
+  /// `y - x`---a distance `d` such that `x.advanced(by: d)` approximates `y`.
+  /// For example:
+  ///
+  ///     let x = 21.5
+  ///     let d = x.distance(to: 15.0)
+  ///     // d == -6.5
+  ///
+  ///     print(x.advanced(by: d))
+  ///     // Prints "15.0"
+  ///
+  /// - Parameter other: A value to calculate the distance to.
+  /// - Returns: The distance between this value and `other`.
+  @_transparent
+  public func distance(to other: ${Self}) -> ${Self} {
+    return other - self
+  }
+  
+  /// Returns a new value advanced by the given distance.
+  ///
+  /// For two values `x` and `d`, the result of a `x.advanced(by: d)` is equal
+  /// to `x + d`---a new value `y` such that `x.distance(to: y)` approximates
+  /// `d`. For example:
+  ///
+  ///     let x = 21.5
+  ///     let y = x.advanced(by: -6.5)
+  ///     // y == 15.0
+  ///
+  ///     print(x.distance(to: y))
+  ///     // Prints "-6.5"
+  ///
+  /// - Parameter amount: The distance to advance this value.
+  /// - Returns: A new value that is `amount` added to this value.
+  @_transparent
+  public func advanced(by amount: ${Self}) -> ${Self} {
+    return self + amount
+  }
+}
+
+//===----------------------------------------------------------------------===//
+// Deprecated operators
+//===----------------------------------------------------------------------===//
+
+@_transparent
+@available(*, unavailable, message: "Use truncatingRemainder instead")
+public func % (lhs: ${Self}, rhs: ${Self}) -> ${Self} {
+  fatalError("% is not available.")
+}
+
+@_transparent
+@available(*, unavailable, message: "Use formTruncatingRemainder instead")
+public func %= (lhs: inout ${Self}, rhs: ${Self}) {
+  fatalError("%= is not available.")
+}
+
+@_transparent
+@available(*, unavailable, message: "use += 1")
+@discardableResult
+public prefix func ++ (rhs: inout ${Self}) -> ${Self} {
+  fatalError("++ is not available")
+}
+@_transparent
+@available(*, unavailable, message: "use -= 1")
+@discardableResult
+public prefix func -- (rhs: inout ${Self}) -> ${Self} {
+  fatalError("-- is not available")
+}
+@_transparent
+@available(*, unavailable, message: "use += 1")
+@discardableResult
+public postfix func ++ (lhs: inout ${Self}) -> ${Self} {
+  fatalError("++ is not available")
+}
+@_transparent
+@available(*, unavailable, message: "use -= 1")
+@discardableResult
+public postfix func -- (lhs: inout ${Self}) -> ${Self} {
+  fatalError("-- is not available")
+}
+
+% if bits == 80:
+#endif
+% end
+% end # for bits in allFloatBits
+
+// Construction of integers from floating point numbers.
+%{
+def getFtoIBounds(floatBits, intBits, signed):
+  if not signed:
+    return (-1, 1 << intBits)
+  upper = 1 << intBits - 1
+  if intBits <= explicitSignificandBits[floatBits]:
+    return (-upper - 1, upper)
+  ulp = 1 << intBits - explicitSignificandBits[floatBits]
+  return (-upper - ulp, upper)
+}%
+% for (bits, signed) in allInts():
+%   sign = 's' if signed else 'u'
+%   Self = intName(bits, signed)
+%   BuiltinName = builtinIntName(bits)
+%   intBits = intFormatFix(bits)
+@_transparent
+extension ${Self} {
+%   for srcBits in allFloatBits:
+%     That = floatName[srcBits]
+
+%     if srcBits == 80:
+#if !os(Windows) && (arch(i386) || arch(x86_64))
+%     end
+  /// Creates a new instance by rounding the given floating-point value toward
+  /// zero.
+  ///
+  /// - Parameter other: A floating-point value. When `other` is rounded toward
+  ///   zero, the result must be within the range `${Self}.min...${Self}.max`.
+  public init(_ other: ${That}) {
+    _precondition(other.isFinite,
+      "${That} value cannot be converted to ${Self} because it is either infinite or NaN")
+%     (lower, upper) = getFtoIBounds(srcBits, int(intBits), signed)
+    _precondition(other > ${str(lower)}.0,
+      "${That} value cannot be converted to ${Self} because the result would be less than ${Self}.min")
+    _precondition(other < ${str(upper)}.0,
+      "${That} value cannot be converted to ${Self} because the result would be greater than ${Self}.max")
+    self._value = Builtin.fpto${sign}i_FPIEEE${srcBits}_${BuiltinName}(other._value)
+  }
+%     if srcBits == 80:
+#endif
+%     end
+%   end
+}
+% end # for (bits, signed) in allInts()
