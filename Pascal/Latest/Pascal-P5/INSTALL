@@ -1,0 +1,32 @@
+Installation instructions
+
+To install Pascal-p5, execute:
+
+[Linux]
+
+> ./configure
+> make
+
+[Windows]
+
+> configure
+> make
+
+To access binaries in the project, execute:
+
+[Linux]
+
+./setpath
+
+[Windows]
+
+setpath
+
+Note that you can copy the path set within the setpath or setpath.bat batch file
+to your startup environment to prevent the need to execute this again.
+
+You can then compile and run single Pascal sources with the command:
+
+p5 <file>
+
+The extension .pas is supplied automatically.

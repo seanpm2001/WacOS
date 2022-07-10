@@ -1,0 +1,8 @@
+#
+# Set path to P5 binaries
+#
+# Source this file to add to your path.
+# You can put this into your startup shell or environment to skip the
+# need to set this each time.
+#
+PATH="$PWD/bin:$PATH"

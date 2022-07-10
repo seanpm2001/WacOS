@@ -1,0 +1,39 @@
+Regression Summary
+Line counts should be 0 for pass
+pint run
+0 sample_programs/hello.dif
+0 sample_programs/roman.dif
+0 sample_programs/match.dif
+0 sample_programs/prime.dif
+0 sample_programs/qsort.dif
+0 sample_programs/fbench.dif
+0 sample_programs/drystone.dif
+0 sample_programs/startrek.dif
+0 sample_programs/basics.dif
+0 basic/basic.dif
+0 standard_tests/iso7185pat.dif
+0 standard_tests/iso7185pat0001.dif
+0 sample_programs/pascals.dif
+0 p2/roman.dif
+0 p4/standardp.dif
+PRT run
+0 standard_tests/iso7185prt.dif
+pcom self compile
+0 source/pcom.mpp.dif
+pint self compile
+0 standard_tests/iso7185pats.dif
+Thu Sep  3 23:05:08 PDT 2020
+Source files
+2b05dd50725d7fd923e7e06b6bea1847 *-
+batch files
+57c507a2c3dc3c462e7a0af5064f5fd3 *-
+P2 files
+707e19639379cfadb7a6e33639bea203 *-
+p4 files
+444ea8d9db5efcb640fb5e7ec0b541ce *-
+Sample program test files
+aa32e9027c1682cbf4aa526b10ba5b61 *-
+standard test files
+2cafaa2575935ffaabe023c673ba3d35 *-
+other files
+845eef234e9404df18dd9286aa7981f0 *-

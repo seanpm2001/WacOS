@@ -1,0 +1,61 @@
+                         THE P5 COMPILER/INTERPRETER
+
+============================== Description =====================================
+
+This is the 5th version of the Pascal-P compiler from Zurich. This is the
+Pascal-P4 compiler modified to be ISO 7185 Pascal compilant, both in the the
+implementation language, and in the language it processes. It is the first
+version of Pascal-P created outside of Zurich.
+
+Pascal-P was an implementation kit, created between 1972 and 1974, for the
+original language Pascal. The source for the original compiler was passed around
+and modified quite a bit, but Niklaus Wirth noted that it was very popular, and
+represented a good method to popularize the language. He gathered the source
+into a clean version called Pascal-P2, which was the basis of UCSD Pascal, which
+in turn was the base language for Borland Pascal. The Zurich group then created
+an improved version called Pascal-P4.
+
+Pascal-P5 is Pascal-P4 modified to accept all of the ISO 7185 language.
+
+The full instructions for running and setting up the P5 compiler/interpreter
+have all been incorporated into the document:
+
+doc/the_p5_compiler.docx
+
+Please consult this document for full instructions on how to use Pascal-P5.
+
+============================== Quick start =====================================
+
+Pascal-p5 uses the standard GNU release layout. You execute:
+
+[Windows]
+
+> setpath
+> configure
+> make
+
+[linux]
+
+> . ./setpath
+> ./configure
+> make
+
+(You can avoid "setpath" by placing the ./bin directory on your path)
+
+This will make the compiler and interpreter set. You can then try a sample
+program as:
+
+> p5 sample_programs/hello
+
+================================== Problems ====================================
+
+You need a working gpc implementation. It is strongly suggested you use the
+gpc version 20070904. gpc has/had various compliance issues with ISO 7185, and
+the compiler has ceased to be supported. This version is found to be solid.
+
+You will need a working set of linux tooling (grep, ls, rm, etc). Mingw has
+an excellent set of tools for Windows users.
+
+You need the "flip" line ending adapation program. If you don't have it, we
+include a copy you can compile, or you can simply go find it. It is a widely
+available program.

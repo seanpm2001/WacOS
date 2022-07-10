@@ -1,0 +1,277 @@
+#!/bin/bash
+################################################################################
+#
+# Configure scipt for Pascal-P5
+#
+# Sets up the complete Pascal-P5 project.
+#
+################################################################################
+
+################################################################################
+#
+# Routines
+#
+
+#
+# Check command exists
+#
+# Uses the bash "command" built in.
+#
+function checkexists {
+
+    command -v $1 >/dev/null
+    rc=$?
+    if [[ $rc != 0 ]] ; then
+
+        echo "*** No $1 was found"
+
+    fi
+
+}
+
+################################################################################
+#
+# Set default variables
+#
+compiler="gpc"
+bits="32"
+host="linux"
+
+################################################################################
+#
+# Determine if needed programs exist. The only fatal one is grep, because we
+# need that to run this script. The rest will impact the running of various
+# test and build scripts.
+#
+checkexists grep
+checkexists diff
+checkexists sed
+checkexists rm
+checkexists cp
+checkexists mv
+checkexists ls
+checkexists tar
+checkexists flip
+checkexists cpp
+
+#
+# Fail on no grep found
+#
+checkexists grep > /dev/null
+if [[ $rc != 0 ]] ; then
+
+    echo "*** Aborting: cannot complete without grep"
+    exit 1
+
+fi
+
+#
+# Check flip (Unix/dos end of line changer) exists, and make it if not.
+#
+checkexists flip > /dev/null
+if [[ $rc != 0 ]] ; then
+
+    echo -n "flip does not exist"
+    echo $PATH | grep -q "$PWD/bin" || echo -n ", has PATH been set up?"
+    echo
+    echo "attempting to make it"
+    ./bin/make_flip
+    checkexists ./bin/flip > /dev/null
+    if [[ $rc != 0 ]] ; then
+
+        echo "*** Unable to make flip"
+
+    fi
+
+fi
+
+################################################################################
+#
+# Set up host compilers in priority order
+#
+# The last host that appears is highest priority.
+#
+
+#
+# Check for GPC
+#
+checkexists gpc > /dev/null
+if [[ $rc == 0 ]] ; then
+
+    compiler="gpc"
+    bits="32"
+    gpc -v 2> temp
+    grep "gpc version 20070904" temp > /dev/null
+    rc=$?
+    if [[ $rc != 0 ]] ; then
+
+        echo "*** Warning, Pascal-P5 is only validated to work with gpc version 20070904"
+
+    fi
+    grep "build=x86_64" temp > /dev/null
+    rc=$?
+    if [[ $rc == 0 ]] ; then
+
+        bits="64"
+
+    fi
+
+fi
+
+#
+# check for IP Pascal
+#
+checkexists pc > /dev/null
+if [[ $rc == 0 ]] ; then
+
+    compiler="ip_pascal"
+
+fi
+
+#
+# Check no compiler found
+#
+if [ -z "$compiler" ]; then
+
+    echo "*** No gpc, fpc or pc was found, there is no ISO 7185 Pascal compiler installed"
+
+fi
+
+#
+# Check user arguments
+#
+for var in "$@"
+do
+
+    if [ $var = "--help" ]
+    then
+
+        echo "Configure program for Pascal-P5"
+        echo
+        echo "--gpc:       Select GPC as target compiler"
+        echo "--ip_pascal: Select IP Pascal as target compiler"
+        echo "--32:        Select 32 bit target"
+        echo "--64:        Select 64 bit target"
+        echo
+        exit 0
+
+    elif [ $var = "--gpc" ]
+    then
+
+        compiler="gpc"
+
+    elif [ $var = "--ip_pascal" ]
+    then
+
+        compiler="ip_pascal"
+
+    elif [ $var = "--32" ]
+    then
+
+        bits="32"
+
+    elif [ $var = "--64" ]
+    then
+
+        bits="64"
+
+    else
+
+        echo "*** Option not recognized"
+        echo "Terminating"
+        exit 0
+
+    fi
+
+done
+
+checkexists $compiler
+if [[ $rc != 0 ]] ; then
+    compiler=""
+    # fatal this for now
+    exit 1
+fi
+
+if [ $compiler = "ip_pascal" ] || [ $compiler = "IP_Pascal" ]
+then
+
+   #
+   # Set up for IP Pascal
+   #
+   cp $compiler/p5.bat      bin/p5.bat
+   cp $compiler/compile.bat bin/compile.bat
+   cp $compiler/run.bat     bin/run.bat
+
+   cp $compiler/p5          bin/p5
+   cp $compiler/compile     bin/compile
+   cp $compiler/run         bin/run
+
+   cp $compiler/Makefile    .
+
+   cp $compiler/standard_tests/iso7185pat.cmp standard_tests
+   cp $compiler/standard_tests/iso7185pats.cmp standard_tests
+
+   # This bash script could be run on either Unix/Linux or DOS/Windows
+   if [ "$OS" == "Windows_NT" ]
+   then
+
+       doseol
+
+   else
+
+       unixeol
+
+   fi
+
+   echo Compiler set to IP Pascal
+
+elif [ $compiler = "gpc" ]
+then
+
+   #
+   # Set up for gpc
+   #
+   cp $compiler/p5.bat      bin/p5.bat
+   cp $compiler/compile.bat bin/compile.bat
+   cp $compiler/run.bat     bin/run.bat
+
+
+   cp $compiler/p5          bin/p5
+   cp $compiler/compile     bin/compile
+   cp $compiler/run         bin/run
+
+   cp $compiler/bit$bits/Makefile    .
+
+   cp $compiler/bit$bits/bin/cpcoms     bin
+   cp $compiler/bit$bits/bin/cpcoms.bat bin
+   cp $compiler/bit$bits/bin/cpints     bin
+   cp $compiler/bit$bits/bin/cpints.bat bin
+
+   cp $compiler/bit$bits/standard_tests/iso7185pat.cmp standard_tests
+   cp $compiler/bit$bits/standard_tests/iso7185pats.cmp standard_tests
+   cp $compiler/bit$bits/standard_tests/iso7185prt1847.ecp standard_tests
+   cp $compiler/bit$bits/standard_tests/iso7185prt.cmp standard_tests
+
+   cp $compiler/bit$bits/p4/standardp.cmp p4
+
+   # This bash script could be run on either Unix/Linux or DOS/Windows
+   if [ "$OS" == "Windows_NT" ]
+   then
+
+       doseol
+
+   else
+
+       unixeol
+
+   fi
+
+   echo Compiler set to GPC Pascal
+
+else
+
+   echo "*** No valid compiler specified"
+
+fi
+
+echo "Configure completed!"

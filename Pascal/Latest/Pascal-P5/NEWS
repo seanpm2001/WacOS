@@ -1,0 +1,114 @@
+**************************  Pascal-P5 1.4 RELEASE  *****************************
+
+You can also find this news at:
+
+https://sourceforge.net/p/pascalp5/discussion/news/
+
+WHAT'S NEW IN THE 1.4 RELEASE
+
+* ISO 7185 negative and positive tests greatly expanded.
+
+* Covers essentially ALL ISO 7185 error cases.
+
+* Moved source configuration from SED to CPP (preprocessor).
+
+* Now uses separate MPB includes for basic configuration.
+
+* Certified for both 32 bit and 64 bit operation in Windows and Linux.
+
+* Documentation updates.
+
+* Increased available compiler options.
+
+* Many bugs fixed.
+
+* Source code tracking/debug system now more accurate.
+
+* Enhanced regression reporting.
+
+* Greatly improved error handling (no more crashes after error).
+
+* Compiler/interpreter updated to tighter ISO 7185 standards checking.
+
+* Spew checking (fault insertion checking).
+
+* Added misspelled symbol and misspelled identifier recovery.
+
+* Supressed duplicate errors on same undefined identifier.
+
+* Supressed duplicate errors on files not in program header.
+
+The 1.4 version of Pascal-P5 is the best tested, most ISO 7185 compliant
+implementation of the Pascal language available. And at just over 10k lines
+(total), it's also one of the smallest. It has been extensively checked for
+operation in three different environments:
+
+* Windows 32 bit with DOS shell.
+
+* Windows 32 bit with Bash shell.
+
+* Linux 64 bit with Bash shell.
+
+It's test suite tests for both constructs that comply with the ISO 7185
+as well as testing that the compiler rejects constructs that do not
+comply. It in fact surpasses the old BSI test protocol, which is no longer
+obtainable in any case. It has also been extensively fault tested by a
+program that inserts random faults into the source code and tests that the
+compiler will not crash or halt from simple source errors.
+
+The 1.4 update incorporates many elements of Pascal-P6 that apply to the ISO
+7185 standard only. Thus it was brought up to date with Pascal-P6.
+
+This is expected to be the last major source code improvement for Pascal-P5.
+
+Pascal-P5 comes from a long line of Pascal compilers, starting with the first
+operational compiler for Pascal in 1973 from ETH Zurich by Niklaus Wirth's
+group. Nearly 50 years old, it progressed through the versions Pascal-P1 to
+Pascal-P4, and the versions Pascal-P2 and Pascal-P4 were used as the basis for
+many operational Pascal compilers. Pascal-P5 brings it to full ISO 7185 status,
+and Pascal-P6 extends the language greatly.
+
+Questions:
+
+Q1: Does Pascal-P5 generate machine code, or will it ever?
+
+A1: No, it is designed to be an ISO 7185 compiler only. There has never been an
+operational compiler that didn't extend the base language of Pascal, including
+the original CDC 6000 compiler. Thus I decided to create a new version of
+Pascal-P, Pascal-P6, that both extended the language and finished aspects of
+Pascal-P that I thought needed addressing, like debug mode and machine code
+generation.
+
+Q2: Does Pascal-P5 have a use?
+
+A2: Besides it's use as a model compiler, Pascal-P5 can be used as a "lint"
+style utility to verify programs to the ISO 7185 language. For this you would
+partition your code into ISO 7185 compliant and non-compliant sections, and use
+the cpp provided "include" facility to allow compilation and checking of just
+the core ISO 7185 part.
+
+Q3: Does Pascal-P5 run on Mac OS X?
+
+A3: Pascal-P5 needs a host compiler. GPC used to run on the system, but no
+longer does. FPC runs on Mac OS X, but does not compile the current version of
+Pascal-P5. There are mentions on the web of versions of Pascal-P5 that do run
+under FPC, but have been modified from their ISO 7185 form and are likely
+downrev (from a previous revision) as well. I understand from the FPC group
+that most or all of the issues have been corrected in tip (the source you get
+directly from git repository), so if you are able to compile a working FPC from
+sources, that may work for you.
+
+Q4: What is the advantage of the original Pascal/ISO 7185 language?
+
+A4: Original Pascal as defined N. Wirth (with T. Hoare and others) was a type
+safe or protected language, meaning that the program could not crash itself with
+accesses beyond the end of an array, or wild pointers, etc. Protected languages
+experienced a renassance in the 1990s with Java and C#, but Pascal did the same
+(and arguably better) decades previously. Most people don't realize this because
+neither the authors of those languages nor the computer press gave proper credit
+to N. Wirth., and in fact the way pointers are kept type safe in Pascal (a
+design by T. Hoare) is still better than that of Java and C# (so called "managed
+pointers"). Futher, many of interpreted languages of today are popular because
+they are also type safe, even though they are much slower. This is one reason I
+still think there is a place for a language to replace C/C++, that is as fast
+and as versatile, but still type safe/protected.
