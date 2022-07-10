@@ -1,0 +1,24 @@
+P5 Pascal compiler vs. 1.4.x
+
+Assembling/loading program
+Running program
+
+
+Tiny basic interpreter vs. 0.1 Copyright (C) 1994 S. A. Moore
+
+Ready
+
+Welcome to match-snatch
+
+how many matches to start ? How many in 1 move ? who moves first -- you or me ? 
+I take           1 matches
+There are           4 left
+how many do you take ? there are           3 left
+I take           2 matches
+There are           1 left
+how many do you take ? there are           0 left
+I won, tough luck.
+Ready
+
+
+program complete

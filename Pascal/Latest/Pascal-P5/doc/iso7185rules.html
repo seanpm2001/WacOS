@@ -1,0 +1,1144 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (Windows NT 5.0; U) [Netscape]">
+   <meta name="Author" content="Scott A. Moore">
+   <title>Rules of ISO 7185 PASCAL</title>
+</head>
+<body text="#000000" bgcolor="#66FFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="graphpaper.gif">
+
+<center>
+    <h1>Rules of ISO 7185 Pascal</h1>
+</center>
+
+<hr WIDTH="100%">
+<p>This file contains an overview of the basic rules of ISO 7185 Pascal. See 
+also the books on the subject. For serious users, I recommend:</p>
+<p>Standard Pascal: Users Reference Manual, Doug Cooper</p>
+<p>Oh ! Pascal !, Doug Cooper</p>
+<p>Both available from Amazon.com.</p>
+<p>Note that the following description could be wrong or incomplete.</p>
+<hr>
+<h2 align="center">Index</h2>
+<h3><a href="#Lexography">Lexography</a></h3>
+<h3><a href="#Program structure">Program structure</a></h3>
+<h3><a href="#Label declaration">Label declaration</a></h3>
+<h3><a href="#Constant declaration">Constant declaration</a></h3>
+<h3><a href="#Types">Types</a></h3>
+<h3><a href="#Variable declaration">Variable declaration</a></h3>
+<h3><a href="#Block declaration">Block declaration</a></h3>
+<h3><a href="#Declaration order">Declaration order</a></h3>
+<h3><a href="#Predefined types">Predefined types</a></h3>
+<h3><a href="#Basic types">Basic types</a></h3>
+<h3><a href="#Integer types">Integer types</a></h3>
+<h3><a href="#Enumerated types">Enumerated types</a></h3>
+<h3><a href="#Boolean types">Boolean types</a></h3>
+<h3><a href="#Character types">Character types</a></h3>
+<h3><a href="#Subrange types">Subrange types</a></h3>
+<h3><a href="#Real types">Real types</a></h3>
+<h3><a href="#Structured types">Structured types</a></h3>
+<h3><a href="#Packing">Packing</a></h3>
+<h3><a href="#Set types">Set types</a></h3>
+<h3><a href="#Array types">Array types</a></h3>
+<h3><a href="#Record types">Record types</a></h3>
+<h3><a href="#File types">File types</a></h3>
+<h3><a href="#Pointer types">Pointer types</a></h3>
+<h3><a href="#Type compatibility">Type compatibility</a></h3>
+<h3><a href="#Expressions">Expressions</a></h3>
+<h3><a href="#Predefined functions">Predefined functions</a></h3>
+<h3><a href="#Statements">Statements</a></h3>
+<h3><a href="#Assignment">Assignment</a></h3>
+<h3><a href="#If statement">If statement</a></h3>
+<h3><a href="#While statement">While statement</a></h3>
+<h3><a href="#Repeat statement">Repeat statement</a></h3>
+<h3><a href="#For statement">For statement</a></h3>
+<h3><a href="#Case statement">Case statement</a></h3>
+<h3><a href="#Goto statement">Goto statement</a></h3>
+<h3><a href="#Compound statement">Compound statement</a></h3>
+<h3><a href="#Procedures and functions">Procedures and functions</a></h3>
+<h3><a href="#Predefined procedures and file operations">Predefined procedures and file operations</a></h3>
+<h3><a href="#Predefined procedures and text files">Predefined procedures and text files</a></h3>
+<h3><a href="#Header files">Header files</a></h3>
+<h3><a href="#Packing procedures">Packing procedures</a></h3>
+<h3><a href="#Dynamic allocation">Dynamic allocation</a></h3>
+<hr>
+<h2><a name="Lexography">Lexography</a></h2>
+<p>Pascal source consists of identifiers, keywords, numbers and special &nbsp;character 
+sequences. A Pascal identifier must begin with 'a' to 'z', but may continue 
+with 'a' to 'z' and '0' to '9'. There is no length limit on labels, but there 
+may be a practical limit. If the compiler cannot process a source line longer 
+than N, you cannot have a label longer than N, since labels may not cross lines.</p>
+<p>Keywords (or reserved words) appear just as labels, but have special meaning 
+wherever they appear, and may never be used as identifiers:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array &nbsp;&nbsp;&nbsp;&nbsp;begin &nbsp;&nbsp;&nbsp;&nbsp;case &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const &nbsp;&nbsp;&nbsp;&nbsp;div &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">downto &nbsp;&nbsp;else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function &nbsp;goto</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">if &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label &nbsp;&nbsp;&nbsp;&nbsp;mod &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">or &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;packed &nbsp;&nbsp;&nbsp;procedure program &nbsp;&nbsp;record &nbsp;&nbsp;&nbsp;repeat &nbsp;&nbsp;&nbsp;set</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">then &nbsp;&nbsp;&nbsp;&nbsp;to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;until &nbsp;&nbsp;&nbsp;&nbsp;var &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while &nbsp;&nbsp;&nbsp;&nbsp;with</pre>
+<p>A number can appear in both integer and real form. Integers will appear as 
+a sequence of digits:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">83</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">00004</pre>
+<p>Are valid integer numbers. For a number to be taken as &quot;real&quot; (or 
+&quot;floating point&quot;) format, it must either have a decimal point, or 
+use scientific notation:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">1.0</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">1e-12</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">0.000000001</pre>
+<p>Are all valid reals. At least one digit must exist on either side of a decimal 
+point. Strings are made up of a sequence of characters between single quotes:</p>
+<pre>'string'</pre>
+<p>The single quote itself can appear as two single quotes back to back in a 
+string:</p>
+<pre>'isn''t'</pre>
+<p>Finally, special character sequences are one of the following:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.)</pre>
+<p>Note that these are just aliases for the same character sequence:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">@ &nbsp;and ^ (or the &quot;up arrow&quot; if allowed in the typeface)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">(. and [</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">.) and ]</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">(* and {</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">*) and }</pre>
+<p>Spaces and line endings in the source are ignored except that they may act 
+as &quot;separators&quot;. No identifier, keyword, special character sequence 
+or number may be broken by a separator or other object. No two identifiers, 
+keywords or numbers may appear in sequence without an intervening separator:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">MyLabel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Valid</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">My Label &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Invalid</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin farg := 1 - Valid</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">beginfarg := 1 &nbsp;- Invalid</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">1.0e-12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Valid</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">1.e-122e-3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Invalid</pre>
+<h2><a name="Program structure">Program structure</a></h2>
+<p>A Pascal program appears as a nested set of &quot;blocks&quot;, each of which 
+has the following form:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">block_type name(parameter [, parameter]...);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">label x[, y]...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">const x = y; </pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[q = r;]...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type x = y;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[q = r;]...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var &nbsp;x[,y]...: z;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x[,y]...: z;]...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[block]...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;statement[; statement]</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end[. | ;]</pre>
+<p>Note that:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[option] &nbsp;&nbsp;&nbsp;means optional.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[repeat]... means can appear 0 or more times.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[x | y] &nbsp;&nbsp;&nbsp;&nbsp;means one or the other.</pre>
+<p>There are three types of blocks, program, procedure and function. Every program 
+must contain a program block, and exactly one program block exists in the source 
+file.</p>
+<p>Each block has two distinct sections, the declaration and statements sections. 
+The declarations immediately before a statement section are considered &quot;local&quot; 
+to that section.</p>
+<p>The declaration section builds a description of the data used by the coming 
+statement section in a logical order. For example, constants are usually used 
+to build type declarations, and type declarations are used to build variables, 
+and all of these may be used by nested blocks.</p>
+<h2><a name="Label declaration">Label declaration</a></h2>
+<p>The first declaration, labels, are numeric sequences that denote the target 
+of any goto's appearing in the block:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">label 99,</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1234;</pre>
+<p>Are valid labels. Labels &quot;appear&quot; to be numbers, and must be in 
+the range 0 to 9999. The &quot;appearance&quot; of a number means that:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">label 1,</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01,</pre>
+<p>Are the same label.</p>
+<h2><a name="Constant declaration">Constant declaration</a></h2>
+<p>Constant declarations introduce fixed valued data as a specified identifier:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">const x = 10;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q= -1;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y = 'hi there';</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r = 1.0e-12;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = x;</pre>
+<p>Are all valid constant declarations. Only integer, real and character constants 
+may be so defined (no sets may appear).</p>
+<h2><a name="Types">Types</a></h2>
+<p>The type declaration allows types to be given names, and are used to create 
+variables later:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type x = array [1..10] of integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = x;</pre>
+<p>Types can be new types, aliases of old types, etc.</p>
+<h2><a name="Variable declaration">Variable declaration</a></h2>
+<p>Variables set aside computer storage for a element of the given type:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var x, y: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;z: &nbsp;&nbsp;&nbsp;array [1..10] of char;</pre>
+<h2><a name="Block declaration">Block declaration</a></h2>
+<p>A block can be declared within a block, and that block can declare blocks 
+within it, etc. There is no defined limit as to the nesting level. Because only 
+one program block may exist, by definition all &quot;sub blocks&quot; must be 
+either procedure or function blocks. Once defined, a block may be accessed by 
+the block it was declared in. But the &quot;surrounding&quot; block cannot access 
+blocks that are declared within such blocks:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">program test;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure junk;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure trash;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin { trash }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end; &nbsp;{ trash }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin { junk }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;trash;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end; &nbsp;{ junk }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin { test }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;junk;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end. &nbsp;{ test }</pre>
+<p>Here test can call junk, but only junk can call trash. Trash is &quot;hidden&quot; 
+from the view of test. Similarly, a subblock can access any of the variables 
+or other blocks that are defined in surrounding blocks:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">program test;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var x;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure q;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure y;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;q;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;x := 1</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;y;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;writeln('x')</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end.</pre>
+<p>The variable &quot;x&quot; can be accessed from all blocks declared within 
+the same block. It is also possible for a block to call itself, or another block 
+that calls it. This means that recursion is allowed in Pascal.</p>
+<h2><a name="Declaration order">Declaration order</a></h2>
+<p>Every identifier must be declared before it is used, with only one exception, 
+pointers, which are discussed later. But there is a way to declare procedures 
+and functions before they are fully defined to get around problems this may 
+cause.</p>
+<h2><a name="Predefined types">Predefined types</a></h2>
+<p>Several types are predeclared in Pascal. These include integer, boolean, 
+char, real and text. predeclared types, just as predeclared functions and procedures, 
+exist in a conceptual &quot;outer block&quot; around the program, and can be 
+replaced by other objects in the program.</p>
+<h2><a name="Basic types">Basic types</a></h2>
+<p>Types in Pascal can be classed as ordinal, real and structured. The ordinal 
+and real types are referred to as the &quot;basic&quot; types, because they 
+have no complex internal structure. &nbsp;Ordinal types are types whose elements 
+can be numbered, and there are a &nbsp;finite number of such elements.</p>
+<h2><a name="Integer types">Integer types</a></h2>
+<p>The basic ordinal type is &quot;integer&quot;, and typically it represents 
+the accuracy of a single word on the target machine:</p>
+<pre>var i: integer;</pre>
+<p>A predefined constant exists, &quot;maxint&quot;, which tells you what the 
+maximum integral value of an integer is. So:</p>
+<pre>type integer = -maxint..maxint;</pre>
+<p>Would be identical to the predefined type &quot;integer&quot;. Specifically, 
+the results of any operation involving ordinals will only be error free if they 
+lie within -maxint to +maxint. Although other ordinal types exist in Pascal, 
+all such types have a mapping into the type &quot;integer&quot;, and are bounded 
+by the same rules. The &quot;ord&quot; function can be used on any ordinal to 
+find the corresponding integer.</p>
+<h2><a name="Enumerated types">Enumerated types</a></h2>
+<p>Enumerated types allow you to specify an identifier for each and every value 
+of an ordinal:</p>
+<pre>type x = (one, two, three, four);</pre>
+<p>Introduces four new identifiers, each one having a constant value in sequence 
+from the number 0. So for the above:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">one &nbsp;&nbsp;= 0</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">two &nbsp;&nbsp;= 1</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">three = 2</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">four &nbsp;= 3</pre>
+<p>Enumerated types may have no relationship to numbers whatever:</p>
+<pre>type y = (red, green, blue);</pre>
+<p>Or some relationship:</p>
+<pre>type day = (mon, tue, wed, thur, fri, sat, sun);</pre>
+<p>Here the fact that &quot;day&quot;s are numbers (say, isn't that a lyric 
+?) is useful because the ordering has real world applications:</p>
+<pre>if mon &lt; fri then writeln('yes');</pre>
+<p>And of course, subranges of enumerated types are quite possible:</p>
+<pre>type workday = (mon..fri);</pre>
+<p>Enumerated types are fundamentally different from integer and subrange types 
+in the fact that they cannot be freely converted to and from each other. There 
+is only one conversion direction defined, to integer, and that must be done 
+by special predefined function:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var i: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;d: day;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">i := ord(d); { find integral value of d }</pre>
+<h2><a name="Boolean types">Boolean types</a></h2>
+<p>The only predefined enumerated type is &quot;boolean&quot;, which could be 
+declared:</p>
+<pre>type boolean = (false, true);</pre>
+<p>However, booleans cannot be cross converted (being enumerated types), this 
+user created type could not in fact be used just as the predeclared one. Booleans 
+are special in that several predefined procedures, and all of the Comparison 
+operators (&quot;=&quot;, &quot;&gt;&quot;, etc.) give boolean results. In addition, 
+several special operators are defined just for booleans, such as &quot;and&quot;, 
+&quot;or&quot; etc.</p>
+<h2><a name="Character types">Character types</a></h2>
+<p>Character types in Pascal hold the values of the underlying character set, 
+usually ISO single byte encoded (including ASCII). The Pascal standard makes 
+no requirements as to what characters will be present or what order they will 
+appear in. However, as a practical matter, most Pascal programs rely on the 
+characters of the alphabet and the digits '0'-'9' being present, and that these 
+are numbered sequentially (which leaves out EBCDIC, for example). A character 
+declaration appears as:</p>
+<pre>var c: char;</pre>
+<p>Character values can also be converted to and from integers at will, but 
+only by using the special functions to do so:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">ord(c); { find integer value of character }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">chr(i); { find character value of integer }</pre>
+<h2><a name="Subrange types">Subrange types</a></h2>
+<p>Subrange types are simply a voluntary programmer restriction of the values 
+an ordinal type may hold:</p>
+<pre>type constrained = -10..50;</pre>
+<p>(the notation x..y means all values from x to y inclusive.)</p>
+<p>It is an error to assign a value outside of the corresponding range to a 
+variable of that type:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var x: constrained</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">x := 100; { invalid! }</pre>
+<p>But note that there are no restrictions on the USE of such a type:</p>
+<pre>writeln('The sum is: ', x+100);</pre>
+<p>Here, even though the result of x+100 is greater than the type of x, it is 
+not an error. When used in an expression, a subrange is directly equivalent 
+to the type &quot;integer&quot;.</p>
+<p>Subranges can be declared of any ordinal type:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type enum = (one, two, three, four, five, six, seven, eight, nine, ten);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var e: three..seven;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var c: 'a'..'z';</pre>
+<p>Etc.</p>
+<h2><a name="Real types">Real types</a></h2>
+<p>Real types, or &quot;floating point&quot;, allow approximations of a large 
+range of numbers to be stored. The tradeoff is that reals have no direct ordinality 
+(cannot be counted), and so have no direct relationship with integers. Real 
+types are the only basic type which is not ordinal.</p>
+<pre>var r: real;</pre>
+<p>Integers are considered &quot;promotable&quot; to reals. That is, is is assumed 
+that an integer can always be represented as a real. However, there may be a 
+loss of precision when this is done (because the mantissa of a real may not 
+be as large as an integer). Reals are never automatically promoted to integer, 
+however, and the programmer must choose between finding the nearest whole number 
+to the real, or simply discarding the fraction. This choice must be made explicitly 
+by predefined function.</p>
+<h2><a name="Structured types">Structured types</a></h2>
+<p>A structured type is a type with a complex internal structure. In fact, the 
+structured types all have one thing in common: they can hold more than one basic 
+type object at one time. They are structured because they are &quot;built up&quot; 
+from basic types, and from other structured types.</p>
+<h2><a name="Packing">Packing</a></h2>
+<p>Structured types can also be &quot;packed&quot;, which is indicated by the 
+keyword &quot;packed&quot; before the type declaration. Packing isn't supposed 
+to change the function of the program at all. Stripping the &quot;packed&quot; 
+keywords out of a program will not change the way it works (with the exception 
+of &quot;strings&quot;, below). Packing means that (if implemented: its optional) 
+the program should conserve space by placing the values in as few bits as possible, 
+even if this takes more code (and time) to perform.</p>
+<p>Packing is better understood if you understand the state of computers before 
+Microprocessors (the Jurassic age of computers ?). Most mainframe computers 
+access memory as a single word size only, and not even a neat multiple of 8 
+bits either (for example, 36 bit computer; the CDC 6000 has 60 bit words). The 
+machine reads or writes in words only. There is no byte access, no even/odd 
+addressing, etc. Because storage on such a machine of small items could be wasteful 
+(especially characters), programs often pack many single data items into a single 
+word.</p>
+<p>The advent of the Minicomputer changed that. DEC started with an 8 bit machine 
+(just as microprocessors did), and when they changed to 16, then 32 bits the 
+&nbsp;ability to address single bytes was maintained.</p>
+<p>For this reason, many people refer to such a machine as &quot;automatically 
+packed&quot;, or that Pascal's packing feature is unnecessary on such machines. 
+However, &nbsp;quantizing data by 8 bit bytes is not necessarily the most extreme 
+packing method available. For example, a structure of boolean values, which 
+take up only 1 bit per element, left to byte packing would waste 7/8s of the 
+storage allocated.</p>
+<h2><a name="Set types">Set types</a></h2>
+<p>Set types are perhaps the most radical feature of Pascal. A set type can 
+be thought of as an array of bits indicating the presence or absence of each 
+value in the base type:</p>
+<pre>var s: set of char;</pre>
+<p>Would declare a set containing a yes/present or no/not present indicator 
+for each character in the computer's character set. The base type of a set must 
+be ordinal.</p>
+<h2><a name="Array types">Array types</a></h2>
+<p>The most basic structured type is the array. Pascal is unusual in that both 
+the upper and lower bounds of arrays are declared (instead of just the upper 
+bound or length), and that the index type can be any ordinal type:</p>
+<pre>var a: array [1..10] of integer;</pre>
+<p>Would declare an array of 10 integers with indexes from 1 to 10. You may 
+recognize the index declaration as a subrange, and indeed any subrange type 
+can be used as an index type:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type sub = 0..99;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var a: array [sub] of integer;</pre>
+<p>Arrays can also be declared as multidimensional:</p>
+<pre>var a: array [1..10] of array [1..10] of char;</pre>
+<p>There is also a shorthand form for array declarations:</p>
+<pre>var a: array [1..10, 1..10] of char;</pre>
+<p>Is equivalent to the last declaration.</p>
+<p>A special type of array definition is a &quot;string&quot;. Strings are arrays 
+of packed characters, with integer indexes, whose lower bound is 1:</p>
+<pre>var s: packed array [1..10] of char;</pre>
+<p>String types are special in that any two strings with the same number of 
+components are compatible with each other, including constant strings.</p>
+<h2><a name="Record types">Record types</a></h2>
+<p>Records give the ability to store completely different component types together 
+as a unit. There they can be manipulated, copied and passed as a unit. It is 
+also possible to create different typed objects that occupy the same storage 
+space. </p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var r: record</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b: char</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</pre>
+<p>Gives a single variable with two completely different components, which can 
+be accessed independently, or used as a unit.</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var vr: record</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case b: boolean of { variant }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;true: (c: integer; d: char);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;false: (e: real)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ end }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</pre>
+<p>Variant records allow the same &quot;collection of types&quot;, but introduce 
+the idea that not all of the components are in use at the same time, and thus 
+can occupy the same storage area. In the above definition, a, b, c, d, and e 
+are all elements of the record, and can be addressed individually. However, 
+there are three basic &quot;types&quot; of record elements in play:</p>
+<p>1. &quot;base&quot; or normal fixed record elements, such as a.</p>
+<p>2. The &quot;tagfield&quot; element. Such as b.</p>
+<p>3. The &quot;variants&quot;, such as c, d, and e.</p>
+<p>All the elements before the case variant are normal record elements and are 
+always present in the record. The tagfield is also always present, but has special 
+function with regards to the variant. It must be an ordinal type, and ALL of 
+it's possible values must be accounted for by a corresponding variant. The tagfield 
+gives both the program and the compiler the chance to tell what the rest of 
+the record holds (ie., what case variant is &quot;active&quot;). The tagfield 
+can also be omitted optionally:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var vr: record</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case boolean of { variant }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;true: (c: integer; d: char);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;false: (e: real)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ end }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</pre>
+<p>In this case, the variant can be anything the program says it is, without 
+&nbsp;checking. The variants introduce what essentially is a &quot;sub record&quot; 
+definition that gives the record elements that are only present if the selecting 
+variant is &quot;active&quot;. A variant can hold any number of such elements. 
+If the compiler chooses to implement variants, the total size of the resulting 
+record will be no larger than the fixed record parts plus the size of the &nbsp;largest 
+variant. It is possible for the compiler to treat the variant as a normal record, 
+&nbsp;allocating each record element normally, in which case the variant record 
+would be no different from a normal record.</p>
+<h2><a name="File types">File types</a></h2>
+<p>Files are identical to arrays in that they store a number of identical components. 
+Files are different from arrays in that the number of components they may store 
+is not limited or fixed beforehand. The number of components in a file can change 
+during the run of a program. A file can have any type as a component type, with 
+the exception of other file types. This rule is strict: you may not even have 
+structures which contain files as components. A typical file declaration is:</p>
+<pre>var f: file of integer;</pre>
+<p>Would declare a file with standard integer components. A special predefined 
+file type exists:</p>
+<pre>var f: text;</pre>
+<p>Text files are supposedly equivalent to:</p>
+<pre>type text = file of char;</pre>
+<p>But there are special procedures and functions that apply to text files only.</p>
+<h2><a name="Pointer types">Pointer types</a></h2>
+<p>Pointers are indirect references to variables that are created at runtime:</p>
+<pre>var ip: ^integer;</pre>
+<p>Pointers are neither basic or structured types (they are not structured because 
+they do not have multiple components). Any type can be pointed to. In practice, 
+pointers allow you to create a series of unnamed components which can be arranged 
+in various ways. The type declaration for pointers is special in that the type 
+&nbsp;specified to the right of &quot;^&quot; must be a type name, not a full 
+type specification. Pointer declarations are also special in that a pointer 
+type can be declared using base types that have not been declared yet:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type rp: ^rec;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rec: record</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next: rp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val: &nbsp;integer</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</pre>
+<p>The declaration for rp contains a reference to an undeclared type, rec. This 
+&quot;forward referencing&quot; of pointers allows recursive definition of pointer 
+types, essential in list processing.</p>
+<h2><a name="Type compatibility">Type compatibility</a></h2>
+<p>Type compatibility (ability to use two different objects in relation to each 
+other), occurs on three different levels:</p>
+<p>1. Two types are identical.</p>
+<p>2. Two types are compatible.</p>
+<p>3. Two types are assignment compatible.</p>
+<p>Two types are identical if the exact same type definition was used to create 
+the objects in question. This can happen in several different ways. Two objects 
+can be declared in the same way:</p>
+<pre>var a, b: array [1..10] of record a, b: integer end;</pre>
+<p>Here a and b are the same (unnamed) type. They can also be declared using 
+the same type name:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type mytype = record a, b: integer end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var a: mytype;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;b: mytype;</pre>
+<p>Finally, an &quot;alias&quot; can be used to create types:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">type mytype = array [1..10] of integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myother = mytype;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var a: mytype;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;b: myother;</pre>
+<p>Even though an alias is used, these objects till have the same type. Two 
+types are considered compatible if:</p>
+<p>1. They are identical types (as described above).</p>
+<p>2. Both are ordinal types, and one or both are subranges of an identical 
+type.</p>
+<p>3. Both are sets with compatible base types and &quot;packed&quot; status.</p>
+<p>4. Both are string types with the same number of components.</p>
+<p>Finally, two types are assignment compatible if:</p>
+<p>1. The types are compatible, as described above.</p>
+<p>2. Neither is a file, or has components of file type.</p>
+<p>3. The destination is real, and the source is integer (because integers can 
+always be promoted to real, as above).</p>
+<p>4. The source &quot;fits&quot; within the destination. If the types are subranges 
+of the same base type, the source must fall within the destination's range:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var x: 1..10;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">x := 1; { legal }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">x := 20; { not legal }</pre>
+<p>5. Both are sets, and the source &quot;fits&quot; within the destination. 
+If the base types of the sets are subranges, all the source elements must also 
+exist in the destination:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var s1: set of 1..10;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">s1 := [1, 2, 3]; { legal }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">s1 := [1, 15]; { not legal } </pre>
+<h2><a name="Expressions">Expressions</a></h2>
+<p>The basic operands in Pascal are:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">xxx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Integer constant. A string of digits, without sign, whose</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value is bounded by -maxint..maxint.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">x.xex &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Real constant.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">'string' &nbsp;&nbsp;- String constant.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">[set] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Set constant. A set constant consists of zero or more elements</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separated by &quot;,&quot;:</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1, 2, 3]</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A range of elements can also appear:</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1, 2..5, 10]</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The elements of a set must be of the same type, and the </pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;apparent&quot; base type of the set is the type of the elements.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The packed or unpacked status of the set is whatever is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required for the context where it appears.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Identifier. Can be a variable or constant from a const </pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declaration.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">func(x, y) - A function call. Each parameter is evaluated, and the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function called. The result of the function is then used</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in the encompassing expression.</pre>
+<p>The basic construct built on these operands is a &quot;variable access&quot;, 
+where &quot;a&quot; is any variable access.</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">ident &nbsp;&nbsp;&nbsp;- A variable indentifier.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a[index] - Array access. It is also possible to access any number of</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimensions by listing multiple indexes separated by &quot;,&quot;:</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[x, y, z, ...]</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a.off &nbsp;&nbsp;&nbsp;- Record access. The &quot;off&quot; will be the element identifier as</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;used in the record declaration.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Pointer reference. The resulting reference will be of the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable that the pointer indexes. If the variable reference</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is a file, the result is a reference to the &quot;buffer variable&quot;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for the file.</pre>
+<p>Note that a VAR parameter only allows a variable reference, not a full &nbsp;expression. 
+For the rest of the expression operators, here they are in precedence, with 
+the operators appearing in groups according to priority (highest first). &quot;a&quot; 
+and &quot;b&quot; are operands.</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">(a) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- A subexpresion.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">not &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The boolean &quot;not&quot; of the operand, which must be boolean.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a*b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Multiplication/set intersection. If the operands are real or</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integer, the multiplication is found. If either operand is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real, the result is real. If the operands are sets, the </pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intersection is found, or a new set with elements that exist</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in both sets.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a/b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Divide. The operands are real or integer. The result is a real</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;representing a divided by b.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a div b &nbsp;- Integer divide. The operands must be integer. The result is an</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integer giving a divided by b with no fractional part.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a mod b &nbsp;- Integer modulo. The operands must be integer. The result is an</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integer giving the modulo of a divided by b.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a and b &nbsp;- Boolean &quot;and&quot;. Both operands must be boolean. The result is a</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean, giving the &quot;and&quot; of the operands.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">+a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Identity. The operand is real or integer. The result is the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;same type as the operand, and gives the same sign result as the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operand (essentially a no-op).</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">-a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Negation. The operand is real or integer. The result is the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;same type as the operand, and gives the negation of the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operand.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a+b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Add/set union. If the operands are real or integer, finds the</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum of the operands. If either operand is real, the result is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real. If both operands are sets, finds a new set which contains</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the elements of both.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a-b &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Subtract/set difference. If the operands are real or integer,</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finds a minus b. If either operand is real, the result is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real. If both operands are sets, finds a new set which contains</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the elements of a that are not also elements of b.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a or b &nbsp;&nbsp;- Boolean &quot;or&quot;. Both operands must be boolean. The result is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean, giving the boolean &quot;or&quot; of the operands.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a &lt; b &nbsp;&nbsp;&nbsp;- Finds if a is less than b, and returns a boolean result.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The operands can be basic or string types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a &gt; b &nbsp;&nbsp;&nbsp;- Finds if a is greater than b, and returns a boolean result.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The operands can be basic or string types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a &lt;= b &nbsp;&nbsp;- Finds if a is less than or equal to b, and returns a boolean</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result. The operands can be basic, string, set or pointer</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a &gt;= b &nbsp;&nbsp;- Finds if a is greater than or equal to b, and returns a boolean</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result. The operands can be basic, string, set or pointer</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a = b &nbsp;&nbsp;&nbsp;- Finds if a is equal to b, and returns a boolean result.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The operands can be basic, string, set or pointer types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a &lt;&gt; b &nbsp;&nbsp;- Finds if a is not equal to b, and returns a boolean result.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The operands can be basic, string, set or pointer types.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">a in b &nbsp;&nbsp;- Set inclusion. A is an ordinal, b is a set with the same base</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type as a. Returns true if there is an element matching a in</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the set.</pre>
+<h2><a name="Predefined functions">Predefined functions</a></h2>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">The following predefined functions exist:</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">sqr(x) &nbsp;&nbsp;&nbsp;- Finds the square of x, which can be real or integer. The</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result is the same type as x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">sqrt(x) &nbsp;&nbsp;- Finds the square root of x, which can be real or integer. The</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result is always real.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">abs(x) &nbsp;&nbsp;&nbsp;- Finds the absolute value of x, which can be real or integer.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The result is the same type as x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">sin(x) &nbsp;&nbsp;&nbsp;- Finds the sine of x,which can be real or integer. x is</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expressed in radians. The result is always real.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">cos(x) &nbsp;&nbsp;&nbsp;- Finds the cosine of x,which can be real or integer. x is </pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;expressed in radians. The result is always real.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">arctan(x) - Finds the arctangent of x, which can be real or integer. The</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result is always real, and is expressed in radians.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">exp(x) &nbsp;&nbsp;&nbsp;- Finds the exponential of x, which can be real or integer. The</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result is always real.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">ln(x) &nbsp;&nbsp;&nbsp;&nbsp;- Finds the natural logarithm of x, which can be real or</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;integer. The result is always real.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">ord(x) &nbsp;&nbsp;&nbsp;- Finds the integer equivalent of any ordinal type x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">succ(x) &nbsp;&nbsp;- Finds the next value of any ordinal type x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">pred(x) &nbsp;&nbsp;- Finds the last value of any ordinal type x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">chr(x) &nbsp;&nbsp;&nbsp;- Finds the char type equivalent of any integer x.</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">trunc(x) &nbsp;- Finds the nearest integer below the given real x (converts a</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">           &nbsp;real to an integer).</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">round(x) &nbsp;- Finds the nearest integer to the given real x.</pre>
+<h2><a name="Statements">Statements</a></h2>
+<p>Pascal uses &quot;structured statements&quot;. This means you are given a 
+few standard control flow methods to build a program with.</p>
+<h2><a name="Assignment">Assignment</a></h2>
+<p>The fundamental statement is the assignment statement:</p>
+<pre>v := x;</pre>
+<p>There is a special operator for assignment, &quot;:=&quot; (or &quot;becomes&quot;). 
+Only a single variable reference may appear to the right, and any expression 
+may appear to the left. The operands must be assignment compatible, as defined 
+above.</p>
+<h2><a name="If statement">If statement</a></h2>
+<p>The if statement is the fundamental flow of control structure:</p>
+<pre>if cond then statement [else statement]</pre>
+<p>In Pascal, only boolean type expressions may appear for the condition (not 
+integers). The if statement specifies a single statement to be executed if the 
+condition is true, and an optional statement if the condition is false. You 
+must beware of the &quot;bonding problem&quot; if you create multiple nested 
+if statements:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">if a = 1 then if b = 2 then writeln('a = 1, b = 2')</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">else writeln('a &lt;&gt; 1');</pre>
+<p>Here the else clause is attached to the very last statement that appeared, 
+which may not be the one we want.</p>
+<h2><a name="While statement">While statement</a></h2>
+<p>Just as if is the fundamental flow of control statement, while is the fundamental 
+loop statement:</p>
+<pre>while cond do statement</pre>
+<p>The while statement continually executes it's single statement as long as 
+the condition is true. It may not execute the statement at all if the condition 
+is never true.</p>
+<h2><a name="Repeat statement">Repeat statement</a></h2>
+<p>A repeat statement executes a block of statements one or more times:</p>
+<pre>repeat statement [; statement] until cond</pre>
+<p>It will execute the block of statements as long as the condition is false. 
+The statement block will always be executed at least once.</p>
+<h2><a name="For statement">For statement</a></h2>
+<p>The for statement executes a statement a fixed number of times:</p>
+<pre>for i := lower to upper do statement</pre>
+<pre>for i := upper downto lower do statement</pre>
+<p>The for statement executes the target statement as long as the &quot;control 
+variable&quot; lies within the set range of lower..upper. It may not execute 
+at all if lower &gt; upper. The control variable in a for is special, and it 
+must obey several rules:</p>
+<p>1. It must be ordinal.</p>
+<p>2. It must be local to the present block (declared in the present block).</p>
+<p>3. It must not be &quot;threatened&quot; in the executed statement. To threaten 
+means to modify, or give the potential to modify, as in passing as a VAR parameter 
+to a procedure or function (see below).</p>
+<h2><a name="Case statement">Case statement</a></h2>
+<p>The case statement defines an action to be executed on each of the values 
+of an ordinal:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">case x of</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;c1: statement;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;c2: statement;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<p>The &quot;selector&quot; is an expression that must result in an ordinal 
+type. Each of the &quot;case labels&quot; must be type compatible with the selector. 
+The case &nbsp;statement will execute one, and only one, statement that matches 
+the current selector value. If the selector matches none of the cases, then 
+an error results. It is NOT possible to assume that execution simply continues 
+if none of the cases are matched. A case label MUST match the value of the selector.</p>
+<h2><a name="Goto statement">Goto statement</a></h2>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">The goto statement directly branches to a given labeled statement:</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">goto 123</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">123:</pre>
+<p>Several requirements exist for gotos:</p>
+<p>1. The goto label must have been declared in a label declaration.</p>
+<p>2. A goto cannot jump into any one of the structured statements above (if, 
+while, repeat, for or case statements).</p>
+<p>3. If the target of the goto is in another procedure or function, that 
+target label must be in the &quot;outer level&quot; of the procedure or function. 
+That means that it may not appear inside any structured statement at all.</p>
+<h2><a name="Compound statement">Compound statement</a></h2>
+<p>A statement block gives the ability to make any number of statements appear 
+as one:</p>
+<pre>begin statement [; statement]... end</pre>
+<p>All of the above statements control only one statement at a time, with the 
+exception of repeat. The compound statement allows the inclusion of a whole 
+substructure to be controlled by those statements.</p>
+<h2><a name="Procedures and functions">Procedures and functions</a></h2>
+<p>When you need to use a block of the same statements several times, a compound 
+block can be turned into a procedure or function and given a name:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">function y: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<p>Then, the block of statements can be called from anywhere:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var i: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">x; { calls the procedure }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">i := y; { calls the function }</pre>
+<p>The difference between a procedure and a function is that a function returns 
+a result, which can only be a basic or pointer type (not structured). This makes 
+it possible to use a function in an expression. In a function, the result is 
+returned by a special form of the assign statement:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">function y: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;y := 1 { set function return }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<p>The assignment is special because only the name of the function appears on 
+the left hand side of &quot;:=&quot;. It does not matter where the function 
+return assignment appears in the function, and it is even possible to have multiple 
+assignments to the function, but AT LEAST one such assignment must be executed 
+before the function ends. If the procedure or function uses parameters, they 
+are declared as:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x(one: integer; two, three: char);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<p>The declaration of a parameter is special in that only a type name may be 
+specified, not a full type specification. Once appearing in the procedure or 
+function header, parameters can be treated as variables that just happen to 
+have been initialized to the value passed to the procedure or function. The 
+modification of parameters has no effect on the original parameters themselves. 
+Any expression that is assignment compatible with the parameter declaration 
+can be used in place of the parameter during it's call:</p>
+<pre>x(x*3, 'a', succ('a'));</pre>
+<p>If it is desired that the original parameter be modified, then a special 
+form of parameter declaration is used:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x(var y: integer);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;y := 1</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<p>Declaring y as a VAR parameter means that y will stand for the original parameter, 
+including taking on any values given it:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var q: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;x(q);</pre>
+<p>Would change q to have the value 1. In order to be compatible with a VAR 
+the passed parameter must be of identical type as the parameter declaration, 
+and be a variable reference. Finally, Pascal provides a special mode of parameter 
+known as a procedure or function parameter which passes a reference to a given 
+procedure or function:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x(procedure y(x, q: integer));</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure z(function y: integer);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<p>To declare a procedure or function parameter, you must give it's full parameter 
+list, including a function result if it is a function. A procedure or function 
+is passed to a procedure or function by just it's name:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure r(a, b: integer);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;x(r); { pass procedure r to procedure x }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<p>The parameter list for the procedure or function passed must be &quot;congruent&quot; 
+with the declared procedure or function parameter declaration. This means that 
+all it's parameters, and all of the parameters of it's procedure or function 
+parameters, etc., must match the declared parameter. Once the procedure or function 
+has been passed, it is then ok for the procedure or function that accepts it 
+to use it:</p>
+<p>procedure x(procedure y(x, q: integer));</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;y(1, 2);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<p>Would call r with parameters 1 and 2.</p>
+<p>Procedures and functions can be declared in advance of the actual appearance 
+of the procedure or function block using the forward keyword:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x(a, b: integer); forward;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure y;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;x(1, 2)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">procedure x;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">begin</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;...</pre>
+<p>The forward keyword replaces the appearance of the block in the first &nbsp;appearance 
+of the declaration. In the second appearance, only the name of the procedure 
+appears, not it's header parameters. Then the block appears as normal. The advance 
+declaration allows recursive structuring of procedure and function calls that 
+would be otherwise not be possible.</p>
+<h2><a name="Predefined procedures and file operations">Predefined procedures and file operations</a></h2>
+<p>A file is not accessed directly (as an array is). Instead, Pascal automatically 
+declares one component of the files base type which is accessed by special syntax:</p>
+<pre>f^</pre>
+<p>So that:</p>
+<pre>f^ := 1;</pre>
+<p>Assigns to the file &quot;buffer&quot; component, and:</p>
+<pre>v := f^;</pre>
+<p>Reads the file buffer. Unless the file is empty or you are at the end of 
+the file, the file buffer component will contain the contents of the component 
+at the file location you are currently reading or writing. Other than that, 
+the file buffer behaves as an ordinary variable, and can even be passed as a 
+parameter to routines. The way to actually read or write through a file is by 
+using the predeclared procedures:</p>
+<pre>get(f);</pre>
+<p>Loads the buffer variable with the next element in the file, and advances 
+the file position by one element, and:</p>
+<pre>put(f);</pre>
+<p>Outputs the contents of the buffer variable to the file and advances the 
+file position by one. These two procedures are really all you need to implement 
+full reading and writing on a file. It also has the advantage of keeping the 
+next component in the file as a &quot;lookahead&quot; mechanism. However, it 
+is much more common to access files via the predefined procedures read and write:</p>
+<pre>read(f, x);</pre>
+<p>Is equivalent to:</p>
+<pre>x := f^; get(f);</pre>
+<p>And:</p>
+<pre>write(f, x);</pre>
+<p>Is equivalent to:</p>
+<pre>f^ := x; put(f);</pre>
+<p>Read and write are special in that any number of parameters can appear:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">read(f, x, y, z, ...);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">write(f, x, y, z, ...);</pre>
+<p>The parameters to read must be variable references. The parameters to write 
+can be expressions of matching type, except for the file parameter (files must 
+always be VAR references). Writing to a file is special in that you cannot write 
+to a file unless you are at the end of the file. That is, you may only append 
+new elements to the end of the file, not modify existing components of the file.</p>
+<p>Files are said to exist in three &quot;states&quot;:</p>
+<p>1. Inactive.</p>
+<p>2. Read.</p>
+<p>3. Write.</p>
+<p>All files begin life in the inactive state. For a file to be read from, it 
+must be placed into the read state. For a file to be written, it must be placed 
+in the write state. The reset and rewrite procedures do this:</p>
+<pre>reset(f);</pre>
+<p>Places the buffer variable at the 1st element of the file (if it exists), 
+and sets the file mode to &quot;read&quot;.</p>
+<pre>rewrite(f);</pre>
+<p>Clears any previous contents of the file, and places the buffer variable 
+at the start of the file. The file mode is set to &quot;write&quot;. A file 
+can be tested for only one kind of position, that is if it has reached the end:</p>
+<pre>eof(f);</pre>
+<p>Is a function that returns true if the end of the file has been reached. 
+eof must be true before the file can be written.</p>
+<h2><a name="Predefined procedures and text files">Predefined procedures and text files</a></h2>
+<p>As alluded to before, text files are treated specially under Pascal. First, 
+The ends of lines are treated specially. If the end of a line is reached, a 
+read call will just return a space. A special function is required to determine 
+if the end of the line has been reached:</p>
+<pre>eoln(f);</pre>
+<p>Returns true if the current file position is at the end of a line. Pascal 
+strictly enforces the following structure to text files:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">line 1&lt;eoln&gt;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">line 2&lt;eoln&gt;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">line N&lt;eoln&gt;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&lt;eof&gt;</pre>
+<p>There will always be an eoln terminating each line. If the file being read 
+does not have an eoln on the last line, it will be added automatically. Besides 
+the standard read and write calls, two procedures are special to text files:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">readln(f...);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">writeln(f...);</pre>
+<p>Readln behaves as a normal read, but after all the items in the list are 
+read, The rest of the line is skipped until eoln is encountered. Writeln behaves 
+as a normal write, but after all the items in the list are written, an eoln 
+is appended to the output. Text files can be treated as simple files of characters, 
+but it is also possible to read and write other types to a text file. Integers 
+and reals can be read from a text file, and integers, reals, booleans, 
+and strings can be written to text files. These types are written or read from 
+the file by converting them to or from a character based format. The format 
+for integers on read must be:</p>
+<pre>[+/-]digit[digit]...</pre>
+<p>Examples:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;9</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">+56</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">-19384</pre>
+<p>The format for reals on read is:</p>
+<pre>[+/-]digit[digit]...[.digit[digit]...][e[+/-]digit[digit]...]</pre>
+<p>Examples:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">-1</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">-356.44</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">7e9</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">+22.343e-22</pre>
+<p>All blanks are skipped before reading the number. Since eolns are defined 
+as blanks, this means that even eoln is skipped to find the number. This can 
+lead to an interesting situation when a number is read from the console. If 
+the user presses return without entering a number (on most systems), nothing 
+will happen until a number is entered, no matter how many times return is hit!</p>
+<p>Write parameters to textfiles are of the format:</p>
+<pre>write(x[:field[:fraction]]);</pre>
+<p>The field states the number of character positions that you expect the object 
+to occupy. The fraction is special to reals. The output format that occurs in 
+each case are:</p>
+<p>integer: The default field for integers is implementation defined, but is 
+usually the number of digits in maxint, plus a position for the sign. If a field 
+is specified, and is larger than the number of positions required to output 
+the number and sign, then blanks are added to the left side of the output until 
+the total size equals the field width. If the field width is less than the required 
+positions, the field width is ignored.</p>
+<p>real: The default field for reals is implementation defined. There are two 
+different format modes depending on whether the fraction parameter appears. 
+</p>
+<p>If there is no fraction, the format is:</p>
+<pre>-0.0000000e+000</pre>
+<p>Starting from the left, the sign is either a &quot;-&quot; sign if the number 
+is negative, or blank if the number is positive or zero. Then the first digit 
+of the number, then the decimal point, then the fraction of the number, then 
+either 'e' or 'E' (the case is implementation defined), then the sign of the 
+exponent, then the digits of the exponent. The number of digits in the exponent 
+are implementation defined, as are the number of digits in a fraction if no 
+field width is defined. If the field width appears, and it is larger than the 
+total number of required positions in the number (all the characters in the 
+above format without the fraction digits), then the fraction is expanded until 
+the entire number fills the specified field, using right hand zeros if required. 
+Otherwise, the minimum required positions are always printed.</p>
+<p>If a fraction appears (which means the field must also appear), the format 
+used is:</p>
+<pre>[-]00...00.000..00</pre>
+<p>The number is converted to it's whole number equivalent, and all the of whole 
+number portion of the number printed, regardless of the field size, proceeded 
+by &quot;-&quot; if the number is negative. Then, a decimal point appears, followed 
+by the number of fractional digits specified in the fraction parameter. If the 
+field is greater then the number of required positions and specified fraction 
+digits, then leading spaces are appended until the total size equals the field 
+width. The minimum positions and the specified fractional digits are always 
+printed.</p>
+<h2><a name="Header files">Header files</a></h2>
+<p>The header files feature was originally designed to be the interface of Pascal 
+to the external files system, and as such is implementation by definition. It 
+is also (unfortunately) ignored in most implementations. The header files appear 
+as a simple list of identifiers in the program header:</p>
+<p>program test(input, output, source, object);</p>
+<p>Each header file automatically assumes the type text. If the file needs to 
+be another type, it should be declared again in the variables section of the 
+program block:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">program test(intlist);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var intlist: file of integer;</pre>
+<p>Two files are special, and should not be redeclared. These are input and 
+output. The input files are understood to represent the main input and main 
+output from the program, and are present in all Pascal programs. In addition, 
+they are the default files is special forms of these &nbsp;procedures and functions:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">This form &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is equivalent to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This form</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">--------------------------------------------------------------</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">write(...) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;write(output, ...)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">writeln(...) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeln(output, ...)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">writeln &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeln(output)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">read(...) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read(input, ...)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">readln(...) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readln(input, ...)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">readln &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readln(input)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">eof &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eof(input)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">eoln &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eoln(input)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">page                                 page(output)</pre>
+<h2><a name="Packing procedures">Packing procedures</a></h2>
+<p>Because arrays are incompatible with each other even when they are of the 
+same type if their packing status differs, two procedures allow a packed array 
+to be copied to a non-packed array and vice versa:</p>
+<pre>unpack(PackedArray, UnpackedArray, Index);</pre>
+<p>Unpacks the packed array and places the contents into the unpacked array. 
+The index gives the starting index of the unpacked array where the data is to 
+be placed. Interestingly, the two arrays need not have the same index type or 
+even be the same size ! The unpacked array must simply have enough elements 
+after the specified starting index to hold the number of elements in the packed 
+array.</p>
+<pre>pack(UnpackedArray, Index, PackedArray);</pre>
+<p>Packs part of the unpacked array into the packed array. The index again gives 
+the starting position to copy data from in the unpacked array. Again, the arrays 
+need not be of the same index type or size. The unpacked array simply need enough 
+elements after the index to provide all the values in the packed array.</p>
+<h2><a name="Dynamic allocation">Dynamic allocation</a></h2>
+<p>In Pascal, pointer variables are limited to the mode of variable they can 
+index. The objects indexed by pointer types are anonymous, and created or destroyed 
+by the programmer at will. A pointer variable is undefined when it is first 
+used, and it is an error to access the variable it points to unless that variable 
+has been created:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var p: ^integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;new(p); { create a new integer type }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;p^ := 1; { place value }</pre>
+<p>Would create a new variable. Variables can also be destroyed:</p>
+<pre>dispose(p);</pre>
+<p>Would release the storage allocated to the variable. It is an error (a very 
+serious one) to access the contents of a variable that has been disposed. A 
+special syntax exists for the allocation of variant records:</p>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">var r: record</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: integer;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case b: boolean 
+of</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;true: 
+(c: integer);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;false: 
+(d: char)</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ end }</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">new(p, true);</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">...</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</pre>
+<pre style="line-height:100%; margin-top:0; margin-bottom:0;">dispose(p, true);</pre>
+<p>For each of new and dispose, each of the tagfields we want to discriminate 
+are parameters to the procedure. The appearance of the tagfield values allow 
+the compiler to allocate a variable with only the amount of space required for 
+the record with that variant. This can allow considerable storage savings if 
+used correctly. The appearance of a discriminant in a new procedure does not 
+also &nbsp;automatically SET the value of the tagfield. You must do that yourself. 
+For the entire life of the variable, you must not set the tagfield to any other 
+value than the value used in the new procedure, nor access any of the &nbsp;variants 
+in the record that are not active. The dispose statement should be called with 
+the exact same tagfield values and number. Note that ALL the tagfields in a 
+variable need not appear, just all the ones, in order, that we wish to allocate 
+as fixed.</p>
+<center>
+<hr WIDTH="100%"></center>
+
+<address>
+For more information contact: <a href="mailto:samiam@moorecad.com">Scott A. Moore samiam@moorecad.com</a></address>
+
+</body>
+</html>

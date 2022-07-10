@@ -1,0 +1,25 @@
+P5 Pascal compiler vs. 1.4.x
+Pascal-P5 complies with the requirements of level 0 of ISO/IEC 7185.
+
+
+                { 
+                 
+                PRT test 1847: Numeric overflow on constant. Overflow on exponent. 
+                 
+                } 
+                 
+                program iso7185prt1847(output); 
+                 
+                begin 
+                 
+                   write(1.0e100000000000000000000000000000000000000000000000000000000000000) 
+    11   ****                          ^194
+                 
+                end. 
+
+Errors in program: 1
+
+Error numbers in listing:
+-------------------------
+194  Exponent too large
+

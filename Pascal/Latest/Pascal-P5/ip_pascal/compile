@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# Compile file in batch mode using IP Pascal.
+#
+# Runs a compile with the input and output coming from/
+# going to files.
+# 
+# Execution:
+# 
+# Compile <file>
+#
+# <file> is the filename without extention.
+#
+# The files are:
+#
+# <file>.pas - The Pascal source file
+# <file>.p5  - The intermediate file produced
+# <file>.err - The errors output from the compiler
+#
+# Note that the l+ option must be specified to get a full
+# listing in the .err file (or just a lack of l-).
+#
+
+if [ -z "$1" ]
+then
+   echo "*** Error: Missing parameter"
+   exit 1
+fi
+
+if [ ! -f $1.pas ]
+then
+   echo "*** Error: Missing $1.pas file"
+   exit 1
+fi
+
+./pcom $1.p5 < $1.pas > $1.err

@@ -1,0 +1,985 @@
+P5 Pascal interpreter vs. 1.2
+
+Assembling/loading program
+Running program
+
+
+*******************************************************************************
+
+                 TEST SUITE FOR P4 PASCAL
+
+                 Copyright (C) 1995 S. A. Moore - All rights reserved
+
+*******************************************************************************
+
+
+The following are implementation defined characteristics
+
+Integer default output field
+         1111111111222222222233333333334
+1234567890123456789012345678901234567890
+         1
+Real default output field
+         1111111111222222222233333333334
+1234567890123456789012345678901234567890
+ 1.2000000000000e+00
+Char default output field
+         1111111111222222222233333333334
+1234567890123456789012345678901234567890
+a
+Appears to be ASCII
+
+******************* Control structures tests *******************
+
+Control1: 1 2 3 4 5 6 7 8 9 10 s/b 1 2 3 4 5 6 7 8 9 10
+Control2: 10 9 8 7 6 5 4 3 2 1 s/b 10 9 8 7 6 5 4 3 2 1
+Control3: 1 2 3 4 5 6 7 8 9 10 s/b 1 2 3 4 5 6 7 8 9 10
+Control4: 1 2 3 4 5 6 7 8 9 10 s/b 1 2 3 4 5 6 7 8 9 10
+Control5: 1 2 3 4 5 6 7 8 9 10 s/b 1 2 3 4 5 6 7 8 9 10
+Control6: yes s/b yes
+Control7: yes s/b yes
+Control8: yes stop s/b yes stop
+Control9: stop s/b stop
+Control10: one two three four five six seven eight nine-ten nine-ten 
+Control10: s/b one two three four five six seven eight nine-ten nine-ten
+Control12: start stop s/b start stop
+
+******************* Integers *******************
+
+Integer1:   121 s/b 121
+Integer2:   35 s/b 35
+Integer3:   3354 s/b 3354
+Integer4:   1 s/b 1
+Integer5:   35 s/b 35
+Integer6:   44 s/b 44
+Integer7:   42 s/b 42
+Integer8:   1849 s/b 1849
+Integer9:   N s/b N
+Integer10:  43 s/b 43
+Integer11:      1 s/b 1
+Integer12:      0 s/b 0
+Integer13:      1 s/b 1
+Integer14:      0 s/b 0
+Integer15:      1 s/b 1
+Integer16:      0 s/b 0
+Integer17:      1 s/b 1
+Integer18:      0 s/b 0
+Integer19:      1 s/b 1
+Integer20:      0 s/b 0
+Integer21:      1 s/b 1
+Integer22:      1 s/b 1
+Integer23:      0 s/b 0
+Integer24:      1 s/b 1
+Integer25:      1 s/b 1
+Integer26:      0 s/b 0
+Integer27:  546 s/b 546
+Integer28:  90 s/b 90
+Integer29:  22 s/b 22
+Integer30:  1904 s/b 1904
+Integer31:  1 s/b 1
+Integer32:  22 s/b 22
+Integer33:  6 s/b 6
+Integer34:  4 s/b 4
+Integer35:  49 s/b 49
+Integer36:  A s/b A
+Integer37:  65 s/b 65
+Integer38:  768 s/b 768
+Integer39:      1 s/b 1
+Integer40:      0 s/b 0
+Integer41:      1 s/b 1
+Integer42:      0 s/b 0
+Integer43:      1 s/b 1
+Integer44:      0 s/b 0
+Integer45:      1 s/b 1
+Integer46:      0 s/b 0
+Integer47:      1 s/b 1
+Integer48:      0 s/b 0
+Integer49:      1 s/b 1
+Integer50:      1 s/b 1
+Integer51:      0 s/b 0
+Integer52:      1 s/b 1
+Integer53:      1 s/b 1
+Integer54:      0 s/b 0
+Integer55:  6 s/b 6
+Integer56:  6 s/b 6
+Integer57:  -12 s/b -12
+Integer58:  -46 s/b -46
+Integer59:  34 s/b 34
+Integer60:  -52 s/b -52
+Integer61:  -18 s/b -18
+Integer62:  -280 s/b -280
+Integer63:  -280 s/b -280
+Integer64:  448 s/b 448
+Integer65:  -1 s/b -1
+Integer66:  -1 s/b -1
+Integer67:  2 s/b 2
+Integer68:  -13 s/b -13
+Integer69:  -33 s/b -33
+Integer70: 196 s/b 196
+Integer71:      0 s/b 0
+Integer72:      1 s/b 1
+Integer73:      1 s/b 1
+Integer74:      0 s/b 0
+Integer75:      1 s/b 1
+Integer76:      0 s/b 0
+Integer77:      1 s/b 1
+Integer78:      1 s/b 1
+Integer79:      0 s/b 0
+Integer80:      0 s/b 0
+Integer81:      1 s/b 1
+Integer82:      1 s/b 1
+Integer83:      0 s/b 0
+Integer84:      0 s/b 0
+Integer85:      1 s/b 1
+Integer86:      1 s/b 1
+Integer87:      1 s/b 1
+Integer88:      0 s/b 0
+Integer89:      0 s/b 0
+Integer90:      1 s/b 1
+Integer91:      1 s/b 1
+Integer92:      1 s/b 1
+Integer93:      0 s/b 0
+Integer94:      0 s/b 0
+Integer95:  14 s/b 14
+Integer96:  15 s/b 15
+Integer97:  45 s/b 45
+Integer98: -39 s/b -39
+Integer99: -35 s/b -35
+Integer100: 34 s/b 34
+Integer101: -48 s/b -48
+Integer102: -44 s/b -44
+Integer103: -20 s/b -20
+Integer104: -126 s/b -126
+Integer105: 520 s/b 520
+Integer106: -6 s/b -6
+Integer107: -25 s/b -25
+Integer108: 5 s/b 5
+Integer109: -9 s/b -9
+Integer110: 0 s/b 0
+Integer111: -2 s/b -2
+Integer112: 64 s/b 64
+Integer113: -55 s/b -55
+Integer114:     0 s/b 0
+Integer115:     1 s/b 1
+Integer116:     1 s/b 1
+Integer117:     0 s/b 0
+Integer118:     1 s/b 1
+Integer119:     0 s/b 0
+Integer120:     1 s/b 1
+Integer121:     1 s/b 1
+Integer122:     0 s/b 0
+Integer123:     0 s/b 0
+Integer124:     1 s/b 1
+Integer125:     1 s/b 1
+Integer126:     0 s/b 0
+Integer127:     0 s/b 0
+Integer128:     1 s/b 1
+Integer129:     1 s/b 1
+Integer130:     1 s/b 1
+Integer131:     0 s/b 0
+Integer132:     0 s/b 0
+Integer133:     1 s/b 1
+Integer134:     1 s/b 1
+Integer135:     1 s/b 1
+Integer136:     0 s/b 0
+Integer137:     0 s/b 0
+Integer138: 6 s/b 6
+Integer139: -52 s/b -52
+
+******************* Subranges *******************
+
+Subrange1:   121 s/b 121
+Subrange2:   35 s/b 35
+Subrange3:   3354 s/b 3354
+Subrange4:   1 s/b 1
+Subrange5:   35 s/b 35
+Subrange6:   44 s/b 44
+Subrange7:   42 s/b 42
+Subrange8:   N s/b N
+Subrange9:   + s/b +
+Subrange10:      1 s/b 1
+Subrange11:      0 s/b 0
+Subrange12:      1 s/b 1
+Subrange13:      0 s/b 0
+Subrange14:      1 s/b 1
+Subrange15:      0 s/b 0
+Subrange16:      1 s/b 1
+Subrange17:      0 s/b 0
+Subrange18:      1 s/b 1
+Subrange19:      0 s/b 0
+Subrange20:      1 s/b 1
+Subrange21:      1 s/b 1
+Subrange22:      0 s/b 0
+Subrange23:      1 s/b 1
+Subrange24:      1 s/b 1
+Subrange25:      0 s/b 0
+Subrange26:  6 s/b 6
+Subrange27:  6 s/b 6
+Subrange28:  -12 s/b -12
+Subrange29:  -46 s/b -46
+Subrange30:  34 s/b 34
+Subrange31:  -52 s/b -52
+Subrange32:  -18 s/b -18
+Subrange33:  -280 s/b -280
+Subrange34:  -280 s/b -280
+Subrange35:  448 s/b 448
+Subrange36:  -1 s/b -1
+Subrange37:  -1 s/b -1
+Subrange38:  2 s/b 2
+Subrange39:  -13 s/b -13
+Subrange40:  -33 s/b -33
+Subrange41:      0 s/b 0
+Subrange42:      1 s/b 1
+Subrange43:      1 s/b 1
+Subrange44:      0 s/b 0
+Subrange45:      1 s/b 1
+Subrange46:      0 s/b 0
+Subrange47:      1 s/b 1
+Subrange48:      1 s/b 1
+Subrange49:      0 s/b 0
+Subrange50:      0 s/b 0
+Subrange51:      1 s/b 1
+Subrange52:      1 s/b 1
+Subrange53:      0 s/b 0
+Subrange54:      0 s/b 0
+Subrange55:      1 s/b 1
+Subrange56:      1 s/b 1
+Subrange57:      1 s/b 1
+Subrange58:      0 s/b 0
+Subrange59:      0 s/b 0
+Subrange60:      1 s/b 1
+Subrange61:      1 s/b 1
+Subrange62:      1 s/b 1
+Subrange63:      0 s/b 0
+Subrange64:      0 s/b 0
+Subrange65:  14 s/b 14
+
+******************* Characters*******************
+
+Character1:   g g u s/b g g u
+Character2:   h s/b h
+Character3:   f s/b f
+Character4:   103 s/b 103
+Character5:   u s/b u
+Character6:       1 s/b 1
+Character7:       0 s/b 0
+Character8:       1 s/b 1
+Character9:       0 s/b 0
+Character10:      1 s/b 1
+Character11:      0 s/b 0
+Character12:      1 s/b 1
+Character13:      0 s/b 0
+Character14:      1 s/b 1
+Character15:      1 s/b 1
+Character16:      0 s/b 0
+Character17:      1 s/b 1
+Character18:      1 s/b 1
+Character19:      0 s/b 0
+Character20:  porker    porker    parker     s/b porker    porker    parker
+Character21:      1 s/b 1
+Character22:      0 s/b 0
+Character23:      1 s/b 1
+Character24:      0 s/b 0
+Character25:      1 s/b 1
+Character26:      0 s/b 0
+Character27:      1 s/b 1
+Character28:      0 s/b 0
+Character29:      1 s/b 1
+Character30:      1 s/b 1
+Character40:      0 s/b 0
+Character41:      1 s/b 1
+Character42:      1 s/b 1
+Character43:      0 s/b 0
+Character44:  abcdefghijklmnopqrstuvwxyz s/b abcdefghijklmnopqrstuvwxyz
+Character45:  zyxwvutsrqponmlkjihgfedcba s/b zyxwvutsrqponmlkjihgfedcba
+Character46:  25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 
+Character46: s/b 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+Character47: n s/b n
+Character48: junky01234 s/b junky01234
+Character49:  
+crapola   
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+finnork   
+trash     
+Character49: s/b
+crapola
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+0123456789
+finnork
+trash
+Character50:  
+zero one two three four five six seven eight nine 
+ s/b zero one two three four five six seven eight nine
+Character51:  a s/b a
+Character52:  b s/b b
+Character53:  y s/b y
+Character54:  99 s/b 99
+Character55:  g s/b g
+Character56:      1 s/b 1
+Character57:      0 s/b 0
+Character58:      1 s/b 1
+Character59:      0 s/b 0
+Character50:      1 s/b 1
+Character61:      0 s/b 0
+Character62:      1 s/b 1
+Character63:      0 s/b 0
+Character64:      1 s/b 1
+Character65:      1 s/b 1
+Character66:      0 s/b 0
+Character67:      1 s/b 1
+Character68:      1 s/b 1
+Character69:      0 s/b 0
+Character70:      1 s/b 1
+Character71:      0 s/b 0
+Character72:      1 s/b 1
+Character73:      0 s/b 0
+Character74:      1 s/b 1
+Character75:      0 s/b 0
+Character76:      1 s/b 1
+Character77:      0 s/b 0
+Character78:      1 s/b 1
+Character79:      1 s/b 1
+Character80:      0 s/b 0
+Character81:      1 s/b 1
+Character82:      1 s/b 1
+Character83:      0 s/b 0
+Character84:  this is a string s/b this is a string
+Character85:  v s/b v
+Character86:  
+   hello, world
+  hello, world
+ hello, world
+hello, world
+hello, worl
+hello, wor
+hello, wo
+hello, w
+hello, 
+hello,
+hello
+hell
+hel
+he
+h
+Character86:  s/b:
+   hello, world
+  hello, world
+ hello, world 
+hello, world
+hello, worl
+hello, wor
+hello, wo
+hello, w
+hello, 
+hello,
+hello
+hell
+hel
+he
+h
+
+******************* Booleans *******************
+
+Boolean1:       1     0 s/b 1 0
+Boolean2:       1 s/b 1
+Boolean3:       0 s/b 0
+Boolean4:   0 s/b 0
+Boolean5:   1 s/b 1
+Boolean6:       1 s/b 1
+Boolean7:       1 s/b 1
+Boolean8:       0 s/b 0
+Boolean9:       1 s/b 1
+Boolean10:      0 s/b 0
+Boolean11:      1 s/b 1
+Boolean12:      0 s/b 0
+Boolean13:      1 s/b 1
+Boolean14:      0 s/b 0
+Boolean15:      1 s/b 1
+Boolean16:      1 s/b 1
+Boolean17:      0 s/b 0
+Boolean18:      1 s/b 1
+Boolean19:      1 s/b 1
+Boolean20:      0 s/b 0
+Boolean23:      1 s/b 1
+Boolean24:      0 s/b 0
+Boolean25:      1     0 s/b 1 0
+Boolean26:      1 s/b 1
+Boolean27:      0 s/b 0
+Boolean28:  0 s/b 0
+Boolean29:  1 s/b 1
+Boolean30:      1 s/b 1
+Boolean31:      1 s/b 1
+Boolean32:      0 s/b 0
+Boolean33:      1 s/b 1
+Boolean34:      0 s/b 0
+Boolean35:      1 s/b 1
+Boolean36:      0 s/b 0
+Boolean37:      1 s/b 1
+Boolean38:      0 s/b 0
+Boolean39:      1 s/b 1
+Boolean40:      1 s/b 1
+Boolean41:      0 s/b 0
+Boolean42:      1 s/b 1
+Boolean43:      1 s/b 1
+Boolean44:      0 s/b 0
+Boolean45:
+         0
+        0
+       0
+      0
+     0
+    0
+   0
+  0
+ 0
+0
+Boolean45: s/b:
+         0
+        0
+       0
+      0
+     0
+    0
+   0
+  0
+ 0
+0
+Boolean46:
+         1
+        1
+       1
+      1
+     1
+    1
+   1
+  1
+ 1
+1
+Boolean46: s/b:
+         1
+        1
+       1
+      1
+     1
+    1
+   1
+  1
+ 1
+1
+
+******************* Scalar *******************
+
+Scalar1:       1 s/b 1
+Scalar2:       1 s/b 1
+Scalar3:   0 s/b 0
+Scalar4:   2 s/b 2
+Scalar5:       1 s/b 1
+Scalar6:       1 s/b 1
+Scalar7:       0 s/b 0
+Scalar8:       1 s/b 1
+Scalar9:       0 s/b 0
+Scalar10:      1 s/b 1
+Scalar11:      0 s/b 0
+Scalar12:      1 s/b 1
+Scalar13:      0 s/b 0
+Scalar14:      1 s/b 1
+Scalar15:      1 s/b 1
+Scalar16:      0 s/b 0
+Scalar17:      1 s/b 1
+Scalar18:      1 s/b 1
+Scalar19:      0 s/b 0
+Scalar20:  0 1 2 3 4 5 6 s/b 0 1 2 3 4 5 6
+Scalar21:  6 5 4 3 2 1 0 s/b 6 5 4 3 2 1 0
+Scalar1:       1 s/b 1
+Scalar2:       1 s/b 1
+Scalar3:   2 s/b 2
+Scalar4:   6 s/b 6
+Scalar5:       1 s/b 1
+Scalar6:       1 s/b 1
+Scalar7:       0 s/b 0
+Scalar8:       1 s/b 1
+Scalar9:       0 s/b 0
+Scalar10:      1 s/b 1
+Scalar11:      0 s/b 0
+Scalar12:      1 s/b 1
+Scalar13:      0 s/b 0
+Scalar14:      1 s/b 1
+Scalar15:      1 s/b 1
+Scalar16:      0 s/b 0
+Scalar17:      1 s/b 1
+Scalar18:      1 s/b 1
+Scalar19:      0 s/b 0
+
+******************* Reals ******************************
+
+Real1:    1.55400000e+00 s/b  1.55400000e+00
+Real2:    3.34000000e-03 s/b  3.34000000e-03
+Real3:    3.34000000e-24 s/b  3.34000000e-24
+Real4:    4.00000000e-45 s/b  4.00000000e-45
+Real5:   -5.56500000e+00 s/b -5.56500000e+03
+Real6:   -9.44000000e-03 s/b -9.44000000e-03
+Real7:   -6.36400000e+29 s/b -6.36400000e+29
+Real8:   -2.00000000e-14 s/b -2.00000000e-14
+Real9:
+         11111111112222222222333333333344444444445
+12345678901234567890123456789012345678901234567890
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.2e+00
+ 1.23e+00
+ 1.235e+00
+ 1.2346e+00
+ 1.23457e+00
+ 1.234568e+00
+ 1.2345679e+00
+ 1.23456789e+00
+ 1.234567890e+00
+ 1.2345678901e+00
+ 1.23456789012e+00
+ 1.234567890123e+00
+ 1.2345678901235e+00
+s/b (note precision dropoff at right):
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.2e+000
+ 1.23e+000
+ 1.234e+000
+ 1.2345e+000
+ 1.23456e+000
+ 1.234567e+000
+ 1.2345678e+000
+ 1.23456789e+000
+ 1.234567890e+000
+ 1.2345678901e+000
+ 1.23456789012e+000
+ 1.234567890123e+000
+Real11:   1.41890000e+03 s/b  1.41890000e+03
+Rea112:   5.48440000e+02 s/b  5.48439999e+02
+Real13:   4.28122694e+05 s/b  4.28122700e+05
+Real14:   2.26011534e+00 s/b  2.26011500e+00
+Real15:      1 s/b 1
+Real16:      0 s/b 0
+Real17:      1 s/b 1
+Real18:      0 s/b 0
+Real19:      1 s/b 1
+Real20:      0 s/b 0
+Real21:      1 s/b 1
+Real22:      0 s/b 0
+Real23:      1 s/b 1
+Real24:      1 s/b 1
+Real25:      0 s/b 0
+Real26:      1 s/b 1
+Real27:      1 s/b 1
+Real28:      0 s/b 0
+Real29:   4.35230000e+02 s/b  4.35230e+02
+Real30:   1.89425153e+05 s/b  1.89425e+05
+Real31:   3.13635138e+01 s/b  3.13635e+01
+Real32:  -3.44305942e-01 s/b -3.44290e-01
+Real33:   1.56849870e+00 s/b  1.56850e+00
+Real34:   1.41100187e+00 s/b  1.41100e+00
+Real35:   6.07587463e+00 s/b  6.07587e+00
+Real36:  435 s/b 435
+Real39:   1.27805200e+03 s/b  1.278052e+03
+Real40:   2.38946000e+02 s/b  2.389460e+02
+Real41:   1.04720175e+05 s/b  1.047202e+05
+Real42:   7.25959751e-03 s/b  7.259598e-03
+Real43:      1 s/b 1
+Real44:      0 s/b 0
+Real45:      1 s/b 1
+Real46:      0 s/b 0
+Real47:      1 s/b 1
+Real48:      0 s/b 0
+Real49:      1 s/b 1
+Real50:      0 s/b 0
+Real51:      1 s/b 1
+Real52:      1 s/b 1
+Real53:      0 s/b 0
+Real54:      1 s/b 1
+Real55:      1 s/b 1
+Real56:      0 s/b 0
+Real57:   3.49300000e+01 s/b  3.493000e+01
+Real58:   5.47560000e+00 s/b  5.475600e+00
+Real59:   9.72333276e+01 s/b  9.723333e+01
+Real60:   3.31147273e-01 s/b  3.311461e-01
+Real61:   1.56788258e+00 s/b  1.567883e+00
+Real62:   1.39375285e+00 s/b  1.393753e+00
+Real63:   4.42148770e+00 s/b  4.421488e+00
+Real64:  24 s/b 24
+Real67:   4.33300000e+01 s/b  4.333000e+01
+Real68:   3.00340000e+02 s/b  3.003400e+02
+Real69:   3.00340000e+02 s/b  3.003400e+02
+Real70:  -6.59998000e+03 s/b -6.599980e+03
+Real71:  -8.36872000e+03 s/b -8.368720e+03
+Real72:   1.76874000e+03 s/b  1.768740e+03
+Real73:  -8.66906000e+03 s/b -8.669061e+03
+Real74:  -6.90032000e+03 s/b -6.900320e+03
+Real75:  -7.59559268e+05 s/b -7.595593e+05
+Real76:  -7.59559268e+05 s/b -7.595593e+05
+Real77:   5.60526458e+06 s/b  5.605265e+06
+Real78:  -1.40907110e+00 s/b -1.409071e+00
+Real79:  -7.37962766e+00 s/b -7.379627e+00
+Real80:   1.03984200e+01 s/b  1.039842e+01
+Real81:      1 s/b 1
+Real82:      0 s/b 0
+Real83:      1 s/b 1
+Real84:      0 s/b 0
+Real85:      1 s/b 1
+Real86:      1 s/b 1
+Real87:      0 s/b 0
+Real88:      0 s/b 0
+Real89:      1 s/b 1
+Real90:      1 s/b 1
+Real91:      0 s/b 0
+Real92:      0 s/b 0
+Real93:      1 s/b 1
+Real94:      1 s/b 1
+Real95:      1 s/b 1
+Real96:      0 s/b 0
+Real97:      0 s/b 0
+Real98:      1 s/b 1
+Real99:      1 s/b 1
+Real100:     1 s/b 1
+Real101:     0 s/b 0
+Real102:     0 s/b 0
+Real103:  7.34200000e+02 s/b  7.34200e+02
+Real104:  5.39049640e+05 s/b  5.39050e+05
+Real105: -4.34832062e-01 s/b -4.34850e-01
+Real106: -1.56943430e+00 s/b -1.56943e+00
+Real107:  6.80566323e-01 s/b  6.80566e-01
+Real108:            -734 s/b -734
+Real111:  1.51000000e+01 s/b  1.510000e+01
+Real112:  4.51330000e+01 s/b  4.513300e+01
+Real113: -3.86400000e+01 s/b -3.864000e+01
+Real114: -3.65810000e+01 s/b -3.658100e+01
+Real115:  3.55480000e+01 s/b  3.554800e+01
+Real116: -4.93984000e+01 s/b -4.939840e+01
+Real117: -4.40010000e+01 s/b -4.400100e+01
+Real118: -2.64122320e+01 s/b -2.641223e+01
+Real119: -1.48904140e+02 s/b -1.489041e+02
+Real120:  5.58563248e+02 s/b  5.585632e+02
+Real121: -5.22015662e+00 s/b -5.220157e+00
+Real122: -1.77216253e+01 s/b -1.772163e+01
+Real123:  4.27458238e+00 s/b  4.274582e+00
+Real124:     1 s/b 1
+Real125:     0 s/b 0
+Real126:     1 s/b 1
+Real127:     0 s/b 0
+Real128:     1 s/b 1
+Real129:     1 s/b 1
+Real130:     0 s/b 0
+Real131:     0 s/b 0
+Real132:     1 s/b 1
+Real133:     1 s/b 1
+Real134:     0 s/b 0
+Real135:     0 s/b 0
+Real136:     1 s/b 1
+Real137:     1 s/b 1
+Real138:     1 s/b 1
+Real139:     0 s/b 0
+Real140:     0 s/b 0
+Real141:     1 s/b 1
+Real142:     1 s/b 1
+Real143:     1 s/b 1
+Real144:     0 s/b 0
+Real145:     0 s/b 0
+Real146:  6.82300000e+00 s/b  6.823000e+00
+Real147   1.21257168e+05 s/b  1.212572e+05
+Real148:  9.42124497e-01 s/b  9.421146e-01
+Real149: -1.57067710e+00 s/b -1.570677e+00
+Real150:  4.17153925e-01 s/b  4.171539e-01
+Real151: -33 s/b -33
+Real154: -8.42200000e+01 s/b -8.422000e+01
+
+******************* sets ******************************
+
+Set1:  10101010101010101010 s/b 10101010101010101010
+Set2:  1101110001 s/b 1101110001
+Set3:  0100010000 s/b 0100010000
+Set4:  0100001000 s/b 0100001000
+Set5:      0 s/b 0
+Set6:      1 s/b 1
+Set7:      1 s/b 1
+Set8:      0 s/b 0
+Set9:      1 s/b 1
+Set10:     1 s/b 1
+Set11:     0 s/b 0
+Set12:     1 s/b 1
+Set13:     1 s/b 1
+Set14:     0 s/b 0
+Set15: 0101010000 s/b 0101010000
+Set16: a_c_e_g_i_k_m_o_q_s_ s/b a_c_e_g_i_k_m_o_q_s_
+Set17: a_cd_fg___ s/b a_cd_fg___
+Set18: a______h__ s/b a______h__
+Set19: _b_______j s/b _b_______j
+Set20:     0 s/b 0
+Set21:     1 s/b 1
+Set22:     1 s/b 1
+Set23:     0 s/b 0
+Set24:     1 s/b 1
+Set25:     1 s/b 1
+Set26:     0 s/b 0
+Set27:     1 s/b 1
+Set28:     1 s/b 1
+Set29:     0 s/b 0
+Set30: a___e_____ s/b a___e_____
+Set31: 0101010101 s/b 0101010101
+Set32: 1101110001 s/b 1101110001
+Set33: 0100010000 s/b 0100010000
+Set34: 0100001000 s/b 0100001000
+Set35:     0 s/b 0
+Set36:     1 s/b 1
+Set37:     1 s/b 1
+Set38:     0 s/b 0
+Set39:     1 s/b 1
+Set40:     1 s/b 1
+Set41:     0 s/b 0
+Set42:     1 s/b 1
+Set43:     1 s/b 1
+Set44:     0 s/b 0
+Set45: 0110000000 s/b 0110000000
+Set50:     0 s/b 0
+Set51:     1 s/b 1
+Set52:     1 s/b 1
+Set53:     0 s/b 0
+Set54:     1 s/b 1
+Set55:     1 s/b 1
+Set56:     0 s/b 0
+Set57:     1 s/b 1
+Set58:     1 s/b 1
+Set59:     0 s/b 0
+
+******************* Pointers ******************************
+
+Pointer1:   4594 s/b 4594
+Pointer2:       1 s/b  1
+Pointer3:       0 s/b 0
+Pointer4:          112 s/b 112
+Pointer5:   0 s/b 5
+Pointer6:   3 s/b 3
+Pointer7:   17 s/b 17
+Pointer9:   my word is s/b my word is
+Pointer10:  20 19 18 17 16 15 14 13 12 11 s/b 20 19 18 17 16 15 14 13 12 11
+Pointer11:   7234 y s/b 7234 y
+Pointer12:   _b_d____ij s/b _b_d____ij
+Pointer13:  3732 s/b 3732
+Pointer14:      1 s/b 1
+Pointer15:      0 s/b 0
+Pointer16:      1 s/b 1
+Pointer17:      0 s/b 0
+Pointer18:      0 s/b 0
+Pointer19:      1 s/b 1
+
+******************* arrays ******************************
+
+Array1:   20 19 18 17 16 15 14 13 12 11  s/b 20 19 18 17 16 15 14 13 12 11
+Array2:   20 19 18 17 16 15 14 13 12 11  s/b 20 19 18 17 16 15 14 13 12 11
+Array3:   20 19 18 17 16 15 14 13 12 11  s/b 20 19 18 17 16 15 14 13 12 11
+Array4:   20 19 18 17 16 15 14 13 12 11  s/b 20 19 18 17 16 15 14 13 12 11
+Array5:       0     1     0     1     0     1     0     1     0     1 
+    s/b:    0   1   0    1    0    1   0   1   0  1
+Array6:       0     1     0     1     0     1     0     1     0     1 
+    s/b:    0   1   0    1   0    1   0    1   0  1
+Array7:    2.0e+01  1.9e+01  1.8e+01  1.7e+01  1.6e+01  1.5e+01  1.4e+01  1.3e+01  1.2e+01  1.1e+01 
+    s/b:   2.0e+001  1.9e+001  1.8e+001  1.7e+001  1.6e+001  1.5e+001  1.4e+001  1.3e+001  1.2e+001  1.1e+001
+Array8:    2.0e+01  1.9e+01  1.8e+01  1.7e+01  1.6e+01  1.5e+01  1.4e+01  1.3e+01  1.2e+01  1.1e+01 
+    s/b:   2.0e+001  1.9e+001  1.8e+001  1.7e+001  1.6e+001  1.5e+001  1.4e+001  1.3e+001  1.2e+001  1.1e+001
+Array9:   k j i h g f e d c b s/b k j i h g f e d c b
+Array10:  k j i h g f e d c b s/b k j i h g f e d c b
+Array11:  p o n m l k j i h g s/b p o n m l k j i h g
+Array12:  p o n m l k j i h g s/b p o n m l k j i h g
+Array13:  9 8 7 6 5 4 3 2 1 0 s/b 9 8 7 6 5 4 3 2 1 0
+Array14:  9 8 7 6 5 4 3 2 1 0 s/b 9 8 7 6 5 4 3 2 1 0
+Array15:  5 4 3 2 s/b 5 4 3 2
+Array16:  5 4 3 2 s/b 5 4 3 2
+Array17:  k j i h g f e d c b s/b k j i h g f e d c b
+Array18:  k j i h g f e d c b s/b k j i h g f e d c b
+Array19:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b 
+    s/b:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b
+Array20:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b 
+    s/b:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b
+Array23:  20 19 18 17 16 15 14 13 12 11 s/b 20 19 18 17 16 15 14 13 12 11
+Array24:  20 19 18 17 16 15 14 13 12 11 s/b 20 19 18 17 16 15 14 13 12 11
+Array27:  j i h g f e d c b a  s/b  j i h g f e d c b a
+Array28:  j i h g f e d c b a  s/b  j i h g f e d c b a
+Array29:  j i h g f e d c b a  s/b  j i h g f e d c b a
+Array30:  j i h g f e d c b a  s/b  j i h g f e d c b a
+Array31:  9 8 7 6 5 4 3 2 1 0  s/b  9 8 7 6 5 4 3 2 1 0
+Array32:  9 8 7 6 5 4 3 2 1 0  s/b  9 8 7 6 5 4 3 2 1 0
+Array33:  5 4 3 2 1  s/b  5 4 3 2 1
+Array34:  5 4 3 2 1  s/b  5 4 3 2 1
+Array35:
+ 0 10 20 30 40 50 60 70 80 90 
+ 1 11 21 31 41 51 61 71 81 91 
+ 2 12 22 32 42 52 62 72 82 92 
+ 3 13 23 33 43 53 63 73 83 93 
+ 4 14 24 34 44 54 64 74 84 94 
+ 5 15 25 35 45 55 65 75 85 95 
+ 6 16 26 36 46 56 66 76 86 96 
+ 7 17 27 37 47 57 67 77 87 97 
+ 8 18 28 38 48 58 68 78 88 98 
+ 9 19 29 39 49 59 69 79 89 99 
+s/b
+0 10 20 30 40 50 60 70 80 90
+1 11 21 31 41 51 61 71 81 91
+2 12 22 32 42 52 62 72 82 92
+3 13 23 33 43 53 63 73 83 93
+4 14 24 34 44 54 64 74 84 94
+5 15 25 35 45 55 65 75 85 95
+6 16 26 36 46 56 66 76 86 96
+7 17 27 37 47 57 67 77 87 97
+8 18 28 38 48 58 68 78 88 98
+9 19 29 39 49 59 69 79 89 99
+Array36: 
+63 62 61 60 59 58 57 56 
+55 54 53 52 51 50 49 48 
+47 46 45 44 43 42 41 40 
+39 38 37 36 35 34 33 32 
+31 30 29 28 27 26 25 24 
+23 22 21 20 19 18 17 16 
+15 14 13 12 11 10  9  8 
+ 7  6  5  4  3  2  1  0 
+s/b:
+63 62 61 60 59 58 57 56
+55 54 53 52 51 50 49 48
+47 46 45 44 43 42 41 40
+39 38 37 36 35 34 33 32
+31 30 29 28 27 26 25 24
+23 22 21 20 19 18 17 16
+15 14 13 12 11 10  9  8
+ 7  6  5  4  3  2  1  0
+Array37: 
+hello, guy s/b hello, guy
+Array38: 
+20 19 18 17 16 15 14 13 12 11 s/b 20 19 18 17 16 15 14 13 12 11
+Array39: 
+63 62 61 60 59 58 57 56 
+55 54 53 52 51 50 49 48 
+47 46 45 44 43 42 41 40 
+39 38 37 36 35 34 33 32 
+31 30 29 28 27 26 25 24 
+23 22 21 20 19 18 17 16 
+15 14 13 12 11 10  9  8 
+ 7  6  5  4  3  2  1  0 
+s/b:
+63 62 61 60 59 58 57 56
+55 54 53 52 51 50 49 48
+47 46 45 44 43 42 41 40
+39 38 37 36 35 34 33 32
+31 30 29 28 27 26 25 24
+23 22 21 20 19 18 17 16
+15 14 13 12 11 10  9  8
+ 7  6  5  4  3  2  1  0
+
+******************* records ******************************
+
+Record1:   
+64     0 j 1 3 12  4.54512000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30 
+2324 y
+_bcde___i_
+8454
+s/b:
+64 false j 1 3 12  4.54512000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30
+2324 y
+_bcde___i_
+8454
+Record2:   
+64     0 j 1 3 12  4.54512000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30 
+2324 y
+_bcde___i_
+8454
+s/b:
+64 false j 1 3 12  4.54512000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30
+2324 y
+_bcde___i_
+8454
+Record3:   873 0 235 427 s/b 873 0 235 427
+Record4:   873 1     1 427 s/b 873 1  1 427
+Record5:   873 2 f 427 s/b 873 2 f 427
+Record6:   873 3 8 427 s/b 873 3 8 427
+Record7:   873 4 3 427 s/b 873 4 3 427
+Record8:   873 5 12 427 s/b 873 5 12 427
+Record9:   873 6  8.7e+03 427 s/b 873 6 8734.8389 427
+Record10:  873 7 this one ? 427 s/b 873 7 this one ? 427
+Record11:  873 8 20 19 18 17 16 15 14 13 12 11 427
+     s/b:  873 8 20 19 18 17 16 15 14 13 12 11 427
+Record12:  873 9 2387 t 427 s/b:  873 9 2387 t 427
+Record13:  873 10 _i_gfedcb_ 427
+     s/b:  873 10 _i_gfedcb_ 427
+Record14:  873 11 2394 427 s/b 873 11 2394 427
+Record15:  10 2343 s/b 10 2343
+Record16:  19     1 s/b 19  1
+Record17:      1 2343 s/b  true 2343
+Record18:      0     1 s/b 0  1
+Record19:  2 2343 s/b 2 2343
+Record20:  7     1 s/b 7  1
+Record21:  3 2343 s/b 3 2343
+Record22:  4     1 s/b 4  1
+Record23:  1 2 3 4 5 6 7 8 9 10 s/b 1 2 3 4 5 6 7 8 9 10
+Record24:  10 9 8 7 6 5 4 3 2 1 s/b 10 9 8 7 6 5 4 3 2 1
+Record25:  10 9 8 7 6 5 4 3 2 76 s/b 10 9 8 7 6 5 4 3 2 76
+Record26:  1 g s/b 1 g
+Record27:  20 19 18 17 16 15 14 13 12 11 s/b 20 19 18 17 16 15 14 13 12 11
+
+************ Procedures and functions ******************
+
+ProcedureFunction1:   45 89 s/b 45 89
+ProcedureFunction2:   46 s/b 46
+ProcedureFunction3:   total junk s/b total junk
+ProcedureFunction4:   tota? junk s/b tota? junk
+total junk s/b total junk
+ProcedureFunction5:   35 s/b 35
+ProcedureFunction6:   10 9 8 6 5 4 3 2 1 78
+             s/b:    10 9 8 6 5 4 3 2 1 78
+ProcedureFunction7:
+93     1 k 7 4 10  3.14140000e+00 hello, guy
+11 12 13 14 15 16 17 18 19 20 
+64     0 j 1 3 12  4.54512000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30 
+2324 y
+_bcde___i_
+8454
+23487 n     0
+help me123
+abcd___h__
+734
+s/b:
+93  1 k 7 4 10  3.14140000e+00 hello, guy
+11 12 13 14 15 16 17 18 19 20
+64 0 j 1 3 12  4.54500000e-29 what ? who
+21 22 23 24 25 26 27 28 29 30
+2324 y
+_bcde___i_
+8454
+23487 n 0
+help me123
+abcd___h__
+734
+ProcedureFunction10:   62 76 s/b 62 76
+
+program complete

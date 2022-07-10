@@ -1,0 +1,40 @@
+#!/bin/bash
+#
+# Run a Pascal file in batch mode using IP Pascal
+#
+# Runs a Pascal intermediate in batch mode.
+#
+# Execution:
+#
+# run <file>
+#
+# <file> is the filename without extention.
+#
+# The files are:
+#
+# <file>.p5  - The intermediate file
+# <file>.out - The prr file produced
+# <file>.inp - The input file to the program
+# <file>.lst - The output file from the program
+#
+
+if [ -z "$1" ]
+then
+   echo "*** Error: Missing parameter"
+   exit 1
+fi
+
+if [ ! -f $1.p5 ]
+then
+   echo "*** Error: Missing $1.p5 file"
+   exit 1
+fi
+
+if [ ! -f $1.inp ]
+then
+   echo "*** Error: Missing $1.inp file"
+   exit 1
+fi
+
+cp $1.p5 prd 
+./pint $1.p5 $1.out < $1.inp > $1.lst

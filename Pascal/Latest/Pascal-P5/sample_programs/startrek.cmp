@@ -1,0 +1,307 @@
+P5 Pascal compiler vs. 1.4.x
+
+Assembling/loading program
+Running program
+
+Orders:  Stardate 3279
+
+As commander of the United Starship Enterprise,
+your mission is to rid the galaxy of the deadly
+Klingon menace.  To do this, you must destroy the 
+Klingon invasion force of 46 battle cruisers.
+You have 13 solar years to complete
+your mission (i.e. until stardate 3291).  The 
+Enterprise is currently in quadrant 6-3, sector 2-2.
+
+Do you need further instructions (y/n) ? 
+
+The galaxy is divided into 64 quadrants with the
+following coordinates:
+
+  0   1   2   3   4   5   6   7
+---------------------------------
+|   |   |   |   |   |   |   |   |  0
+---------------------------------
+|   |   |   |   |   |   |   |   |  1
+---------------------------------
+|   |   |   |   |   |   |   |   |  2
+---------------------------------
+|   |   |   |   |   |   |   |   |  3
+---------------------------------
+|   |   |   |   |   |   |   |   |  4
+---------------------------------
+|   |   |   |   |   |   |   |   |  5
+---------------------------------
+|   |   |   |   |   |   |   |   |  6
+---------------------------------
+|   |   |   |   |   |   |   |   |  7
+
+Each quadrant is similarly divided into 64 sectors.
+
+Hit <return> to continue
+
+::: DEVICES :::
+
+ :: Warp Engines ::
+
+ Course = a number in degrees.
+   Numbers indicate direction starting at the top and
+   going counter clockwise.
+
+                     0
+                 315 | 45
+                    \\|/
+               270 --*-- 90
+                    /|\\
+                 225 | 135
+                    180
+
+ Warp Factor = a REAL number from 0 to 12.
+   Distance traveled = <warp factor> quadrants.
+     Warp  .2  =  The Enterprise travels 1 sector.
+           .5  =                         4 sectors.
+            1  =                         1 quadrant.
+            2  =                         2 quadrants.
+
+Hit <return> to continue
+
+   For example, if you travel from quadrant 1-1 in the
+   direction of 90 degrees at warp 2, you would stop at
+   quadrant 1-3 in the next stardate.  NOTE: every use of
+   the warp engines takes one stardate.  If the Enterprise
+   is blocked by something during an intra-quadrant travel,
+   it will stop in front of it (and waste a stardate).
+
+ :: Short Range Sensors ::
+
+  The short range sensors display a detailed view of the 
+  quadrant currently occupied by the Enterprise.  The 
+  The following symbols have meanings as follows:
+
+          Symbol          Meaning
+             .            empty space
+             *            a stable star
+             +            an unstable star
+             E            the Enterprise
+             B            a Federation base
+             K            a Klingon ship
+             @            a Klingon base
+
+Hit <return> to continue
+
+ :: Long Range Sensors ::
+
+  The long range sensors display the objects in the nine
+  closest quadrants.  Each digit in each box means 
+  means something:
+
+    The ONES digit represents the number of STARS.
+        TENS                                FEDERATION BASES.
+        HUNDREDS                            KLINGON SHIPS
+        THOUSANDS                           KLINGON BASES
+
+  For example:
+    319 means 3 Klingons, 1 Federation base, and 9 stars.
+    206 means 2 Klingons, 0 Federation bases, and 6 stars.
+   1007 means 1 Klingon base and 7 stars.
+
+ :: Phasers ::
+
+  Any portion of the energy available can be fired.  The
+  battle computer divides this amount among the Klingon
+  ships in the quadrant and determines the various directions
+
+Hit <return> to continue
+
+  of fire.  The effectiveness of a hit depends mostly on the
+  distance to the target.  A Klingon battle cruiser starts with
+  300 units of energy.  It can fire an amount equal to
+  whatever energy is left.  Note that phasers are ineffective 
+  against stars, Klingon bases, and Federation bases.
+
+ :: Photon Torpedoes ::
+
+  Initially the Enterprise has          10 photon torpedoes.
+  One torpedo destroys whatever it hits.  The range of the
+  photon torpedoes (like phasers) is limited to the current
+  quadrant.  The course of a photon torpedo is set the same
+  way as that of the Enterprise.  Torpedoes and phasers are
+  restocked when the Enterprise docks at a Federation base.
+
+ :: Damage Control Report ::
+
+  The damage control report lists the state of repair of each
+  device.  A non-zero state indicates the number of stardates
+  required to repair the device.  Devices can be damaged by
+  space storms, and are repaired by time and truces.
+
+Hit <return> to continue
+
+ :: History Computers ::
+
+  The history computers keep a record of all the quadrants
+  scanned with the long range scanners.  The history report
+  uses the same display format as the long range scanners,
+  except that the entire galaxy is displayed.  A quadrant
+  that has not been scanned is printed as "+++++".
+
+ :: Suicide Device ::
+
+  It is possible to implement a self-destruct sequence merely
+  by invoking this command.  The game is terminated.
+
+To get a list of all commands, type "9" when asked for a
+command.  All commands are terminated by the [RETURN] key.
+You have at least on supporting starbase.  Your energy and
+photon torpedoes are replenished when you are docked at a
+Federation starbase.  G O O D   L U C K !
+
+
+Hit <return> to continue
+
+
+----------------------
+. . . . . . . .    Stardate         3279
+. . . . . . . .    Condition        Green     
+. . E . . . . .    Quadrant         6-3
+. . . . + . . .    Sector           2-2
+. . . . . . . .    Energy           5000
+. . . . * * . .    Photon torpedoes 10
+. . . . . . . .    Klingons left    46
+. . + * . . . .    
+----------------------
+Command: 
+0 = Set course
+1 = Short range sensor scan
+2 = Long range sensor scan
+3 = Fire phasors
+4 = Fire photon torpedoes
+5 = Damage control report
+6 = History computer report
+7 = Self destruct
+Command: 
+----------------------
+. . . . . . . .    Stardate         3279
+. . . . . . . .    Condition        Green     
+. . E . . . . .    Quadrant         6-3
+. . . . + . . .    Sector           2-2
+. . . . . . . .    Energy           5000
+. . . . * * . .    Photon torpedoes 10
+. . . . . . . .    Klingons left    46
+. . + * . . . .    
+----------------------
+Command: 
+Long Range Sensor Scan For Quadrant 6-3
+|-----|-----|-----|
+|1005 | 104 | 102 |
+|-----|-----|-----|
+| 103 |   5 | 102 |
+|-----|-----|-----|
+|   6 |   5 |   6 |
+|-----|-----|-----|
+Command: 
+History Computer Report; Stardate 3279
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|+++++|+++++|+++++|+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|+++++|+++++|+++++|+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|+++++|+++++|+++++|+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|+++++|+++++|+++++|+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|+++++|+++++|+++++|+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|1005 | 104 | 102 |+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++| 103 |   5 | 102 |+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+|+++++|+++++|   6 |   5 |   6 |+++++|+++++|+++++|
+|-----|-----|-----|-----|-----|-----|-----|-----|
+Command: 
+Course: Warp factor (0-12): 180 unit hit on Enterprise from Klingon at sector 1-6 (4640 left)
+100 unit hit on Enterprise from Klingon at sector 2-5 (4540 left)
+165 unit hit on Enterprise from Klingon at sector 2-7 (4375 left)
+127 unit hit on Enterprise from Klingon at sector 5-3 (4248 left)
+----------------------
+. . . . . . . .    Stardate         3280
+. . . . . . K .    Condition        Red       
+. . . . . K . K    Quadrant         0-4
+. . . . . . . .    Sector           4-7
+. . . . * . . E    Energy           4248
+. . * K . . . .    Photon torpedoes 10
+* . . . . . . .    Klingons left    46
+. . . . . . . .    
+----------------------
+Command: 
+Phasers locked on target.  Energy available = 4248
+Number of units to fire:          28 unit hit on Klingon at sector 1-6 (272 left)
+         23 unit hit on Klingon at sector 2-5 (277 left)
+         40 unit hit on Klingon at sector 2-7 (260 left)
+         22 unit hit on Klingon at sector 5-3 (278 left)
+181 unit hit on Enterprise from Klingon at sector 1-6 (4017 left)
+156 unit hit on Enterprise from Klingon at sector 2-5 (3861 left)
+169 unit hit on Enterprise from Klingon at sector 2-7 (3692 left)
+125 unit hit on Enterprise from Klingon at sector 5-3 (3567 left)
+----------------------
+. . . . . . . .    Stardate         3280
+. . . . . . K .    Condition        Red       
+. . . . . K . K    Quadrant         0-4
+. . . . . . . .    Sector           4-7
+. . . . * . . E    Energy           3567
+. . * K . . . .    Photon torpedoes 10
+* . . . . . . .    Klingons left    46
+. . . . . . . .    
+----------------------
+Command: 
+Phasers locked on target.  Energy available = 3567
+Number of units to fire:          18 unit hit on Klingon at sector 1-6 (254 left)
+         16 unit hit on Klingon at sector 2-5 (261 left)
+         37 unit hit on Klingon at sector 2-7 (223 left)
+         12 unit hit on Klingon at sector 5-3 (266 left)
+93 unit hit on Enterprise from Klingon at sector 1-6 (3424 left)
+165 unit hit on Enterprise from Klingon at sector 2-5 (3259 left)
+200 unit hit on Enterprise from Klingon at sector 2-7 (3059 left)
+119 unit hit on Enterprise from Klingon at sector 5-3 (2940 left)
+----------------------
+. . . . . . . .    Stardate         3280
+. . . . . . K .    Condition        Red       
+. . . . . K . K    Quadrant         0-4
+. . . . . . . .    Sector           4-7
+. . . . * . . E    Energy           2940
+. . * K . . . .    Photon torpedoes 10
+* . . . . . . .    Klingons left    46
+. . . . . . . .    
+----------------------
+Command: 
+Torpedo course: Torpedo track:
+4-7
+3-7
+*** Klingon DESTROYED ***
+84 unit hit on Enterprise from Klingon at sector 1-6 (2856 left)
+139 unit hit on Enterprise from Klingon at sector 2-5 (2717 left)
+99 unit hit on Enterprise from Klingon at sector 5-3 (2618 left)
+----------------------
+. . . . . . . .    Stardate         3280
+. . . . . . K .    Condition        Red       
+. . . . . K . .    Quadrant         0-4
+. . . . . . . .    Sector           4-7
+. . . . * . . E    Energy           2618
+. . * K . . . .    Photon torpedoes 9
+* . . . . . . .    Klingons left    45
+. . . . . . . .    
+----------------------
+Command: 
+Device name:      Repair Time:
+Warp Engines            0
+Short Range Sensors     0
+Long Range Sensors      0
+Phaser Control          0
+Photon Tubes            0
+Damage Control          0
+History Computers       0
+Self Destruct           0
+Command: 
+Are you SURE ? 
+
+program complete

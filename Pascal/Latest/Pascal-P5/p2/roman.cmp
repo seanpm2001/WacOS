@@ -1,0 +1,21 @@
+P5 Pascal interpreter vs. 1.2
+
+Assembling/loading program
+Running program
+
+
+         1 I
+         2 II
+         4 IIII
+         8 VIII
+        16 XVI
+        32 XXXII
+        64 LXIIII
+       128 CXXVIII
+       256 CCLVI
+       512 DXII
+      1024 MXXIIII
+      2048 MMXXXXVIII
+      4096 MMMMLXXXXVI
+
+program complete

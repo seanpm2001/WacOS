@@ -1,0 +1,59 @@
+#!/bin/bash
+#
+# Script to run a pint self compile
+#
+# Run macro preprocessor to configure source for self compile.
+#
+pascpp source/pint -DWRDSIZ32 -DSELF_COMPILE
+#
+# Compile the final target, the PAT
+#
+echo Compiling the ISO 7185 PAT
+compile standard_tests/iso7185pat
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    cat standard_tests/iso7185pat.err
+    exit 1
+    
+fi
+#
+# Compile pint itself
+#
+echo Compiling pint to intermediate code
+compile source/pint.mpp
+if [ $? -ne 0 ]
+then
+
+    echo "*** Compile failed"
+    cat source/pint.mpp.err
+    exit 1
+    
+fi
+#
+# Add the final target program (the pat) to the end of pint.
+# This means that the version of pint will read and interpret
+# this.
+#
+cat source/pint.mpp.p5 standard_tests/iso7185pat.p5 > source/tmp.p5
+rm source/pint.mpp.p5
+mv source/tmp.p5 source/pint.mpp.p5
+#
+# Create input file
+#
+cp standard_tests/iso7185pat.inp source/pint.mpp.inp
+#
+# Now run pint on pint, which runs the PAT.
+#
+echo "Running pint on itself, to run the ISO 7185 PAT"
+run source/pint.mpp
+cp source/pint.mpp.lst standard_tests/iso7185pats.lst
+echo "Comparing PAT result to reference ... "
+diffnole standard_tests/iso7185pats.lst standard_tests/iso7185pats.cmp > standard_tests/iso7185pats.dif
+if test -s standard_tests/iso7185pats.dif
+then
+    echo "*** FAILED"
+else
+    echo "PASS"
+fi
