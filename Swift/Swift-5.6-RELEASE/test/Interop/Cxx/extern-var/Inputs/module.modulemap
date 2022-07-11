@@ -1,0 +1,4 @@
+module ExternVar {
+  header "extern-var.h"
+  requires cplusplus
+}
