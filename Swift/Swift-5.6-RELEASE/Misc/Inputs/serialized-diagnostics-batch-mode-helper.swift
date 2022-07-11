@@ -1,3 +1,0 @@
-func testHelper() {
-  nonexistent()
-}
