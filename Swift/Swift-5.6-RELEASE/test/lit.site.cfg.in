@@ -1,0 +1,149 @@
+# lit.site.cfg.in - Local configuration for the 'lit' test runner -*- python -*-
+#
+# This source file is part of the Swift.org open source project
+#
+# Copyright (c) 2014 - 2017 Apple Inc. and the Swift project authors
+# Licensed under Apache License v2.0 with Runtime Library Exception
+#
+# See https://swift.org/LICENSE.txt for license information
+# See https://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
+#
+# -----------------------------------------------------------------------------
+
+import os
+import platform
+import sys
+
+config.cmake = "@CMAKE_COMMAND@"
+config.llvm_src_root = "@LLVM_MAIN_SRC_DIR@"
+config.llvm_obj_root = "@LLVM_BINARY_DIR@"
+config.llvm_tools_dir = "@LLVM_TOOLS_DIR@"
+config.llvm_libs_dir = "@LLVM_LIBS_DIR@"
+config.llvm_code_generators = "@LLVM_TARGETS_TO_BUILD@".split(";")
+config.lit_tools_dir = "@LLVM_LIT_TOOLS_DIR@"
+config.swift_src_root = lit_config.params.get("swift_src_root", "@SWIFT_SOURCE_DIR@")
+config.swift_obj_root = "@SWIFT_BINARY_DIR@"
+config.target_triple = "@TARGET_TRIPLE@"
+config.variant_triple = "@VARIANT_TRIPLE@"
+config.variant_sdk = "@VARIANT_SDK@"
+config.variant_suffix = "@VARIANT_SUFFIX@"
+config.swiftlib_dir = "@LIT_SWIFTLIB_DIR@"
+config.swift_test_results_dir = \
+    lit_config.params.get("swift_test_results_dir", "@SWIFT_TEST_RESULTS_DIR@")
+
+config.coverage_mode = "@SWIFT_ANALYZE_CODE_COVERAGE@"
+config.lldb_build_root = "@LLDB_BUILD_DIR@"
+config.libdispatch_build_path = "@SWIFT_PATH_TO_LIBDISPATCH_BUILD@"
+config.libdispatch_static_build_path = "@SWIFT_PATH_TO_LIBDISPATCH_STATIC_BUILD@"
+config.swift_driver_test_options = "@SWIFT_DRIVER_TEST_OPTIONS@"
+config.swift_frontend_test_options = "@SWIFT_FRONTEND_TEST_OPTIONS@"
+
+# --- Darwin ---
+config.darwin_xcrun_toolchain = "@SWIFT_DARWIN_XCRUN_TOOLCHAIN@"
+
+# --- android ---
+config.android_ndk_path = "@SWIFT_ANDROID_NDK_PATH@"
+config.android_api_level = "@SWIFT_ANDROID_API_LEVEL@"
+
+# --- Windows ---
+msvc_runtime_flags = {
+  'MultiThreaded': 'MT',
+  'MultiThreadedDebug': 'MTd',
+  'MultiThreadedDLL': 'MD',
+  'MultiThreadedDebugDLL': 'MDd',
+}
+config.swift_stdlib_msvc_runtime = \
+    msvc_runtime_flags["@SWIFT_STDLIB_MSVC_RUNTIME_LIBRARY@"]
+
+config.darwin_enable_maccatalyst = "@SWIFT_ENABLE_MACCATALYST@" == "TRUE"
+config.darwin_maccatalyst_build_flavor = "@BUILD_FLAVOR@"
+config.darwin_osx_variant_suffix = "@DEFAULT_OSX_VARIANT_SUFFIX@"
+
+# If we are not testing against the host compiler, we are testing against the
+# just built compiler. Add that as a feature so we can conditionally mark tests
+# as requiring a just_built_compiler.
+config.testing_against_host_compiler = \
+    "@SWIFT_RUN_TESTS_WITH_HOST_COMPILER@" == "TRUE"
+
+# Please remember to handle empty strings and/or unset variables correctly.
+
+if "@SWIFT_ASAN_BUILD@" == "TRUE":
+    config.available_features.add("asan")
+else:
+    config.available_features.add('no_asan')
+
+if "@SWIFT_RUNTIME_ENABLE_LEAK_CHECKER@" == "TRUE":
+    config.available_features.add('leak-checker')
+
+if '@SWIFT_TOOLS_ENABLE_LTO@'.lower() in ['full', 'thin']:
+    config.available_features.add('lto')
+else:
+    config.available_features.add('no_lto')
+
+if '@SWIFT_STDLIB_ENABLE_LTO@'.lower() in ['full', 'thin']:
+    config.available_features.add('stdlib_lto')
+
+if "@LLVM_ENABLE_ASSERTIONS@" == "TRUE":
+    config.available_features.add('asserts')
+else:
+    config.available_features.add('no_asserts')
+
+if "@SWIFT_STDLIB_ASSERTIONS@" == "TRUE":
+    config.available_features.add('swift_stdlib_asserts')
+else:
+    config.available_features.add('swift_stdlib_no_asserts')
+
+if "@SWIFT_OPTIMIZED@" == "TRUE":
+    config.available_features.add("optimized_stdlib")
+
+if "@SWIFT_STDLIB_SINGLE_THREADED_RUNTIME@" == "TRUE":
+    config.available_features.add("single_threaded_runtime")
+
+if "@SWIFT_ENABLE_REFLECTION@" == "TRUE":
+    config.available_features.add("reflection")
+
+if "@SWIFT_ENABLE_RUNTIME_FUNCTION_COUNTERS@" == "TRUE":
+    config.available_features.add('runtime_function_counters')
+
+if "@CMAKE_GENERATOR@" == "Xcode":
+    xcode_bin_dir = os.path.join(config.llvm_obj_root, "@LLVM_BUILD_TYPE@",
+                                 'bin')
+    lit_config.note('Adding to path: ' + xcode_bin_dir)
+    config.environment['PATH'] = \
+      os.path.pathsep.join((xcode_bin_dir, config.environment['PATH']))
+
+config.available_features.add("CMAKE_GENERATOR=@CMAKE_GENERATOR@")
+
+if "@SWIFT_ENABLE_MACCATALYST@" == "TRUE":
+    config.available_features.add('maccatalyst_support')
+
+if "@SWIFT_BUILD_SYNTAXPARSERLIB@" == "TRUE":
+    config.available_features.add('syntax_parser_lib')
+
+if "@SWIFT_ENABLE_SOURCEKIT_TESTS@" == "TRUE":
+    config.available_features.add('sourcekit')
+
+if "@SWIFT_HAVE_LIBXML2@" == "TRUE":
+    config.available_features.add('libxml2')
+
+if '@SWIFT_INCLUDE_TOOLS@' == 'TRUE':
+    config.available_features.add('swift_tools_extra')
+
+if "@SWIFT_ENABLE_EXPERIMENTAL_DIFFERENTIABLE_PROGRAMMING@" == "TRUE":
+    config.available_features.add('differentiable_programming')
+if "@SWIFT_ENABLE_EXPERIMENTAL_CONCURRENCY@" == "TRUE":
+    config.available_features.add('concurrency')
+if "@SWIFT_BACK_DEPLOY_CONCURRENCY@" == "TRUE":
+    config.available_features.add('back_deploy_concurrency')
+if "@SWIFT_ENABLE_EXPERIMENTAL_DISTRIBUTED@" == "TRUE":
+    config.available_features.add('distributed')
+if "@SWIFT_STDLIB_STATIC_PRINT@" == "TRUE":
+    config.available_features.add('stdlib_static_print')
+if "@SWIFT_ENABLE_EXPERIMENTAL_STRING_PROCESSING@" == "TRUE":
+    config.available_features.add('string_processing')
+
+# Let the main config do the real work.
+if config.test_exec_root is None:
+    config.test_exec_root = os.path.dirname(os.path.realpath(__file__))
+lit_config.load_config(
+    config, os.path.join(config.swift_src_root, "test", "lit.cfg"))
