@@ -1,0 +1,325 @@
+// RUN: %target-sil-opt -enable-sil-verify-all %s -capture-promotion | %FileCheck %s
+
+sil_stage raw
+
+import Builtin
+import Swift
+
+/*
+func test_reachability_1(b: Builtin.Int1, x: Builtin.Int64, y: Builtin.Int64) {
+  if (b) {
+    x = y
+  }
+  var t : () -> Builtin.Int64 = { x } // promotable
+  if (b) {
+    t = { x } // promotable
+  }
+}
+*/
+// CHECK-LABEL: sil [ossa] @test_reachability_1 :
+// CHECK: [[CLOSURE0_PROMOTE0:%.*]] = function_ref @$s8closure0Tf2i_n :
+// CHECK: partial_apply [[CLOSURE0_PROMOTE0]]({{%.*}})
+// CHECK: [[CLOSURE1_PROMOTE0:%.*]] = function_ref @$s8closure1Tf2i_n :
+// CHECK: partial_apply [[CLOSURE1_PROMOTE0]]({{%.*}})
+// CHECK: } // end sil function 'test_reachability_1'
+sil [ossa] @test_reachability_1 : $@convention(thin) (Builtin.Int1, Builtin.Int64, Builtin.Int64) -> () {
+bb0(%0 : $Builtin.Int1, %1 : $Builtin.Int64, %2 : $Builtin.Int64):
+  %3 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %3a = project_box %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>, 0
+  %4 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %4a = project_box %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %5 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %5a = project_box %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  store %0 to [trivial] %3a : $*Builtin.Int1
+  store %1 to [trivial] %4a : $*Builtin.Int64
+  store %2 to [trivial] %5a : $*Builtin.Int64
+  %9 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %9, bb1a, bb1b
+
+bb1a:
+  %11 = load [trivial] %5a : $*Builtin.Int64
+  assign %11 to %4a : $*Builtin.Int64
+  br bb2
+
+bb1b:
+  br bb2
+
+bb2:
+  %14 = alloc_box $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  %14a = project_box %14 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>, 0
+  %15 = function_ref @closure0 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4b = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %17 = partial_apply %15(%4b) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  store %17 to [init] %14a : $*@callee_owned () -> Builtin.Int64
+  %19 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %19, bb3a, bb3b
+
+bb3a:
+  %21 = function_ref @closure1 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4c = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %23 = partial_apply %21(%4c) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  assign %23 to %14a : $*@callee_owned () -> Builtin.Int64
+  br bb4
+
+bb3b:
+  br bb4
+
+bb4:
+  destroy_value %14 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  destroy_value %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %30 = tuple ()
+  return %30 : $()
+}
+
+sil private [ossa] @closure0 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+// closure1
+sil private [ossa] @closure1 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+/*
+func test_reachability_2(b: Builtin.Int1, x: Builtin.Int64, y: Builtin.Int64) {
+  var t : () -> Builtin.Int64 = { x } // unpromotable
+  if (b) {
+    x = y
+  }
+  if (b) {
+    t = { x } // promotable
+  }
+}
+*/
+// CHECK-LABEL: sil [ossa] @test_reachability_2 :
+// CHECK: [[CLOSURE2:%.*]] = function_ref @closure2 :
+// CHECK: partial_apply [[CLOSURE2]]({{%.*}})
+// CHECK: [[CLOSURE3_PROMOTE0:%.*]] = function_ref @$s8closure3Tf2i_n :
+// CHECK: partial_apply [[CLOSURE3_PROMOTE0]]({{%.*}})
+// CHECK: } // end sil function 'test_reachability_2'
+sil [ossa] @test_reachability_2 : $@convention(thin) (Builtin.Int1, Builtin.Int64, Builtin.Int64) -> () {
+bb0(%0 : $Builtin.Int1, %1 : $Builtin.Int64, %2 : $Builtin.Int64):
+  %3 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %3a = project_box %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>, 0
+  %4 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %4a = project_box %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %5 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %5a = project_box %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  store %0 to [trivial] %3a : $*Builtin.Int1
+  store %1 to [trivial] %4a : $*Builtin.Int64
+  store %2 to [trivial] %5a : $*Builtin.Int64
+  %9 = alloc_box $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  %9a = project_box %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>, 0
+  %10 = function_ref @closure2 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4b = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %12 = partial_apply %10(%4b) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  store %12 to [init] %9a : $*@callee_owned () -> Builtin.Int64
+  %14 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %14, bb1a, bb1b
+
+bb1a:
+  %16 = load [trivial] %5a : $*Builtin.Int64
+  assign %16 to %4a : $*Builtin.Int64
+  br bb2
+
+bb1b:
+  br bb2
+
+bb2:
+  %19 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %19, bb3a, bb3b
+
+bb3a:
+  %21 = function_ref @closure3 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4c = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %23 = partial_apply %21(%4c) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  assign %23 to %9a : $*@callee_owned () -> Builtin.Int64
+  br bb4
+
+bb3b:
+  br bb4
+
+bb4:
+  destroy_value %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  destroy_value %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %30 = tuple ()
+  return %30 : $()
+}
+
+// closure2
+sil private [ossa] @closure2 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+// closure3
+sil private [ossa] @closure3 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+/*
+func test_reachability_3(b: Builtin.Int1, x: Builtin.Int64, y: Builtin.Int64) {
+  var t : () -> Builtin.Int64 = { x } // unpromotable
+  if (b) {
+    t = { x } // unpromotable
+  }
+  if (b) {
+    x = y
+  }
+}
+*/
+// CHECK-LABEL: sil [ossa] @test_reachability_3 :
+// CHECK: [[CLOSURE4:%.*]] = function_ref @closure4 :
+// CHECK: partial_apply [[CLOSURE4]]({{%.*}})
+// CHECK: [[CLOSURE5:%.*]] = function_ref @closure5 :
+// CHECK: partial_apply [[CLOSURE5]]({{%.*}})
+// CHECK: } // end sil function 'test_reachability_3'
+sil [ossa] @test_reachability_3 : $@convention(thin) (Builtin.Int1, Builtin.Int64, Builtin.Int64) -> () {
+bb0(%0 : $Builtin.Int1, %1 : $Builtin.Int64, %2 : $Builtin.Int64):
+  %3 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %3a = project_box %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>, 0
+  %4 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %4a = project_box %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %5 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %5a = project_box %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  store %0 to [trivial] %3a : $*Builtin.Int1
+  store %1 to [trivial] %4a : $*Builtin.Int64
+  store %2 to [trivial] %5a : $*Builtin.Int64
+  %9 = alloc_box $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  %9a = project_box %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>, 0
+  %10 = function_ref @closure4 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4c = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %12 = partial_apply %10(%4c) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  store %12 to [init] %9a : $*@callee_owned () -> Builtin.Int64
+  %14 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %14, bb1a, bb1b
+
+bb1a:
+  %16 = function_ref @closure5 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4d = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %18 = partial_apply %16(%4d) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  assign %18 to %9a : $*@callee_owned () -> Builtin.Int64
+  br bb2
+
+bb1b:
+  br bb2
+
+bb2:
+  %21 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %21, bb3a, bb3b
+
+bb3a:
+  %23 = load [trivial] %5a : $*Builtin.Int64
+  assign %23 to %4a : $*Builtin.Int64
+  br bb4
+
+bb3b:
+  br bb4
+
+bb4:
+  destroy_value %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  destroy_value %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %30 = tuple ()
+  return %30 : $()
+}
+
+sil private [ossa] @closure4 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+sil private [ossa] @closure5 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+/*
+func test_reachability_4(b: Builtin.Int1, x: Builtin.Int64, y: Builtin.Int64) {
+  var t : () -> Builtin.Int64 = { x } // unpromotable
+  while (b) {
+    x = y
+    t = { x } // unpromotable
+  }
+}
+*/
+// CHECK-LABEL: sil [ossa] @test_reachability_4 :
+// CHECK: [[CLOSURE6:%.*]] = function_ref @closure6 :
+// CHECK: partial_apply [[CLOSURE6]]({{%.*}})
+// CHECK: [[CLOSURE7:%.*]] = function_ref @closure7 :
+// CHECK: partial_apply [[CLOSURE7]]({{%.*}})
+// CHECK: } // end sil function 'test_reachability_4'
+sil [ossa] @test_reachability_4 : $@convention(thin) (Builtin.Int1, Builtin.Int64, Builtin.Int64) -> () {
+bb0(%0 : $Builtin.Int1, %1 : $Builtin.Int64, %2 : $Builtin.Int64):
+  %3 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %3a = project_box %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>, 0
+  %4 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %4a = project_box %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %5 = alloc_box $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %5a = project_box %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  store %0 to [trivial] %3a : $*Builtin.Int1
+  store %1 to [trivial] %4a : $*Builtin.Int64
+  store %2 to [trivial] %5a : $*Builtin.Int64
+  %9 = alloc_box $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  %9a = project_box %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>, 0
+  %10 = function_ref @closure6 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4d = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %12 = partial_apply %10(%4d) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  store %12 to [init] %9a : $*@callee_owned () -> Builtin.Int64
+  br bb1
+
+bb1:
+  %15 = load [trivial] %3a : $*Builtin.Int1
+  cond_br %15, bb2, bb3
+
+bb2:
+  %17 = load [trivial] %5a : $*Builtin.Int64
+  assign %17 to %4a : $*Builtin.Int64
+  %19 = function_ref @closure7 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  %4e = copy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  %21 = partial_apply %19(%4e) : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64
+  assign %21 to %9a : $*@callee_owned () -> Builtin.Int64
+  br bb1
+
+bb3:
+  destroy_value %9 : $<τ_0_0> { var τ_0_0 } <@callee_owned () -> Builtin.Int64>
+  destroy_value %5 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %4 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>
+  destroy_value %3 : $<τ_0_0> { var τ_0_0 } <Builtin.Int1>
+  %28 = tuple ()
+  return %28 : $()
+}
+
+sil private [ossa] @closure6 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
+
+sil private [ossa] @closure7 : $@convention(thin) (@guaranteed <τ_0_0> { var τ_0_0 } <Builtin.Int64>) -> Builtin.Int64 {
+bb0(%0 : @guaranteed $<τ_0_0> { var τ_0_0 } <Builtin.Int64>):
+  %1 = project_box %0 : $<τ_0_0> { var τ_0_0 } <Builtin.Int64>, 0
+  %3 = load [trivial] %1 : $*Builtin.Int64
+  return %3 : $Builtin.Int64
+}
