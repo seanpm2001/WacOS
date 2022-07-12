@@ -1,0 +1,53 @@
+test_parser
+Expressions:
+expr: foo(1)
+expr: [1, 2, 3]
+expr: [x**3 for x in range(20)]
+expr: [x**3 for x in range(20) if x % 3]
+expr: foo(*args)
+expr: foo(*args, **kw)
+expr: foo(**kw)
+expr: foo(key=value)
+expr: foo(key=value, *args)
+expr: foo(key=value, *args, **kw)
+expr: foo(key=value, **kw)
+expr: foo(a, b, c, *args)
+expr: foo(a, b, c, *args, **kw)
+expr: foo(a, b, c, **kw)
+expr: foo + bar
+
+Statements:
+suite: print
+suite: print 1
+suite: print 1,
+suite: print >>fp
+suite: print >>fp, 1
+suite: print >>fp, 1,
+suite: a
+suite: a = b
+suite: a = b = c = d = e
+suite: a += b
+suite: a -= b
+suite: a *= b
+suite: a /= b
+suite: a %= b
+suite: a &= b
+suite: a |= b
+suite: a ^= b
+suite: a <<= b
+suite: a >>= b
+suite: a **= b
+
+Invalid parse trees:
+
+<junk>
+caught expected exception for invalid tree
+
+print >>fp,
+caught expected exception for invalid tree
+
+a,,c
+caught expected exception for invalid tree
+
+a $= b
+caught expected exception for invalid tree
