@@ -1,0 +1,62 @@
+{
+  key.offset: 0,
+  key.length: 280,
+  key.diagnostic_stage: source.diagnostic.stage.swift.parse,
+  key.syntaxmap: [
+    {
+      key.kind: source.lang.swift.syntaxtype.comment,
+      key.offset: 0,
+      key.length: 71
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.comment,
+      key.offset: 71,
+      key.length: 41
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.keyword,
+      key.offset: 113,
+      key.length: 3
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.identifier,
+      key.offset: 117,
+      key.length: 5
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.objectliteral,
+      key.offset: 125,
+      key.length: 40
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.keyword,
+      key.offset: 166,
+      key.length: 3
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.identifier,
+      key.offset: 170,
+      key.length: 5
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.objectliteral,
+      key.offset: 178,
+      key.length: 50
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.keyword,
+      key.offset: 229,
+      key.length: 3
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.identifier,
+      key.offset: 233,
+      key.length: 4
+    },
+    {
+      key.kind: source.lang.swift.syntaxtype.objectliteral,
+      key.offset: 240,
+      key.length: 38
+    }
+  ]
+}
