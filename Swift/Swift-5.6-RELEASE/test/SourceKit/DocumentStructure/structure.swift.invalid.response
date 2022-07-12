@@ -1,0 +1,162 @@
+{
+  key.offset: 0,
+  key.length: 166,
+  key.diagnostic_stage: source.diagnostic.stage.swift.parse,
+  key.substructure: [
+    {
+      key.kind: source.lang.swift.decl.extension,
+      key.name: "Worker",
+      key.offset: 0,
+      key.length: 82,
+      key.nameoffset: 10,
+      key.namelength: 6,
+      key.bodyoffset: 18,
+      key.bodylength: 63,
+      key.substructure: [
+        {
+          key.kind: source.lang.swift.decl.protocol,
+          key.accessibility: source.lang.swift.accessibility.public,
+          key.name: "BasicWorker",
+          key.offset: 28,
+          key.length: 52,
+          key.nameoffset: 37,
+          key.namelength: 11,
+          key.bodyoffset: 58,
+          key.bodylength: 21,
+          key.inheritedtypes: [
+            {
+              key.name: "Worker"
+            }
+          ],
+          key.attributes: [
+            {
+              key.offset: 21,
+              key.length: 6,
+              key.attribute: source.decl.attribute.public
+            }
+          ],
+          key.elements: [
+            {
+              key.kind: source.lang.swift.structure.elem.typeref,
+              key.offset: 50,
+              key.length: 6
+            }
+          ],
+          key.substructure: [
+            {
+              key.kind: source.lang.swift.decl.var.instance,
+              key.accessibility: source.lang.swift.accessibility.public,
+              key.setter_accessibility: source.lang.swift.accessibility.public,
+              key.name: "eventLoop",
+              key.offset: 63,
+              key.length: 13,
+              key.nameoffset: 67,
+              key.namelength: 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      key.kind: source.lang.swift.decl.class,
+      key.accessibility: source.lang.swift.accessibility.internal,
+      key.name: "3",
+      key.offset: 84,
+      key.length: 10,
+      key.nameoffset: 90,
+      key.namelength: 1,
+      key.bodyoffset: 93,
+      key.bodylength: 0
+    },
+    {
+      key.kind: source.lang.swift.decl.extension,
+      key.name: "OuterCls",
+      key.offset: 96,
+      key.length: 43,
+      key.nameoffset: 106,
+      key.namelength: 8,
+      key.bodyoffset: 116,
+      key.bodylength: 22,
+      key.substructure: [
+        {
+          key.kind: source.lang.swift.decl.class,
+          key.name: "InnerCls1",
+          key.offset: 119,
+          key.length: 18,
+          key.nameoffset: 125,
+          key.namelength: 9,
+          key.bodyoffset: 136,
+          key.bodylength: 0
+        }
+      ]
+    },
+    {
+      key.kind: source.lang.swift.expr.closure,
+      key.offset: 141,
+      key.length: 24,
+      key.bodyoffset: 142,
+      key.bodylength: 22,
+      key.substructure: [
+        {
+          key.kind: source.lang.swift.stmt.brace,
+          key.offset: 141,
+          key.length: 24,
+          key.bodyoffset: 142,
+          key.bodylength: 22,
+          key.substructure: [
+            {
+              key.kind: source.lang.swift.decl.class,
+              key.accessibility: source.lang.swift.accessibility.private,
+              key.name: "MyCoolClass",
+              key.offset: 143,
+              key.length: 22,
+              key.nameoffset: 149,
+              key.namelength: 11,
+              key.bodyoffset: 162,
+              key.bodylength: 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  key.diagnostics: [
+    {
+      key.line: 7,
+      key.column: 7,
+      key.filepath: invalid.swift,
+      key.severity: source.diagnostic.severity.error,
+      key.id: "number_cant_start_decl_name",
+      key.description: "class name can only start with a letter or underscore, not a number",
+      key.diagnostic_stage: source.diagnostic.stage.swift.parse
+    },
+    {
+      key.line: 13,
+      key.column: 1,
+      key.filepath: invalid.swift,
+      key.severity: source.diagnostic.severity.error,
+      key.id: "statement_begins_with_closure",
+      key.description: "top-level statement cannot begin with a closure expression",
+      key.diagnostic_stage: source.diagnostic.stage.swift.parse
+    },
+    {
+      key.line: 17,
+      key.column: 1,
+      key.filepath: invalid.swift,
+      key.severity: source.diagnostic.severity.error,
+      key.id: "expected_closure_rbrace",
+      key.description: "expected '}' at end of closure",
+      key.diagnostic_stage: source.diagnostic.stage.swift.parse,
+      key.diagnostics: [
+        {
+          key.line: 13,
+          key.column: 1,
+          key.filepath: invalid.swift,
+          key.severity: source.diagnostic.severity.note,
+          key.id: "opening_brace",
+          key.description: "to match this opening '{'"
+        }
+      ]
+    }
+  ]
+}
