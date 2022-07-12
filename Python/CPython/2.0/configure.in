@@ -1,0 +1,1304 @@
+dnl Process this file with autoconf 2.0 or later to make a configure script.
+AC_REVISION($Revision$)
+AC_PREREQ(2.0)
+AC_INIT(Include/object.h)
+AC_CONFIG_HEADER(config.h)
+
+# Set VERSION so we only need to edit in one place (i.e., here)
+AC_SUBST(VERSION)
+VERSION=2.0
+
+# NEXTSTEP|MacOSX|Darwin stuff
+if test -f /usr/lib/NextStep/software_version -o -f /System/Library/CoreServices/software_version ; then
+
+	AC_MSG_CHECKING(for --with-next-archs)
+	AC_ARG_WITH(next-archs,
+	 [  --with-next-archs='arch1 arch2 ..'   build MAB binary], [
+		if test -n "$withval"; then
+		    ac_arch_flags=`/usr/lib/arch_tool -archify_list $withval`
+		    # GCC does not currently support multi archs on the NeXT
+		    with_gcc=no
+		fi
+		AC_MSG_RESULT($with_next_archs)
+	], [AC_MSG_RESULT(none: using `arch`)])
+	
+	if test -z "$MACHDEP"
+	then
+	    ac_sys_system=`uname -s`
+	    if test "$ac_sys_system" = "Darwin" ; then
+		ac_sys_release=`uname -r`
+	    else
+		set X `hostinfo | egrep '(NeXT Mach|Kernel Release).*:' | \
+			sed -e 's/://' -e 's/\./_/'` && \
+		ac_sys_system=next && ac_sys_release=$4
+	    fi
+
+	    MACHDEP="$ac_sys_system$ac_sys_release"
+	fi
+fi
+
+AC_ARG_WITH(next-framework,
+[  --with-next-framework           Build (OpenStep|Rhapsody|MacOSX|Darwin) framework],,)
+AC_ARG_WITH(dyld,
+[  --with-dyld                     Use (OpenStep|Rhapsody|MacOSX|Darwin) dynamic linker],,)
+
+# Set name for machine-dependent library files
+AC_SUBST(MACHDEP)
+AC_MSG_CHECKING(MACHDEP)
+if test -z "$MACHDEP"
+then
+	ac_sys_system=`uname -s`
+	if test "$ac_sys_system" = "AIX" -o "$ac_sys_system" = "Monterey64"; then
+		ac_sys_release=`uname -v`
+	else
+		ac_sys_release=`uname -r`
+	fi
+	ac_md_system=`echo $ac_sys_system |
+			   tr -d '[/ ]' | tr '[[A-Z]]' '[[a-z]]'`
+	ac_md_release=`echo $ac_sys_release |
+			   tr -d '[/ ]' | sed 's/\..*//'`
+	MACHDEP="$ac_md_system$ac_md_release"
+
+	case $MACHDEP in
+	'')	MACHDEP="unknown";;
+	esac
+fi
+
+#
+# SGI compilers allow the specification of the both the ABI and the
+# ISA on the command line.  Depending on the values of these switches,
+# different and often incompatable code will be generated.
+#
+# The SGI_ABI variable can be used to modify the CC and LDFLAGS and
+# thus supply support for various ABI/ISA combinations.  The MACHDEP
+# variable is also adjusted.
+#
+AC_SUBST(SGI_ABI)
+if test ! -z "$SGI_ABI"
+then
+        CC="cc $SGI_ABI"
+        LDFLAGS="$SGI_ABI $LDFLAGS"
+        MACHDEP=`echo "${MACHDEP}${SGI_ABI}" | sed 's/ *//g'`
+fi
+AC_MSG_RESULT($MACHDEP)
+
+#
+# CCC is the command that compiles C++ programs
+#
+# Not all make programs have this predefined.
+#
+#AC_SUBST(SET_CCC)
+#AC_MSG_CHECKING(CCC)
+#if test -z "$CCC"
+#then
+#	case $ac_sys_system in
+#	IRIX*)	SET_CCC="CCC= CC ${SGI_ABI}";;
+#	Linux*) SET_CCC="CCC= g++";;
+#	*)	SET_CCC=""
+#	esac
+#else
+#        SET_CCC="CCC= ${CCC}"
+#fi
+#AC_MSG_RESULT($SET_CCC)
+
+
+# checks for alternative programs
+AC_MSG_CHECKING(for --without-gcc)
+AC_ARG_WITH(gcc, [  --without-gcc                   never use gcc], [
+	case $withval in
+	no)	CC=cc
+		without_gcc=yes;;
+	yes)	CC=gcc
+		without_gcc=no;;
+	*)	CC=$withval
+		without_gcc=$withval;;
+	esac], [
+	case $ac_sys_system in
+	OSF1)	CC=cc
+		without_gcc=;;
+	BeOS*)
+		case $BE_HOST_CPU in
+		ppc)
+			CC=mwcc
+			without_gcc=yes
+			OPT="-O -D'DL_EXPORT(RTYPE)=__declspec(dllexport) RTYPE' -D'DL_IMPORT(RTYPE)=__declspec(dllexport) RTYPE' -export pragma"
+			CCSHARED="UDL_IMPORT -D'DL_IMPORT(RTYPE)=__declspec(dllimport) RTYPE'"
+			LDFLAGS="$LDFLAGS -nodup"
+
+			AR="$PWD/BeOS/ar-fake"
+			RANLIB=:
+			;;
+		x86)
+			CC=gcc
+			without_gcc=no
+			OPT=-O
+			# Really should use srcdir instead of PWD
+			AR="$PWD/BeOS/ar-fake"
+			RANLIB=:
+			;;
+		*)
+			AC_ERROR(Unknown BeOS platform \"$BE_HOST_CPU\")
+			;;
+		esac
+		;;
+    Monterey*)
+        RANLIB=:
+        without_gcc=;;
+	*)	without_gcc=no;;
+	esac])
+AC_MSG_RESULT($without_gcc)
+
+AC_SUBST(SET_CXX)
+AC_SUBST(MAINOBJ)
+MAINOBJ=python.o
+AC_MSG_CHECKING(for --with-cxx=<compiler>)
+AC_ARG_WITH(cxx, [  --with-cxx=<compiler>           enable C++ support],[
+	case $withval in
+	no)	CXX=
+		with_cxx=no;;
+	*)	CXX=$withval
+		MAINOBJ=ccpython.o
+		with_cxx=$withval;;
+	esac], [
+	with_cxx=no
+])
+AC_MSG_RESULT($with_cxx)
+SET_CXX="CXX=$CXX"
+
+#AC_MSG_CHECKING(CCC)
+#if test -z "$CCC"
+#then
+#	case $ac_sys_system in
+#	IRIX*)	SET_CCC="CCC= CC ${SGI_ABI}";;
+#	Linux*) SET_CCC="CCC= g++";;
+#	*)	SET_CCC=""
+#	esac
+#else
+#        SET_CCC="CCC= ${CCC}"
+#fi
+#AC_MSG_RESULT($SET_CCC)
+
+# If the user switches compilers, we can't believe the cache
+if test ! -z "$ac_cv_prog_CC" -a ! -z "$CC" -a "$CC" != "$ac_cv_prog_CC"
+then
+  AC_ERROR(cached CC is different -- throw away $cache_file
+(it is also a good idea to do 'make clean' before compiling))
+fi
+
+AC_PROG_CC
+AC_SUBST(EXE)
+AC_MSG_CHECKING(for --with-suffix)
+AC_ARG_WITH(suffix, [  --with-suffix=.exe              set executable suffix],[
+	case $withval in
+	no)	EXE=;;
+	yes)	EXE=.exe;;
+	*)	EXE=$withval;;
+	esac])
+AC_MSG_RESULT($EXE)
+
+case $MACHDEP in
+bsdos*)
+    case $CC in
+    gcc) CC="$CC -D_HAVE_BSDI";;
+    esac;;
+esac
+
+case $ac_sys_system in
+hp*|HP*)
+    case $CC in
+    cc|*/cc) CC="$CC -Ae";;
+    esac;;
+Monterey*)
+    case $CC in
+    cc) CC="$CC -Wl,-Bexport";;
+    esac;;
+esac
+
+# LDLIBRARY is the name of the library to link against (as opposed to the
+# name of the library into which to insert object files). On systems
+# without shared libraries, LDLIBRARY is the same as LIBRARY (defined in
+# the Makefiles). 
+AC_SUBST(MAKE_LDLIBRARY)
+AC_SUBST(LDLIBRARY)
+LDLIBRARY=''
+
+# LINKCC is the command that links the python executable -- default is $(CC).
+# This is altered for AIX in order to build the export list before 
+# linking.
+AC_SUBST(LINKCC)
+AC_MSG_CHECKING(LINKCC)
+if test -z "$LINKCC" -a ! -z "$CXX"
+then
+    LINKCC="$CXX"
+fi
+if test -z "$LINKCC"
+then
+	case $ac_sys_system in
+	AIX*)
+	   LINKCC="\$(srcdir)/makexp_aix python.exp \"\" \$(LIBRARY); \$(PURIFY) \$(CC)";;
+	dgux*)
+	   LINKCC="LD_RUN_PATH=$libdir \$(PURIFY) \$(CC)";;
+	Monterey64*)
+	   LINKCC="\$(PURIFY) \$(CC) -L/usr/lib/ia64l64";;
+	*) LINKCC="\$(PURIFY) \$(CC)";;
+	esac
+fi
+AC_MSG_RESULT($LINKCC)
+
+AC_MSG_CHECKING(LDLIBRARY)
+
+# NeXT framework builds require that the 'ar' library be converted into
+# a bundle using libtool.
+if test "$with_next_framework"
+then
+  LDLIBRARY='libpython$(VERSION).dylib'
+fi  
+
+# DG/UX requires some fancy ld contortions to produce a .so from an .a
+case $MACHDEP in
+dguxR4)
+      LDLIBRARY='libpython$(VERSION).so'
+      OPT="$OPT -pic"
+      ;;
+beos*)
+      LDLIBRARY='libpython$(VERSION).so'
+      ;;
+esac
+AC_MSG_RESULT($LDLIBRARY)
+
+# If LDLIBRARY is different from LIBRARY, emit a rule to build it.
+if test -z "$LDLIBRARY"
+then
+  LDLIBRARY='libpython$(VERSION).a'
+  MAKE_LDLIBRARY="true"
+else
+  MAKE_LDLIBRARY='$(MAKE) $(LDLIBRARY)'
+fi
+
+AC_PROG_RANLIB
+AC_SUBST(AR)
+AC_CHECK_PROGS(AR, ar aal, ar)
+AC_SUBST(INSTALL)
+AC_SUBST(INSTALL_PROGRAM)
+AC_SUBST(INSTALL_DATA)
+# Install just never works :-(
+if test -z "$INSTALL"
+then
+	INSTALL=cp
+	INSTALL_PROGRAM=cp
+	INSTALL_DATA=cp
+else
+	INSTALL_PROGRAM="$INSTALL"
+	INSTALL_DATA="$INSTALL -m 644"
+fi
+
+# Not every filesystem supports hard links
+AC_SUBST(LN)
+if test -z "$LN" ; then
+	case $ac_sys_system in
+		BeOS*) LN="ln -s";;
+		*) LN=ln;;
+	esac
+fi
+
+# Optimizer/debugger flags passed between Makefiles
+AC_SUBST(OPT)
+if test -z "$OPT"
+then
+	case $GCC in
+	yes)
+		case $ac_cv_prog_cc_g in
+		yes)	OPT="-g -O2 -Wall -Wstrict-prototypes -fPIC";;
+		*)	OPT="-O2 -Wall -Wstrict-prototypes -fPIC";;
+		esac
+		;;
+	*)	OPT="-O";;
+	esac
+fi
+
+# The current (beta) Monterey compiler dies with optimizations
+case $ac_sys_system in
+Monterey*) OPT="";;
+esac
+
+if test "$ac_arch_flags"
+then
+	OPT="$OPT $ac_arch_flags"
+fi
+# checks for UNIX variants that set C preprocessor variables
+AC_AIX
+AC_MINIX
+
+AC_MSG_CHECKING(whether $CC accepts -OPT:Olimit=0)
+AC_CACHE_VAL(ac_cv_opt_olimit_ok,
+[ac_save_cc="$CC"
+CC="$CC -OPT:Olimit=0"
+AC_TRY_RUN([int main() { return 0; }],
+  ac_cv_opt_olimit_ok=yes,
+  ac_cv_opt_olimit_ok=no)
+CC="$ac_save_cc"])
+AC_MSG_RESULT($ac_cv_opt_olimit_ok)
+if test $ac_cv_opt_olimit_ok = yes; then
+    case $ac_sys_system in
+      Darwin*) OPT="$OPT" ;;
+      *) OPT="$OPT -OPT:Olimit=0";;
+    esac
+else
+  AC_MSG_CHECKING(whether $CC accepts -Olimit 1500)
+  AC_CACHE_VAL(ac_cv_olimit_ok,
+  [ac_save_cc="$CC"
+  CC="$CC -Olimit 1500"
+  AC_TRY_RUN([int main() { return 0; }],
+    ac_cv_olimit_ok=yes,
+    ac_cv_olimit_ok=no)
+  CC="$ac_save_cc"])
+  AC_MSG_RESULT($ac_cv_olimit_ok)
+  if test $ac_cv_olimit_ok = yes; then
+    OPT="$OPT -Olimit 1500"
+  fi
+fi
+
+dnl # check for ANSI or K&R ("traditional") preprocessor
+dnl AC_MSG_CHECKING(for C preprocessor type)
+dnl AC_TRY_COMPILE([
+dnl #define spam(name, doc) {#name, &name, #name "() -- " doc}
+dnl int foo;
+dnl struct {char *name; int *addr; char *doc;} desc = spam(foo, "something");
+dnl ], [;], cpp_type=ansi, AC_DEFINE(HAVE_OLD_CPP) cpp_type=traditional)
+dnl AC_MSG_RESULT($cpp_type)
+
+# checks for header files
+AC_HEADER_STDC
+AC_CHECK_HEADERS(dlfcn.h fcntl.h limits.h locale.h ncurses.h poll.h pthread.h \
+signal.h stdarg.h stddef.h stdlib.h thread.h unistd.h utime.h \
+sys/audioio.h sys/file.h sys/lock.h db_185.h db.h \
+sys/param.h sys/select.h sys/socket.h sys/time.h sys/times.h \
+sys/un.h sys/utsname.h sys/wait.h pty.h libutil.h \
+ndbm.h db1/ndbm.h gdbm/ndbm.h)
+AC_HEADER_DIRENT
+
+# checks for typedefs
+was_it_defined=no
+AC_MSG_CHECKING(for clock_t in time.h)
+AC_EGREP_HEADER(clock_t, time.h, was_it_defined=yes, AC_DEFINE(clock_t, long))
+AC_MSG_RESULT($was_it_defined)
+
+# Add some code to confdefs.h so that the test for off_t works on SCO
+cat >> confdefs.h <<\EOF
+#if defined(SCO_DS)
+#undef _OFF_T
+#endif
+EOF
+
+# Type availability checks
+AC_TYPE_MODE_T
+AC_TYPE_OFF_T
+AC_TYPE_PID_T
+AC_TYPE_SIGNAL
+AC_TYPE_SIZE_T
+AC_TYPE_UID_T
+
+# Sizes of various common basic types
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+AC_CHECK_SIZEOF(void *)
+AC_CHECK_SIZEOF(char)
+AC_CHECK_SIZEOF(short)
+AC_CHECK_SIZEOF(float)
+AC_CHECK_SIZEOF(double)
+AC_CHECK_SIZEOF(fpos_t)
+
+AC_MSG_CHECKING(for long long support)
+have_long_long=no
+AC_TRY_COMPILE([], [long long x; x = (long long)0;], AC_DEFINE(HAVE_LONG_LONG) have_long_long=yes)
+AC_MSG_RESULT($have_long_long)
+if test "$have_long_long" = yes ; then
+AC_CHECK_SIZEOF(long long)
+fi
+
+AC_MSG_CHECKING(for uintptr_t support)
+have_uintptr_t=no
+AC_TRY_COMPILE([], [uintptr_t x; x = (uintptr_t)0;], AC_DEFINE(HAVE_UINTPTR_T) have_uintptr_t=yes)
+AC_MSG_RESULT($have_uintptr_t)
+if test "$have_uintptr_t" = yes ; then
+AC_CHECK_SIZEOF(uintptr_t)
+fi
+
+# Hmph. AC_CHECK_SIZEOF() doesn't include <sys/types.h>.
+AC_MSG_CHECKING(size of off_t)
+AC_CACHE_VAL(ac_cv_sizeof_off_t,
+[AC_TRY_RUN([#include <stdio.h>
+#include <sys/types.h>
+main()
+{
+  FILE *f=fopen("conftestval", "w");
+  if (!f) exit(1);
+  fprintf(f, "%d\n", sizeof(off_t));
+  exit(0);
+}], ac_cv_sizeof_off_t=`cat conftestval`, ac_cv_sizeof_off_t=0)
+])
+AC_MSG_RESULT($ac_cv_sizeof_off_t)
+AC_DEFINE_UNQUOTED(SIZEOF_OFF_T, $ac_cv_sizeof_off_t)
+
+AC_MSG_CHECKING(whether to enable large file support)
+if test "$have_long_long" = yes -a \
+	"$ac_cv_sizeof_off_t" -gt "$ac_cv_sizeof_long" -a \
+	"$ac_cv_sizeof_long_long" -ge "$ac_cv_sizeof_off_t"; then
+  AC_DEFINE(HAVE_LARGEFILE_SUPPORT)
+  AC_MSG_RESULT(yes)
+else
+  AC_MSG_RESULT(no)
+fi
+
+# AC_CHECK_SIZEOF() doesn't include <time.h>.
+AC_MSG_CHECKING(size of time_t)
+AC_CACHE_VAL(ac_cv_sizeof_time_t,
+[AC_TRY_RUN([#include <stdio.h>
+#include <time.h>
+main()
+{
+  FILE *f=fopen("conftestval", "w");
+  if (!f) exit(1);
+  fprintf(f, "%d\n", sizeof(time_t));
+  exit(0);
+}], ac_cv_sizeof_time_t=`cat conftestval`, ac_cv_sizeof_time_t=0)
+])
+AC_MSG_RESULT($ac_cv_sizeof_time_t)
+AC_DEFINE_UNQUOTED(SIZEOF_TIME_T, $ac_cv_sizeof_time_t)
+
+
+# if have pthread_t then define SIZEOF_PTHREAD_T
+AC_MSG_CHECKING(for pthread_t)
+have_pthread_t=no
+AC_TRY_COMPILE([#include <pthread.h>], [pthread_t x; x = *(pthread_t*)0;], have_pthread_t=yes)
+AC_MSG_RESULT($have_pthread_t)
+if test "$have_pthread_t" = yes ; then
+  # AC_CHECK_SIZEOF() doesn't include <pthread.h>.
+  AC_MSG_CHECKING(size of pthread_t)
+  AC_CACHE_VAL(ac_cv_sizeof_pthread_t,
+  [AC_TRY_RUN([#include <stdio.h>
+  #include <pthread.h>
+  main()
+  {
+    FILE *f=fopen("conftestval", "w");
+    if (!f) exit(1);
+    fprintf(f, "%d\n", sizeof(pthread_t));
+    exit(0);
+  }], ac_cv_sizeof_pthread_t=`cat conftestval`, ac_cv_sizeof_pthread_t=0)
+  ])
+  AC_MSG_RESULT($ac_cv_sizeof_pthread_t)
+  AC_DEFINE_UNQUOTED(SIZEOF_PTHREAD_T, $ac_cv_sizeof_pthread_t)
+fi
+
+
+# Minor variations in building a framework between NextStep versions 4 and 5
+AC_SUBST(LIBTOOL_CRUFT)
+case $ac_sys_system/$ac_sys_release in
+  Darwin/*)
+    ns_undef_sym='_environ'
+    LIBTOOL_CRUFT="-lcc_dynamic -arch_only ppc -U $ns_undef_sym" ;;
+  next/4*)
+    ns_undef_sym='__environ'
+    LIBTOOL_CRUFT="-U $ns_undef_sym" ;;
+  next/5*)
+    ns_undef_sym='_environ'
+    LIBTOOL_CRUFT="-lcc_dynamic -U $ns_undef_sym" ;;
+esac
+
+AC_MSG_CHECKING(for --with-next-framework)
+if test "$with_next_framework"
+then
+	OPT="$OPT -fno-common"
+	# -U __environ is needed since bundles don't have access
+	# to crt0 when built but will always be linked against it
+	LDFLAGS="$LDFLAGS -Wl,-U,$ns_undef_sym"
+	AC_DEFINE(WITH_NEXT_FRAMEWORK)
+	AC_MSG_RESULT(yes)
+else
+	AC_MSG_RESULT(no)
+fi
+
+AC_MSG_CHECKING(for --with-dyld)
+if test "$with_next_framework" -o "$with_dyld"
+then
+	if test "$with_dyld"
+	then
+		AC_MSG_RESULT(yes)
+	else
+		AC_MSG_RESULT(required for framework build)
+	fi
+	AC_DEFINE(WITH_DYLD)
+	ns_dyld='set'
+else
+	AC_MSG_RESULT(no)
+fi
+
+# Set info about shared libraries.
+AC_SUBST(SO)
+AC_SUBST(LDSHARED)
+AC_SUBST(CCSHARED)
+AC_SUBST(LINKFORSHARED)
+# SO is the extension of shared libraries `(including the dot!)
+# -- usually .so, .sl on HP-UX
+AC_MSG_CHECKING(SO)
+if test -z "$SO"
+then
+	case $ac_sys_system in
+	hp*|HP*)   SO=.sl;;
+	*)	   SO=.so;;
+	esac
+fi
+AC_MSG_RESULT($SO)
+# LDSHARED is the ld *command* used to create shared library
+# -- "ld" on SunOS 4.x.x, "ld -G" on SunOS 5.x, "ld -shared" on IRIX 5
+# (Shared libraries in this instance are shared modules to be loaded into
+# Python, as opposed to building Python itself as a shared library.)
+AC_MSG_CHECKING(LDSHARED)
+if test -z "$LDSHARED"
+then
+	case $ac_sys_system/$ac_sys_release in
+	AIX*) LDSHARED="\$(srcdir)/ld_so_aix \$(CC)";;
+	BeOS*) LDSHARED="\$(srcdir)/../BeOS/linkmodule -L.. -lpython\$(VERSION)";;
+	IRIX/5*) LDSHARED="ld -shared";;
+	IRIX*/6*) LDSHARED="ld ${SGI_ABI} -shared -all";;
+	SunOS/4*) LDSHARED="ld";;
+	SunOS/5*) 
+		if test "$GCC" = "yes"
+		then LDSHARED='$(CC) -shared'
+		else LDSHARED="ld -G";
+		fi ;;
+	hp*|HP*) LDSHARED="ld -b";;
+	OSF*) LDSHARED="ld -shared -expect_unresolved \"*\"";;
+	DYNIX/ptx*) LDSHARED="ld -G";;
+        Darwin/*|next/*) 
+		if test "$ns_dyld"
+		then 
+		  if test "$ac_sys_system" = Darwin
+		  then LDSHARED='$(CC) $(LDFLAGS) -bundle -undefined suppress'
+		  else LDSHARED='$(CC) $(LDFLAGS) -bundle -prebind'
+		  fi
+		else LDSHARED='$(CC) $(CFLAGS) -nostdlib -r';
+		fi
+	if test "$with_next_framework" ; then
+		    LDSHARED="$LDSHARED \$(LDLIBRARY)"
+		fi ;;
+	Linux*) LDSHARED="gcc -shared";;
+	dgux*) LDSHARED="ld -G";;
+	BSD/OS*/4*) LDSHARED="gcc -shared";;
+	OpenBSD*) LDSHARED="ld -Bshareable";;
+	NetBSD*)
+		if [[ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]]
+		then
+			LDSHARED="cc -shared"
+		else
+			LDSHARED="ld -Bshareable"
+		fi;;
+	FreeBSD*)
+		if [[ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]]
+		then
+			LDSHARED="cc -shared ${LDFLAGS}"
+		else
+			LDSHARED="ld -Bshareable ${LDFLAGS}"
+		fi;;
+	SCO_SV*) LDSHARED="cc -G -KPIC -Ki486 -belf -Wl,-Bexport";;
+	Monterey*) LDSHARED="cc -G -dy -Bdynamic -Bexport -L/usr/lib/ia64l64";;
+	*)	LDSHARED="ld";;
+	esac
+fi
+AC_MSG_RESULT($LDSHARED)
+# CCSHARED are the C *flags* used to create objects to go into a shared
+# library (module) -- this is only needed for a few systems
+AC_MSG_CHECKING(CCSHARED)
+if test -z "$CCSHARED"
+then
+	case $ac_sys_system/$ac_sys_release in
+	hp*|HP*) if test "$GCC" = yes;
+		 then CCSHARED="-fpic";
+		 else CCSHARED="+z";
+		 fi;;
+	Linux*) CCSHARED="-fpic";;
+	BSD/OS*/4*) CCSHARED="-fpic";;
+	OpenBSD*) CCSHARED="-fpic";;
+	FreeBSD*|NetBSD*) CCSHARED="-fPIC";;
+	SCO_SV*) CCSHARED="-KPIC -dy -Bdynamic";;
+	Monterey*) CCSHARED="-G";;
+	IRIX*/6*)  case $CC in
+		   *gcc*) CCSHARED="-shared";;
+		   *) CCSHARED="";;
+		   esac;;
+	esac
+fi
+AC_MSG_RESULT($CCSHARED)
+# LINKFORSHARED are the flags passed to the $(CC) command that links
+# the python executable -- this is only needed for a few systems
+AC_MSG_CHECKING(LINKFORSHARED)
+if test -z "$LINKFORSHARED"
+then
+	case $ac_sys_system/$ac_sys_release in
+	AIX*)	LINKFORSHARED='-Wl,-bE:python.exp -lld';;
+	hp*|HP*)
+	    LINKFORSHARED="-Wl,-E -Wl,+s -Wl,+b\$(BINLIBDEST)/lib-dynload";;
+	BSD/OS/4*) LINKFORSHARED="-Xlinker -export-dynamic";;
+	Linux*) LINKFORSHARED="-Xlinker -export-dynamic";;
+	# -u libsys_s pulls in all symbols in libsys
+	next/2*|next/3*) LINKFORSHARED="-u libsys_s";;
+	# -u __dummy makes the linker aware of the objc runtime
+	# in System.framework; otherwise, __objcInit (referenced in
+	# crt1.o) gets erroneously defined as common, which breaks dynamic
+	# loading of any modules which reference it in System.framework
+	next/4*|next/5*) LINKFORSHARED="-u __dummy -framework System" ;;
+	Darwin/*) LINKFORSHARED="-framework System" ;;
+	SCO_SV*) LINKFORSHARED="-Bdynamic -dy -Wl,-Bexport";;
+	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
+	FreeBSD*|NetBSD*) 
+		if [[ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]]
+		then
+			LINKFORSHARED="-Wl,--export-dynamic"
+		fi;;
+	SunOS/5*) case $CC in
+		  *gcc*)
+		    if $CC -Xlinker -V 2>&1 | grep BFD >/dev/null
+		    then
+			LINKFORSHARED="-Xlinker --export-dynamic"
+		    fi;;
+		  esac;;
+	esac
+fi
+AC_MSG_RESULT($LINKFORSHARED)
+
+# checks for libraries
+AC_CHECK_LIB(dl, dlopen)	# Dynamic linking for SunOS/Solaris and SYSV
+AC_CHECK_LIB(dld, shl_load)	# Dynamic linking for HP-UX
+
+# Check for --with-pydebug
+AC_MSG_CHECKING(for --with-pydebug)
+AC_ARG_WITH(pydebug, 
+[  --with-pydebug                  build with Py_DEBUG defined], [
+if test "$withval" != no
+then AC_DEFINE(Py_DEBUG) AC_MSG_RESULT(yes)
+else AC_MSG_RESULT(no)
+fi],
+[AC_MSG_RESULT(no)])
+
+# checks for system dependent C++ extensions support
+case "$ac_sys_system" in
+	AIX*)	AC_MSG_CHECKING(for genuine AIX C++ extensions support)
+		AC_TRY_LINK([#include "/usr/lpp/xlC/include/load.h"],
+			    [loadAndInit("", 0, "")],
+			    [AC_DEFINE(AIX_GENUINE_CPLUSPLUS)
+			     AC_MSG_RESULT(yes)],
+			    [AC_MSG_RESULT(no)]);;
+	*) ;;
+esac
+
+# Most SVR4 platforms (e.g. Solaris) need -lsocket and -lnsl.
+# However on SGI IRIX, these exist but are broken.
+# BeOS' sockets are stashed in libnet.
+case "$ac_sys_system" in
+IRIX*) ;;
+*)
+AC_CHECK_LIB(nsl, t_open, [LIBS="-lnsl $LIBS"]) # SVR4
+AC_CHECK_LIB(socket, socket, [LIBS="-lsocket $LIBS"], [], $LIBS) # SVR4 sockets
+;;
+esac
+case "$ac_sys_system" in
+BeOS*)
+AC_CHECK_LIB(net, socket, [LIBS="-lnet $LIBS"], [], $LIBS) # BeOS
+;;
+esac
+
+AC_MSG_CHECKING(for --with-libs)
+AC_ARG_WITH(libs,
+[  --with-libs='lib1 ...'          link against additional libs], [
+AC_MSG_RESULT($withval)
+LIBS="$withval $LIBS"
+], AC_MSG_RESULT(no))
+
+AC_SUBST(USE_THREAD_MODULE)
+USE_THREAD_MODULE=""
+
+AC_MSG_CHECKING(for --with-dec-threads)
+AC_SUBST(LDLAST)
+AC_ARG_WITH(dec-threads,
+[  --with-dec-threads              use DEC Alpha/OSF1 thread-safe libraries], [
+AC_MSG_RESULT($withval)
+LDLAST=-threads
+if test "${with_thread+set}" != set; then
+   with_thread="$withval";
+fi],
+AC_MSG_RESULT(no))
+
+AC_MSG_CHECKING(for --with-threads)
+AC_ARG_WITH(threads,
+[  --with(out)-threads[=DIRECTORY] disable/enable thread support])
+
+# --with-thread is deprecated, but check for it anyway
+AC_ARG_WITH(thread,
+[  --with(out)-thread[=DIRECTORY]  deprecated; use --with(out)-threads],[
+with_threads=$with_thread])
+
+if test -z "$with_threads"
+then with_threads="yes"
+fi
+AC_MSG_RESULT($with_threads)
+
+if test "$with_threads" = "no"
+then
+    USE_THREAD_MODULE="#"
+else
+    if test ! -z "$with_threads" -a -d "$with_threads"
+    then LDFLAGS="$LDFLAGS -L$with_threads"
+    fi
+    if test ! -z "$withval" -a -d "$withval"
+    then LDFLAGS="$LDFLAGS -L$withval"
+    fi
+    AC_DEFINE(_REENTRANT)
+    AC_CHECK_HEADER(mach/cthreads.h, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(C_THREADS)
+    LIBOBJS="$LIBOBJS thread.o"],[
+    AC_MSG_CHECKING(for --with-pth)
+    AC_ARG_WITH(pth,
+    [  --with-pth                      use GNU pth threading libraries], [
+    AC_MSG_RESULT($withval)
+    AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(HAVE_PTH)
+    LIBS="-lpth $LIBS"
+    LIBOBJS="$LIBOBJS thread.o"],[
+    AC_MSG_RESULT(no)
+    AC_CHECK_LIB(pthread, pthread_create, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(_POSIX_THREADS)
+    LIBS="-lpthread $LIBS"
+    LIBOBJS="$LIBOBJS thread.o"],[
+    AC_CHECK_FUNC(pthread_detach, [AC_DEFINE(WITH_THREAD)
+    case $ac_sys_system in
+      Darwin*) ;;
+      *) AC_DEFINE(_POSIX_THREADS);;
+    esac
+    LIBOBJS="$LIBOBJS thread.o"],[
+    AC_CHECK_HEADER(kernel/OS.h, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(BEOS_THREADS)
+    LIBOBJS="$LIBOBJS thread.o"],[
+    AC_CHECK_LIB(pthreads, pthread_create, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(_POSIX_THREADS)
+    LIBS="$LIBS -lpthreads"
+    LIBOBJS="$LIBOBJS thread.o"], [
+    AC_CHECK_LIB(c_r, pthread_create, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(_POSIX_THREADS)
+    LIBS="$LIBS -lc_r"
+    LIBOBJS="$LIBOBJS thread.o"], [
+    AC_CHECK_LIB(thread, __d6_pthread_create, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(_POSIX_THREADS)
+    LIBS="$LIBS -lthread"
+    LIBOBJS="$LIBOBJS thread.o"], [
+    AC_CHECK_LIB(cma, pthread_create, [AC_DEFINE(WITH_THREAD)
+    AC_DEFINE(_POSIX_THREADS)
+    LIBS="$LIBS -lcma"
+    LIBOBJS="$LIBOBJS thread.o"],[
+    USE_THREAD_MODULE="#"])
+    ])])])])])])])])
+
+    AC_CHECK_LIB(mpc, usconfig, [AC_DEFINE(WITH_THREAD)
+    LIBS="$LIBS -lmpc"
+    LIBOBJS="$LIBOBJS thread.o"
+    USE_THREAD_MODULE=""])
+    AC_CHECK_LIB(thread, thr_create, [AC_DEFINE(WITH_THREAD)
+    LIBS="$LIBS -lthread"
+    LIBOBJS="$LIBOBJS thread.o"
+    USE_THREAD_MODULE=""])
+
+    if test "$USE_THREAD_MODULE" != "#"
+    then
+        # If the above checks didn't disable threads, (at least) OSF1
+        # needs this '-threads' argument during linking.
+        case $ac_sys_system in
+        OSF1) LDLAST=-threads;;
+        esac
+    fi
+fi
+
+# Check for GC support
+AC_SUBST(USE_GC_MODULE)
+USE_GC_MODULE=""
+AC_MSG_CHECKING(for --with-cycle-gc)
+AC_ARG_WITH(cycle-gc,
+[  --with(out)-cycle-gc            disable/enable garbage collection])
+
+if test -z "$with_cycle_gc"
+then with_cycle_gc="yes"
+fi
+if test "$with_cycle_gc" = "no"
+then
+    USE_GC_MODULE="#"
+else
+    AC_DEFINE(WITH_CYCLE_GC)
+fi
+AC_MSG_RESULT($with_cycle_gc)
+
+# Check for LIBDB support
+# either --with-libdb or, in its absence, the presence of db.h
+AC_SUBST(USE_BSDDB_MODULE)
+USE_BSDDB_MODULE=""
+AC_MSG_CHECKING(for --with-libdb)
+AC_ARG_WITH(libdb,
+[  --with(out)-libdb               disable/enable bsddb module])
+
+# enabled by default, but db.h must be found
+if test "$ac_cv_header_db_h" = "yes"
+then
+    if test "$with_libdb" != "no"
+    then with_libdb="yes"
+    fi
+else
+    # make sure user knows why bsddb support wasn't enabled even
+    # though s/he requested it
+    if test "$with_libdb" = "yes"
+    then echo $ac_n "(requested, but db.h was not found) $ac_c"
+    fi
+    with_libdb="no"
+fi
+
+if test "$with_libdb" = "no"
+then
+    USE_BSDDB_MODULE="#"
+else
+    AC_DEFINE(WITH_LIBDB)
+fi
+AC_MSG_RESULT($with_libdb)
+
+if test "$with_libdb" = "yes"
+then
+    # check for libdb; BSD systems have the DB routines in libc  --tg
+    AC_SUBST(HAVE_LIBDB)
+    # If dbopen is not in libc, then checking whether it is in libdb
+    # is difficult: db_185.h may #define it as __db185_open
+    # Instead, we just trust it is in libdb; linking will fail if it
+    # is not.
+    AC_CHECK_FUNC(dbopen, [HAVE_LIBDB=], [HAVE_LIBDB=-ldb])
+fi
+
+# Check for --with-wctype-functions
+AC_MSG_CHECKING(for --with-wctype-functions)
+AC_ARG_WITH(wctype-functions, 
+[  --with-wctype-functions         use wctype.h functions], [
+if test "$withval" != no
+then AC_DEFINE(WANT_WCTYPE_FUNCTIONS) AC_MSG_RESULT(yes)
+else AC_MSG_RESULT(no)
+fi],
+[AC_MSG_RESULT(no)])
+
+# -I${DLINCLDIR} is added to the compile rule for importdl.o
+AC_SUBST(DLINCLDIR)
+DLINCLDIR=/
+
+AC_MSG_CHECKING(for --with-sgi-dl)
+AC_ARG_WITH(sgi-dl,
+[  --with-sgi-dl=DIRECTORY         IRIX 4 dynamic linking], [
+AC_MSG_RESULT($withval)
+AC_DEFINE(WITH_SGI_DL)
+DYNLOADFILE="dynload_dl.o"
+dldir=$withval
+if test ! -z "$dldir" -a -d "$dldir"
+then LDFLAGS="$LDFLAGS -L$dldir"
+else AC_ERROR(proper usage is --with-sgi-dl=DIRECTORY)
+fi
+DLINCLDIR=${dldir}
+LIBS="$LIBS -ldl -lmld"], AC_MSG_RESULT(no))
+
+AC_MSG_CHECKING(for --with-dl-dld)
+AC_ARG_WITH(dl-dld, [  --with-dl-dld=DL_DIR,DLD_DIR    GNU dynamic linking], [
+AC_MSG_RESULT($withval)
+AC_DEFINE(WITH_DL_DLD)
+DYNLOADFILE="dynload_dl.o"
+dldir=`echo "$withval" | sed 's/,.*//'`
+dlddir=`echo "$withval" | sed 's/.*,//'`
+if test ! -z "$dldir" -a -d "$dldir" -a ! -z "$dlddir" -a -d "$dlddir"
+then LDFLAGS="$LDFLAGS -L$dldir -L$dlddir"
+else AC_ERROR(proper usage is --with-dl-dld=DL_DIRECTORY,DLD_DIRECTORY)
+fi
+DLINCLDIR=${dldir}
+LIBS="$LIBS -ldl -ldld"], AC_MSG_RESULT(no))
+
+# the dlopen() function means we might want to use dynload_shlib.o. some
+# platforms, such as AIX, have dlopen(), but don't want to use it.
+AC_CHECK_FUNCS(dlopen)
+
+# DYNLOADFILE specifies which dynload_*.o file we will use for dynamic
+# loading of modules.
+AC_SUBST(DYNLOADFILE)
+AC_MSG_CHECKING(DYNLOADFILE)
+if test -z "$DYNLOADFILE"
+then
+	case $ac_sys_system/$ac_sys_release in
+	AIX*) DYNLOADFILE="dynload_aix.o";;
+	BeOS*) DYNLOADFILE="dynload_beos.o";;
+	hp*|HP*) DYNLOADFILE="dynload_hpux.o";;
+	Darwin/*|next/*) DYNLOADFILE="dynload_next.o";;
+	*)
+	# use dynload_shlib.c and dlopen() if we have it; otherwise stub
+	# out any dynamic loading
+	if test "$ac_cv_func_dlopen" = yes
+	then DYNLOADFILE="dynload_shlib.o"
+	else DYNLOADFILE="dynload_stub.o"
+	fi
+	;;
+	esac
+fi
+AC_MSG_RESULT($DYNLOADFILE)
+if test "$DYNLOADFILE" != "dynload_stub.o"
+then
+	AC_DEFINE(HAVE_DYNAMIC_LOADING)
+fi
+
+# checks for library functions
+AC_CHECK_FUNCS(alarm chown clock confstr ctermid ctermid_r execv \
+ flock fork fsync fdatasync fpathconf ftime ftruncate \
+ getgroups getlogin getpeername getpid getpwent getwd \
+ kill link lstat mkfifo mktime mremap \
+ nice pathconf pause plock poll pthread_init \
+ putenv readlink \
+ select setegid seteuid setgid \
+ setlocale setregid setreuid setsid setpgid setuid setvbuf \
+ sigaction siginterrupt sigrelse strftime strptime symlink sysconf \
+ tcgetpgrp tcsetpgrp tempnam timegm times tmpfile tmpnam tmpnam_r \
+ truncate uname waitpid _getpty)
+
+# check for openpty and forkpty
+
+AC_CHECK_FUNCS(openpty,, AC_CHECK_LIB(util,openpty, [AC_DEFINE(HAVE_OPENPTY)] [LIBS="$LIBS -lutil"]))
+AC_CHECK_FUNCS(forkpty,, AC_CHECK_LIB(util,forkpty, [AC_DEFINE(HAVE_FORKPTY)] [LIBS="$LIBS -lutil"]))
+
+# check for long file support functions
+AC_CHECK_FUNCS(fseek64 fseeko fstatvfs ftell64 ftello statvfs)
+
+AC_REPLACE_FUNCS(dup2 getcwd strdup strerror memmove)
+AC_CHECK_FUNCS(getpgrp, AC_TRY_COMPILE([#include <unistd.h>], [getpgrp(0);], AC_DEFINE(GETPGRP_HAVE_ARG)))
+AC_CHECK_FUNCS(setpgrp, AC_TRY_COMPILE([#include <unistd.h>], [setpgrp(0,0);], AC_DEFINE(SETPGRP_HAVE_ARG)))
+AC_CHECK_FUNCS(gettimeofday, AC_TRY_COMPILE([#include <sys/time.h>], [gettimeofday((struct timeval*)0,(struct timezone*)0);], ,AC_DEFINE(GETTIMEOFDAY_NO_TZ)))
+
+# checks for structures
+AC_HEADER_TIME
+AC_STRUCT_TM
+AC_STRUCT_TIMEZONE
+
+AC_MSG_CHECKING(for time.h that defines altzone)
+AC_CACHE_VAL(ac_cv_header_time_altzone,
+[AC_TRY_COMPILE([#include <time.h>], [return altzone;],
+  ac_cv_header_time_altzone=yes,
+  ac_cv_header_time_altzone=no)])
+AC_MSG_RESULT($ac_cv_header_time_altzone)
+if test $ac_cv_header_time_altzone = yes; then
+  AC_DEFINE(HAVE_ALTZONE)
+fi
+
+was_it_defined=no
+AC_MSG_CHECKING(whether sys/select.h and sys/time.h may both be included)
+AC_TRY_COMPILE([
+#include <sys/types.h>
+#include <sys/select.h>
+#include <sys/time.h>
+], [;], [AC_DEFINE(SYS_SELECT_WITH_SYS_TIME) was_it_defined=yes])
+AC_MSG_RESULT($was_it_defined)
+
+# checks for compiler characteristics
+
+AC_C_CHAR_UNSIGNED
+AC_C_CONST
+AC_C_INLINE
+
+works=no
+AC_MSG_CHECKING(for working volatile)
+AC_TRY_COMPILE([],[volatile int x; x = 0;], works=yes, AC_DEFINE(volatile, []))
+AC_MSG_RESULT($works)
+
+works=no
+AC_MSG_CHECKING(for working signed char)
+AC_TRY_COMPILE([], [signed char c;], works=yes, AC_DEFINE(signed, []))
+AC_MSG_RESULT($works)
+
+have_prototypes=no
+AC_MSG_CHECKING(for prototypes)
+AC_TRY_COMPILE([int foo(int x) { return 0; }], [return foo(10);],
+AC_DEFINE(HAVE_PROTOTYPES) have_prototypes=yes)
+AC_MSG_RESULT($have_prototypes)
+
+works=no
+AC_MSG_CHECKING(for variable length prototypes and stdarg.h)
+AC_TRY_COMPILE([
+#include <stdarg.h>
+int foo(int x, ...) {
+	va_list va;
+	va_start(va, x);
+	va_arg(va, int);
+	va_arg(va, char *);
+	va_arg(va, double);
+	return 0;
+}
+], [return foo(10, "", 3.14);],
+AC_DEFINE(HAVE_STDARG_PROTOTYPES) works=yes)
+AC_MSG_RESULT($works)
+
+if test "$have_prototypes" = yes; then
+bad_prototypes=no
+AC_MSG_CHECKING(for bad exec* prototypes)
+AC_TRY_COMPILE([#include <unistd.h>], [char **t;execve("@",t,t);], ,
+	AC_DEFINE(BAD_EXEC_PROTOTYPES) bad_prototypes=yes)
+AC_MSG_RESULT($bad_prototypes)
+fi
+
+bad_forward=no
+AC_MSG_CHECKING(for bad static forward)
+AC_TRY_RUN([
+struct s { int a; int b; };
+static struct s foo;
+int foobar() {
+ static int random;
+ random = (int) &foo;
+ return random;
+}
+static struct s foo = { 1, 2 };
+main() {
+ exit(!((int)&foo == foobar()));
+}
+], , AC_DEFINE(BAD_STATIC_FORWARD) bad_forward=yes)
+AC_MSG_RESULT($bad_forward)
+
+va_list_is_array=no
+AC_MSG_CHECKING(whether va_list is an array)
+AC_TRY_COMPILE([
+#ifdef HAVE_STDARG_PROTOTYPES
+#include <stdarg.h>
+#else
+#include <varargs.h>
+#endif
+], [va_list list1, list2; list1 = list2;], , 
+AC_DEFINE(VA_LIST_IS_ARRAY) va_list_is_array=yes)
+AC_MSG_RESULT($va_list_is_array)
+
+# sigh -- gethostbyname_r is a mess; it can have 3, 5 or 6 arguments :-(
+AC_CHECK_FUNC(gethostbyname_r, [
+  AC_DEFINE(HAVE_GETHOSTBYNAME_R)
+  AC_MSG_CHECKING([gethostbyname_r with 6 args])
+  OLD_CFLAGS=$CFLAGS
+  CFLAGS="$CFLAGS $MY_CPPFLAGS $MY_THREAD_CPPFLAGS $MY_CFLAGS"
+  AC_TRY_COMPILE([
+#   include <netdb.h>
+  ], [
+    char *name;
+    struct hostent *he, *res;
+    char buffer[2048];
+    int buflen = 2048;
+    int h_errnop;
+
+    (void) gethostbyname_r(name, he, buffer, buflen, &res, &h_errnop)
+  ], [
+    AC_DEFINE(HAVE_GETHOSTBYNAME_R)
+    AC_DEFINE(HAVE_GETHOSTBYNAME_R_6_ARG)
+    AC_MSG_RESULT(yes)
+  ], [
+    AC_MSG_RESULT(no)
+    AC_MSG_CHECKING([gethostbyname_r with 5 args])
+    AC_TRY_COMPILE([
+#     include <netdb.h>
+    ], [
+      char *name;
+      struct hostent *he;
+      char buffer[2048];
+      int buflen = 2048;
+      int h_errnop;
+
+      (void) gethostbyname_r(name, he, buffer, buflen, &h_errnop)
+    ], [
+      AC_DEFINE(HAVE_GETHOSTBYNAME_R)
+      AC_DEFINE(HAVE_GETHOSTBYNAME_R_5_ARG)
+      AC_MSG_RESULT(yes)
+    ], [
+      AC_MSG_RESULT(no)
+      AC_MSG_CHECKING([gethostbyname_r with 3 args])
+      AC_TRY_COMPILE([
+#       include <netdb.h>
+      ], [
+        char *name;
+        struct hostent *he;
+        struct hostent_data data;
+
+        (void) gethostbyname_r(name, he, &data);
+      ], [
+        AC_DEFINE(HAVE_GETHOSTBYNAME_R)
+        AC_DEFINE(HAVE_GETHOSTBYNAME_R_3_ARG)
+        AC_MSG_RESULT(yes)
+      ], [
+        AC_MSG_RESULT(no)
+      ])
+    ])
+  ])
+  CFLAGS=$OLD_CFLAGS
+], [
+  AC_CHECK_FUNCS(gethostbyname)
+])
+AC_SUBST(HAVE_GETHOSTBYNAME_R_6_ARG)
+AC_SUBST(HAVE_GETHOSTBYNAME_R_5_ARG)
+AC_SUBST(HAVE_GETHOSTBYNAME_R_3_ARG)
+AC_SUBST(HAVE_GETHOSTBYNAME_R)
+AC_SUBST(HAVE_GETHOSTBYNAME)
+
+# checks for system services
+# (none yet)
+
+# Linux requires this for correct f.p. operations
+AC_CHECK_FUNC(__fpu_control,
+  [],
+  [AC_CHECK_LIB(ieee, __fpu_control)
+])
+
+# Check for --with-fpectl
+AC_MSG_CHECKING(for --with-fpectl)
+AC_ARG_WITH(fpectl,
+[  --with-fpectl                   enable SIGFPE catching], [
+if test "$withval" != no
+then AC_DEFINE(WANT_SIGFPE_HANDLER) AC_MSG_RESULT(yes)
+else AC_MSG_RESULT(no)
+fi],
+[AC_MSG_RESULT(no)])
+
+# check for --with-libm=...
+AC_SUBST(LIBM)
+case $ac_sys_system in
+Darwin) ;;
+next) ;;
+BeOS) ;;
+*) LIBM=-lm
+esac
+AC_MSG_CHECKING(for --with-libm=STRING)
+AC_ARG_WITH(libm, [  --with-libm=STRING              math library], [
+if test "$withval" = no
+then LIBM=
+     AC_MSG_RESULT(force LIBM empty)
+elif test "$withval" != yes
+then LIBM=$withval
+     AC_MSG_RESULT(set LIBM=\"$withval\")
+else AC_ERROR(proper usage is --with-libm=STRING)
+fi],
+[AC_MSG_RESULT(default LIBM=\"$LIBM\")])
+
+# check for --with-libc=...
+AC_SUBST(LIBC)
+AC_MSG_CHECKING(for --with-libc=STRING)
+AC_ARG_WITH(libc, [  --with-libc=STRING              C library], [
+if test "$withval" = no
+then LIBC=
+     AC_MSG_RESULT(force LIBC empty)
+elif test "$withval" != yes
+then LIBC=$withval
+     AC_MSG_RESULT(set LIBC=\"$withval\")
+else AC_ERROR(proper usage is --with-libc=STRING)
+fi],
+[AC_MSG_RESULT(default LIBC=\"$LIBC\")])
+
+# check for hypot() in math library
+LIBS_SAVE=$LIBS
+LIBS="$LIBS $LIBM"
+AC_REPLACE_FUNCS(hypot)
+LIBS=$LIBS_SAVE
+
+# check for getopt
+AC_MSG_CHECKING(for genuine getopt)
+AC_CACHE_VAL(ac_cv_func_getopt,
+[AC_TRY_RUN([#include <stdio.h>
+extern int optind, opterr, getopt();
+extern char* optarg;
+int main() {
+	char* av[] = { "testprog", "parameter", "-fFlag", NULL };
+	opterr = 0;
+	if (getopt(3, av, "f:") == 'f') { exit(1); }
+	exit(0);
+}], ac_cv_func_getopt=yes, ac_cv_func_getopt=no, ac_cv_func_getopt=no)])dnl
+AC_MSG_RESULT($ac_cv_func_getopt)
+test $ac_cv_func_getopt = no && LIBOBJS="$LIBOBJS getopt.o"
+AC_SUBST(LIBOBJS)dnl
+
+# check whether malloc(0) returns NULL or not
+AC_MSG_CHECKING(what malloc(0) returns)
+AC_CACHE_VAL(ac_cv_malloc_zero,
+[AC_TRY_RUN([#include <stdio.h>
+#ifdef HAVE_STDLIB
+#include <stdlib.h>
+#else
+char *malloc(), *realloc();
+int *free();
+#endif
+main() {
+	char *p;
+	p = malloc(0);
+	if (p == NULL) exit(1);
+	p = realloc(p, 0);
+	if (p == NULL) exit(1);
+	free(p);
+	exit(0);
+}], ac_cv_malloc_zero=nonnull, ac_cv_malloc_zero=null)])
+AC_MSG_RESULT($ac_cv_malloc_zero)
+if test "$ac_cv_malloc_zero" = null
+then
+  AC_DEFINE(MALLOC_ZERO_RETURNS_NULL)
+fi
+
+# check for wchar.h
+AC_CHECK_HEADER(wchar.h,
+AC_DEFINE(HAVE_WCHAR_H) wchar_h="yes",
+wchar_h="no"
+)
+
+# check for usable wchar_t
+usable_wchar_t="unkown"
+AC_MSG_CHECKING(for usable wchar_t)
+AC_TRY_RUN([
+#include "wchar.h"
+#include "wctype.h"
+main() {
+ wchar_t s;
+ if (sizeof(s) == 2)
+  exit(0);
+ else
+  exit(1);
+}
+], 
+AC_DEFINE(HAVE_USABLE_WCHAR_T) usable_wchar_t="yes",
+usable_wchar_t="no")
+AC_MSG_RESULT($usable_wchar_t)
+
+# check for endianness
+AC_C_BIGENDIAN
+
+# Check whether right shifting a negative integer extends the sign bit
+# or fills with zeros (like the Cray J90, according to Tim Peters).
+AC_MSG_CHECKING(whether right shift extends the sign bit)
+AC_CACHE_VAL(ac_cv_rshift_extends_sign, [
+AC_TRY_RUN([
+int main()
+{
+	exit(((-1)>>3 == -1) ? 0 : 1);
+}
+], ac_cv_rshift_extends_sign=yes, ac_cv_rshift_extends_sign=no)])
+AC_MSG_RESULT($ac_cv_rshift_extends_sign)
+if test "$ac_cv_rshift_extends_sign" = no
+then
+  AC_DEFINE(SIGNED_RIGHT_SHIFT_ZERO_FILLS)
+fi
+
+
+# THIS MUST BE LAST, IT CAN BREAK OTHER TESTS!
+# Add sys/socket.h to confdefs.h
+cat >> confdefs.h <<\EOF
+#ifdef HAVE_SYS_SOCKET_H
+#include <sys/socket.h>
+#endif
+EOF
+AC_CHECK_TYPE(socklen_t, int)
+
+# generate output files
+AC_OUTPUT(Makefile \
+ Objects/Makefile \
+ Parser/Makefile \
+ Grammar/Makefile \
+ Python/Makefile \
+ Modules/Makefile.pre \
+ Modules/Setup.config)

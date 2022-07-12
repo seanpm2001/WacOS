@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+#  Truly fake ar, using a directory to store object files.
+#
+#     Donn Cave, donn@oz.net
+
+usage='Usage: ar-fake cr libpython.dir obj.o ...
+       ar-fake d libpython.dir obj.o ...
+       ar-fake so libpython.dir libpython.so'
+
+case $# in
+0|1|2)
+        echo "$usage" >&2
+        exit 1
+        ;;
+esac
+
+command=$1
+library=$2
+shift 2
+
+case $command in
+cr)
+        if test -d $library
+        then :
+        else
+                mkdir $library
+        fi
+        if cp -p $* $library
+        then
+                #  To force directory modify date, create or delete a file.
+                if test -e $library/.tch
+                then rm $library/.tch
+                else echo tch > $library/.tch
+                fi
+                exit 0
+        fi
+        ;;
+d)
+        if test -d $library
+        then
+                cd $library
+                rm -f $*
+        fi
+        ;;
+so)
+        case $BE_HOST_CPU in
+        ppc)
+                mwld -xms -export pragma -nodup -o $1 $library/*
+                ;;
+        x86)
+                gcc -nostart -Wl,-soname=$(basename $1) -o $1 $library/*
+                ;;
+        esac
+        status=$?
+        cd $(dirname $1)
+        ln -sf $PWD lib
+        exit $status
+        ;;
+*)
+        echo "$usage" >&2
+        exit 1
+        ;;
+esac
