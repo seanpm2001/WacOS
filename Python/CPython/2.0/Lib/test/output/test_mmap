@@ -1,0 +1,19 @@
+test_mmap
+  Position of foo: 1.0 pages
+  Length of file: 2.0 pages
+  Contents of byte 0: '\000'
+  Contents of first 3 bytes: '\000\000\000'
+
+  Modifying file's content...
+  Contents of byte 0: '3'
+  Contents of first 3 bytes: '3\000\000'
+  Contents of second page: '\000foobar\000'
+  Regex match on mmap (page start, length of match): 1.0 6
+  Seek to zeroth byte
+  Seek to 42nd byte
+  Seek to last byte
+  Try to seek to negative position...
+  Try to seek beyond end of mmap...
+  Try to seek to negative position...
+  Attempting resize()
+ Test passed
