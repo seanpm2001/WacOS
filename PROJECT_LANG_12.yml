@@ -1,0 +1,13 @@
+# Start of script
+# Project language file 12
+# For: WacOS
+# I decided to make YAML the 12th project language file for this project (WacOS) as on 2021 September 25th, I decided to make project languages out of all the languages used on this project. This project uses a little bit of YAML, so it was included.
+# This is a rare instance in which I am using YAML as a project language file, as I learned how to make the GitHub linguist recognize Markdown as a language, and I extended this to other languages, this time with YAML. I found this out when snooping around on [Apple/Swift Evolution](https://github.com/apple/swift-evolution/blob/main/.gitattributes) if you want to do this yourself, simply add this to your `.gitattributes` file (if you haven't created one yet, make it now, do not add anything else to the file name but `.gitattributes`)
+gitattributes: ".gitattributes"
+line1: *.yml linguist-detectable=true
+line2: *.yaml linguist-detectable=true
+## File info
+# File type: YAML document (*.yml *.yaml)
+# File version: 1 (Saturday, 2021 September 25th at 7:09 pm)
+# Line count (including blank lines and compiler line): 14
+# End of script
