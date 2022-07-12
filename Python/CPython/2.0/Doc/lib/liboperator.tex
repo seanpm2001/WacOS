@@ -1,0 +1,222 @@
+\section{\module{operator} ---
+         Standard operators as functions.}
+\declaremodule{builtin}{operator}
+\sectionauthor{Skip Montanaro}{skip@automatrix.com}
+
+\modulesynopsis{All Python's standard operators as built-in functions.}
+
+
+The \module{operator} module exports a set of functions implemented in C
+corresponding to the intrinsic operators of Python.  For example,
+\code{operator.add(x, y)} is equivalent to the expression \code{x+y}.  The
+function names are those used for special class methods; variants without
+leading and trailing \samp{__} are also provided for convenience.
+
+The \module{operator} module defines the following functions:
+
+\begin{funcdesc}{add}{a, b}
+\funcline{__add__}{a, b}
+Return \var{a} \code{+} \var{b}, for \var{a} and \var{b} numbers.
+\end{funcdesc}
+
+\begin{funcdesc}{sub}{a, b}
+\funcline{__sub__}{a, b}
+Return \var{a} \code{-} \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{mul}{a, b}
+\funcline{__mul__}{a, b}
+Return \var{a} \code{*} \var{b}, for \var{a} and \var{b} numbers.
+\end{funcdesc}
+
+\begin{funcdesc}{div}{a, b}
+\funcline{__div__}{a, b}
+Return \var{a} \code{/} \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{mod}{a, b}
+\funcline{__mod__}{a, b}
+Return \var{a} \code{\%} \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{neg}{o}
+\funcline{__neg__}{o}
+Return \var{o} negated.
+\end{funcdesc}
+
+\begin{funcdesc}{pos}{o}
+\funcline{__pos__}{o}
+Return \var{o} positive.
+\end{funcdesc}
+
+\begin{funcdesc}{abs}{o}
+\funcline{__abs__}{o}
+Return the absolute value of \var{o}.
+\end{funcdesc}
+
+\begin{funcdesc}{inv}{o}
+\funcline{__inv__}{o}
+\funcline{__invert__}{o}
+Return the inverse of \var{o}.  The names \function{invert()} and
+\function{__invert__()} were added in Python 2.0.
+\end{funcdesc}
+
+\begin{funcdesc}{lshift}{a, b}
+\funcline{__lshift__}{a, b}
+Return \var{a} shifted left by \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{rshift}{a, b}
+\funcline{__rshift__}{a, b}
+Return \var{a} shifted right by \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{and_}{a, b}
+\funcline{__and__}{a, b}
+Return the bitwise and of \var{a} and \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{or_}{a, b}
+\funcline{__or__}{a, b}
+Return the bitwise or of \var{a} and \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{xor}{a, b}
+\funcline{__xor__}{a, b}
+Return the bitwise exclusive or of \var{a} and \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{not_}{o}
+\funcline{__not__}{o}
+Return the outcome of \keyword{not} \var{o}.  (Note that there is no
+\method{__not__()} method for object instances; only the interpreter
+core defines this operation.)
+\end{funcdesc}
+
+\begin{funcdesc}{truth}{o}
+Return \code{1} if \var{o} is true, and 0 otherwise.
+\end{funcdesc}
+
+\begin{funcdesc}{concat}{a, b}
+\funcline{__concat__}{a, b}
+Return \var{a} \code{+} \var{b} for \var{a} and \var{b} sequences.
+\end{funcdesc}
+
+\begin{funcdesc}{repeat}{a, b}
+\funcline{__repeat__}{a, b}
+Return \var{a} \code{*} \var{b} where \var{a} is a sequence and
+\var{b} is an integer.
+\end{funcdesc}
+
+\begin{funcdesc}{contains}{a, b}
+\funcline{__contains__}{a, b}
+Return the outcome of the test \var{b} \code{in} \var{a}.
+Note the reversed operands.  The name \function{__contains__()} was
+added in Python 2.0.
+\end{funcdesc}
+
+\begin{funcdesc}{sequenceIncludes}{\unspecified}
+\deprecated{2.0}{Use \function{contains()} instead.}
+Alias for \function{contains()}.
+\end{funcdesc}
+
+\begin{funcdesc}{countOf}{a, b}
+Return the number of occurrences of \var{b} in \var{a}.
+\end{funcdesc}
+
+\begin{funcdesc}{indexOf}{a, b}
+Return the index of the first of occurrence of \var{b} in \var{a}.
+\end{funcdesc}
+
+\begin{funcdesc}{getitem}{a, b}
+\funcline{__getitem__}{a, b}
+Return the value of \var{a} at index \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{setitem}{a, b, c}
+\funcline{__setitem__}{a, b, c}
+Set the value of \var{a} at index \var{b} to \var{c}.
+\end{funcdesc}
+
+\begin{funcdesc}{delitem}{a, b}
+\funcline{__delitem__}{a, b}
+Remove the value of \var{a} at index \var{b}.
+\end{funcdesc}
+
+\begin{funcdesc}{getslice}{a, b, c}
+\funcline{__getslice__}{a, b, c}
+Return the slice of \var{a} from index \var{b} to index \var{c}\code{-1}.
+\end{funcdesc}
+
+\begin{funcdesc}{setslice}{a, b, c, v}
+\funcline{__setslice__}{a, b, c, v}
+Set the slice of \var{a} from index \var{b} to index \var{c}\code{-1} to the
+sequence \var{v}.
+\end{funcdesc}
+
+\begin{funcdesc}{delslice}{a, b, c}
+\funcline{__delslice__}{a, b, c}
+Delete the slice of \var{a} from index \var{b} to index \var{c}\code{-1}.
+\end{funcdesc}
+
+The \module{operator} also defines a few predicates to test the type
+of objects.  \strong{Note:}  Be careful not to misinterpret the
+results of these functions; only \function{isCallable()} has any
+measure of reliability with instance objects.  For example:
+
+\begin{verbatim}
+>>> class C:
+...     pass
+... 
+>>> import operator
+>>> o = C()
+>>> operator.isMappingType(o)
+1
+\end{verbatim}
+
+\begin{funcdesc}{isCallable}{o}
+\deprecated{2.0}{Use the \function{callable()} built-in function instead.}
+Returns true if the object \var{o} can be called like a function,
+otherwise it returns false.  True is returned for functions, bound and
+unbound methods, class objects, and instance objects which support the
+\method{__call__()} method.
+\end{funcdesc}
+
+\begin{funcdesc}{isMappingType}{o}
+Returns true if the object \var{o} supports the mapping interface.
+This is true for dictionaries and all instance objects.
+\strong{Warning:} There is no reliable way to test if an instance
+supports the complete mapping protocol since the interface itself is
+ill-defined.  This makes this test less useful than it otherwise might
+be.
+\end{funcdesc}
+
+\begin{funcdesc}{isNumberType}{o}
+Returns true if the object \var{o} represents a number.  This is true
+for all numeric types implemented in C, and for all instance objects.
+\strong{Warning:}  There is no reliable way to test if an instance
+supports the complete numeric interface since the interface itself is
+ill-defined.  This makes this test less useful than it otherwise might
+be.
+\end{funcdesc}
+
+\begin{funcdesc}{isSequenceType}{o}
+Returns true if the object \var{o} supports the sequence protocol.
+This returns true for all objects which define sequence methods in C,
+and for all instance objects.  \strong{Warning:} There is no reliable
+way to test if an instance supports the complete sequence interface
+since the interface itself is ill-defined.  This makes this test less
+useful than it otherwise might be.
+\end{funcdesc}
+
+
+Example: Build a dictionary that maps the ordinals from \code{0} to
+\code{256} to their character equivalents.
+
+\begin{verbatim}
+>>> import operator
+>>> d = {}
+>>> keys = range(256)
+>>> vals = map(chr, keys)
+>>> map(operator.setitem, [d]*len(keys), keys, vals)
+\end{verbatim}
