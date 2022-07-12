@@ -1,0 +1,188 @@
+\section{\module{struct} ---
+         Interpret strings as packed binary data}
+\declaremodule{builtin}{struct}
+
+\modulesynopsis{Interpret strings as packed binary data.}
+
+\indexii{C}{structures}
+\indexiii{packing}{binary}{data}
+
+This module performs conversions between Python values and C
+structs represented as Python strings.  It uses \dfn{format strings}
+(explained below) as compact descriptions of the lay-out of the C
+structs and the intended conversion to/from Python values.  This can
+be used in handling binary data stored in files or from network
+connections, among other sources.
+
+The module defines the following exception and functions:
+
+
+\begin{excdesc}{error}
+  Exception raised on various occasions; argument is a string
+  describing what is wrong.
+\end{excdesc}
+
+\begin{funcdesc}{pack}{fmt, v1, v2, \textrm{\ldots}}
+  Return a string containing the values
+  \code{\var{v1}, \var{v2}, \textrm{\ldots}} packed according to the given
+  format.  The arguments must match the values required by the format
+  exactly.
+\end{funcdesc}
+
+\begin{funcdesc}{unpack}{fmt, string}
+  Unpack the string (presumably packed by \code{pack(\var{fmt},
+  \textrm{\ldots})}) according to the given format.  The result is a
+  tuple even if it contains exactly one item.  The string must contain
+  exactly the amount of data required by the format (i.e.
+  \code{len(\var{string})} must equal \code{calcsize(\var{fmt})}).
+\end{funcdesc}
+
+\begin{funcdesc}{calcsize}{fmt}
+  Return the size of the struct (and hence of the string)
+  corresponding to the given format.
+\end{funcdesc}
+
+Format characters have the following meaning; the conversion between
+C and Python values should be obvious given their types:
+
+\begin{tableiv}{c|l|l|c}{samp}{Format}{C Type}{Python}{Notes}
+  \lineiv{x}{pad byte}{no value}{}
+  \lineiv{c}{\ctype{char}}{string of length 1}{}
+  \lineiv{b}{\ctype{signed char}}{integer}{}
+  \lineiv{B}{\ctype{unsigned char}}{integer}{}
+  \lineiv{h}{\ctype{short}}{integer}{}
+  \lineiv{H}{\ctype{unsigned short}}{integer}{}
+  \lineiv{i}{\ctype{int}}{integer}{}
+  \lineiv{I}{\ctype{unsigned int}}{long}{(1)}
+  \lineiv{l}{\ctype{long}}{integer}{}
+  \lineiv{L}{\ctype{unsigned long}}{long}{}
+  \lineiv{f}{\ctype{float}}{float}{}
+  \lineiv{d}{\ctype{double}}{float}{}
+  \lineiv{s}{\ctype{char[]}}{string}{}
+  \lineiv{p}{\ctype{char[]}}{string}{}
+  \lineiv{P}{\ctype{void *}}{integer}{}
+\end{tableiv}
+
+\noindent
+Notes:
+
+\begin{description}
+\item[(1)]
+  The \character{I} conversion code will convert to a Python long if
+  the C \ctype{int} is the same size as a C \ctype{long}, which is
+  typical on most modern systems.  If a C \ctype{int} is smaller than
+  a C \ctype{long}, an Python integer will be created instead.
+\end{description}
+
+
+A format character may be preceded by an integral repeat count;
+e.g.\ the format string \code{'4h'} means exactly the same as
+\code{'hhhh'}.
+
+Whitespace characters between formats are ignored; a count and its
+format must not contain whitespace though.
+
+For the \character{s} format character, the count is interpreted as the
+size of the string, not a repeat count like for the other format
+characters; e.g. \code{'10s'} means a single 10-byte string, while
+\code{'10c'} means 10 characters.  For packing, the string is
+truncated or padded with null bytes as appropriate to make it fit.
+For unpacking, the resulting string always has exactly the specified
+number of bytes.  As a special case, \code{'0s'} means a single, empty
+string (while \code{'0c'} means 0 characters).
+
+The \character{p} format character can be used to encode a Pascal
+string.  The first byte is the length of the stored string, with the
+bytes of the string following.  If count is given, it is used as the
+total number of bytes used, including the length byte.  If the string
+passed in to \function{pack()} is too long, the stored representation
+is truncated.  If the string is too short, padding is used to ensure
+that exactly enough bytes are used to satisfy the count.
+
+For the \character{I} and \character{L} format characters, the return
+value is a Python long integer.
+
+For the \character{P} format character, the return value is a Python
+integer or long integer, depending on the size needed to hold a
+pointer when it has been cast to an integer type.  A \NULL{} pointer will
+always be returned as the Python integer \code{0}. When packing pointer-sized
+values, Python integer or long integer objects may be used.  For
+example, the Alpha and Merced processors use 64-bit pointer values,
+meaning a Python long integer will be used to hold the pointer; other
+platforms use 32-bit pointers and will use a Python integer.
+
+By default, C numbers are represented in the machine's native format
+and byte order, and properly aligned by skipping pad bytes if
+necessary (according to the rules used by the C compiler).
+
+Alternatively, the first character of the format string can be used to
+indicate the byte order, size and alignment of the packed data,
+according to the following table:
+
+\begin{tableiii}{c|l|l}{samp}{Character}{Byte order}{Size and alignment}
+  \lineiii{@}{native}{native}
+  \lineiii{=}{native}{standard}
+  \lineiii{<}{little-endian}{standard}
+  \lineiii{>}{big-endian}{standard}
+  \lineiii{!}{network (= big-endian)}{standard}
+\end{tableiii}
+
+If the first character is not one of these, \character{@} is assumed.
+
+Native byte order is big-endian or little-endian, depending on the
+host system (e.g. Motorola and Sun are big-endian; Intel and DEC are
+little-endian).
+
+Native size and alignment are determined using the C compiler's
+\keyword{sizeof} expression.  This is always combined with native byte
+order.
+
+Standard size and alignment are as follows: no alignment is required
+for any type (so you have to use pad bytes); \ctype{short} is 2 bytes;
+\ctype{int} and \ctype{long} are 4 bytes.  \ctype{float} and
+\ctype{double} are 32-bit and 64-bit IEEE floating point numbers,
+respectively.
+
+Note the difference between \character{@} and \character{=}: both use
+native byte order, but the size and alignment of the latter is
+standardized.
+
+The form \character{!} is available for those poor souls who claim they
+can't remember whether network byte order is big-endian or
+little-endian.
+
+There is no way to indicate non-native byte order (i.e. force
+byte-swapping); use the appropriate choice of \character{<} or
+\character{>}.
+
+The \character{P} format character is only available for the native
+byte ordering (selected as the default or with the \character{@} byte
+order character). The byte order character \character{=} chooses to
+use little- or big-endian ordering based on the host system. The
+struct module does not interpret this as native ordering, so the
+\character{P} format is not available.
+
+Examples (all using native byte order, size and alignment, on a
+big-endian machine):
+
+\begin{verbatim}
+>>> from struct import *
+>>> pack('hhl', 1, 2, 3)
+'\000\001\000\002\000\000\000\003'
+>>> unpack('hhl', '\000\001\000\002\000\000\000\003')
+(1, 2, 3)
+>>> calcsize('hhl')
+8
+\end{verbatim}
+
+Hint: to align the end of a structure to the alignment requirement of
+a particular type, end the format with the code for that type with a
+repeat count of zero, e.g.\ the format \code{'llh0l'} specifies two
+pad bytes at the end, assuming longs are aligned on 4-byte boundaries.
+This only works when native size and alignment are in effect;
+standard size and alignment does not enforce any alignment.
+
+\begin{seealso}
+  \seemodule{array}{Packed binary storage of homogeneous data.}
+  \seemodule{xdrlib}{Packing and unpacking of XDR data.}
+\end{seealso}
