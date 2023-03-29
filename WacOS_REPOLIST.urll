@@ -3,10 +3,10 @@
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
 //// Note: I have plans to increase WacOS development within the next 10 days
-//// 117 total repository links (as of 2023, Wednesday, March 22nd at 5:07 pm PST)
+//// 119 total repository links (as of 2023, Wednesday, March 29th at 4:36 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 141
+//// Total link count: 143
 
 //// WacOS repository list
 
@@ -60,7 +60,7 @@ https://github.com/seanpm2001/WacOS_OpenGS
 //// ||||
 
 //// WacOS repository listing
-//// Count: 117 (as of 2023, Wednesday, March 2nd at 5:07 pm PST)
+//// Count: 119 (as of 2023, Wednesday, March 29th at 4:36 pm PST)
 
 //// WacOS (1)
 
@@ -127,6 +127,7 @@ https://github.com/seanpm2001/wOS_4
 
 https://github.com/seanpm2001/WacOS_wOS_Software_Calculator
 https://github.com/seanpm2001/WacOS_wOS_Software
+https://github.com/seanpm2001/wOS_Weather
 
 //// whyPhoneOS (4)
 
@@ -211,6 +212,10 @@ https://github.com/seanpm2001/WacOS_10.15
 https://github.com/seanpm2001/WacOS_10.14
 https://github.com/seanpm2001/WacOS_10.13
 https://github.com/seanpm2001/WacOS_10.12
+
+//// WacOS (modern) software (1)
+
+https://github.com/seanpm2001/WacOS_Weather
 
 //// Sir Isaac NewtonOS (2)
 
@@ -305,7 +310,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 2 (2023, Wednesday, March 22nd at 5:07 pm PST)
-//// Line count (including blank lines and compiler line): 312
+//// File version: 3 (2023, Wednesday, March 29th at 4:36 pm PST)
+//// Line count (including blank lines and compiler line): 317
 
 //// End of file (EOF)
