@@ -2,10 +2,10 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 123 total repository links (as of 2023, Friday, March 31st at 10:32 pm PST)
+//// 125 total repository links (as of 2023, Saturday, April 1st at 6:30 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 147
+//// Total link count: 149
 
 //// WacOS repository list
 
@@ -59,7 +59,7 @@ https://github.com/seanpm2001/WacOS_OpenGS
 //// ||||
 
 //// WacOS repository listing
-//// Count: 123 (as of 2023, Friday, March 31 at 4:36 pm PST)
+//// Count: 125 (as of 2023, Saturday, April 1st at 6:30 pm PST)
 
 //// WacOS (1)
 
@@ -122,11 +122,12 @@ https://github.com/seanpm2001/wOS_6
 https://github.com/seanpm2001/wOS_5
 https://github.com/seanpm2001/wOS_4
 
-//// wOS software (3)
+//// wOS software (4)
 
 https://github.com/seanpm2001/WacOS_wOS_Software_Calculator
 https://github.com/seanpm2001/WacOS_wOS_Software
 https://github.com/seanpm2001/wOS_Weather
+https://github.com/seanpm2001/wOS_Kiri
 
 //// whyPhoneOS (4)
 
@@ -149,11 +150,12 @@ https://github.com/seanpm2001/WhyPadOS_14
 https://github.com/seanpm2001/WhyPadOS_15
 https://github.com/seanpm2001/WhyPadOS_16
 
-//// whyPadOS software (3)
+//// whyPadOS software (4)
 
 https://github.com/seanpm2001/WacOS_WhyPadOS_Software_Calculator
 https://github.com/seanpm2001/WacOS_WhyPadOS_Software
 https://github.com/seanpm2001/whyPadOS_Weather
+https://github.com/seanpm2001/whyPadOS_Kiri
 
 //// WacTVOS (10)
 
@@ -313,7 +315,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 4 (2023, Friday, March 31st at 10:32 pm PST)
-//// Line count (including blank lines and compiler line): 320
+//// File version: 5 (2023, Saturday, April 1st at 6:30 pm PST)
+//// Line count (including blank lines and compiler line): 322
 
 //// End of file (EOF)
