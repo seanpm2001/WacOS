@@ -2,10 +2,10 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 125 total repository links (as of 2023, Saturday, April 1st at 6:30 pm PST)
+//// 127 total repository links (as of 2023, Sunday, April 2nd at 3:41 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 149
+//// Total link count: 151
 
 //// WacOS repository list
 
@@ -122,12 +122,13 @@ https://github.com/seanpm2001/wOS_6
 https://github.com/seanpm2001/wOS_5
 https://github.com/seanpm2001/wOS_4
 
-//// wOS software (4)
+//// wOS software (5)
 
 https://github.com/seanpm2001/WacOS_wOS_Software_Calculator
 https://github.com/seanpm2001/WacOS_wOS_Software
 https://github.com/seanpm2001/wOS_Weather
 https://github.com/seanpm2001/wOS_Kiri
+https://github.com/seanpm2001/wOS_Compass
 
 //// whyPhoneOS (4)
 
@@ -281,11 +282,12 @@ https://github.com/seanpm2001/WhyWatchOS_3
 https://github.com/seanpm2001/WhyWatchOS_2
 https://github.com/seanpm2001/WhyWatchOS_1
 
-//// WhyWatchOS software (3)
+//// WhyWatchOS software (4)
 
 https://github.com/seanpm2001/WacOS_WhyWatchOS_Software
 https://github.com/seanpm2001/WacOS_WhyWatchOS_Software_Calculator
 https://github.com/seanpm2001/whyWatchOS_Weather
+https://github.com/seanpm2001/whyWatchOS_Kiri
 
 //// API (1)
 
@@ -315,7 +317,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 5 (2023, Saturday, April 1st at 6:30 pm PST)
-//// Line count (including blank lines and compiler line): 322
+//// File version: 6 (2023, Sunday, April 2nd at 3:41 pm PST)
+//// Line count (including blank lines and compiler line): 324
 
 //// End of file (EOF)
