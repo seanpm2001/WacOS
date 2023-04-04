@@ -2,10 +2,10 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 127 total repository links (as of 2023, Sunday, April 2nd at 3:41 pm PST)
+//// 129 total repository links (as of 2023, Monday, April 3rd at 7:30 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 151
+//// Total link count: 153
 
 //// WacOS repository list
 
@@ -59,7 +59,7 @@ https://github.com/seanpm2001/WacOS_OpenGS
 //// ||||
 
 //// WacOS repository listing
-//// Count: 125 (as of 2023, Saturday, April 1st at 6:30 pm PST)
+//// Count: 129 (as of 2023, Monday, April 3rd at 7:30 pm PST)
 
 //// WacOS (1)
 
@@ -151,12 +151,13 @@ https://github.com/seanpm2001/WhyPadOS_14
 https://github.com/seanpm2001/WhyPadOS_15
 https://github.com/seanpm2001/WhyPadOS_16
 
-//// whyPadOS software (4)
+//// whyPadOS software (5)
 
 https://github.com/seanpm2001/WacOS_WhyPadOS_Software_Calculator
 https://github.com/seanpm2001/WacOS_WhyPadOS_Software
 https://github.com/seanpm2001/whyPadOS_Weather
 https://github.com/seanpm2001/whyPadOS_Kiri
+https://github.com/seanpm2001/whyPadOS_Compass
 
 //// WacTVOS (10)
 
@@ -282,12 +283,13 @@ https://github.com/seanpm2001/WhyWatchOS_3
 https://github.com/seanpm2001/WhyWatchOS_2
 https://github.com/seanpm2001/WhyWatchOS_1
 
-//// WhyWatchOS software (4)
+//// WhyWatchOS software (5)
 
 https://github.com/seanpm2001/WacOS_WhyWatchOS_Software
 https://github.com/seanpm2001/WacOS_WhyWatchOS_Software_Calculator
 https://github.com/seanpm2001/whyWatchOS_Weather
 https://github.com/seanpm2001/whyWatchOS_Kiri
+https://github.com/seanpm2001/whyWatchOS_Compass
 
 //// API (1)
 
@@ -317,7 +319,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 6 (2023, Sunday, April 2nd at 3:41 pm PST)
-//// Line count (including blank lines and compiler line): 324
+//// File version: 7 (2023, Monday, April 3rd at 7:30 pm PST)
+//// Line count (including blank lines and compiler line): 326
 
 //// End of file (EOF)
