@@ -2,10 +2,10 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 135 total repository links (as of 2023, Sunday, April 16th at 7:52 pm PST)
+//// 137 total repository links (as of 2023, Monday, April 17th at 4:45 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 159
+//// Total link count: 161
 
 //// WacOS repository list
 
@@ -59,7 +59,7 @@ https://github.com/seanpm2001/WacOS_OpenGS
 //// ||||
 
 //// WacOS repository listing
-//// Count: 135 (as of 2023, Sunday, April 16th at 7:52 pm PST)
+//// Count: 137 (as of 2023, Monday, April 17th at 4:45 pm PST)
 
 //// WacOS (1)
 
@@ -295,7 +295,7 @@ https://github.com/seanpm2001/whyWatchOS_Compass
 
 https://github.com/seanpm2001/WacOS_API
 
-//// iCandy (6)
+//// iCandy (8)
 
 https://github.com/seanpm2001/iCandy
 https://github.com/seanpm2001/iCandy_Docs
@@ -303,6 +303,8 @@ https://github.com/seanpm2001/iCandy_Desktop
 https://github.com/seanpm2001/iCandy_Mobile
 https://github.com/seanpm2001/iCandy_Tablet
 https://github.com/seanpm2001/iCandy_TV
+https://github.com/seanpm2001/iCandy_Wrist
+https://github.com/seanpm2001/iCandy_Pod
 
 //// Architectures
 
@@ -328,7 +330,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 8 (2023, Sunday, April 16th at 7:52 pm PST)
-//// Line count (including blank lines and compiler line): 335
+//// File version: 9 (2023, Monday, April 17th at 4:45 pm PST)
+//// Line count (including blank lines and compiler line): 337
 
 //// End of file (EOF)
