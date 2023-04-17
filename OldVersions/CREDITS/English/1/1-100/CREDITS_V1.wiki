@@ -1,0 +1,32 @@
+
+---
+
+{{int:version-credits-summary}}
+WacOS (Linux based operating system) is a collaborative project released under the GNU General Public License v3. We would like to recognize the following names for their contribution to the product.
+
+This comment block and this file (excluding author names) was modified from MediaWiki/CREDITS -->
+
+== Maintainers ==
+<!-- BEGIN MAINTAINERS LIST !-->
+
+01. @seanpm2001 - Creator and primary maintainer of the WacOS operating system project
+02. No other contributors as of Thursday, August 26th 2021
+
+== Contributors ==
+<!-- BEGIN CONTRIBUTOR LIST -->
+01. @seanpm2001 (For creating the WacOS project, among many other software and media projects)
+02. @GitHub (For GitHub, and for being the first host of this project)
+03. @Apple (For MacOS, iOS, iPadOS, TvOS, WatchOS, and many other projects that inspired this project)
+04. @S-Desktop-Environment (For the modified desktop environment used in this project)
+05. @Microsoft (For saving Apple earlier on, without this, we wouldn't have iOS 6 and many other works of art, and my mid childhood would have been much different)
+06. @WacOS-Dev (For the community developing this project, and this projects platform)
+07. @VirtualBox (Not on GitHub, but they really helped get me into operating system preservation and virtualization, and were a stepping stone that inspired this project)
+08. @Torvalds (For the Linux kernel, without it, this project would have no good base, and I would be stuck with little freedom on Windows)
+09. @Dennis_Ritchie (Not on GitHub, but big thanks to him for creating the C programming language, and many other glorious contributions to computer science)
+10. @Ken (Ken Thompson, big thanks to him for co-creating the C programming language, and many other glorious contributions to computer science)
+11. @BjarneStrousnip (Not on GitHub, but big thanks to him for creating the C++ programming language that built many projects)
+12. @Python (For the Python programming language, my favorite programming language that made computer science more tolerable, and gave me lots of experiences and lots to work with)
+13. @Git (For the Git version control system used on this project)
+14. No other contributors as of Thursday, August 26th 2021
+
+---
