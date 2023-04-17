@@ -1,5 +1,6 @@
 /!Cloud/
 /.github/
+/.gitlab/
 /API/
 /Alt-Kernel/
 /Apple/
@@ -77,6 +78,7 @@
 /WhyPhoneOS/
 /WhyWatchOS/
 /Wiki/
+/iCandy/
 /m4/
 /wOS/
 /.all-contributorsrc
