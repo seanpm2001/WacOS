@@ -2,7 +2,7 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 137 total repository links (as of 2023, Monday, April 17th at 4:45 pm PST)
+//// 142 total repository links (as of 2023, Sunday, September 10th at 4:54 pm PST)
 
 //// Calculation note: search https:// and remove 24 from the result
 //// Total link count: 161
@@ -59,7 +59,7 @@ https://github.com/seanpm2001/WacOS_OpenGS
 //// ||||
 
 //// WacOS repository listing
-//// Count: 137 (as of 2023, Monday, April 17th at 4:45 pm PST)
+//// Count: 142 (as of 2023, Sunday, September 10th at 4:55 pm PST)
 
 //// WacOS (1)
 
@@ -105,9 +105,10 @@ https://github.com/seanpm2001/WacOS_In_Ease
 https://github.com/seanpm2001/WacOS_Classic_Calculator
 https://github.com/seanpm2001/WacOS_Classic_WacOS_Software
 
-//// wOS (14)
+//// wOS (15)
 
 https://github.com/seanpm2001/wOS
+https://github.com/seanpm2001/wOS_17
 https://github.com/seanpm2001/wOS_16
 https://github.com/seanpm2001/wOS_15
 https://github.com/seanpm2001/wOS_14
@@ -143,13 +144,14 @@ https://github.com/seanpm2001/WacOS_whyPhoneOS_Software
 https://github.com/seanpm2001/WacOS_whyPhoneOS_Software_Calculator
 https://github.com/seanpm2001/whyPhoneOS_Weather
 
-//// whyPadOS (5)
+//// whyPadOS (6)
 
 https://github.com/seanpm2001/WhyPadOS
 https://github.com/seanpm2001/WhyPadOS_13
 https://github.com/seanpm2001/WhyPadOS_14
 https://github.com/seanpm2001/WhyPadOS_15
 https://github.com/seanpm2001/WhyPadOS_16
+https://github.com/seanpm2001/whyPadOS_17
 
 //// whyPadOS software (5)
 
@@ -159,7 +161,7 @@ https://github.com/seanpm2001/whyPadOS_Weather
 https://github.com/seanpm2001/whyPadOS_Kiri
 https://github.com/seanpm2001/whyPadOS_Compass
 
-//// WacTVOS (10)
+//// WacTVOS (11)
 
 https://github.com/seanpm2001/WacTVOS
 https://github.com/seanpm2001/WacTVOS_8
@@ -171,6 +173,7 @@ https://github.com/seanpm2001/WacTVOS_13
 https://github.com/seanpm2001/WacTVOS_14
 https://github.com/seanpm2001/WacTVOS_15
 https://github.com/seanpm2001/WacTVOS_16
+https://github.com/seanpm2001/WacTVOS_17
 
 //// WacTVOS software (2)
 
@@ -208,8 +211,9 @@ https://github.com/seanpm2001/WOAHS-X_10.7
 https://github.com/seanpm2001/WacOS_WOAHS-X_Software
 https://github.com/seanpm2001/WOAHS-X_Software_Calculator
 
-//// WacOS (modern) (7)
+//// WacOS (modern) (8)
 
+https://github.com/seanpm2001/WacOS_14
 https://github.com/seanpm2001/WacOS_13
 https://github.com/seanpm2001/WacOS_12
 https://github.com/seanpm2001/WacOS_11
@@ -270,9 +274,10 @@ https://github.com/seanpm2001/WacOS_Cloud
 
 //// WacOS Server (1)
 
-//// WhyWatchOS (10)
+//// WhyWatchOS (11)
 
 https://github.com/seanpm2001/WhyWatchOS
+https://github.com/seanpm2001/whyWatchOS_10
 https://github.com/seanpm2001/WhyWatchOS_9
 https://github.com/seanpm2001/WhyWatchOS_8
 https://github.com/seanpm2001/WhyWatchOS_7
@@ -330,7 +335,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 9 (2023, Monday, April 17th at 4:45 pm PST)
-//// Line count (including blank lines and compiler line): 337
+//// File version: 10 (2023, Sunday, September 10th at 4:54 pm PST)
+//// Line count (including blank lines and compiler line): 342
 
 //// End of file (EOF)
