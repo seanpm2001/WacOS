@@ -2,64 +2,8 @@
 //// https://github.com/seanpm2001/URLL-Specification
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
-//// 146 total repository links (as of 2023, Tuesday, September 19th at 7:56 pm PST)
-
-//// Calculation note: search https:// and remove 24 from the result
-//// Total link count: 161
-
-//// WacOS repository list
-
-//// Note: This is my 3rd attempt at doing this in 2023, March.
-//// I stuck through this time and succeeded in listing all WacOS projects.
-//// If I missed any, please raise an issue.
-
-//// ||||
-//// PREVIOUS FAILED ATTEMPTS
-
-//// Attempt #1
-//// WacOS listing (GitHUb simple search)
-//// Crawl count: 18
-
-https://github.com/seanpm2001/WacOS
-https://github.com/seanpm2001/WacOS_Cloud
-https://github.com/seanpm2001/WacPaint
-https://github.com/seanpm2001/Kiri
-https://github.com/seanpm2001/WacOS_API
-https://github.com/seanpm2001/WacOS_Wiki_2021
-https://github.com/seanpm2001/WacWrite
-https://github.com/seanpm2001/WacOS_OpenGS
-https://github.com/seanpm2001/SirIsaacNewtonScript
-https://github.com/seanpm2001/SirIsaacNewtonOS
-https://github.com/seanpm2001/WacOS_WacOS_Calculator
-https://github.com/seanpm2001/WacOS_WhyPadOS_Software_Calculator
-https://github.com/seanpm2001/WacOS_Classic_Calculator
-https://github.com/seanpm2001/WacOS_wOS_Software_Calculator
-https://github.com/seanpm2001/WacOS_WOAHS-X_Software
-https://github.com/seanpm2001/WacOS_whyPhoneOS_Software
-https://github.com/seanpm2001/WacOS_WacTVOS_Software_Calculator
-https://github.com/seanpm2001/WacOS_X_Software_Calculator
-
-//// Fail:
-//// Reason:
-//// Gave up due to inaccurate results (the exact repository count changed for each page I went to, and likely removed relevant entries in the process)
-
-//// Attempt #2
-//// WacOS listing (Profile search: q?="WacOS")
-//// Crawl count: 4
-
-https://github.com/seanpm2001/Bliss_Browser_OSMode_WacOS_Shell
-https://github.com/seanpm2001/WacOS_Docs
-https://github.com/seanpm2001/WacOS
-https://github.com/seanpm2001/WacOS_OpenGS
-
-//// Fail:
-//// Reason:
-//// I felt that I wasn't going to get everything this way.
-
-//// ||||
-
 //// WacOS repository listing
-//// Count: 146 (as of 2023, Tuesday, September 19th at 7:56 pm PST)
+//// 148 total repository links (as of 2023, Wednesday, September 20th at 6:35 pm PST)
 
 //// WacOS (1)
 
@@ -105,7 +49,7 @@ https://github.com/seanpm2001/WacOS_In_Ease
 https://github.com/seanpm2001/WacOS_Classic_Calculator
 https://github.com/seanpm2001/WacOS_Classic_WacOS_Software
 
-//// wOS (15)
+//// wOS (16)
 
 https://github.com/seanpm2001/wOS
 https://github.com/seanpm2001/wOS_17
@@ -122,6 +66,7 @@ https://github.com/seanpm2001/wOS_7
 https://github.com/seanpm2001/wOS_6
 https://github.com/seanpm2001/wOS_5
 https://github.com/seanpm2001/wOS_4
+https://github.com/seanpm2001/wOS_Docs
 
 //// wOS software (5)
 
@@ -163,7 +108,7 @@ https://github.com/seanpm2001/whyPadOS_Weather
 https://github.com/seanpm2001/whyPadOS_Kiri
 https://github.com/seanpm2001/whyPadOS_Compass
 
-//// WacTVOS (11)
+//// WacTVOS (12)
 
 https://github.com/seanpm2001/WacTVOS
 https://github.com/seanpm2001/WacTVOS_8
@@ -176,6 +121,7 @@ https://github.com/seanpm2001/WacTVOS_14
 https://github.com/seanpm2001/WacTVOS_15
 https://github.com/seanpm2001/WacTVOS_16
 https://github.com/seanpm2001/WacTVOS_17
+https://github.com/seanpm2001/WacTVOS_Docs
 
 //// WacTVOS software (2)
 
@@ -337,9 +283,8 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
 //// File info
 
-//// V2: Added 1 link, added the number of entries for a category into each category heading
 //// File type: URLL source file (*.urll)
-//// File version: 12 (2023, Tuesday, September 19th at 7:56 pm PST)
-//// Line count (including blank lines and compiler line): 346
+//// File version: 13 (2023, Wednesday, September 20th at 06:35 pm PST)
+//// Line count (including blank lines and compiler line): 291
 
 //// End of file (EOF)
