@@ -3,7 +3,7 @@
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
 //// WacOS repository listing
-//// 148 total repository links (as of 2023, Wednesday, September 20th at 6:35 pm PST)
+//// 150 total repository links (as of 2023, Thursday, September 21st at 7:58 pm PST)
 
 //// WacOS (1)
 
@@ -23,7 +23,7 @@ https://github.com/seanpm2001/Bliss_Browser_OSMode_iOS_Shell
 
 ///////// ?COMING SOON (I double checked on 2023.03.22, no repository exists for this category set)
 
-//// BaSYS (7)
+//// BaSYS (8)
 
 https://github.com/seanpm2001/WacOS_BaSYS
 https://github.com/seanpm2001/WacOS_BaSYS_6
@@ -32,6 +32,7 @@ https://github.com/seanpm2001/WacOS_BaSYS_4
 https://github.com/seanpm2001/WacOS_BaSYS_3
 https://github.com/seanpm2001/WacOS_BaSYS_2
 https://github.com/seanpm2001/WacOS_BaSYS_1
+https://github.com/seanpm2001/BaSYS_Docs
 
 //// BaSYS Software (2)
 
@@ -179,6 +180,10 @@ https://github.com/seanpm2001/WacOS_Weather
 //// Sir Isaac NewtonOS (2)
 
 https://github.com/seanpm2001/SirIsaacNewtonOS
+https://github.com/seanpm2001/Sir-Isaac-NewtonOS_Docs
+
+//// Sir Isaac NewtonScript (1)
+
 https://github.com/seanpm2001/SirIsaacNewtonScript
 
 //// OpenCyberdog (1)
@@ -222,7 +227,9 @@ https://github.com/seanpm2001/WacOS_WAMMY
 
 https://github.com/seanpm2001/WacOS_Cloud
 
-//// WacOS Server (1)
+//// WacOS Server (0)
+
+//// No entries yet
 
 //// WhyWatchOS (11)
 
@@ -284,7 +291,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 //// File info
 
 //// File type: URLL source file (*.urll)
-//// File version: 13 (2023, Wednesday, September 20th at 06:35 pm PST)
-//// Line count (including blank lines and compiler line): 291
+//// File version: 14 (2023, Thursday, September 21st at 07:58 pm PST)
+//// Line count (including blank lines and compiler line): 298
 
 //// End of file (EOF)
