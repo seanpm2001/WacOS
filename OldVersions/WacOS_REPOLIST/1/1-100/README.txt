@@ -3,7 +3,7 @@
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
 //// WacOS repository listing
-//// 150 total repository links (as of 2023, Thursday, September 21st at 7:58 pm PST)
+//// 152 total repository links (as of 2023, Friday, September 22nd at 6:46 pm PST)
 
 //// WacOS (1)
 
@@ -182,9 +182,10 @@ https://github.com/seanpm2001/WacOS_Weather
 https://github.com/seanpm2001/SirIsaacNewtonOS
 https://github.com/seanpm2001/Sir-Isaac-NewtonOS_Docs
 
-//// Sir Isaac NewtonScript (1)
+//// Sir Isaac NewtonScript (2)
 
 https://github.com/seanpm2001/SirIsaacNewtonScript
+https://github.com/seanpm2001/Sir-Isaac-NewtonScript_Docs
 
 //// OpenCyberdog (1)
 
@@ -231,7 +232,7 @@ https://github.com/seanpm2001/WacOS_Cloud
 
 //// No entries yet
 
-//// WhyWatchOS (11)
+//// WhyWatchOS (12)
 
 https://github.com/seanpm2001/WhyWatchOS
 https://github.com/seanpm2001/whyWatchOS_10
@@ -244,6 +245,7 @@ https://github.com/seanpm2001/WhyWatchOS_4
 https://github.com/seanpm2001/WhyWatchOS_3
 https://github.com/seanpm2001/WhyWatchOS_2
 https://github.com/seanpm2001/WhyWatchOS_1
+https://github.com/seanpm2001/WhyWatchOS_Docs
 
 //// WhyWatchOS software (5)
 
@@ -291,7 +293,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 //// File info
 
 //// File type: URLL source file (*.urll)
-//// File version: 14 (2023, Thursday, September 21st at 07:58 pm PST)
-//// Line count (including blank lines and compiler line): 298
+//// File version: 15 (2023, Friday, September 22nd at 06:46 pm PST)
+//// Line count (including blank lines and compiler line): 300
 
 //// End of file (EOF)
