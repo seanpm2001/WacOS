@@ -3,7 +3,7 @@
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
 //// WacOS repository listing
-//// 152 total repository links (as of 2023, Friday, September 22nd at 6:46 pm PST)
+//// 161 total repository links (as of 2025, Thursday, June 12th at 05:25 pm PST)
 
 //// WacOS (1)
 
@@ -50,9 +50,10 @@ https://github.com/seanpm2001/WacOS_In_Ease
 https://github.com/seanpm2001/WacOS_Classic_Calculator
 https://github.com/seanpm2001/WacOS_Classic_WacOS_Software
 
-//// wOS (16)
+//// wOS (17)
 
 https://github.com/seanpm2001/wOS
+https://github.com/seanpm2001/wOS_18
 https://github.com/seanpm2001/wOS_17
 https://github.com/seanpm2001/wOS_16
 https://github.com/seanpm2001/wOS_15
@@ -109,6 +110,15 @@ https://github.com/seanpm2001/whyPadOS_Weather
 https://github.com/seanpm2001/whyPadOS_Kiri
 https://github.com/seanpm2001/whyPadOS_Compass
 
+//// VisorOS (6)
+
+https://github.com/seanpm2001/VisorOS
+https://github.com/seanpm2001/VisorOS_Docs
+https://github.com/seanpm2001/VisorOS_1
+https://github.com/seanpm2001/VisorOS_1_Docs
+https://github.com/seanpm2001/VisorOS_2
+https://github.com/seanpm2001/VisorOS_2_Docs
+
 //// WacTVOS (12)
 
 https://github.com/seanpm2001/WacTVOS
@@ -162,8 +172,9 @@ https://github.com/seanpm2001/WOAHS-X_Docs
 https://github.com/seanpm2001/WacOS_WOAHS-X_Software
 https://github.com/seanpm2001/WOAHS-X_Software_Calculator
 
-//// WacOS (modern) (8)
+//// WacOS (modern) (9)
 
+https://github.com/seanpm2001/WacOS_15
 https://github.com/seanpm2001/WacOS_14
 https://github.com/seanpm2001/WacOS_13
 https://github.com/seanpm2001/WacOS_12
@@ -232,9 +243,10 @@ https://github.com/seanpm2001/WacOS_Cloud
 
 //// No entries yet
 
-//// WhyWatchOS (12)
+//// WhyWatchOS (13)
 
 https://github.com/seanpm2001/WhyWatchOS
+https://github.com/seanpm2001/whyWatchOS_11
 https://github.com/seanpm2001/whyWatchOS_10
 https://github.com/seanpm2001/WhyWatchOS_9
 https://github.com/seanpm2001/WhyWatchOS_8
@@ -293,7 +305,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 //// File info
 
 //// File type: URLL source file (*.urll)
-//// File version: 15 (2023, Friday, September 22nd at 06:46 pm PST)
-//// Line count (including blank lines and compiler line): 300
+//// File version: 16 (2025, Thursday, June 12th at 05:25 pm PST)
+//// Line count (including blank lines and compiler line): 312
 
 //// End of file (EOF)
