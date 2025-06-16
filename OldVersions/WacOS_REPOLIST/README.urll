@@ -50,9 +50,10 @@ https://github.com/seanpm2001/WacOS_In_Ease
 https://github.com/seanpm2001/WacOS_Classic_Calculator
 https://github.com/seanpm2001/WacOS_Classic_WacOS_Software
 
-//// wOS (17)
+//// wOS (19)
 
 https://github.com/seanpm2001/wOS
+https://github.com/seanpm2001/wOS_26
 https://github.com/seanpm2001/wOS_18
 https://github.com/seanpm2001/wOS_17
 https://github.com/seanpm2001/wOS_16
@@ -69,6 +70,7 @@ https://github.com/seanpm2001/wOS_6
 https://github.com/seanpm2001/wOS_5
 https://github.com/seanpm2001/wOS_4
 https://github.com/seanpm2001/wOS_Docs
+https://github.com/seanpm2001/wOS_26_Docs
 
 //// wOS software (5)
 
@@ -92,7 +94,7 @@ https://github.com/seanpm2001/WacOS_whyPhoneOS_Software
 https://github.com/seanpm2001/WacOS_whyPhoneOS_Software_Calculator
 https://github.com/seanpm2001/whyPhoneOS_Weather
 
-//// whyPadOS (7)
+//// whyPadOS (9)
 
 https://github.com/seanpm2001/WhyPadOS
 https://github.com/seanpm2001/WhyPadOS_13
@@ -100,7 +102,9 @@ https://github.com/seanpm2001/WhyPadOS_14
 https://github.com/seanpm2001/WhyPadOS_15
 https://github.com/seanpm2001/WhyPadOS_16
 https://github.com/seanpm2001/whyPadOS_17
+https://github.com/seanpm2001/whyPadOS_26
 https://github.com/seanpm2001/WhyPadOS_Docs
+https://github.com/seanpm2001/whyPadOS_26_Docs
 
 //// whyPadOS software (5)
 
@@ -110,7 +114,7 @@ https://github.com/seanpm2001/whyPadOS_Weather
 https://github.com/seanpm2001/whyPadOS_Kiri
 https://github.com/seanpm2001/whyPadOS_Compass
 
-//// VisorOS (6)
+//// VisorOS (8)
 
 https://github.com/seanpm2001/VisorOS
 https://github.com/seanpm2001/VisorOS_Docs
@@ -118,6 +122,8 @@ https://github.com/seanpm2001/VisorOS_1
 https://github.com/seanpm2001/VisorOS_1_Docs
 https://github.com/seanpm2001/VisorOS_2
 https://github.com/seanpm2001/VisorOS_2_Docs
+https://github.com/seanpm2001/VisorOS_26
+https://github.com/seanpm2001/VisorOS_26_Docs
 
 //// WacTVOS (12)
 
@@ -172,8 +178,9 @@ https://github.com/seanpm2001/WOAHS-X_Docs
 https://github.com/seanpm2001/WacOS_WOAHS-X_Software
 https://github.com/seanpm2001/WOAHS-X_Software_Calculator
 
-//// WacOS (modern) (9)
+//// WacOS (modern) (11)
 
+https://github.com/seanpm2001/WacOS_26
 https://github.com/seanpm2001/WacOS_15
 https://github.com/seanpm2001/WacOS_14
 https://github.com/seanpm2001/WacOS_13
@@ -183,6 +190,7 @@ https://github.com/seanpm2001/WacOS_10.15
 https://github.com/seanpm2001/WacOS_10.14
 https://github.com/seanpm2001/WacOS_10.13
 https://github.com/seanpm2001/WacOS_10.12
+https://github.com/seanpm2001/WacOS_26_Docs
 
 //// WacOS (modern) software (1)
 
@@ -246,6 +254,7 @@ https://github.com/seanpm2001/WacOS_Cloud
 //// WhyWatchOS (13)
 
 https://github.com/seanpm2001/WhyWatchOS
+https://github.com/seanpm2001/WhyWatchOS_26
 https://github.com/seanpm2001/whyWatchOS_11
 https://github.com/seanpm2001/whyWatchOS_10
 https://github.com/seanpm2001/WhyWatchOS_9
@@ -258,6 +267,7 @@ https://github.com/seanpm2001/WhyWatchOS_3
 https://github.com/seanpm2001/WhyWatchOS_2
 https://github.com/seanpm2001/WhyWatchOS_1
 https://github.com/seanpm2001/WhyWatchOS_Docs
+https://github.com/seanpm2001/WhyWatchOS_26_Docs
 
 //// WhyWatchOS software (5)
 
@@ -305,7 +315,7 @@ https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 //// File info
 
 //// File type: URLL source file (*.urll)
-//// File version: 16 (2025, Thursday, June 12th at 05:25 pm PST)
-//// Line count (including blank lines and compiler line): 312
+//// File version: 17 (2025, Sunday, June 15th at 07:01 pm PST)
+//// Line count (including blank lines and compiler line): 322
 
 //// End of file (EOF)
