@@ -3,7 +3,7 @@
 //// FileName: WacOS_REPOLIST.urll
 //// URL list for WacOS repositories
 //// WacOS repository listing
-//// 161 total repository links (as of 2025, Thursday, June 12th at 05:25 pm PST)
+//// 167 total repository links (as of 2025, Monday, June 14th at xx:xx pm PST)
 
 //// WacOS (1)
 
@@ -18,6 +18,10 @@ https://github.com/seanpm2001/WacOS_ManPages
 
 https://github.com/seanpm2001/Bliss_Browser_OSMode_WacOS_Shell
 https://github.com/seanpm2001/Bliss_Browser_OSMode_iOS_Shell
+
+//// Website (1)
+
+https://github.com/seanpm2001/WacOS_Website
 
 //// Linux Defender (0)
 
@@ -50,12 +54,13 @@ https://github.com/seanpm2001/WacOS_In_Ease
 https://github.com/seanpm2001/WacOS_Classic_Calculator
 https://github.com/seanpm2001/WacOS_Classic_WacOS_Software
 
-//// wOS (19)
+//// wOS (20)
 
 https://github.com/seanpm2001/wOS
 https://github.com/seanpm2001/wOS_26
 https://github.com/seanpm2001/wOS_18
 https://github.com/seanpm2001/wOS_17
+https://github.com/seanpm2001/wOS_17_docs
 https://github.com/seanpm2001/wOS_16
 https://github.com/seanpm2001/wOS_15
 https://github.com/seanpm2001/wOS_14
@@ -312,10 +317,20 @@ https://github.com/seanpm2001/WacOS_OpenAPFS
 
 https://github.com/seanpm2001/WacOS_Hardware_Blueprints
 
+//// WacOS Aquatic (2)
+
+https://github.com/seanpm2001/WacOS_Aquatic
+https://github.com/seanpm2001/WacOS_Aquatic_Docs
+
+//// WacOS LGlass (2)
+
+https://github.com/seanpm2001/WacOS_LGlass
+https://github.com/seanpm2001/WacOS_LGlass_Docs
+
 //// File info
 
 //// File type: URLL source file (*.urll)
-//// File version: 17 (2025, Sunday, June 15th at 07:01 pm PST)
-//// Line count (including blank lines and compiler line): 322
+//// File version: 18 (2025, Monday, July 14th at 06:43 pm PST)
+//// Line count (including blank lines and compiler line): 337
 
 //// End of file (EOF)
